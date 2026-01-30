@@ -1,0 +1,158 @@
+{
+  "research_questions": [
+    {
+      "person_id": "JNSN-UNK-e1673-01",
+      "question": "Are Richard Johnson (1624), William Johnson (1653), and Michael Johnson (d.1718) related?",
+      "question_type": "relationship",
+      "status": "open",
+      "evidence_for": "All in same geographic area (Arrowhattocks/Henrico); connected to same allied families (Hatchers, Jordans, Bayleys, Burtons); Richard Johnson and William Hatcher served as Tobacco Viewers together (1639), and William Hatcher's family later neighbors Michael Johnson",
+      "evidence_against": "No document explicitly states any family relationship; common surname; 94-year span from Richard (1624) to Michael's death (1718)",
+      "research_action": "Search for any wills, deeds, or court records naming parent-child relationships among these Johnsons",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["JNSN-ENG-e1595-01", "JNSN-ENG-e1620-01"]
+    },
+    {
+      "person_id": "JNSN-UNK-e1673-01",
+      "question": "Were John Johnson and James Johnson sons of Michael Johnson?",
+      "question_type": "relationship",
+      "status": "open",
+      "evidence_for": "1718 patents show them as adjacent landowners to Michael; 1719 estate inventory shows John and James presenting Michael's estate together; adjacent land patterns typical of father-son",
+      "evidence_against": "No document explicitly states 'son of Michael Johnson'; no will from Michael naming children",
+      "research_action": "Find Michael Johnson's will if it exists; check Henrico court records for guardianship or orphan records",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["JNSN-HEN-e1695-01", "JNSN-HEN-e1695-02"]
+    },
+    {
+      "person_id": "JNSN-UNK-e1673-01",
+      "question": "Was John Jones Michael Johnson's brother-in-law?",
+      "question_type": "relationship",
+      "status": "open",
+      "evidence_for": "Listed together on Edloe Plantation tithables 1702; moved together from New Kent County; Tony's consistent claim",
+      "evidence_against": "No document states the relationship; could be neighbors/associates without family tie",
+      "research_action": "Find marriage record for John Jones; check if he married a Watson (sister of Sarah Watson) or a Johnson (sister of Michael)",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["JNES-UNK-e1670-01"]
+    },
+    {
+      "person_id": "JNSN-UNK-e1673-01",
+      "question": "Was Alice Watson (wife of John Watson) previously married to Henry Rowen?",
+      "question_type": "identity",
+      "status": "open",
+      "evidence_for": "Tony notes 'Benjamin Hatcher is one of the signeders of John Watson's will 2nd husband of Alice first married to Henry Rowen'; 1661 deed shows Henry Rowing and wife Alice selling to Hatchers",
+      "evidence_against": "Alice is a common name; no document explicitly states Alice Rowen remarried John Watson",
+      "research_action": "Find Henry Rowen's death record or will; find John Watson's marriage record; determine if Alice in both records is same person",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["RWNG-VA-e1630-01", "RWNG-VA-e1635-01", "WTSN-UNK-e1650-01"]
+    },
+    {
+      "person_id": "JNSN-UNK-e1673-01",
+      "question": "Did Michael Johnson appear in records as early as 1685?",
+      "question_type": "source_needed",
+      "status": "open",
+      "evidence_for": "Tony claims 1685 Hatcher-Burton deed mentions 'adjoining Michael Johnson and John Johnson'",
+      "evidence_against": "Tony notes 'Lost the Original document on this I need the proof on this deed'; extracted excerpt only shows witnesses, not land description",
+      "research_action": "Locate original 1685 Edward Hatcher to Robert Burton deed in Henrico County Deeds 1677-1705; examine full land description",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": []
+    },
+    {
+      "person_id": "JNSN-UNK-e1673-01",
+      "question": "What is the source for Michael Johnson at Beaverdam Swamp in 1698?",
+      "question_type": "source_needed",
+      "status": "open",
+      "evidence_for": "Tony states 'Michael Johnson in 1698 was living by Beaverdam Swamp'",
+      "evidence_against": "First PRIMARY SOURCE for Michael Johnson is 1702 St. Peters Parish vestry entry; 1698 reference appears to be Tony's interpretation",
+      "research_action": "Ask Tony for source of 1698 claim; check St. Peters Parish records pre-1702; check New Kent County records 1695-1702",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": []
+    },
+    {
+      "person_id": "JNSN-UNK-e1673-01",
+      "question": "What happened to Michael Johnson between 1702 and 1714?",
+      "question_type": "gap",
+      "status": "open",
+      "evidence_for": "N/A - this is a gap in the record",
+      "evidence_against": "N/A",
+      "research_action": "Check Henrico County tithables 1703-1713; check St. Peters Parish records; check New Kent County records; Watson Will (1702) and first land patent (1714) are only known records in this period",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": []
+    },
+    {
+      "person_id": "JNSN-ENG-e1595-01",
+      "question": "Did Richard Johnson own land at Arrowhattocks before William Johnson's 1653 patent?",
+      "question_type": "source_needed",
+      "status": "open",
+      "evidence_for": "Tony states William Johnson was 'on lands that once belonged to Richard Johnson'",
+      "evidence_against": "No patent or deed found showing Richard Johnson as landowner; 1639 Tobacco Viewer record shows status but not land ownership",
+      "research_action": "Search Cavaliers and Pioneers for any Richard Johnson patent pre-1653; check Henrico deed books",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["JNSN-ENG-e1620-01"]
+    },
+    {
+      "person_id": "JNSN-ENG-e1595-01",
+      "question": "Was William Farrar the transporter of Richard Johnson in 1621?",
+      "question_type": "verification",
+      "status": "open",
+      "evidence_for": "Tony states 'Farrar brought Richard Johnson in 1621 to Colonial Va'; 1624 muster places them together at Jordan's Journey",
+      "evidence_against": "Specific transportation record not cited",
+      "research_action": "Check Ferrar/Farrar headright claims; examine ship manifests for 1621; verify in Hotten's Original Lists",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["FRRR-ENG-e1590-01"]
+    },
+    {
+      "person_id": "JNSN-ENG-e1620-01",
+      "question": "Are the 1653 William Johnson (patentee) and 1685 Will Johnson (witness) the same person?",
+      "question_type": "identity",
+      "status": "open",
+      "evidence_for": "Same general area; 32-year span is plausible for one lifetime",
+      "evidence_against": "Could be father/son or unrelated; no explicit connection documented",
+      "research_action": "Look for death record for William Johnson of 1653; check for William Johnson Jr. or son named William",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": []
+    },
+    {
+      "person_id": "BRTN-VA-e1660-01",
+      "question": "Was William Burton the son of Robert Burton Sr.?",
+      "question_type": "relationship",
+      "status": "open",
+      "evidence_for": "Tony states 'William Burton is son of Robert Burton of Arrowhattocks and Lily Valley'; 1717 patent shows 'William Burton's line' adjacent to Robert Burton's grant",
+      "evidence_against": "No will or deed explicitly naming relationship found",
+      "research_action": "Find Robert Burton Sr.'s will; check Henrico court records for Burton family documentation",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["BRTN-HEN-e1685-01"]
+    },
+    {
+      "person_id": "BRTN-VA-e1640-01",
+      "question": "What is the relationship between John Burton (1665 Longfield patent) and Robert Burton Sr. (1699 patent)?",
+      "question_type": "relationship",
+      "status": "open",
+      "evidence_for": "Same surname; same area (Longfield/Cornelius Creek); overlapping time period",
+      "evidence_against": "No document states relationship; could be brothers, father/son, cousins, or unrelated",
+      "research_action": "Research Burton family genealogy; find wills or deeds showing family connections",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["BRTN-VA-e1660-01"]
+    },
+    {
+      "person_id": "JNSN-UNK-e1673-01",
+      "question": "Are Edward Johnson, Luke Johnson, and John Johnson of Strawberry Banks related to Michael Johnson?",
+      "question_type": "relationship",
+      "status": "open",
+      "evidence_for": "Same general area and time period; Tony mentions them in same document",
+      "evidence_against": "Different specific location (Strawberry Banks vs. Tuckahoe Creek); no documented connection",
+      "research_action": "Track these Johnsons separately; look for any documents connecting them to Michael Johnson's family",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": []
+    },
+    {
+      "person_id": "JNSN-VA-e1720-01",
+      "question": "Is Charles Johnson (1756 tithables) a descendant of Michael Johnson?",
+      "question_type": "relationship",
+      "status": "open",
+      "evidence_for": "Same county (Henrico); timing consistent with grandson generation (born c.1720 if Michael's grandson)",
+      "evidence_against": "Common name; no documented connection",
+      "research_action": "Trace John Johnson and James Johnson descendants to see if any named Charles; check Henrico records 1740-1760",
+      "source_file": "Va-1607-Arrowhattocks.pdf",
+      "related_people": ["JNSN-UNK-e1673-01"]
+    }
+  ]
+}

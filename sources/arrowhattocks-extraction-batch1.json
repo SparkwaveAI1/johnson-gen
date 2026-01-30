@@ -1,0 +1,676 @@
+{
+  "extraction_metadata": {
+    "source_file": "Va-1607-Arrowhattocks.pdf",
+    "extraction_date": "2026-01-16",
+    "extractor": "Claude",
+    "batch": 1,
+    "focus": "Michael Johnson (d. 1718) and immediate family - primary source records",
+    "notes": "This extraction focuses on records with actual citations. Tony's research notes and theories are captured separately."
+  },
+  
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-001",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 10",
+      "page": "217",
+      "abbreviation": "Patent Bk 10:217",
+      "full_citation": "Virginia Land Office Patents, Book 10:217, Thomas Mims patent, 25 December 1714.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file (Va-1607-Arrowhattocks); vagenweb.org/lunenburg/f0johnso.htm"
+    },
+    {
+      "temp_id": "SRC-002",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 10",
+      "page": "345",
+      "abbreviation": "Patent Bk 10:345",
+      "full_citation": "Virginia Land Office Patents, Book 10:345, Michael Johnson patent, 22 January 1717.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file (Va-1607-Arrowhattocks); vagenweb.org/lunenburg/f0johnso.htm"
+    },
+    {
+      "temp_id": "SRC-003",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 10",
+      "page": "380",
+      "abbreviation": "Patent Bk 10:380",
+      "full_citation": "Virginia Land Office Patents, Book 10:380, John Johnson patent, 12 July 1718.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file (Va-1607-Arrowhattocks); vagenweb.org/lunenburg/f0johnso.htm"
+    },
+    {
+      "temp_id": "SRC-004",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 10",
+      "page": "380",
+      "abbreviation": "Patent Bk 10:380",
+      "full_citation": "Virginia Land Office Patents, Book 10:380, James Johnson patent, 12 July 1718.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file (Va-1607-Arrowhattocks); vagenweb.org/lunenburg/f0johnso.htm",
+      "notes": "Same page as John Johnson patent - may be recorded together"
+    },
+    {
+      "temp_id": "SRC-005",
+      "source_type": "primary",
+      "repository": "Henrico County Courthouse (or Library of Virginia)",
+      "collection": "Henrico County Court Records",
+      "record_date": "1719-10-05",
+      "abbreviation": "Henrico Ct 1719",
+      "full_citation": "Henrico County, Virginia, Court Records, 5 October 1719, Inventory of Michael Johnson estate.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file (Va-1607-Arrowhattocks); vagenweb.org/lunenburg/f0johnso.htm"
+    },
+    {
+      "temp_id": "SRC-006",
+      "source_type": "primary",
+      "repository": "Henrico County Courthouse (or Library of Virginia)",
+      "collection": "Henrico County Wills",
+      "record_date": "1702-07-30",
+      "abbreviation": "Watson Will 1702",
+      "full_citation": "Henrico County, Virginia, Will of John Watson, dated 30 July 1702, recorded 1 February 1706.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file (Va-1607-Arrowhattocks)"
+    },
+    {
+      "temp_id": "SRC-007",
+      "source_type": "primary",
+      "repository": "Unknown - need to locate",
+      "collection": "St. Peters Parish Records",
+      "record_date": "1702-02-27",
+      "abbreviation": "St Peters Parish 1702",
+      "full_citation": "St. Peters Parish, New Kent County, Virginia, Vestry Book, 27 February 1702/3, Tithables report.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file (Va-1607-Arrowhattocks)",
+      "notes": "Records Peter Massey reporting Michael Johnson moved to Edloe Plantation tithes"
+    },
+    {
+      "temp_id": "SRC-008",
+      "source_type": "primary",
+      "repository": "Unknown - need to locate",
+      "collection": "Henrico County Deeds",
+      "record_date": "1685",
+      "abbreviation": "Henrico Deed 1685",
+      "full_citation": "Henrico County, Virginia, Deed [specific book/page unknown], Edward Hatcher to Robert Burton, 1685.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file (Va-1607-Arrowhattocks)",
+      "notes": "Tony notes: 'Lost the Original document on this I need the proof on this deed.' - NEEDS VERIFICATION"
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-001",
+      "document_type": "land_patent",
+      "date": "1714-12-25",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-001",
+      "title": "Thomas Mims Patent - 500 acres Tuckahoe Creek",
+      "acres": 500,
+      "location_description": "on the south side of the main branch of the Tuckahoe Creek",
+      "transcription_excerpt": "Thomas Mims.....500a.. (N L)...Henrico Co; on the south side of the main branch of the Tuccahoe (Cr); adj. Wm Burton; Benja Woodson; Michael Johnson...Pat bk 10, page 217, paid 50 S.",
+      "people": [
+        {
+          "name_as_written": "Thomas Mims",
+          "role": "patentee",
+          "likely_match": "MIMS-UNK-e1680-01",
+          "match_confidence": "likely",
+          "reasoning": "Only Thomas Mims documented at Tuckahoe Creek"
+        },
+        {
+          "name_as_written": "Wm Burton",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Need to determine which William Burton - possibly son of Robert Burton",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Benja Woodson",
+          "role": "adjacent_landowner",
+          "likely_match": "WDSN-HEN-b1666-01",
+          "match_confidence": "likely",
+          "reasoning": "Benjamin Woodson (1666-1723) documented as Quaker at Tuckahoe Creek area"
+        },
+        {
+          "name_as_written": "Michael Johnson",
+          "role": "adjacent_landowner",
+          "likely_match": "JNSN-UNK-e1673-01",
+          "match_confidence": "confirmed",
+          "reasoning": "Only Michael Johnson documented at Tuckahoe Creek; White Oak DNA anchor"
+        }
+      ]
+    },
+    {
+      "temp_id": "DOC-002",
+      "document_type": "land_patent",
+      "date": "1717-01-22",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-002",
+      "title": "Michael Johnson Patent - 500 acres Tuckahoe Creek",
+      "acres": 500,
+      "location_description": "on the S. side of the main br. of the Tuckahoe Cr",
+      "transcription_excerpt": "Michael Johnson records a land patent of 500a (N L) Henrico Co; on the S. side of the main br. of the Tuckahoe Cr; adj. Benja. Harrison's survey; John Woodson's Mill Cr; and Thomas Mim's land. Paid 50 shill. Book 10 pg 345.",
+      "people": [
+        {
+          "name_as_written": "Michael Johnson",
+          "role": "patentee",
+          "likely_match": "JNSN-UNK-e1673-01",
+          "match_confidence": "confirmed",
+          "reasoning": "White Oak DNA anchor; only Michael Johnson at Tuckahoe Creek"
+        },
+        {
+          "name_as_written": "Benja. Harrison",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Benjamin Harrison - need to identify which one; Harrison survey referenced",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "John Woodson",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "John Woodson's Mill Creek referenced - Tony notes 'This is John Woodson of Arrowhattocks'",
+          "new_person_flag": true,
+          "research_note": "Need to determine which John Woodson - multiple in area"
+        },
+        {
+          "name_as_written": "Thomas Mims",
+          "role": "adjacent_landowner",
+          "likely_match": "MIMS-UNK-e1680-01",
+          "match_confidence": "likely",
+          "reasoning": "Same Thomas Mims from 1714 patent"
+        }
+      ],
+      "notes": "Tony notes: 'This area is now in Goochland County'"
+    },
+    {
+      "temp_id": "DOC-003",
+      "document_type": "land_patent",
+      "date": "1718-07-12",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-003",
+      "title": "John Johnson Patent - 400 acres Tuckahoe Creek",
+      "acres": 400,
+      "location_description": "on the N. side of James Riv. adj. Cha. Eavens; on the N. side and near head of Tuckahoe Cr; his own, James Johnson; and Michael Johnson",
+      "transcription_excerpt": "John Johnson(2)...400a (N L) Henrico Co; on the N. side of James Riv. adj. Cha. Eavens; on the N. side and near head of Tuckahoe Cr; his own, James Johnson; and Michael Johnson. Paid 40 shill. Book 10 pg 380.",
+      "people": [
+        {
+          "name_as_written": "John Johnson",
+          "role": "patentee",
+          "likely_match": "JNSN-HEN-e1695-02",
+          "match_confidence": "likely",
+          "reasoning": "Adjacent to Michael Johnson and James Johnson at Tuckahoe Creek; Tony notes 'John Johnson and James Johnson are sons of Michael Johnson and Sarah Watson' - but document does not explicitly state this relationship"
+        },
+        {
+          "name_as_written": "Cha. Eavens",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Charles Evans - Tony notes 'Charles Evans is of Arrowhattocks'",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "James Johnson",
+          "role": "adjacent_landowner",
+          "likely_match": "JNSN-HEN-e1695-01",
+          "match_confidence": "likely",
+          "reasoning": "Adjacent to John Johnson and Michael Johnson; likely brother per Tony's research"
+        },
+        {
+          "name_as_written": "Michael Johnson",
+          "role": "adjacent_landowner",
+          "likely_match": "JNSN-UNK-e1673-01",
+          "match_confidence": "confirmed",
+          "reasoning": "White Oak DNA anchor; died 1718"
+        }
+      ],
+      "notes": "The '(2)' notation in Tony's file may indicate second John Johnson entry or distinguish from another John Johnson"
+    },
+    {
+      "temp_id": "DOC-004",
+      "document_type": "land_patent",
+      "date": "1718-07-12",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-004",
+      "title": "James Johnson Patent - 400 acres Tuckahoe Creek",
+      "acres": 400,
+      "location_description": "on the N. side of James Riv. adj. Cha. Eavens; John Johnson; Joseph Woodson; and Benja. Woodson",
+      "transcription_excerpt": "James Johnson(3)....400a (N L) Henrico Co., on the N. side of James Riv. adj. Cha. Eavens; John Johnson; Joseph Woodson; and Benja. Woodson. Paid 40 shill. book 10 pg 380.",
+      "people": [
+        {
+          "name_as_written": "James Johnson",
+          "role": "patentee",
+          "likely_match": "JNSN-HEN-e1695-01",
+          "match_confidence": "likely",
+          "reasoning": "Adjacent to John Johnson and Woodsons at Tuckahoe Creek; likely son of Michael per Tony's research"
+        },
+        {
+          "name_as_written": "Cha. Eavens",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Charles Evans of Arrowhattocks",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "John Johnson",
+          "role": "adjacent_landowner",
+          "likely_match": "JNSN-HEN-e1695-02",
+          "match_confidence": "likely",
+          "reasoning": "Same John Johnson from DOC-003"
+        },
+        {
+          "name_as_written": "Joseph Woodson",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Joseph Woodson - need to identify",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Benja. Woodson",
+          "role": "adjacent_landowner",
+          "likely_match": "WDSN-HEN-b1666-01",
+          "match_confidence": "likely",
+          "reasoning": "Benjamin Woodson documented at Tuckahoe Creek"
+        }
+      ]
+    },
+    {
+      "temp_id": "DOC-005",
+      "document_type": "estate_inventory",
+      "date": "1719-08-22",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-005",
+      "title": "Inventory of Estate of Michael Johnson",
+      "transcription_excerpt": "Michael Johnson...Inventory..of Estate.. Recorded in a court held for Henrico County the fifth day of October 1719, John and James Johnson presented this Inventory upon oath which was thereupon written to record...Test..Henry Wood, Dep",
+      "people": [
+        {
+          "name_as_written": "Michael Johnson",
+          "role": "decedent",
+          "likely_match": "JNSN-UNK-e1673-01",
+          "match_confidence": "confirmed",
+          "reasoning": "White Oak DNA anchor; this confirms death by August 1719"
+        },
+        {
+          "name_as_written": "John Johnson",
+          "role": "estate_presenter",
+          "likely_match": "JNSN-HEN-e1695-02",
+          "match_confidence": "likely",
+          "reasoning": "Presented inventory with James Johnson; consistent with being sons"
+        },
+        {
+          "name_as_written": "James Johnson",
+          "role": "estate_presenter",
+          "likely_match": "JNSN-HEN-e1695-01",
+          "match_confidence": "likely",
+          "reasoning": "Presented inventory with John Johnson; consistent with being sons"
+        },
+        {
+          "name_as_written": "Henry Wood",
+          "role": "court_official",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Deputy clerk; Tony notes involvement with Robert Burlington of Arrowhattocks",
+          "new_person_flag": true
+        }
+      ],
+      "notes": "This document is critical - it confirms Michael Johnson's death and that John and James Johnson presented the inventory (strongly suggesting they were his heirs/sons)"
+    },
+    {
+      "temp_id": "DOC-006",
+      "document_type": "will",
+      "date": "1702-07-30",
+      "date_recorded": "1706-02-01",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-006",
+      "title": "Will of John Watson",
+      "transcription_excerpt": "Dated 30 Jul 1702. Rec. 1 Feb 1706. Henrico Co VA. Will of John Watson names wife Alice. Sons John, Joseph, and Benjamin. Daughter Sarah, wife of Michael Johnson (who received 1 shilling). Wife Alice to receive Cowtale Quarter. After her death, her share to son John. The whole being 478 acres by patent. John to receive 1/2 the above plantation and 100 acres, part of tract of 195 acres on the east side of the north branch of Upham Brook, part of tract taken up by James More. Son Joseph, 400 acres on Chickahominy Swamp, part of greater tract bought of Thomas Cocke, Sr. and 200 acres S side the Swamp, part of 480 acres patented 21 Apr 1690, to adjoin the land he lives on. To son Benjamin, the plantation, one half of 478 acres, after death of my wife, 50 acres S side Chickahominy Swamp at Upham Brook, 95 acres east side north branch of Upham Brook, part of 195 acres, and 280 acres S side Chickahominy Swamp part of 480 acres. to daughter Sarah, wife of Michael Johnson, 1 shilling.",
+      "people": [
+        {
+          "name_as_written": "John Watson",
+          "role": "testator",
+          "likely_match": "WTSN-UNK-e1650-01",
+          "match_confidence": "likely",
+          "reasoning": "Father of Sarah Watson, wife of Michael Johnson"
+        },
+        {
+          "name_as_written": "Alice",
+          "role": "wife_of_testator",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Wife of John Watson; maiden name unknown",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "John [Watson]",
+          "role": "son_heir",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Son of John Watson; received half of 478 acre plantation",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Joseph [Watson]",
+          "role": "son_heir",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Son of John Watson; received 400 acres on Chickahominy Swamp",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Benjamin [Watson]",
+          "role": "son_heir",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Son of John Watson; received plantation after wife's death",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Sarah, wife of Michael Johnson",
+          "role": "daughter_heir",
+          "likely_match": "WTSN-UNK-e1675-01",
+          "match_confidence": "confirmed",
+          "reasoning": "CONFIRMED: Will explicitly states 'daughter Sarah, wife of Michael Johnson' - this is primary source evidence"
+        },
+        {
+          "name_as_written": "Michael Johnson",
+          "role": "son_in_law",
+          "likely_match": "JNSN-UNK-e1673-01",
+          "match_confidence": "confirmed",
+          "reasoning": "CONFIRMED: Will explicitly names him as husband of Sarah Watson"
+        }
+      ],
+      "notes": "CRITICAL DOCUMENT: This will provides CONFIRMED evidence that Sarah Watson was the daughter of John Watson and wife of Michael Johnson. The 1 shilling bequest is notably small - may indicate she had already received her portion, or family tension."
+    },
+    {
+      "temp_id": "DOC-007",
+      "document_type": "parish_record",
+      "date": "1702-02-27",
+      "county": "New Kent",
+      "state": "Virginia",
+      "source_temp_id": "SRC-007",
+      "title": "St. Peters Parish Vestry Book - Tithables Report",
+      "transcription_excerpt": "27 February 1702/3, O. S., p. 55 [renumbered p. 57; Chamberlayne, p. 89] Peter masse upon his motion to this vestrey is ordered to his tithables the tithables on Mr Edloes plantation John Jones and Michaell Johnson",
+      "people": [
+        {
+          "name_as_written": "Peter Masse",
+          "role": "reporter",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Peter Massey - reported the tithables",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "John Jones",
+          "role": "tithable",
+          "likely_match": "JNES-UNK-e1670-01",
+          "match_confidence": "likely",
+          "reasoning": "Listed with Michael Johnson on Edloe Plantation tithes; Tony identifies as brother-in-law"
+        },
+        {
+          "name_as_written": "Michaell Johnson",
+          "role": "tithable",
+          "likely_match": "JNSN-UNK-e1673-01",
+          "match_confidence": "confirmed",
+          "reasoning": "White Oak DNA anchor; this places him at Edloe Plantation in 1702"
+        }
+      ],
+      "notes": "Tony interprets this as showing Michael Johnson and John Jones moved from St. Peters Parish lands to Edloe Plantation area in 1702. The brother-in-law relationship to John Jones is stated by Tony but NOT confirmed by this document."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1": "JNSN-UNK-e1673-01",
+      "person_1_name": "Michael Johnson",
+      "person_2": "WTSN-UNK-e1675-01",
+      "person_2_name": "Sarah Watson",
+      "relationship_type": "spouse",
+      "confidence": "confirmed",
+      "evidence_summary": "Watson Will (1702) explicitly names 'daughter Sarah, wife of Michael Johnson'",
+      "source_temp_id": "SRC-006"
+    },
+    {
+      "person_1": "WTSN-UNK-e1675-01",
+      "person_1_name": "Sarah Watson",
+      "person_2": "WTSN-UNK-e1650-01",
+      "person_2_name": "John Watson",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Watson Will (1702) names Sarah as his daughter",
+      "source_temp_id": "SRC-006"
+    },
+    {
+      "person_1": "JNSN-HEN-e1695-01",
+      "person_1_name": "James Johnson",
+      "person_2": "JNSN-UNK-e1673-01",
+      "person_2_name": "Michael Johnson",
+      "relationship_type": "father",
+      "confidence": "likely",
+      "evidence_summary": "1718 patent shows James Johnson adjacent to Michael Johnson; 1719 estate inventory shows John and James Johnson presenting Michael Johnson's estate inventory together - strongly suggests they were his sons, but no document explicitly states 'son of Michael Johnson'",
+      "source_temp_ids": ["SRC-003", "SRC-004", "SRC-005"]
+    },
+    {
+      "person_1": "JNSN-HEN-e1695-02",
+      "person_1_name": "John Johnson",
+      "person_2": "JNSN-UNK-e1673-01",
+      "person_2_name": "Michael Johnson",
+      "relationship_type": "father",
+      "confidence": "likely",
+      "evidence_summary": "1718 patent shows John Johnson adjacent to Michael Johnson; 1719 estate inventory shows John and James Johnson presenting Michael Johnson's estate inventory together - strongly suggests they were his sons, but no document explicitly states 'son of Michael Johnson'",
+      "source_temp_ids": ["SRC-003", "SRC-005"]
+    },
+    {
+      "person_1": "JNSN-HEN-e1695-01",
+      "person_1_name": "James Johnson",
+      "person_2": "JNSN-HEN-e1695-02",
+      "person_2_name": "John Johnson",
+      "relationship_type": "sibling",
+      "confidence": "likely",
+      "evidence_summary": "Both presented Michael Johnson's estate inventory in 1719; adjacent landowners in 1718 patents; if both are sons of Michael, they are siblings",
+      "source_temp_ids": ["SRC-003", "SRC-004", "SRC-005"]
+    }
+  ],
+
+  "associations_to_add": [
+    {
+      "person_1": "JNSN-UNK-e1673-01",
+      "person_1_name": "Michael Johnson",
+      "person_2": "JNES-UNK-e1670-01",
+      "person_2_name": "John Jones",
+      "association_type": "co_tithable",
+      "date": "1702",
+      "confidence": "confirmed",
+      "evidence_summary": "St. Peters Parish vestry book lists both on Edloe Plantation tithes, February 1702/3",
+      "source_temp_id": "SRC-007",
+      "notes": "Tony states John Jones was Michael Johnson's brother-in-law, but this document does not confirm that relationship"
+    },
+    {
+      "person_1": "JNSN-UNK-e1673-01",
+      "person_1_name": "Michael Johnson",
+      "person_2": "WDSN-HEN-b1666-01",
+      "person_2_name": "Benjamin Woodson",
+      "association_type": "adjacent_landowner",
+      "date": "1714-12-25",
+      "confidence": "confirmed",
+      "evidence_summary": "Thomas Mims patent (1714) lists both as adjacent landowners",
+      "source_temp_id": "SRC-001"
+    },
+    {
+      "person_1": "JNSN-UNK-e1673-01",
+      "person_1_name": "Michael Johnson",
+      "person_2": "MIMS-UNK-e1680-01",
+      "person_2_name": "Thomas Mims",
+      "association_type": "adjacent_landowner",
+      "date": "1717-01-22",
+      "confidence": "confirmed",
+      "evidence_summary": "Michael Johnson patent (1717) lists Thomas Mims as adjacent",
+      "source_temp_id": "SRC-002"
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "WTSN-UNK-e1670-01",
+      "surname": "Watson",
+      "given_name": "Alice",
+      "designation": "wife of John Watson",
+      "death_year_estimate": "after 1702",
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named as wife in John Watson will (1702)",
+      "source_temp_id": "SRC-006"
+    },
+    {
+      "suggested_id": "WTSN-HEN-e1680-01",
+      "surname": "Watson",
+      "given_name": "John",
+      "designation": "son of John Watson Sr.",
+      "location": "Henrico County, Chickahominy area",
+      "confidence": "confirmed",
+      "evidence": "Named as son in John Watson will (1702); received half of 478 acre plantation",
+      "source_temp_id": "SRC-006"
+    },
+    {
+      "suggested_id": "WTSN-HEN-e1680-02",
+      "surname": "Watson",
+      "given_name": "Joseph",
+      "designation": "son of John Watson Sr.",
+      "location": "Henrico County, Chickahominy Swamp",
+      "confidence": "confirmed",
+      "evidence": "Named as son in John Watson will (1702); received 400 acres on Chickahominy Swamp",
+      "source_temp_id": "SRC-006"
+    },
+    {
+      "suggested_id": "WTSN-HEN-e1680-03",
+      "surname": "Watson",
+      "given_name": "Benjamin",
+      "designation": "son of John Watson Sr.",
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named as son in John Watson will (1702); received plantation after wife's death",
+      "source_temp_id": "SRC-006"
+    },
+    {
+      "suggested_id": "BRTN-HEN-e1685-01",
+      "surname": "Burton",
+      "given_name": "William",
+      "designation": "of Tuckahoe Creek",
+      "location": "Henrico County, Tuckahoe Creek",
+      "confidence": "confirmed",
+      "evidence": "Named as adjacent landowner in Thomas Mims patent (1714)",
+      "source_temp_id": "SRC-001",
+      "notes": "Tony notes: 'William Burton is son of Robert Burton of Arrowhattocks and Lily Valley' - needs verification"
+    },
+    {
+      "suggested_id": "EVNS-HEN-e1680-01",
+      "surname": "Evans",
+      "given_name": "Charles",
+      "designation": "of Arrowhattocks",
+      "location": "Henrico County, Arrowhattocks/Tuckahoe Creek",
+      "confidence": "confirmed",
+      "evidence": "Named as adjacent landowner in John Johnson and James Johnson patents (1718)",
+      "source_temp_ids": ["SRC-003", "SRC-004"],
+      "notes": "Tony notes: 'Charles Evans Welsh Indian of Arrowhattocks witness Will of John Watson'"
+    },
+    {
+      "suggested_id": "WDSN-HEN-e1690-01",
+      "surname": "Woodson",
+      "given_name": "Joseph",
+      "location": "Henrico County, Tuckahoe Creek",
+      "confidence": "confirmed",
+      "evidence": "Named as adjacent landowner in James Johnson patent (1718)",
+      "source_temp_id": "SRC-004"
+    },
+    {
+      "suggested_id": "MSSY-UNK-e1670-01",
+      "surname": "Massey",
+      "given_name": "Peter",
+      "location": "New Kent/Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named in St. Peters Parish vestry book as reporter of tithables (1702)",
+      "source_temp_id": "SRC-007"
+    }
+  ],
+
+  "research_notes_not_evidence": [
+    {
+      "note": "Tony states John Jones was Michael Johnson's brother-in-law, but no document has been found confirming this relationship. The 1702 parish record places them together but does not state the relationship.",
+      "related_people": ["JNSN-UNK-e1673-01", "JNES-UNK-e1670-01"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "unverified",
+      "research_needed": "Find document stating relationship between John Jones and Michael Johnson or Sarah Watson"
+    },
+    {
+      "note": "Tony states that John Johnson and James Johnson are sons of Michael Johnson and Sarah Watson. The 1718 patents show them as adjacent landowners to Michael Johnson, and the 1719 estate inventory shows them presenting Michael's estate. This strongly suggests parent-child relationship but no document explicitly states 'son of Michael Johnson'.",
+      "related_people": ["JNSN-UNK-e1673-01", "JNSN-HEN-e1695-01", "JNSN-HEN-e1695-02"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "likely_but_unconfirmed",
+      "research_needed": "Find Michael Johnson's will or deed explicitly naming John and James as sons"
+    },
+    {
+      "note": "Tony references a 1685 deed: 'Edward Hatcher of Varina Parish lands sold to Robert Burton adjoining Jonathan Woodson, Michael Johnson and John Johnson on North side of James River in 1685'. Tony notes: 'Lost the Original document on this I need the proof on this deed.'",
+      "related_people": ["JNSN-UNK-e1673-01"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "unverified",
+      "research_needed": "Locate the original 1685 deed in Henrico County records to verify Michael Johnson's presence that early"
+    },
+    {
+      "note": "Tony states Michael Johnson was 'living by Beaverdam Swamp' in 1698 before moving to Edloe Plantation in 1702. No citation provided for the 1698 location.",
+      "related_people": ["JNSN-UNK-e1673-01"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "unverified",
+      "research_needed": "Find source for 1698 location"
+    },
+    {
+      "note": "The 1 shilling bequest to Sarah Watson in John Watson's will is notably small compared to her brothers. Tony does not explain this. Possible interpretations: she already received her portion; family estrangement; standard practice for married daughters; or the family was not wealthy.",
+      "related_people": ["WTSN-UNK-e1675-01", "WTSN-UNK-e1650-01"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "observation",
+      "research_needed": "Compare with other contemporary wills for context on bequests to married daughters"
+    }
+  ],
+
+  "possible_claims_for_review": [
+    {
+      "claim": "William Burton (adjacent to Michael Johnson 1714) is the son of Robert Burton of Arrowhattocks",
+      "basis": "Tony's research note in file",
+      "evidence_strength": "possible",
+      "recommendation": "Add to research questions - need to find Burton genealogy documentation"
+    },
+    {
+      "claim": "Charles Evans was a 'Welsh Indian' of Arrowhattocks",
+      "basis": "Tony's research note in file",
+      "evidence_strength": "possible",
+      "recommendation": "Interesting if true - 'Welsh Indian' could mean Melungeon or mixed heritage; needs verification"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 7,
+    "sources_identified": 8,
+    "confirmed_relationships": 2,
+    "likely_relationships": 3,
+    "new_people_identified": 8,
+    "research_notes_captured": 5,
+    "key_finding": "Watson Will (1702) provides CONFIRMED evidence that Sarah Watson was daughter of John Watson and wife of Michael Johnson. Estate inventory (1719) strongly suggests but does not confirm John and James Johnson were sons of Michael."
+  }
+}

@@ -1,0 +1,636 @@
+{
+  "extraction_metadata": {
+    "source_file": "Va-1607-Arrowhattocks.pdf",
+    "extraction_date": "2026-01-16",
+    "batch": 3,
+    "focus": "Richard Johnson (earliest, 1621-1639), Woodson family, bridging records connecting to Michael Johnson",
+    "notes": "This batch traces the earliest Johnson presence and the key allied family (Woodson) that connects to Michael Johnson's Tuckahoe Creek neighbors."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-201",
+      "source_type": "derivative",
+      "author": "Greer, George Cabell",
+      "title": "Early Virginia Immigrants 1623-1666",
+      "publication_year": 1912,
+      "abbreviation": "Greer EVI",
+      "full_citation": "George Cabell Greer, Early Virginia Immigrants 1623-1666 (Richmond, 1912).",
+      "original_examined": false,
+      "notes": "Standard reference for transported persons and headrights"
+    },
+    {
+      "temp_id": "SRC-202",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Virginia Acts of Assembly",
+      "record_date": "1639",
+      "abbreviation": "Acts of Assembly 1639",
+      "full_citation": "Virginia Acts of Assembly, 1639, Viewers of Tobacco appointments.",
+      "original_examined": false,
+      "cited_in": "Google Books digitized copy; Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-203",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Virginia Colonial Records - Muster 1624/25",
+      "record_date": "1624",
+      "abbreviation": "Muster 1624/25",
+      "full_citation": "Virginia Muster of 1624/25, Jordan's Journey listing.",
+      "original_examined": false,
+      "cited_in": "Hotten's Original Lists; Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-204",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Henrico County Deeds and Wills",
+      "volume": "1697-1704",
+      "page": "391",
+      "record_date": "1704-05-31",
+      "abbreviation": "Henrico DW 1697-1704:391",
+      "full_citation": "Henrico County, Virginia, Deeds and Wills 1697-1704, p. 391, Agreement of John Woodson and Edward Hatcher Sr., 31 May 1704.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-205",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 8",
+      "page": "unknown",
+      "record_date": "1690-10-23",
+      "abbreviation": "Patent Bk 8 (Woodson 1690)",
+      "full_citation": "Virginia Land Office Patents, Book 8, John Woodson patent, 23 October 1690.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file",
+      "notes": "Referenced in later deed - exact page needed"
+    },
+    {
+      "temp_id": "SRC-206",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Henrico County Deeds and Wills",
+      "volume": "1714-1718",
+      "page": "135",
+      "record_date": "1716-01-07",
+      "abbreviation": "Henrico DW 1714-1718:135",
+      "full_citation": "Henrico County, Virginia, Deeds and Wills 1714-1718, p. 135, Thomas Pleasants to Obadiah Smith, 7 January 1716.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-207",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 10",
+      "page": "296",
+      "record_date": "1716-10-31",
+      "abbreviation": "Patent Bk 10:296",
+      "full_citation": "Virginia Land Office Patents, Book 10:296, John Jones patent, 31 October 1716.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-208",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 10",
+      "page": "284",
+      "record_date": "1715-03-23",
+      "abbreviation": "Patent Bk 10:284",
+      "full_citation": "Virginia Land Office Patents, Book 10:284, John Jones patent, 23 March 1715.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-209",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Henrico County Deeds and Wills",
+      "volume": "1677-1705",
+      "page": "363",
+      "record_date": "1685-01-04",
+      "abbreviation": "Henrico DW 1677-1705:363",
+      "full_citation": "Henrico County, Virginia, Deeds and Wills 1677-1705, p. 363, Edward Hatcher to John Field, 4 January 1685, recorded 1 April 1686.",
+      "original_examined": false,
+      "cited_in": "Weisiger abstract; Tony L. Johnson research file"
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-201",
+      "document_type": "muster_record",
+      "date": "1624",
+      "county": "Henrico/Charles City",
+      "state": "Virginia",
+      "source_temp_id": "SRC-203",
+      "title": "Virginia Muster 1624/25 - Jordan's Journey",
+      "transcription_excerpt": "Tony notes: 'Mary Jordan is found in 1624 at Jordans Journey with her mother and Richard Johnson' and 'in 1623-24 Nicholas Bullington Wm Farrar Richard Johnson, two of Samuel Jordans daughter at Jordans Plantation'",
+      "people": [
+        {
+          "name_as_written": "Richard Johnson",
+          "role": "listed_resident",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "EARLIEST Johnson documented in this area. Listed at Jordan's Journey 1624. Tony identifies as servant/associate of William Farrar.",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Mary Jordan",
+          "role": "listed_resident",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Daughter of Samuel Jordan; age 2 in 1624; later married Arthur Bayley"
+        },
+        {
+          "name_as_written": "Samuel Jordan",
+          "role": "plantation_owner",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "William Farrar",
+          "role": "listed_resident",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Tony notes he brought Richard Johnson to Virginia in 1621"
+        }
+      ],
+      "notes": "CRITICAL: This is the earliest documented Johnson in the Arrowhattocks/Henrico area. Tony's research notes connect Richard Johnson to William Farrar (who brought him in 1621) and places him at Jordan's Plantation with Samuel Jordan's family."
+    },
+    {
+      "temp_id": "DOC-202",
+      "document_type": "legislative_record",
+      "date": "1639",
+      "county": "Henrico/Charles City",
+      "state": "Virginia",
+      "source_temp_id": "SRC-202",
+      "title": "Acts of Assembly 1639 - Tobacco Viewers Appointment",
+      "transcription_excerpt": "1639 Acts of Assembly Viewers of Tobacco For the North side of the Appomattox, Mr. William Hatcher, Richard Shippay, Richard Johnson",
+      "people": [
+        {
+          "name_as_written": "Richard Johnson",
+          "role": "tobacco_viewer",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Same Richard Johnson from 1624? Appointed as official tobacco viewer - indicates established planter status.",
+          "new_person_flag": false,
+          "notes": "Likely same as DOC-201"
+        },
+        {
+          "name_as_written": "Mr. William Hatcher",
+          "role": "tobacco_viewer",
+          "likely_match": "HTCR-ENG-b1613-01",
+          "match_confidence": "likely",
+          "reasoning": "William Hatcher (b. 1613) - same as father of Edward Hatcher"
+        },
+        {
+          "name_as_written": "Richard Shippay",
+          "role": "tobacco_viewer",
+          "likely_match": null,
+          "new_person_flag": false
+        }
+      ],
+      "notes": "IMPORTANT: Richard Johnson and William Hatcher serving together as tobacco viewers in 1639. This connects the earliest Johnson to the Hatcher family 16 years before the 1655/1656 court record."
+    },
+    {
+      "temp_id": "DOC-203",
+      "document_type": "deed",
+      "date": "1685-01-04",
+      "date_recorded": "1686-04-01",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-209",
+      "title": "Edward Hatcher to John Field - 300 acres Varina Parish",
+      "acres": 300,
+      "location_description": "in Varina Parish on north side of James River, next to land sold by said Hatcher to Robert Burton",
+      "transcription_excerpt": "4 Jan. 1685 Edward Hatcher of Varina Parish, planter, to John Field of same, carpenter, for 1060 lbs tobacco, 300 acres in same parish on north side of James River, next to land sold by said Hatcher to Robert Burton, being part of a grant to said Hatcher 6 Oct. 1675. Wit: Jno. Woodson, Will Johnson. Signed: Edward Hatcher (EH). Recorded 1 April 1686. Mary, wife of Edward, relinquished her dower right.",
+      "people": [
+        {
+          "name_as_written": "Edward Hatcher",
+          "role": "grantor",
+          "likely_match": "HTCR-VA-e1640-01",
+          "match_confidence": "confirmed"
+        },
+        {
+          "name_as_written": "John Field",
+          "role": "grantee",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Robert Burton",
+          "role": "adjacent_landowner",
+          "likely_match": "BRTN-VA-e1660-01",
+          "match_confidence": "likely",
+          "reasoning": "Same Robert Burton from Batch 2"
+        },
+        {
+          "name_as_written": "Jno. Woodson",
+          "role": "witness",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "John Woodson - need to determine which one"
+        },
+        {
+          "name_as_written": "Will Johnson",
+          "role": "witness",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "William Johnson witnessing Hatcher/Burton area deed in 1685. Could be the 1653 patentee or a relative.",
+          "new_person_flag": false,
+          "notes": "Same question as Batch 2 - is this the 1653 William Johnson?"
+        },
+        {
+          "name_as_written": "Mary [Hatcher]",
+          "role": "wife_releasing_dower",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Wife of Edward Hatcher"
+        }
+      ],
+      "notes": "This deed shows the land transaction network: Edward Hatcher (1675 patentee) selling to John Field, adjacent to Robert Burton, witnessed by Woodson and Johnson. The 1675 Hatcher patent is the source of much of this land."
+    },
+    {
+      "temp_id": "DOC-204",
+      "document_type": "deed",
+      "date": "1704-05-31",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-204",
+      "title": "Agreement of John Woodson and Edward Hatcher Sr.",
+      "transcription_excerpt": "31 May 1704 Agreement of Jno Woodson and Edw Hatcher Sr [HWD 1697-1704: 391]. Woodson confirms to Hatcher 150 acres on Cornelius Ck, part of a patent to Robt Burton and sold by him to Wm Hobson. Also Woodson hath given Hatcher L28/15/0 in store goods. For this Hatcher gives Woodson a tract of 50 acres on the S side of James River at Neck of Land, bounded by Wm Hatcher.",
+      "people": [
+        {
+          "name_as_written": "Jno Woodson",
+          "role": "party_to_agreement",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "John Woodson - merchant per this record"
+        },
+        {
+          "name_as_written": "Edw Hatcher Sr",
+          "role": "party_to_agreement",
+          "likely_match": "HTCR-VA-e1640-01",
+          "match_confidence": "likely"
+        },
+        {
+          "name_as_written": "Robt Burton",
+          "role": "original_patentee",
+          "likely_match": "BRTN-VA-e1660-01",
+          "match_confidence": "likely"
+        },
+        {
+          "name_as_written": "Wm Hobson",
+          "role": "intermediate_owner",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Wm Hatcher",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "A William Hatcher still holding land at Neck of Land in 1704 - son of original William Hatcher?"
+        }
+      ],
+      "notes": "Shows the Woodson-Hatcher-Burton land exchange network at Cornelius Creek. This is adjacent to where Michael Johnson patents land by 1717."
+    },
+    {
+      "temp_id": "DOC-205",
+      "document_type": "deed",
+      "date": "1716-01-07",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-206",
+      "title": "Thomas Pleasants to Obadiah Smith - 600 acres",
+      "acres": 600,
+      "location_description": "On Cornelius Creek bounded by land formerly Jas Blair's, Four Mile Creek, Falls of the James River",
+      "transcription_excerpt": "7 Jan.1716 Deed Tho Pleasants son of Jno P dec'd to Obadiah Smith, 600 acres [HWD 1714-1718: 135]. On Cornelius Ck bounded by land formerly Jas Blair's, Four Mile Ck, Falls of the James River. Part of patent to Jno Woodson 23 Oct 1690, bequeathed to Jno Woodson Sr, sold to Edw Curd 2 Oct 1704, by him exchanged with my father Jno Pleasants by deed 1 Nov 1705.",
+      "people": [
+        {
+          "name_as_written": "Tho Pleasants",
+          "role": "grantor",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Thomas Pleasants, son of John Pleasants deceased"
+        },
+        {
+          "name_as_written": "Obadiah Smith",
+          "role": "grantee",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Jno Woodson",
+          "role": "original_patentee",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "John Woodson who patented in 1690"
+        },
+        {
+          "name_as_written": "Jno Woodson Sr",
+          "role": "heir",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Inherited from the 1690 patentee"
+        },
+        {
+          "name_as_written": "Edw Curd",
+          "role": "intermediate_owner",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Jno Pleasants",
+          "role": "intermediate_owner",
+          "likely_match": "PLSN-ENG-e1640-01",
+          "match_confidence": "likely",
+          "notes": "John Pleasants - father of Thomas, acquired from Curd in 1705"
+        }
+      ],
+      "notes": "This traces the chain of title for land at Cornelius Creek from Woodson (1690) through multiple owners. Shows Woodson-Pleasants-Hatcher land network."
+    },
+    {
+      "temp_id": "DOC-206",
+      "document_type": "land_patent",
+      "date": "1715-03-23",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-208",
+      "title": "John Jones Patent - 133 acres south side James River",
+      "acres": 133,
+      "location_description": "on the south side of James River, standing on the river parting Stephen Renno and Capoone",
+      "transcription_excerpt": "1715 march 23 Location: Henrico County John Jones Description: 133 acres on the south side of James River. Begg. &c. standg. on the river parting Stephen Renno and Capoone Source: Land Office Patents No. 10, 1710-1719, p. 284 (Reel 10)",
+      "people": [
+        {
+          "name_as_written": "John Jones",
+          "role": "patentee",
+          "likely_match": "JNES-UNK-e1670-01",
+          "match_confidence": "likely",
+          "reasoning": "Same John Jones who was co-tithable with Michael Johnson in 1702. Tony notes he is 'no longer at Edloe Plantation' by 1716."
+        },
+        {
+          "name_as_written": "Stephen Renno",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "new_person_flag": false
+        }
+      ],
+      "notes": "Tony notes John Jones is 'no longer at Edloe Plantation' - he has moved to south side of James River by 1715/1716. This is the same John Jones who was with Michael Johnson in 1702."
+    },
+    {
+      "temp_id": "DOC-207",
+      "document_type": "land_patent",
+      "date": "1716-10-31",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-207",
+      "title": "John Jones Patent - 53 acres south side James River",
+      "acres": 53,
+      "location_description": "on the south side of James River, standing on the river parting James Bilbaud and said Jones",
+      "transcription_excerpt": "1716 Oct 31: Location: Henrico County John Jones: Description: 53 acres on the south side of James River, begg. &c. standing on the river parting James Bilbaud and sd. Jones Source: Land Office Patents No. 10, 1710-1719, p. 296 (Reel 10)",
+      "people": [
+        {
+          "name_as_written": "John Jones",
+          "role": "patentee",
+          "likely_match": "JNES-UNK-e1670-01",
+          "match_confidence": "likely"
+        },
+        {
+          "name_as_written": "James Bilbaud",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "new_person_flag": false
+        }
+      ],
+      "notes": "Additional John Jones patent - he is accumulating land on south side of James River in 1715-1716, away from the Edloe Plantation/Tuckahoe Creek area where Michael Johnson remained."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1_temp": "Richard Johnson (1621/1624)",
+      "person_2_temp": "William Hatcher (b.1613)",
+      "relationship_type": "associate",
+      "confidence": "confirmed",
+      "evidence_summary": "Both served as Tobacco Viewers in 1639 Acts of Assembly",
+      "source_temp_id": "SRC-202",
+      "notes": "This places the earliest Johnson (Richard) in direct association with the Hatcher patriarch 16 years before the 1655/1656 court record"
+    }
+  ],
+
+  "associations_to_add": [
+    {
+      "person_1_temp": "Richard Johnson (1621/1624)",
+      "person_2_temp": "Samuel Jordan",
+      "association_type": "co_resident",
+      "date": "1624",
+      "confidence": "likely",
+      "evidence_summary": "Both listed at Jordan's Journey in 1624 muster",
+      "source_temp_id": "SRC-203"
+    },
+    {
+      "person_1_temp": "Richard Johnson (1621/1624)",
+      "person_2_temp": "William Farrar",
+      "association_type": "transported_by",
+      "date": "1621",
+      "confidence": "likely",
+      "evidence_summary": "Tony notes: 'Farrar brought Richard Johnson in 1621 to Colonial Va'",
+      "source_temp_id": "SRC-201",
+      "notes": "Based on Tony's research - need to verify original source"
+    },
+    {
+      "person_1_temp": "John Woodson (merchant)",
+      "person_2_temp": "Edward Hatcher Sr.",
+      "association_type": "land_transaction",
+      "date": "1704-05-31",
+      "confidence": "confirmed",
+      "evidence_summary": "Land exchange agreement at Cornelius Creek",
+      "source_temp_id": "SRC-204"
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "JNSN-ENG-e1595-01",
+      "surname": "Johnson",
+      "given_name": "Richard",
+      "birth_year_estimate": 1595,
+      "birth_type": "estimated",
+      "location": "Henrico County, Jordan's Journey / North side Appomattox",
+      "confidence": "confirmed",
+      "evidence": "Listed at Jordan's Journey 1624; Tobacco Viewer 1639",
+      "source_temp_ids": ["SRC-202", "SRC-203"],
+      "notes": "EARLIEST documented Johnson in Henrico/Arrowhattocks area. Tony states he was transported by William Farrar in 1621 and that William Johnson (1653) was 'on lands once owned by Richard Johnson'. Need to verify the land ownership claim."
+    },
+    {
+      "suggested_id": "JRDN-ENG-e1580-01",
+      "surname": "Jordan",
+      "given_name": "Samuel",
+      "birth_year_estimate": 1580,
+      "location": "Jordan's Journey, Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Owner of Jordan's Journey plantation",
+      "notes": "Father of Mary Jordan who married Arthur Bayley"
+    },
+    {
+      "suggested_id": "JRDN-VA-b1622-01",
+      "surname": "Jordan",
+      "given_name": "Mary",
+      "birth_year": 1622,
+      "birth_type": "estimated",
+      "location": "Jordan's Journey, Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Listed at Jordan's Journey 1624 with mother; married Arthur Bayley",
+      "source_temp_id": "SRC-203",
+      "notes": "Daughter of Samuel Jordan; married Arthur Bayley who later sold Arrowhattocks land to William Johnson"
+    },
+    {
+      "suggested_id": "FRRR-ENG-e1590-01",
+      "surname": "Farrar",
+      "given_name": "William",
+      "birth_year_estimate": 1590,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Listed at Jordan's Journey 1624; transported Richard Johnson per Tony's notes",
+      "notes": "Connected to Ferrar/Farrar family prominent in Virginia Company"
+    },
+    {
+      "suggested_id": "WDSN-VA-e1660-01",
+      "surname": "Woodson",
+      "given_name": "John",
+      "designation": "merchant",
+      "birth_year_estimate": 1660,
+      "location": "Henrico County, Cornelius Creek area",
+      "confidence": "confirmed",
+      "evidence": "1704 agreement with Edward Hatcher; witness to 1685 deed",
+      "source_temp_ids": ["SRC-204", "SRC-209"],
+      "notes": "Need to determine relationship to other Woodsons (Dr. John Woodson, John Woodson Sr., etc.)"
+    },
+    {
+      "suggested_id": "WDSN-VA-e1635-01",
+      "surname": "Woodson",
+      "given_name": "John",
+      "designation": "Senior",
+      "birth_year_estimate": 1635,
+      "location": "Henrico County, Curles Plantation / Cornelius Creek",
+      "confidence": "confirmed",
+      "evidence": "Inherited from John Woodson (1690 patentee) per 1716 deed chain",
+      "source_temp_id": "SRC-206",
+      "notes": "Part of the Woodson family descended from Dr. John Woodson (1619/20 immigrant)"
+    },
+    {
+      "suggested_id": "FILD-VA-e1655-01",
+      "surname": "Field",
+      "given_name": "John",
+      "designation": "carpenter",
+      "birth_year_estimate": 1655,
+      "location": "Henrico County, Varina Parish",
+      "confidence": "confirmed",
+      "evidence": "Purchased 300 acres from Edward Hatcher, 4 January 1685",
+      "source_temp_id": "SRC-209"
+    },
+    {
+      "suggested_id": "HTCR-VA-e1665-01",
+      "surname": "Hatcher",
+      "given_name": "Mary",
+      "designation": "wife of Edward Hatcher",
+      "birth_year_estimate": 1665,
+      "location": "Henrico County, Varina Parish",
+      "confidence": "confirmed",
+      "evidence": "Relinquished dower in 1685 deed",
+      "source_temp_id": "SRC-209"
+    },
+    {
+      "suggested_id": "HBSN-VA-e1660-01",
+      "surname": "Hobson",
+      "given_name": "William",
+      "birth_year_estimate": 1660,
+      "location": "Henrico County, Cornelius Creek",
+      "confidence": "confirmed",
+      "evidence": "Purchased land from Robert Burton, resold via chain to Woodson/Hatcher",
+      "source_temp_id": "SRC-204"
+    },
+    {
+      "suggested_id": "PLSN-VA-e1670-01",
+      "surname": "Pleasants",
+      "given_name": "Thomas",
+      "birth_year_estimate": 1670,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Son of John Pleasants; sold 600 acres to Obadiah Smith in 1716",
+      "source_temp_id": "SRC-206"
+    },
+    {
+      "suggested_id": "SMTH-VA-e1670-01",
+      "surname": "Smith",
+      "given_name": "Obadiah",
+      "birth_year_estimate": 1670,
+      "location": "Henrico County, Cornelius Creek",
+      "confidence": "confirmed",
+      "evidence": "Purchased 600 acres from Thomas Pleasants in 1716",
+      "source_temp_id": "SRC-206"
+    }
+  ],
+
+  "research_notes_not_evidence": [
+    {
+      "note": "Tony states 'William Johnson (1653) is on lands that once belonged to Richard Johnson' but no deed or patent has been found showing Richard Johnson's land ownership. The 1639 record shows Richard Johnson as a Tobacco Viewer (established planter status) but not a landowner.",
+      "related_people": ["Richard Johnson", "William Johnson (1653)"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "unverified",
+      "research_needed": "Find any land patent or deed showing Richard Johnson as landowner prior to 1653"
+    },
+    {
+      "note": "Tony states 'Farrar brought Richard Johnson in 1621 to Colonial Va' but the specific source is not cited. The 1624 muster places them together at Jordan's Journey.",
+      "related_people": ["Richard Johnson", "William Farrar"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "likely_but_unconfirmed",
+      "research_needed": "Verify transportation record in headright claims or ship manifests"
+    },
+    {
+      "note": "The Woodson family genealogy is complex with multiple John Woodsons. Tony references 'Dr. John Woodson and wife Sarah Winston who came in 1621 with Henry Rowen to Fleur De Hundred'. The merchant John Woodson, John Woodson Sr., John Woodson Jr. in 1717, etc. need to be sorted out.",
+      "related_people": ["John Woodson (merchant)", "John Woodson Sr.", "Dr. John Woodson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "needs_research",
+      "research_needed": "Map out Woodson family tree to distinguish the multiple John Woodsons"
+    },
+    {
+      "note": "John Jones moved from Edloe Plantation (1702) to south side of James River by 1715-1716, while Michael Johnson remained at Tuckahoe Creek. Tony claims John Jones was Michael Johnson's brother-in-law but this has not been documented.",
+      "related_people": ["John Jones", "Michael Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "observation",
+      "research_needed": "Find document confirming John Jones relationship to Sarah Watson or Michael Johnson"
+    },
+    {
+      "note": "Tony connects Richard Johnson (1624/1639) to William Johnson (1653) to Michael Johnson (d.1718) through the land and associate network, but no direct family relationship has been documented.",
+      "related_people": ["Richard Johnson", "William Johnson (1653)", "Michael Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "possible_but_speculative",
+      "research_needed": "This is the key research question - are these three Johnsons related?"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 7,
+    "sources_identified": 9,
+    "confirmed_relationships": 1,
+    "new_people_identified": 11,
+    "research_notes_captured": 5,
+    "time_period": "1621-1716",
+    "key_findings": [
+      "Richard Johnson is the EARLIEST documented Johnson in the area (1624 at Jordan's Journey, 1639 as Tobacco Viewer)",
+      "Richard Johnson and William Hatcher served together as Tobacco Viewers in 1639 - connecting earliest Johnson to Hatcher patriarch",
+      "John Jones (Michael Johnson's associate from 1702) moved away from Edloe Plantation to south side of James River by 1715-1716",
+      "Woodson-Hatcher-Burton-Pleasants land exchange network at Cornelius Creek documented",
+      "The question of whether Richard Johnson → William Johnson → Michael Johnson are related remains unverified"
+    ]
+  }
+}

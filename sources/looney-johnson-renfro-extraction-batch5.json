@@ -1,0 +1,1054 @@
+{
+  "extraction_metadata": {
+    "source_file": "1692-Johnson-renfro-Looney.docx",
+    "extraction_date": "2026-01-17",
+    "batch": 5,
+    "focus": "Hudson Johnson family completion (Agnes, Mary/Polly, Joel Shropshire), Rebecca Johnson/Hatcher connection, Walter Johnson Sullivan Co records, Larkin Johnson, Hiram Johnson, Isaac Johnson",
+    "notes": "Final batch from this file. Completes Hudson Johnson's family (Tony's direct ancestor), adds Hatcher connection through Rebecca Johnson's son, documents additional Johnsons. More information on these individuals may come from future source files."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-L023",
+      "source_type": "primary",
+      "repository": "Big Creek Baptist Church",
+      "collection": "Church Minutes",
+      "record_date": "1800",
+      "abbreviation": "Big Creek Baptist Church Minutes",
+      "full_citation": "Big Creek Baptist Church Minutes, Washington County, North Carolina (now Hawkins County, Tennessee), c.1800.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L024",
+      "source_type": "secondary",
+      "author": "Rev. Donald J. Hebert",
+      "title": "Southwest Louisiana Records, Volume 1 - 1756-1910",
+      "publication_date": "1974",
+      "abbreviation": "Hebert, SW Louisiana Records",
+      "full_citation": "Rev. Donald J. Hebert, 'Southwest Louisiana Records, Volume 1 - 1756-1910' (1974).",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L025",
+      "source_type": "secondary",
+      "author": "Taylor",
+      "title": "Historic Sullivan",
+      "page": "225",
+      "abbreviation": "Taylor, Historic Sullivan",
+      "full_citation": "Taylor, 'Historic Sullivan,' p. 225.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L026",
+      "source_type": "primary",
+      "repository": "Sullivan County, Tennessee",
+      "collection": "Tax Lists",
+      "record_date": "1796",
+      "abbreviation": "Sullivan Co TN Tax 1796",
+      "full_citation": "Sullivan County, Tennessee, Tax List, 1796.",
+      "original_examined": false,
+      "url": "http://www.combs-families.org/combs/records/tn/sull88.htm"
+    },
+    {
+      "temp_id": "SRC-L027",
+      "source_type": "primary",
+      "repository": "Dickson County, Tennessee",
+      "collection": "Deeds",
+      "record_date": "1809-01-17",
+      "abbreviation": "Dickson Co TN Deeds 1809",
+      "full_citation": "Dickson County, Tennessee, Deed from Abraham Caldwell to Lebius Richardson, 17 January 1809.",
+      "original_examined": false,
+      "notes": "Cited by Peg Zaremba"
+    },
+    {
+      "temp_id": "SRC-L028",
+      "source_type": "primary",
+      "repository": "Humphreys County, Tennessee",
+      "collection": "Deed Books",
+      "volume": "M",
+      "page": "169-171",
+      "record_date": "1854-11-20",
+      "abbreviation": "Humphreys Co TN Deeds M:169",
+      "full_citation": "Humphreys County, Tennessee, Deed Book M, pp. 169-171, dated 20 November 1854.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L029",
+      "source_type": "primary",
+      "repository": "Goochland County, Virginia",
+      "collection": "Order Books/Wills",
+      "record_date": "1744-1746",
+      "abbreviation": "Goochland Co VA Records 1744-1746",
+      "full_citation": "Goochland County, Virginia, Order Books and Wills, 1744-1746.",
+      "original_examined": false,
+      "url": "http://freepages.genealogy.rootsweb.ancestry.com/~flyfamily/Goochland%20Co.%20Wills%20Deeds%20Part%201.html"
+    },
+    {
+      "temp_id": "SRC-L030",
+      "source_type": "primary",
+      "repository": "Hanover County, Virginia",
+      "collection": "Road Orders",
+      "record_date": "1721-03-02",
+      "abbreviation": "Hanover Co VA Road Order 1721",
+      "full_citation": "Hanover County, Virginia, Road Order, 2 March 1721, p. 101.",
+      "original_examined": false
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-L026",
+      "document_type": "church_record",
+      "date": "1800",
+      "county": "Hawkins",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L023",
+      "title": "Big Creek Baptist Church - Agnes Johnson member, Hudson Johnson deacon",
+      "transcription_excerpt": "This is the Bunch Families found at Big Creek Baptist Church with rev. Thomas Murrell and Agness Johnston. Whose daughter if Mary Johnson married To Joel Shropshire... In 1800 era Hudson Johnson is a Deacon in this Church.",
+      "people": [
+        {
+          "name_as_written": "Agness Johnston",
+          "name_variants": ["Agnes Johnson"],
+          "role": "member"
+        },
+        {
+          "name_as_written": "Hudson Johnson",
+          "role": "deacon"
+        },
+        {
+          "name_as_written": "Rev. Thomas Murrell",
+          "role": "minister",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Big Creek",
+          "type": "creek",
+          "parent": "Hawkins County, Tennessee",
+          "role": "church_location"
+        }
+      ],
+      "notes": "Hudson Johnson served as deacon at Big Creek Baptist Church c.1800. Wife Agnes was a member. Church formed by Rev. Thomas Murrell. Bunch families also members."
+    },
+    {
+      "temp_id": "DOC-L027",
+      "document_type": "church_record",
+      "date": "1806-01-08",
+      "county": "St. Martin",
+      "state": "Louisiana",
+      "source_temp_id": "SRC-L024",
+      "title": "St. Martin of Tours Church - Charles Jonson Hogans and Sara Hatcher",
+      "transcription_excerpt": "Charles Jonson Hogans, son of Homfrey (Humphrey) and Rebecca Jonson Hogan listed at St. Martin of Tours Church, St. Martinville, Louisiana. Here a Charles Jonson Hogans + Sara Hatcher gave birth to two daughters -- Prudence Hogans 8 January 1806 and Anne Hogans 22 June 1808.",
+      "people": [
+        {
+          "name_as_written": "Charles Jonson Hogans",
+          "role": "father",
+          "new_person_flag": true,
+          "notes": "Son of Humphrey Hogan and Rebecca Johnson; 'of Bedford County, Virginia'"
+        },
+        {
+          "name_as_written": "Sara Hatcher",
+          "role": "mother",
+          "new_person_flag": true,
+          "notes": "HATCHER connection - wife of Charles Jonson Hogans"
+        },
+        {
+          "name_as_written": "Prudence Hogans",
+          "role": "child",
+          "new_person_flag": true,
+          "notes": "Born 8 January 1806"
+        },
+        {
+          "name_as_written": "Anne Hogans",
+          "role": "child",
+          "new_person_flag": true,
+          "notes": "Born 22 June 1808"
+        },
+        {
+          "name_as_written": "Humphrey Hogan",
+          "role": "grandfather",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Rebecca Johnson",
+          "role": "grandmother",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "St. Martinville",
+          "type": "town",
+          "parent": "St. Martin Parish, Louisiana",
+          "role": "recorded"
+        },
+        {
+          "name": "Bedford County",
+          "type": "county",
+          "parent": "Virginia",
+          "role": "origin",
+          "notes": "Charles stated he was 'of Bedford County, Virginia'"
+        }
+      ],
+      "notes": "KEY DOCUMENT: Establishes Hatcher connection through Rebecca Johnson's grandson. Charles Jonson Hogan (son of Humphrey Hogan and Rebecca Johnson) married Sara Hatcher. This connects Johnson and Hatcher families."
+    },
+    {
+      "temp_id": "DOC-L028",
+      "document_type": "militia_list",
+      "date": "1788",
+      "county": "Sullivan",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L025",
+      "title": "Sullivan County Militia List 1788 - Walter Johnson",
+      "transcription_excerpt": "1788 Sullivan Co Miltia List From Historic Sullivan, Taylor, p 225, '...the Tennessee to Abingdon, Virginia road [now Hwy 81] includes what is now Hawkins [County] ... Walter JOHNSON, M ROWLER [Martin ROLLER?] Jr, John DEAN, John ANDERSON, David ERWIN among others",
+      "people": [
+        {
+          "name_as_written": "Walter JOHNSON",
+          "role": "militia_member"
+        },
+        {
+          "name_as_written": "Martin ROLLER",
+          "role": "militia_member",
+          "new_person_flag": true,
+          "notes": "Listed as 'M ROWLER Jr' - possibly Martin Roller"
+        },
+        {
+          "name_as_written": "John DEAN",
+          "role": "militia_member",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "John ANDERSON",
+          "role": "militia_member",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "David ERWIN",
+          "role": "militia_member",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Sullivan County",
+          "type": "county",
+          "parent": "Tennessee",
+          "role": "recorded"
+        }
+      ],
+      "notes": "Walter Johnson on 1788 Sullivan County militia list. Area later included Hawkins County."
+    },
+    {
+      "temp_id": "DOC-L029",
+      "document_type": "tax_list",
+      "date": "1796",
+      "county": "Sullivan",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L026",
+      "title": "Sullivan County Tax List 1796 - Walter Johnston Esq.",
+      "transcription_excerpt": "1796 Sullivan Co. tax List JOHNSTON, Walter, esqr 260 acs 1 white poll, 3 black polls",
+      "people": [
+        {
+          "name_as_written": "JOHNSTON, Walter, esqr",
+          "role": "taxpayer",
+          "notes": "260 acres, 1 white poll, 3 black polls; designated 'Esquire'"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Sullivan County",
+          "type": "county",
+          "parent": "Tennessee",
+          "role": "recorded"
+        }
+      ],
+      "notes": "Walter Johnston listed as 'Esquire' - indicates status. Owned 260 acres, had 3 enslaved persons."
+    },
+    {
+      "temp_id": "DOC-L030",
+      "document_type": "deed",
+      "date": "1809-01-17",
+      "county": "Dickson",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L027",
+      "title": "Abraham Caldwell to Lebius Richardson - Hudson Johnson witness",
+      "acres": 200,
+      "transcription_excerpt": "January 17 1809 Hudson Johnson witness to a deed from Abraham Caldwell to Lebius Richardson tract of land on Barton's Creek, 200 acres Pd$450. Other witnesses were Joel Shropshire and Thomas Richardson.",
+      "people": [
+        {
+          "name_as_written": "Hudson Johnson",
+          "role": "witness"
+        },
+        {
+          "name_as_written": "Joel Shropshire",
+          "role": "witness",
+          "new_person_flag": true,
+          "notes": "Husband of Mary Johnson (daughter of Hudson Johnson)"
+        },
+        {
+          "name_as_written": "Abraham Caldwell",
+          "role": "grantor",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Lebius Richardson",
+          "role": "grantee",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Thomas Richardson",
+          "role": "witness",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Bartons Creek",
+          "type": "creek",
+          "parent": "Dickson County, Tennessee",
+          "role": "subject"
+        }
+      ],
+      "notes": "Hudson Johnson and son-in-law Joel Shropshire witness same deed - shows family connection and Bartons Creek location."
+    },
+    {
+      "temp_id": "DOC-L031",
+      "document_type": "court_record",
+      "date": "1854-11-20",
+      "county": "Humphreys",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L028",
+      "title": "James David Johnson Petition - Margaret Johnson estate",
+      "transcription_excerpt": "Found a deed in the Humphrey Co. Court House Deed Book M p.169,170,171 dated 20 Nov 1854 where James David Johnson is Petitioning to sell land of Margaret Johnson decd. in right of their father Hiram Johnson.",
+      "people": [
+        {
+          "name_as_written": "James David Johnson",
+          "role": "petitioner",
+          "new_person_flag": true,
+          "notes": "Son of Hiram Johnson and Margaret Johnson"
+        },
+        {
+          "name_as_written": "Margaret Johnson",
+          "role": "deceased",
+          "notes": "Died 9 Sept 1850"
+        },
+        {
+          "name_as_written": "Hiram Johnson",
+          "role": "deceased_father",
+          "notes": "Died 20 Nov 1844"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Tumbling Creek",
+          "type": "creek",
+          "parent": "Humphreys County, Tennessee",
+          "role": "subject"
+        }
+      ],
+      "notes": "Establishes Hiram Johnson as father of James David Johnson, and Margaret as mother."
+    },
+    {
+      "temp_id": "DOC-L032",
+      "document_type": "court_record",
+      "date": "1744-04-17",
+      "county": "Goochland",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L029",
+      "title": "Benjamin Johnson Estate - Isaac Johnson security",
+      "transcription_excerpt": "Goochland Co.: Elizabeth Johnson comes into court & makes oath that Benj. Johnson died without any will so far as she knows or believes & on her motion Certificate is granted her for obtaining Letters of Administration in due form. Isaac Johnson, William Arrington, Outring(??) Thompson security for same. Ordered that Philip Webber, George Payne, Thomas Wadlow, Robt Burton Junr. or any three of them being first sworn by Justices of the Peace do appraise the estate of Benj. Johnson, Decd.",
+      "people": [
+        {
+          "name_as_written": "Elizabeth Johnson",
+          "role": "administratrix",
+          "new_person_flag": true,
+          "notes": "Widow of Benjamin Johnson"
+        },
+        {
+          "name_as_written": "Benj. Johnson",
+          "role": "deceased",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Isaac Johnson",
+          "role": "security",
+          "notes": "Posted security for estate administration"
+        },
+        {
+          "name_as_written": "William Arrington",
+          "role": "security",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "George Payne",
+          "role": "appraiser"
+        },
+        {
+          "name_as_written": "Robt Burton Junr",
+          "role": "appraiser",
+          "notes": "Robert Burton Jr. - BURTON family connection"
+        },
+        {
+          "name_as_written": "Philip Webber",
+          "role": "appraiser",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Thomas Wadlow",
+          "role": "appraiser",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Goochland County",
+          "type": "county",
+          "parent": "Virginia",
+          "role": "recorded"
+        }
+      ],
+      "notes": "Isaac Johnson posted security for Benjamin Johnson's estate. Robert Burton Jr. as appraiser connects to Burton family from Arrowhattocks extraction."
+    },
+    {
+      "temp_id": "DOC-L033",
+      "document_type": "road_order",
+      "date": "1721-03-02",
+      "county": "Hanover",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L030",
+      "title": "Road Order 1721 - Isaac Johnson on Taylors Creek",
+      "transcription_excerpt": "In Obedience to an order of court dated the 2nd of March, 1721, its order'd that Samuel Knockols clear a road from the upper end of Mattlock's road to the upper Inhabitants, on the north Side of the South river, and the he have to assist him, Mr Thos Johnson's, Mr David Meriwwether's upper Quarter, Jn Bunch on Taylors Creek, Isaac Johnson, Jn Bostick, Mr. Rich Phillips, with all their Male Tithables",
+      "people": [
+        {
+          "name_as_written": "Isaac Johnson",
+          "role": "road_worker"
+        },
+        {
+          "name_as_written": "Mr Thos Johnson",
+          "role": "road_worker",
+          "notes": "Thomas Johnson"
+        },
+        {
+          "name_as_written": "Samuel Knockols",
+          "role": "surveyor",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Mr David Meriwwether",
+          "role": "road_worker",
+          "new_person_flag": true,
+          "notes": "Meriwether family - connected to Col. Richard Johnson per researcher note"
+        },
+        {
+          "name_as_written": "Jn Bunch",
+          "role": "road_worker",
+          "notes": "John Bunch on Taylors Creek"
+        },
+        {
+          "name_as_written": "Jn Bostick",
+          "role": "road_worker",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Mr. Rich Phillips",
+          "role": "road_worker",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Taylors Creek",
+          "type": "creek",
+          "parent": "Hanover County (later Goochland County)",
+          "role": "subject",
+          "notes": "Part of Owens Creek area"
+        },
+        {
+          "name": "South River",
+          "type": "river",
+          "parent": "Hanover County",
+          "role": "reference",
+          "notes": "North side"
+        }
+      ],
+      "notes": "Early Isaac Johnson record 1721. Listed with Thomas Johnson, John Bunch, David Meriwether. Tony's note: Meriwether families married to Col. Richard Johnson son of William Johnson and Contance Lucas."
+    }
+  ],
+
+  "family_groups_to_create": [
+    {
+      "name": "Hiram Johnson of Humphreys County",
+      "group_type": "nuclear",
+      "anchor_person": "Hiram Johnson (d.1844)",
+      "primary_location": "Tumbling Creek, Humphreys County, Tennessee",
+      "date_start": "1790",
+      "date_end": "1854",
+      "confidence": "confirmed",
+      "summary": "Hiram Johnson (d. 20 Nov 1844) married Margaret (b.1793 NC, d. 9 Sept 1850). Margaret did all land transactions - her name on deeds, not Hiram's. Lands on Tumbling Creek of Duck River. Both buried Cannon Cemetery on Ben Pewett farm, Tumbling Creek. Children include James David Johnson, Jackson Johnson (born Kentucky). DNA match to Timothy Rich line.",
+      "source_files": ["1692-Johnson-renfro-Looney.docx"]
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "JNSN-TN-e1775-02",
+      "surname": "Johnson",
+      "given_name": "Agnes",
+      "name_variants": ["Agness", "Johnston"],
+      "birth_year_estimate": 1775,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Bartons Creek",
+          "parent_location": "Dickson County, Tennessee",
+          "date_first": "1800",
+          "date_last": "1823",
+          "residence_type": "resident",
+          "evidence": "Tony's research - wife of Hudson Johnson"
+        },
+        {
+          "location_name": "Big Creek",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1800",
+          "residence_type": "resident",
+          "evidence": "Big Creek Baptist Church member"
+        },
+        {
+          "location_name": "Buffalo Creek",
+          "parent_location": "Henry County, Virginia",
+          "date_first": null,
+          "residence_type": "resident",
+          "evidence": "Tony's header notes"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Big Creek Baptist Church minutes; Tony L. Johnson's direct ancestor",
+      "notes": "Wife of Hudson Johnson. Member of Big Creek Baptist Church with Rev. Thomas Murrell. Tony states he descends from 'Hudson Johnson and Agness Johnson of Bartons Creek, Dickson Co. Tn, Big Creek Hawkins Co Tn and Buffalo Creek of Henry Co. Va.'"
+    },
+    {
+      "suggested_id": "JNSN-TN-e1790-02",
+      "surname": "Johnson",
+      "given_name": "Mary",
+      "name_variants": ["Polly", "Johnston"],
+      "birth_year_estimate": 1790,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Dickson County",
+          "parent_location": "Tennessee",
+          "date_first": "1809",
+          "residence_type": "resident",
+          "evidence": "Father Hudson Johnson witness 1809 deed"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Tony's research notes; husband Joel Shropshire witnessed deeds with Hudson Johnson",
+      "notes": "Daughter of Hudson Johnson and Agnes Johnson. Married (1) Joel Shropshire, (2) Sterling May. Also known as Polly Johnson. Went to Johnson Co, Arkansas."
+    },
+    {
+      "suggested_id": "SHRP-TN-e1785-01",
+      "surname": "Shropshire",
+      "given_name": "Joel",
+      "birth_year_estimate": 1785,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Bartons Creek",
+          "parent_location": "Dickson County, Tennessee",
+          "date_first": "1809",
+          "residence_type": "resident",
+          "evidence": "Witness to 1809 deed with father-in-law Hudson Johnson"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1809 deed witness; married Mary Johnson daughter of Hudson",
+      "notes": "First husband of Mary Johnson (daughter of Hudson Johnson). Witnessed 1809 deed alongside Hudson Johnson."
+    },
+    {
+      "suggested_id": "JNSN-VA-e1750-02",
+      "surname": "Johnson",
+      "given_name": "Rebecca",
+      "name_variants": ["Rebekah", "Rebeccah", "Jonson"],
+      "birth_year_estimate": 1750,
+      "birth_year_type": "e",
+      "death_year": 1804,
+      "death_year_type": "a",
+      "locations": [
+        {
+          "location_name": "Bedford County",
+          "parent_location": "Virginia",
+          "date_first": "1769",
+          "date_last": "1790",
+          "residence_type": "resident",
+          "evidence": "Son stated family was 'of Bedford County, Virginia'"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "St. Martin of Tours Church records, Louisiana; son's statement",
+      "notes": "Married (1) Humphrey Hogan c.1769, (2) William Hines. Son Charles Jonson Hogan married Sara HATCHER - key Hatcher connection. 'Possibly relative of Walter Johnson of Sullivan County, Tennessee' per researcher note. Living 1804."
+    },
+    {
+      "suggested_id": "HOGN-VA-e1745-01",
+      "surname": "Hogan",
+      "given_name": "Humphrey",
+      "name_variants": ["Homfrey"],
+      "birth_year_estimate": 1745,
+      "birth_year_type": "e",
+      "death_year": 1790,
+      "death_year_type": "c",
+      "confidence": "confirmed",
+      "evidence": "Louisiana church records citing son Charles",
+      "notes": "Married Rebecca Johnson c.1769. Died 1789 or 1790, probably leaving children not yet adults. Parentage unknown - research ongoing."
+    },
+    {
+      "suggested_id": "HOGN-VA-e1770-01",
+      "surname": "Hogan",
+      "given_name": "Charles Jonson",
+      "name_variants": ["Hogans"],
+      "birth_year_estimate": 1770,
+      "birth_year_type": "e",
+      "birthplace": "Bedford County, Virginia",
+      "locations": [
+        {
+          "location_name": "Bedford County",
+          "parent_location": "Virginia",
+          "date_first": "1770",
+          "date_last": "1800",
+          "residence_type": "resident",
+          "evidence": "Stated he was 'of Bedford County, Virginia'"
+        },
+        {
+          "location_name": "St. Martinville",
+          "parent_location": "St. Martin Parish, Louisiana",
+          "date_first": "1806",
+          "date_last": "1808",
+          "residence_type": "resident",
+          "evidence": "Children baptized there 1806, 1808"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "St. Martin of Tours Church records, Louisiana",
+      "notes": "Son of Humphrey Hogan and Rebecca Johnson. Married Sara HATCHER. Daughters Prudence (b.1806) and Anne (b.1808) baptized Louisiana. KEY HATCHER CONNECTION."
+    },
+    {
+      "suggested_id": "HTCH-VA-e1775-01",
+      "surname": "Hatcher",
+      "given_name": "Sara",
+      "birth_year_estimate": 1775,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "St. Martinville",
+          "parent_location": "St. Martin Parish, Louisiana",
+          "date_first": "1806",
+          "residence_type": "resident",
+          "evidence": "Children baptized there"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "St. Martin of Tours Church records, Louisiana",
+      "notes": "HATCHER - wife of Charles Jonson Hogan, son of Rebecca Johnson. Connects Johnson and Hatcher families. Daughters Prudence and Anne."
+    },
+    {
+      "suggested_id": "JNSN-TN-e1780-01",
+      "surname": "Johnson",
+      "given_name": "Larkin",
+      "birth_year_estimate": 1780,
+      "birth_year_type": "e",
+      "confidence": "likely",
+      "evidence": "Tony's research notes",
+      "notes": "Married Olivia Renfro (daughter of James Renfro, born 1809). Another Johnson-Renfro marriage connection."
+    },
+    {
+      "suggested_id": "RNFR-TN-b1809-01",
+      "surname": "Renfro",
+      "given_name": "Olivia",
+      "birth_year": 1809,
+      "birth_year_type": "b",
+      "confidence": "likely",
+      "evidence": "Tony's research notes",
+      "notes": "Daughter of James Renfro. Married Larkin Johnson."
+    },
+    {
+      "suggested_id": "JNSN-TN-e1800-01",
+      "surname": "Johnson",
+      "given_name": "Hiram",
+      "name_variants": ["John Hiram"],
+      "birth_year_estimate": 1800,
+      "birth_year_type": "e",
+      "death_year": 1844,
+      "death_date": "1844-11-20",
+      "death_place": "Humphreys County, Tennessee",
+      "locations": [
+        {
+          "location_name": "Tumbling Creek",
+          "parent_location": "Humphreys County, Tennessee",
+          "date_first": "1826",
+          "date_last": "1844",
+          "residence_type": "resident",
+          "evidence": "Wife's land deeds; buried Cannon Cemetery on Tumbling Creek"
+        }
+      ],
+      "dna_notes": "DNA match to descendants of Timothy Rich of Henrico Co VA",
+      "confidence": "confirmed",
+      "evidence": "Humphreys Co TN deeds; cemetery records",
+      "notes": "Married Margaret (b.1793 NC). Margaret did all land buying/selling - possibly couldn't write. Died 20 Nov 1844. Buried Cannon Cemetery, Tumbling Creek. Sons include James David Johnson, Jackson Johnson (born Kentucky). DNA matches Timothy Rich line."
+    },
+    {
+      "suggested_id": "JNSN-TN-b1793-01",
+      "surname": "Johnson",
+      "given_name": "Margaret",
+      "name_variants": ["Peggy Johnston"],
+      "birth_year": 1793,
+      "birth_year_type": "b",
+      "birthplace": "North Carolina",
+      "death_year": 1850,
+      "death_date": "1850-09-09",
+      "death_place": "Humphreys County, Tennessee",
+      "locations": [
+        {
+          "location_name": "Tumbling Creek",
+          "parent_location": "Humphreys County, Tennessee",
+          "date_first": "1826",
+          "date_last": "1850",
+          "residence_type": "landowner",
+          "evidence": "Multiple land deeds in her name 1826-1849"
+        },
+        {
+          "location_name": "Rices Branch",
+          "parent_location": "Tumbling Creek, Humphreys County",
+          "date_first": "1842",
+          "residence_type": "landowner",
+          "evidence": "State grant 150 acres 14 June 1842"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Humphreys Co TN deeds; cemetery records",
+      "notes": "Wife of Hiram Johnson. Born NC, maiden name unknown. Educated - could sign her name. Did all land transactions (possibly Hiram couldn't write). Bought 50 acres 1826 for 1 cent/acre, 150 acres 1842. Buried Cannon Cemetery, Tumbling Creek. Partnership with son David Johnson 1849 for farming/stock raising."
+    },
+    {
+      "suggested_id": "JNSN-TN-e1820-01",
+      "surname": "Johnson",
+      "given_name": "James David",
+      "name_variants": ["David Johnson"],
+      "birth_year_estimate": 1820,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Tumbling Creek",
+          "parent_location": "Humphreys County, Tennessee",
+          "date_first": "1849",
+          "date_last": "1854",
+          "residence_type": "resident",
+          "evidence": "1849 partnership with mother; 1854 petition"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Humphreys Co TN Deed Book M:169-171",
+      "notes": "Son of Hiram Johnson and Margaret Johnson. Entered farming/stock partnership with mother Margaret 1849. Petitioned to sell mother's estate land 1854."
+    },
+    {
+      "suggested_id": "JNSN-VA-e1700-01",
+      "surname": "Johnson",
+      "given_name": "Isaac",
+      "birth_year_estimate": 1700,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Taylors Creek",
+          "parent_location": "Hanover County (later Goochland County)",
+          "date_first": "1721",
+          "residence_type": "resident",
+          "evidence": "1721 road order"
+        },
+        {
+          "location_name": "Goochland County",
+          "date_first": "1744",
+          "date_last": "1746",
+          "residence_type": "resident",
+          "evidence": "Security for Benjamin Johnson estate 1744; tithables list 1746"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1721 Hanover Co road order; 1744 Goochland Co estate record; 1746 tithables",
+      "notes": "Early Virginia Johnson. On 1721 road order with Thomas Johnson, John Bunch, David Meriwether. Posted security for Benjamin Johnson estate 1744. Listed on John Payne's tithables list 1746."
+    },
+    {
+      "suggested_id": "JNSN-TN-e1780-02",
+      "surname": "Johnson",
+      "given_name": "Isaac",
+      "designation": "of Dickson County",
+      "birth_year_estimate": 1780,
+      "birth_year_type": "e",
+      "death_year": 1820,
+      "death_year_type": "c",
+      "locations": [
+        {
+          "location_name": "Dickson County",
+          "parent_location": "Tennessee",
+          "date_first": "1800",
+          "date_last": "1820",
+          "residence_type": "resident",
+          "evidence": "Researcher notes"
+        }
+      ],
+      "confidence": "likely",
+      "evidence": "Researcher Peg Zaremba notes",
+      "notes": "Lived in Dickson County TN. Possibly related to Nathaniel Johnson. Died c.1820. Son Isaac Johnson went to Johnson County, Arkansas about same time as Mary Polly Johnson Shropshire."
+    },
+    {
+      "suggested_id": "JNSN-VA-e1715-02",
+      "surname": "Johnson",
+      "given_name": "Benjamin",
+      "designation": "of Goochland",
+      "birth_year_estimate": 1715,
+      "birth_year_type": "e",
+      "death_year": 1744,
+      "death_year_type": "b",
+      "death_place": "Goochland County, Virginia",
+      "locations": [
+        {
+          "location_name": "Goochland County",
+          "date_first": "1744",
+          "residence_type": "resident",
+          "evidence": "Estate administration 1744"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Goochland Co VA estate records 1744",
+      "notes": "Died intestate before 1744. Widow Elizabeth Johnson administered estate. Isaac Johnson posted security. Appraisers included George Payne and Robert Burton Jr. (Burton family connection). Estate valued at 34 pounds, 9 shillings, 6 pence."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1_temp": "JNSN-TN-e1770-01",
+      "person_1_name": "Hudson Johnson",
+      "person_2_temp": "JNSN-TN-e1775-02",
+      "person_2_name": "Agnes Johnson",
+      "relationship_type": "spouse",
+      "confidence": "confirmed",
+      "evidence_summary": "Tony L. Johnson's direct ancestor statement; Big Creek Baptist Church records"
+    },
+    {
+      "person_1_temp": "JNSN-TN-e1770-01",
+      "person_1_name": "Hudson Johnson",
+      "person_2_temp": "JNSN-TN-e1790-02",
+      "person_2_name": "Mary Johnson (Polly)",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Tony's research notes; Joel Shropshire (Mary's husband) witnessed deed with Hudson"
+    },
+    {
+      "person_1_temp": "JNSN-TN-e1790-02",
+      "person_1_name": "Mary Johnson (Polly)",
+      "person_2_temp": "SHRP-TN-e1785-01",
+      "person_2_name": "Joel Shropshire",
+      "relationship_type": "spouse",
+      "marriage_order": 1,
+      "confidence": "confirmed",
+      "evidence_summary": "Tony's research notes"
+    },
+    {
+      "person_1_temp": "JNSN-VA-e1750-02",
+      "person_1_name": "Rebecca Johnson",
+      "person_2_temp": "HOGN-VA-e1745-01",
+      "person_2_name": "Humphrey Hogan",
+      "relationship_type": "spouse",
+      "marriage_date": "c.1769",
+      "marriage_order": 1,
+      "confidence": "confirmed",
+      "evidence_summary": "Louisiana church records"
+    },
+    {
+      "person_1_temp": "JNSN-VA-e1750-02",
+      "person_1_name": "Rebecca Johnson",
+      "person_2_temp": "HOGN-VA-e1770-01",
+      "person_2_name": "Charles Jonson Hogan",
+      "relationship_type": "mother",
+      "confidence": "confirmed",
+      "evidence_summary": "Louisiana church records: 'Charles Jonson Hogans, son of Homfrey and Rebecca Jonson Hogan'"
+    },
+    {
+      "person_1_temp": "HOGN-VA-e1770-01",
+      "person_1_name": "Charles Jonson Hogan",
+      "person_2_temp": "HTCH-VA-e1775-01",
+      "person_2_name": "Sara Hatcher",
+      "relationship_type": "spouse",
+      "confidence": "confirmed",
+      "evidence_summary": "Louisiana church records - children baptized 1806, 1808"
+    },
+    {
+      "person_1_temp": "JNSN-VA-e1750-02",
+      "person_1_name": "Rebecca Johnson",
+      "person_2_temp": "JNSN-VA-e1740-01",
+      "person_2_name": "Walter Johnson",
+      "relationship_type": "associated",
+      "association_type": "possibly_related",
+      "confidence": "possible",
+      "evidence_summary": "Researcher note: Rebecca Johnson 'possibly relative of Walter Johnson of Sullivan County, Tennessee'"
+    },
+    {
+      "person_1_temp": "JNSN-TN-e1780-01",
+      "person_1_name": "Larkin Johnson",
+      "person_2_temp": "RNFR-TN-b1809-01",
+      "person_2_name": "Olivia Renfro",
+      "relationship_type": "spouse",
+      "confidence": "likely",
+      "evidence_summary": "Tony's research notes"
+    },
+    {
+      "person_1_temp": "JNSN-TN-e1800-01",
+      "person_1_name": "Hiram Johnson",
+      "person_2_temp": "JNSN-TN-b1793-01",
+      "person_2_name": "Margaret Johnson",
+      "relationship_type": "spouse",
+      "confidence": "confirmed",
+      "evidence_summary": "Humphreys Co TN deeds; 1854 petition identifies Hiram as father"
+    },
+    {
+      "person_1_temp": "JNSN-TN-e1800-01",
+      "person_1_name": "Hiram Johnson",
+      "person_2_temp": "JNSN-TN-e1820-01",
+      "person_2_name": "James David Johnson",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "1854 petition: 'James David Johnson is Petitioning to sell land of Margaret Johnson decd. in right of their father Hiram Johnson'"
+    },
+    {
+      "person_1_temp": "JNSN-VA-e1715-02",
+      "person_1_name": "Benjamin Johnson (of Goochland)",
+      "person_2_temp": "JNSN-VA-e1700-01",
+      "person_2_name": "Isaac Johnson",
+      "relationship_type": "associated",
+      "association_type": "possibly_related",
+      "confidence": "possible",
+      "evidence_summary": "Isaac posted security for Benjamin's estate - often indicates kinship"
+    }
+  ],
+
+  "locations_to_create": [
+    {
+      "name": "Tumbling Creek",
+      "location_type": "creek",
+      "parent_location": "Humphreys County, Tennessee",
+      "description": "Creek of the Duck River. Location of Hiram and Margaret Johnson lands. Cannon Cemetery on Ben Pewett farm.",
+      "notes": "Rices Branch is a tributary"
+    },
+    {
+      "name": "Rices Branch",
+      "location_type": "creek",
+      "parent_location": "Tumbling Creek, Humphreys County, Tennessee",
+      "description": "Branch of Tumbling Creek where Margaret Johnson received 150 acre state grant 1842."
+    },
+    {
+      "name": "Cannon Cemetery",
+      "location_type": "cemetery",
+      "parent_location": "Tumbling Creek, Humphreys County, Tennessee",
+      "description": "Cemetery on Ben Pewett farm on Tumbling Creek. Burial place of Hiram Johnson (d.1844), Margaret Johnson (d.1850), Milbury Johnson (d.1869), George Washington Johnson."
+    },
+    {
+      "name": "St. Martinville",
+      "location_type": "town",
+      "parent_location": "St. Martin Parish, Louisiana",
+      "description": "Location of St. Martin of Tours Church where Charles Jonson Hogan and Sara Hatcher had children baptized 1806-1808."
+    },
+    {
+      "name": "Taylors Creek",
+      "location_type": "creek",
+      "parent_location": "Hanover County (later Goochland County), Virginia",
+      "description": "Creek where Isaac Johnson, Thomas Johnson, and John Bunch lived per 1721 road order. Part of Owens Creek area.",
+      "notes": "Tony notes: Meriwether families here married to Col. Richard Johnson son of William Johnson"
+    },
+    {
+      "name": "Buffalo Creek",
+      "location_type": "creek",
+      "parent_location": "Henry County, Virginia",
+      "description": "Location associated with Hudson Johnson and Agnes Johnson family per Tony's header notes."
+    }
+  ],
+
+  "research_questions_to_add": [
+    {
+      "question": "Is Rebecca Johnson related to Walter Johnson of Sullivan County?",
+      "question_type": "relationship",
+      "person_id": "JNSN-VA-e1750-02",
+      "status": "open",
+      "evidence_for": "Researcher note states Rebecca Johnson 'possibly relative of Walter Johnson of Sullivan County, Tennessee'",
+      "evidence_against": "No documented connection",
+      "research_action": "Compare Bedford County VA Johnson records with Sullivan County TN Johnson records",
+      "related_people": ["Rebecca Johnson", "Walter Johnson"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    },
+    {
+      "question": "What is Sara Hatcher's connection to the Henrico County Hatcher family?",
+      "question_type": "relationship",
+      "person_id": "HTCH-VA-e1775-01",
+      "status": "open",
+      "evidence_for": "Hatcher surname; husband's family from Bedford County VA (near Henrico migration path)",
+      "evidence_against": "No documented connection; Louisiana location",
+      "research_action": "Research Hatcher families who migrated from Virginia to Louisiana; check for connections to Ben Hatcher of Henrico/Goochland",
+      "related_people": ["Sara Hatcher", "Ben Hatcher"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    },
+    {
+      "question": "What is Hiram Johnson's parentage and connection to Timothy Rich line?",
+      "question_type": "relationship",
+      "person_id": "JNSN-TN-e1800-01",
+      "status": "open",
+      "evidence_for": "DNA match to descendants of Timothy Rich of Henrico Co VA",
+      "evidence_against": "No paper trail documented",
+      "research_action": "Research Timothy Rich descendants; check for migration to Tennessee",
+      "related_people": ["Hiram Johnson", "Timothy Rich"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    },
+    {
+      "question": "Is Isaac Johnson of Goochland (1721-1746) related to Benjamin Johnson whose estate he secured?",
+      "question_type": "relationship",
+      "person_id": "JNSN-VA-e1700-01",
+      "status": "open",
+      "evidence_for": "Isaac posted security for Benjamin's estate - often indicates kinship",
+      "evidence_against": "Could be neighbor/friend obligation",
+      "research_action": "Search Goochland County records for Isaac Johnson and Benjamin Johnson connections",
+      "related_people": ["Isaac Johnson", "Benjamin Johnson of Goochland"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    },
+    {
+      "question": "What is the connection between Eleanor Renfro who married John Johnson and Eleanor Renfro who married John R. Choate?",
+      "question_type": "identity",
+      "person_id": "RNFR-VA-b1775-01",
+      "status": "open",
+      "evidence_for": "Both born c.1775; both married men named John; overlapping geography (Montgomery Co VA and Dickson Co TN on same migration path)",
+      "evidence_against": "Different death dates (1833 vs 1845); different husbands' surnames; second Eleanor's parents identified as Isaac Alexander Renfro and Mary McKinney",
+      "research_action": "Determine if same person with two husbands (John Johnson died first), or two different women, or misattribution",
+      "related_people": ["Eleanor Renfro", "John Johnson (Montgomery Co)", "John R. Choate"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 8,
+    "sources_identified": 8,
+    "new_people_identified": 16,
+    "family_groups_identified": 1,
+    "locations_identified": 6,
+    "relationships_documented": 12,
+    "research_questions_added": 5,
+    "time_period": "1721-1854",
+    "key_findings": [
+      "AGNES JOHNSON - wife of Hudson Johnson, Big Creek Baptist Church member - completes Tony's direct ancestral family",
+      "HUDSON JOHNSON served as deacon at Big Creek Baptist Church c.1800",
+      "Mary Johnson (Polly) - daughter of Hudson, married Joel Shropshire, later Sterling May",
+      "SARA HATCHER married Charles Jonson Hogan (son of Rebecca Johnson) - KEY HATCHER CONNECTION",
+      "Rebecca Johnson (c.1750-1804+) married Humphrey Hogan - 'possibly relative of Walter Johnson of Sullivan County'",
+      "Walter Johnson on 1788 Sullivan Co militia; 1796 tax shows 260 acres, Esquire title, 3 enslaved persons",
+      "Larkin Johnson married Olivia Renfro - another Johnson-Renfro marriage",
+      "HIRAM JOHNSON of Humphreys Co TN - DNA match to Timothy Rich line of Henrico Co VA",
+      "Margaret Johnson (wife of Hiram) did all land transactions - educated woman",
+      "ISAAC JOHNSON on 1721 road order with Thomas Johnson, John Bunch, David Meriwether",
+      "Isaac Johnson posted security for Benjamin Johnson estate 1744 - Robert Burton Jr. was appraiser (Burton connection)",
+      "Isaac Johnson of Dickson Co TN - connected to Nathaniel Johnson network, son went to Arkansas"
+    ]
+  }
+}

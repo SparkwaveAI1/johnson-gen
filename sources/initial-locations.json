@@ -1,0 +1,138 @@
+{
+  "locations": [
+    {
+      "name": "Virginia",
+      "slug": "virginia",
+      "location_type": "colony",
+      "description": "Colony of Virginia, established 1607"
+    },
+    {
+      "name": "Henrico County",
+      "slug": "henrico-county",
+      "location_type": "county",
+      "parent_slug": "virginia",
+      "date_formed": "1634",
+      "description": "One of the original eight shires of Virginia, formed 1634. Named after Henry, Prince of Wales."
+    },
+    {
+      "name": "Varina Parish",
+      "slug": "varina-parish",
+      "location_type": "parish",
+      "parent_slug": "henrico-county",
+      "description": "Parish in Henrico County"
+    },
+    {
+      "name": "St. Peters Parish",
+      "slug": "st-peters-parish",
+      "location_type": "parish",
+      "parent_slug": "henrico-county",
+      "description": "Parish in Henrico County. Vestry records document early settlers."
+    },
+    {
+      "name": "Arrowhattocks",
+      "slug": "arrowhattocks",
+      "location_type": "region",
+      "parent_slug": "henrico-county",
+      "name_variants": ["Arrahattock", "Arrahatock"],
+      "description": "Region in Henrico County along the James River, named for the Arrowhattock Indians. Key settlement area for Johnson and allied families."
+    },
+    {
+      "name": "Tuckahoe Creek",
+      "slug": "tuckahoe-creek",
+      "location_type": "creek",
+      "parent_slug": "arrowhattocks",
+      "description": "Creek in the Arrowhattocks region. Michael Johnson and family settled along this creek by 1714."
+    },
+    {
+      "name": "Cornelius Creek",
+      "slug": "cornelius-creek",
+      "location_type": "creek",
+      "parent_slug": "arrowhattocks",
+      "description": "Creek in the Arrowhattocks region. Site of Burton family patents."
+    },
+    {
+      "name": "Beaverdam Creek",
+      "slug": "beaverdam-creek",
+      "location_type": "creek",
+      "parent_slug": "arrowhattocks",
+      "description": "Creek in the Arrowhattocks region."
+    },
+    {
+      "name": "Beaverdam Swamp",
+      "slug": "beaverdam-swamp",
+      "location_type": "swamp",
+      "parent_slug": "beaverdam-creek",
+      "description": "Swamp area near Beaverdam Creek. Michael Johnson reportedly at this location by 1698."
+    },
+    {
+      "name": "Edloe Plantation",
+      "slug": "edloe-plantation",
+      "location_type": "plantation",
+      "parent_slug": "arrowhattocks",
+      "description": "Plantation in the Arrowhattocks region. 1702 vestry entry shows Michael Johnson and John Jones listed as tithables here."
+    },
+    {
+      "name": "Longfield",
+      "slug": "longfield",
+      "location_type": "region",
+      "parent_slug": "henrico-county",
+      "description": "Area in Henrico County. John Burton received patent here in 1665."
+    },
+    {
+      "name": "Lily Valley",
+      "slug": "lily-valley",
+      "location_type": "region",
+      "parent_slug": "henrico-county",
+      "description": "Area in Henrico County. Robert Burton of Arrowhattocks and Lily Valley."
+    },
+    {
+      "name": "Jordan's Journey",
+      "slug": "jordans-journey",
+      "location_type": "plantation",
+      "parent_slug": "henrico-county",
+      "description": "Early plantation established by Samuel Jordan. Richard Johnson appears here in the 1624 muster."
+    },
+    {
+      "name": "Strawberry Banks",
+      "slug": "strawberry-banks",
+      "location_type": "region",
+      "parent_slug": "henrico-county",
+      "description": "Area in Henrico County. Edward Johnson, Luke Johnson, and John Johnson documented here."
+    },
+    {
+      "name": "New Kent County",
+      "slug": "new-kent-county",
+      "location_type": "county",
+      "parent_slug": "virginia",
+      "date_formed": "1654",
+      "formed_from": "York County",
+      "description": "County formed 1654. Michael Johnson and John Jones may have come from here before moving to Henrico."
+    },
+    {
+      "name": "Charles City County",
+      "slug": "charles-city-county",
+      "location_type": "county",
+      "parent_slug": "virginia",
+      "date_formed": "1634",
+      "description": "One of the original eight shires of Virginia."
+    },
+    {
+      "name": "James City County",
+      "slug": "james-city-county",
+      "location_type": "county",
+      "parent_slug": "virginia",
+      "date_formed": "1634",
+      "description": "One of the original eight shires of Virginia. Contains Jamestown."
+    },
+    {
+      "name": "Goochland County",
+      "slug": "goochland-county",
+      "location_type": "county",
+      "parent_slug": "virginia",
+      "date_formed": "1728",
+      "formed_from": "Henrico County",
+      "border_notes": "Western portion of Henrico. Further divided when Albemarle formed 1744.",
+      "description": "County formed 1728 from Henrico County. Some Arrowhattocks families moved here."
+    }
+  ]
+}

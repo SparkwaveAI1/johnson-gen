@@ -1,0 +1,725 @@
+{
+  "extraction_metadata": {
+    "source_file": "Va-1607-Arrowhattocks.pdf",
+    "extraction_date": "2026-01-16",
+    "batch": 2,
+    "focus": "Early records pre-1700 - William Johnson of Arrowhattocks (1653), allied families, court records",
+    "notes": "This extraction focuses on the earliest Johnson records in the Arrowhattocks area and the connected Hatcher, Burton, Edloe families."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-101",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 3",
+      "page": "11",
+      "abbreviation": "Patent Bk 3:11",
+      "full_citation": "Virginia Land Office Patents, Book 3:11, William Johnson patent, 12 March 1653.",
+      "original_examined": false,
+      "cited_in": "Cavaliers and Pioneers Vol. 1; Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-102",
+      "source_type": "derivative",
+      "author": "Nugent, Nell Marion",
+      "title": "Cavaliers and Pioneers: Abstracts of Virginia Land Patents and Grants",
+      "volume": "Vol. 1",
+      "publication_place": "Richmond",
+      "publisher": "Virginia State Library",
+      "publication_year": 1934,
+      "abbreviation": "CPv1",
+      "full_citation": "Nell Marion Nugent, Cavaliers and Pioneers: Abstracts of Virginia Land Patents and Grants, vol. 1 (Richmond: Virginia State Library, 1934).",
+      "original_examined": true,
+      "notes": "Standard reference for Virginia land patents 1623-1666"
+    },
+    {
+      "temp_id": "SRC-103",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Charles City County Order Book",
+      "volume": "1656-1658",
+      "page": "5",
+      "record_date": "1656-07-11",
+      "abbreviation": "Charles City OB 1656:5",
+      "full_citation": "Charles City County, Virginia, Order Book 1656-1658, p. 5, 11 July 1656.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-104",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 5",
+      "page": "585",
+      "abbreviation": "Patent Bk 5:585",
+      "full_citation": "Virginia Land Office Patents, Book 5:585, John Burton patent, 22 March 1665/6.",
+      "original_examined": false,
+      "cited_in": "Cavaliers and Pioneers Vol. 2; Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-105",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 6",
+      "page": "570",
+      "abbreviation": "Patent Bk 6:570",
+      "full_citation": "Virginia Land Office Patents, Book 6:570, Edward Hatcher patent, 6 October 1675.",
+      "original_examined": false,
+      "cited_in": "Cavaliers and Pioneers Vol. 2; Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-106",
+      "source_type": "primary",
+      "repository": "Henrico County Courthouse (or Library of Virginia)",
+      "collection": "Henrico County Deeds",
+      "record_date": "1683-08-01",
+      "abbreviation": "Henrico Deeds 1683",
+      "full_citation": "Henrico County, Virginia, Deeds, 1 August 1683, Edward Hatcher release to John Pleasants.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-107",
+      "source_type": "primary",
+      "repository": "Henrico County Courthouse (or Library of Virginia)",
+      "collection": "Henrico County Deeds",
+      "record_date": "1685-04-01",
+      "abbreviation": "Henrico Deeds 1685",
+      "full_citation": "Henrico County, Virginia, Deeds, 1 April 1685, Edward Hatcher sale to Robert Burton.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file",
+      "notes": "Tony notes: 'Need to find original - location of Michael Johnson and John Johnson documented'"
+    },
+    {
+      "temp_id": "SRC-108",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 5",
+      "page": "534",
+      "abbreviation": "Patent Bk 5:534",
+      "full_citation": "Virginia Land Office Patents, Book 5:534, John Browne and Edward Hatcher patent, 30 December 1663.",
+      "original_examined": false,
+      "cited_in": "Cavaliers and Pioneers Vol. 1; Tony L. Johnson research file"
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-101",
+      "document_type": "land_patent",
+      "date": "1653-03-12",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-101",
+      "title": "William Johnson Patent - 550 acres Arrowhattocks",
+      "acres": 550,
+      "location_description": "On the N. side of the River, known by the Name of Harrahadocks, beg. next to land of Capt. Edloe",
+      "transcription_excerpt": "William Johnson, 550 acs, Henrico Co., p.11. On the N. side of the River, known by the Name of Harrahadocks, beg. next to land of Capt. Edloe, thence S. S. E., thence W. S. W. to the river, thence as the river bayeth to the place of beg. Trans. 11 pers; ED. ELTON, ELIZ. PATTENT, MARY FRANKLIN, KATH. PRICE, JON. PHILPOT, JON. CARTER, JON. MAYDEN, DANLL. BERRY, JON WOOD, THO. LOCK, JAMES HUMPHRY.",
+      "people": [
+        {
+          "name_as_written": "William Johnson",
+          "role": "patentee",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "First Johnson land patent in Henrico County on record. This is the earliest documented Johnson at Arrowhattocks. NEEDS NEW ID.",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Capt. Edloe",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Matthew Edloe or John Edloe - Edloe Plantation",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Ed. Elton",
+          "role": "headright",
+          "likely_match": null,
+          "match_confidence": null,
+          "new_person_flag": false,
+          "notes": "Transported person - not creating ID unless becomes significant"
+        },
+        {
+          "name_as_written": "Eliz. Pattent",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Mary Franklin",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Kath. Price",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Jon. Philpot",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Jon. Carter",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Jon. Mayden",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Danll. Berry",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Jon Wood",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Tho. Lock",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "James Humphry",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": false
+        }
+      ],
+      "notes": "This is the EARLIEST Johnson land patent in Henrico County. Harold Johnson (founder of JJJDNA project) identified this as significant. Later records show Arthur Bayly sold this land to William Johnson, who then assigned it to John Cox (by 1665/6). Location is south and east of present-day Richmond."
+    },
+    {
+      "temp_id": "DOC-102",
+      "document_type": "court_record",
+      "date": "1656-07-11",
+      "county": "Charles City",
+      "state": "Virginia",
+      "source_temp_id": "SRC-103",
+      "title": "Charles City County Court - Testimony about William Hatcher's statements",
+      "transcription_excerpt": "165[6] Jul 11, Charles City County, Order Book, 1656-1658: Hatcher as Thos ffones told me before Jo: Gilham and Saml Woodward did say at Mr. Wm. Johnsons the night before he went downe (there being then present Will Baugh, Tho Jones, Tho. ffones, and his wife and John Pryse that he would hang Mr. Landsdale in England at Tyburner and that he wish'd he could meet with Ned Hill in England, and that he was going fer England to be released of his good behavior...",
+      "people": [
+        {
+          "name_as_written": "Mr. Wm. Johnson",
+          "role": "location_host",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "The gathering took place 'at Mr. Wm. Johnsons' - this places William Johnson as a property owner where people gathered. Tony notes this is the same William Johnson from the 1653 patent, on lands 'that once belonged to Richard Johnson'.",
+          "new_person_flag": true,
+          "notes": "Same person as patentee in DOC-101"
+        },
+        {
+          "name_as_written": "Hatcher",
+          "role": "speaker",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "William Hatcher - Tony notes this is 'Edward Hatchers father'. William Hatcher (b. 1613 England) documented at Swift Creek/Appomattox River area.",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Thos ffones",
+          "role": "witness",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Jo: Gilham",
+          "role": "witness",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Saml Woodward",
+          "role": "witness",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Will Baugh",
+          "role": "present",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "John Pryse",
+          "role": "present",
+          "likely_match": null,
+          "new_person_flag": false
+        }
+      ],
+      "notes": "IMPORTANT: Tony states this record places William Johnson 'on lands that once belonged to Richard Johnson'. This connects to earlier Johnson presence. The court record documents a gathering at William Johnson's property."
+    },
+    {
+      "temp_id": "DOC-103",
+      "document_type": "land_patent",
+      "date": "1663-12-30",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-108",
+      "title": "John Browne and Edward Hatcher Patent - 500 acres (escheated James Place land)",
+      "acres": 500,
+      "location_description": "According to the ancient bounds thereof granted unto James Place",
+      "transcription_excerpt": "30 DEC. 1663: John Browne & Edward Hatcher, 500 acs, Henrico Co., according to the ancient bounds thereof, 30 Dec. 1663, p. 446 (534). Granted unto James Place & lately found to escheat to his Majestie as by inquisition dated 5 Sept. 1663 & now granted to the above named who hath made their composition to bee paid according to act.",
+      "people": [
+        {
+          "name_as_written": "John Browne",
+          "role": "patentee",
+          "likely_match": null,
+          "match_confidence": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Edward Hatcher",
+          "role": "patentee",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Son of William Hatcher. Edward Hatcher later patents 1300 acres (1675) and is connected to Michael Johnson land dealings.",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "James Place",
+          "role": "previous_owner",
+          "likely_match": null,
+          "new_person_flag": false,
+          "notes": "Original patentee - land escheated (reverted to crown)"
+        }
+      ],
+      "notes": "This land was adjacent to Hannah Boyce's land (daughter of Alice Edloe). Shows early Hatcher presence in Arrowhattocks area."
+    },
+    {
+      "temp_id": "DOC-104",
+      "document_type": "land_patent",
+      "date": "1665-03-22",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-104",
+      "title": "John Burton Patent - 700 acres Longfield",
+      "acres": 700,
+      "location_description": "300 acres northerly on a great swamp, southerly towards land of Alice Edlowe widow; 300 acres joining on the head of the Long Field patent; 100 acres due for transportation",
+      "transcription_excerpt": "22 March 1665/66, page 479 (585) Jno. Burton, 700 acres, Henrico Co. 300 acres northerly on a great swamp, southerly towards land of Alice Edlowe, Widdow, westerly over the river & easterly into the woods, called by the name of the old field; 300 acres another parte joyning on the head of the Long field pattent, beginning at a white oake marked 4 wayes at the extent of the deviding line of Jno. Burton & Jno. Davies, running along the greate slash southeast by south &c. 600 acres granted to Robt. Craddock & by Hoell Prise, his Attorney, sould unto Jno. Cox, who assigned to said Burton, & 100 acres due for transportation of 2 persons: Ann Coleman, Mark Wms. (Williams).",
+      "people": [
+        {
+          "name_as_written": "Jno. Burton",
+          "role": "patentee",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "John Burton - early Burton family presence at Longfield/Lily Valley. Robert Burton (1701 patentee near Michael Johnson) may be descendant.",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Alice Edlowe, widow",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Jno. Davies",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "John Davis - married Mary Burton (John Burton's daughter)"
+        },
+        {
+          "name_as_written": "Robt. Craddock",
+          "role": "previous_owner",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Jno. Cox",
+          "role": "intermediate_owner",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "John Cox assigned this land to Burton - same John Cox who received William Johnson's Arrowhattocks land"
+        }
+      ],
+      "notes": "Establishes Burton family at Longfield/Lily Valley by 1665. Connects to later Robert Burton adjacent to Michael Johnson (1714)."
+    },
+    {
+      "temp_id": "DOC-105",
+      "document_type": "land_patent",
+      "date": "1675-10-06",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-105",
+      "title": "Edward Hatcher Patent - 1300 acres Lily Valley/Cornelius Creek",
+      "acres": 1300,
+      "location_description": "N. side James River, next to Lilley Valley, nigh Cornelius Creek over Mr. Beauchampts path",
+      "transcription_excerpt": "6 OCT. 1675: Edwd. Hatcher, 1300 acs, Henrico Co., N. side James Riv., 6 Oct. 1675, p. 570. Next to Lilley Valley; nigh Cornelius' Cr. over Mr. Beauchampts path &c. Trans. of 26 pers: [names listed including] HENRY HATCHER.",
+      "people": [
+        {
+          "name_as_written": "Edwd. Hatcher",
+          "role": "patentee",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "Edward Hatcher - same as DOC-103. Later sells land to Robert Burton (1685). Connected to Michael Johnson area.",
+          "new_person_flag": false,
+          "notes": "Same Edward Hatcher from 1663 patent"
+        },
+        {
+          "name_as_written": "Henry Hatcher",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Listed among transported persons - brother of Edward Hatcher"
+        }
+      ],
+      "notes": "Edward Hatcher's major land acquisition near Cornelius Creek/Lily Valley. This land later connects to Burton and Johnson lands."
+    },
+    {
+      "temp_id": "DOC-106",
+      "document_type": "deed",
+      "date": "1682-12-22",
+      "date_recorded": "1683-08-01",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-106",
+      "title": "Edward Hatcher Release to John Pleasants - Turkey Island Point",
+      "acres": 150,
+      "transcription_excerpt": "18 Oct. 1681 Benjamin Hatcher, my brother, has purchased of me, Edward Hatcher of Henrico Co., a piece of land called 'Turkey Island Point', 150 acres; which land was purchased by my father William Hatcher, of Daniel and John Price. This land was sold by my said brother to John Pleasants 18 Oct. 1681. I, for more perfect assurance of said land, release all claim to John Pleasants. 22 Dec. 1682. Wit: Richard Kennon, Tho. Branch. Signed: Edward Hatcher (E). Recorded 1 Aug. 1683.",
+      "people": [
+        {
+          "name_as_written": "Edward Hatcher",
+          "role": "grantor",
+          "likely_match": null,
+          "match_confidence": null,
+          "new_person_flag": false,
+          "notes": "Same Edward Hatcher"
+        },
+        {
+          "name_as_written": "Benjamin Hatcher",
+          "role": "intermediate_owner",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Brother of Edward Hatcher; witness to John Watson will (1702)"
+        },
+        {
+          "name_as_written": "William Hatcher",
+          "role": "original_purchaser",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Father of Edward and Benjamin Hatcher; 'my father William Hatcher'"
+        },
+        {
+          "name_as_written": "Daniel Price",
+          "role": "seller_to_hatcher",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "John Price",
+          "role": "seller_to_hatcher",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "John Pleasants",
+          "role": "grantee",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Quaker; later significant landholder"
+        },
+        {
+          "name_as_written": "Tho. Branch",
+          "role": "witness",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Thomas Branch of Kingsland"
+        }
+      ],
+      "notes": "IMPORTANT for Hatcher genealogy: Confirms Edward and Benjamin Hatcher were brothers, and William Hatcher was their father."
+    },
+    {
+      "temp_id": "DOC-107",
+      "document_type": "deed",
+      "date": "1685-04-01",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-107",
+      "title": "Edward Hatcher Sale to Robert Burton - 300 acres Varina Parish",
+      "acres": 300,
+      "transcription_excerpt": "1685 Apr 1 - Edward Hatcher sells 300 a. in Varina Parish, Henrico Co. on north side of James River, with witnesses Jno. Woodson and Will Johnson.",
+      "people": [
+        {
+          "name_as_written": "Edward Hatcher",
+          "role": "grantor",
+          "likely_match": null,
+          "new_person_flag": false
+        },
+        {
+          "name_as_written": "Robert Burton",
+          "role": "grantee",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Robert Burton who later patents 300 acres at Cornelius Creek (1701)"
+        },
+        {
+          "name_as_written": "Jno. Woodson",
+          "role": "witness",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Will Johnson",
+          "role": "witness",
+          "likely_match": null,
+          "match_confidence": null,
+          "reasoning": "A William Johnson witnessing a deed in 1685. Could be same as 1653 patentee (would be older), or a son/relative.",
+          "new_person_flag": true,
+          "notes": "Need to determine relationship to 1653 William Johnson"
+        }
+      ],
+      "notes": "Tony notes this deed is 'adjoining Jonathan Woodson, Michael Johnson and John Johnson' but the excerpt provided doesn't include that detail. Tony also notes 'Lost the Original document on this I need the proof on this deed.' If the full deed does mention Michael Johnson and John Johnson, it would place them in the area by 1685."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1_temp": "William Hatcher",
+      "person_2_temp": "Edward Hatcher",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Edward Hatcher deed (1682/1683) explicitly states 'my father William Hatcher'",
+      "source_temp_id": "SRC-106"
+    },
+    {
+      "person_1_temp": "William Hatcher",
+      "person_2_temp": "Benjamin Hatcher",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Edward Hatcher deed (1682/1683) states 'Benjamin Hatcher, my brother'",
+      "source_temp_id": "SRC-106"
+    },
+    {
+      "person_1_temp": "Edward Hatcher",
+      "person_2_temp": "Benjamin Hatcher",
+      "relationship_type": "sibling",
+      "confidence": "confirmed",
+      "evidence_summary": "Edward Hatcher deed (1682/1683) states 'Benjamin Hatcher, my brother'",
+      "source_temp_id": "SRC-106"
+    }
+  ],
+
+  "associations_to_add": [
+    {
+      "person_1_temp": "William Johnson (1653)",
+      "person_2_temp": "Capt. Edloe",
+      "association_type": "adjacent_landowner",
+      "date": "1653-03-12",
+      "confidence": "confirmed",
+      "evidence_summary": "William Johnson patent (1653) describes land 'beg. next to land of Capt. Edloe'",
+      "source_temp_id": "SRC-101"
+    },
+    {
+      "person_1_temp": "William Johnson (1653)",
+      "person_2_temp": "William Hatcher",
+      "association_type": "social_connection",
+      "date": "1656-07-11",
+      "confidence": "confirmed",
+      "evidence_summary": "Court record documents gathering 'at Mr. Wm. Johnsons' where Hatcher made statements",
+      "source_temp_id": "SRC-103"
+    },
+    {
+      "person_1_temp": "John Burton (1665)",
+      "person_2_temp": "Alice Edloe",
+      "association_type": "adjacent_landowner",
+      "date": "1665-03-22",
+      "confidence": "confirmed",
+      "evidence_summary": "Burton patent (1665) describes land 'southerly towards land of Alice Edlowe widow'",
+      "source_temp_id": "SRC-104"
+    },
+    {
+      "person_1_temp": "Edward Hatcher",
+      "person_2_temp": "Robert Burton",
+      "association_type": "land_transaction",
+      "date": "1685-04-01",
+      "confidence": "confirmed",
+      "evidence_summary": "Edward Hatcher sold 300 acres to Robert Burton (1685)",
+      "source_temp_id": "SRC-107"
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "JNSN-ENG-e1620-01",
+      "surname": "Johnson",
+      "given_name": "William",
+      "designation": "of Arrowhattocks",
+      "birth_year_estimate": 1620,
+      "birth_type": "estimated",
+      "location": "Henrico County, Arrowhattocks",
+      "confidence": "confirmed",
+      "evidence": "Land patent 12 March 1653 for 550 acres at Arrowhattocks; court record 1656 places him as property owner",
+      "source_temp_ids": ["SRC-101", "SRC-103"],
+      "notes": "Earliest documented Johnson landholder in Henrico County. Later assigned land to John Cox. Harold Johnson (JJJDNA founder) identified as significant."
+    },
+    {
+      "suggested_id": "HTCR-ENG-b1613-01",
+      "surname": "Hatcher",
+      "given_name": "William",
+      "birth_year": 1613,
+      "birth_type": "known",
+      "birth_place": "England",
+      "location": "Swift Creek, Appomattox River / Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named as father by Edward Hatcher in 1682/1683 deed; court record 1656 places him at William Johnson's",
+      "source_temp_ids": ["SRC-103", "SRC-106"],
+      "notes": "Father of Edward, Benjamin, Henry Hatcher. Patriarch of Hatcher family connected to Johnsons."
+    },
+    {
+      "suggested_id": "HTCR-VA-e1640-01",
+      "surname": "Hatcher",
+      "given_name": "Edward",
+      "birth_year_estimate": 1640,
+      "location": "Henrico County, Lily Valley / Cornelius Creek",
+      "confidence": "confirmed",
+      "evidence": "Patents 500 acres (1663) and 1300 acres (1675); sells to Robert Burton (1685)",
+      "source_temp_ids": ["SRC-105", "SRC-106", "SRC-107", "SRC-108"],
+      "notes": "Son of William Hatcher. Later landowner at Tuckahoe Creek near Michael Johnson."
+    },
+    {
+      "suggested_id": "HTCR-VA-e1645-01",
+      "surname": "Hatcher",
+      "given_name": "Benjamin",
+      "birth_year_estimate": 1645,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named as brother by Edward Hatcher in 1682/1683 deed; witness to John Watson will (1702)",
+      "source_temp_ids": ["SRC-106"],
+      "notes": "Son of William Hatcher. Witness to Watson will connects him to Michael Johnson's wife's family."
+    },
+    {
+      "suggested_id": "BRTN-VA-e1640-01",
+      "surname": "Burton",
+      "given_name": "John",
+      "designation": "of Longfield",
+      "birth_year_estimate": 1640,
+      "location": "Henrico County, Longfield / Lily Valley",
+      "confidence": "confirmed",
+      "evidence": "Patent 700 acres 22 March 1665/6",
+      "source_temp_id": "SRC-104",
+      "notes": "Early Burton presence at Longfield. Robert Burton (1701) may be descendant."
+    },
+    {
+      "suggested_id": "BRTN-VA-e1660-01",
+      "surname": "Burton",
+      "given_name": "Robert",
+      "designation": "Senior",
+      "birth_year_estimate": 1660,
+      "death_year": 1724,
+      "death_type": "estimated",
+      "location": "Henrico County, Cornelius Creek / Arrowhattocks",
+      "confidence": "confirmed",
+      "evidence": "Purchased land from Edward Hatcher (1685); patent 300 acres at Cornelius Creek (1701)",
+      "source_temp_id": "SRC-107",
+      "notes": "Robert Burton Senior of Longfield Plantation - later adjacent to Michael Johnson area"
+    },
+    {
+      "suggested_id": "EDLE-ENG-e1600-01",
+      "surname": "Edloe",
+      "given_name": "Alice",
+      "designation": "widow",
+      "birth_year_estimate": 1600,
+      "location": "Henrico County, Arrowhattocks / Edloe Plantation",
+      "confidence": "confirmed",
+      "evidence": "Named in multiple patents as adjacent landowner (1636, 1665)",
+      "source_temp_id": "SRC-104",
+      "notes": "Early Edloe Plantation owner. Michael Johnson later tithable at 'Edloe Plantation' (1702)."
+    },
+    {
+      "suggested_id": "COX-VA-e1635-01",
+      "surname": "Cox",
+      "given_name": "John",
+      "birth_year_estimate": 1635,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Received William Johnson's Arrowhattocks land; assigned to John Burton (1665)",
+      "source_temp_ids": ["SRC-101", "SRC-104"],
+      "notes": "Connected to Cox family at Strawberry Banks and Arrowhattocks. Brother-in-law to John Burton."
+    },
+    {
+      "suggested_id": "PLSN-ENG-e1640-01",
+      "surname": "Pleasants",
+      "given_name": "John",
+      "birth_year_estimate": 1640,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Received land from Benjamin Hatcher / Edward Hatcher (1681-1683)",
+      "source_temp_id": "SRC-106",
+      "notes": "Quaker family. Later Pleasants significant in area."
+    },
+    {
+      "suggested_id": "BRNC-ENG-b1600-01",
+      "surname": "Branch",
+      "given_name": "Thomas",
+      "designation": "of Kingsland",
+      "birth_year": 1623,
+      "birth_type": "known",
+      "location": "Henrico County, Kingsland",
+      "confidence": "confirmed",
+      "evidence": "Witness to Edward Hatcher deed (1682/1683)",
+      "source_temp_id": "SRC-106",
+      "notes": "Son of Christopher Branch. Branch family intermarried with Hatchers."
+    }
+  ],
+
+  "research_notes_not_evidence": [
+    {
+      "note": "Tony states the 1685 Edward Hatcher to Robert Burton deed was 'adjoining Jonathan Woodson, Michael Johnson and John Johnson'. The excerpt provided only shows witnesses (Jno. Woodson and Will Johnson), not the land description. Tony notes 'Lost the Original document on this I need the proof on this deed.' If verified, this would place Michael Johnson in the area by 1685.",
+      "related_people": ["Michael Johnson", "John Johnson", "William Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "unverified",
+      "research_needed": "Locate original 1685 deed in Henrico County records to verify if Michael Johnson and John Johnson are mentioned in the land description"
+    },
+    {
+      "note": "Tony states William Johnson of 1653 patent was 'on lands that once belonged to Richard Johnson'. No source citation provided for Richard Johnson ownership.",
+      "related_people": ["William Johnson (1653)", "Richard Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "unverified",
+      "research_needed": "Find documentation of Richard Johnson at Arrowhattocks prior to 1653"
+    },
+    {
+      "note": "Tony notes that the William Johnson who witnessed the 1685 deed might be the same as the 1653 patentee, but this is not confirmed. If same person, he would have been active for 32+ years.",
+      "related_people": ["William Johnson (1653)", "Will Johnson (1685 witness)"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "possible",
+      "research_needed": "Determine if 1653 and 1685 William Johnsons are same person or father/son"
+    },
+    {
+      "note": "The connection between John Burton (1665) and Robert Burton (1701) is not explicitly documented. Tony implies family connection but no proof shown.",
+      "related_people": ["John Burton (1665)", "Robert Burton Sr."],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "likely_but_unconfirmed",
+      "research_needed": "Find Burton family genealogy documentation connecting John Burton (1665) to Robert Burton (1701)"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 7,
+    "sources_identified": 8,
+    "confirmed_relationships": 3,
+    "new_people_identified": 10,
+    "research_notes_captured": 4,
+    "time_period": "1653-1685",
+    "key_finding": "William Johnson's 1653 patent is the earliest documented Johnson land in Henrico County. The 1656 court record places him as an established property owner. Hatcher family genealogy confirmed: William Hatcher was father of Edward and Benjamin Hatcher."
+  }
+}

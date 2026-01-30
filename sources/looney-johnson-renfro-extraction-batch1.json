@@ -1,0 +1,546 @@
+{
+  "extraction_metadata": {
+    "source_file": "1692-Johnson-renfro-Looney.docx",
+    "extraction_date": "2026-01-17",
+    "batch": 1,
+    "focus": "Renfro family foundation 1638-1728 - earliest allied family in this file",
+    "notes": "The Renfro family provides context for later Johnson-Renfro intermarriages. Symon Renfro arrived 1638, same era as earliest Johnsons at Chippokes Creek."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-L001",
+      "source_type": "derivative",
+      "author": "Nugent, Nell Marion",
+      "title": "Cavaliers and Pioneers: Abstracts of Virginia Land Patents and Grants",
+      "volume": "1",
+      "page": "86, 546",
+      "publication_year": 1934,
+      "abbreviation": "CPv1:86",
+      "full_citation": "Nugent, Nell Marion. Cavaliers and Pioneers: Abstracts of Virginia Land Patents and Grants, Vol. 1 (Richmond: Virginia State Library, 1934), pp. 86, 546.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L002",
+      "source_type": "primary",
+      "repository": "Chester County, Pennsylvania",
+      "collection": "Wills",
+      "record_date": "1727-07-28",
+      "abbreviation": "Chester Co PA Wills",
+      "full_citation": "Chester County, Pennsylvania, Will of John Renfro, dated 28 July 1727, probated between 28 July 1727 and 6 April 1728.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-L003",
+      "source_type": "primary",
+      "repository": "Welsh Tract Baptist Church",
+      "collection": "Church Records",
+      "volume": "Pencader Hundred, New Castle Co, Delaware",
+      "page": "18-19",
+      "record_date": "1701-1728",
+      "abbreviation": "Welsh Tract Baptist Records",
+      "full_citation": "Records of the Welsh Tract Baptist Meeting, Pencader Hundred, New Castle County, Delaware, 1701-1728, pp. 18-19.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-L004",
+      "source_type": "primary",
+      "repository": "Bedford County, Virginia",
+      "collection": "Will Books",
+      "record_date": "1776-03-25",
+      "abbreviation": "Bedford Co VA Wills",
+      "full_citation": "Bedford County, Virginia, Will of Joseph Renfro, dated 14 November 1772, probated 25 March 1776.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-L005",
+      "source_type": "authored",
+      "author": "Renfro, Dr. D.O.",
+      "title": "Renfro Family",
+      "publication_year": 1970,
+      "abbreviation": "Renfro Family (1970)",
+      "full_citation": "Renfro, Dr. D.O. Renfro Family. 1970.",
+      "original_examined": false,
+      "notes": "Tony notes this researcher 'tried to tie together information on ALL Renfro's'"
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-L001",
+      "document_type": "land_patent",
+      "date": "1638-05-06",
+      "county": "James City",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L001",
+      "title": "Jeremiah Dickenson Patent - 500 acres, Upper Chippokes Creek",
+      "acres": 500,
+      "location_description": "West upon upper Chippoeks Creek, beginning at Swann Baye",
+      "transcription_excerpt": "JEREMIAH DICKENSON, 500 acs. James Citty Co., 6 May 1638, p. 546. W. upon upper Chippoeks Cr., beg. at Swann Baye, joyning upon a Sw. Tuning E. into the woods. N. towards the river mouth &c. Trans. of 10 pers: Eliza. Flinton, Henry Hayes, Elias Jue, James Hayes, Robert Newton, Robt. Muxford, Sarah Henchley, Eliza. Hayes, Wm. Gage, Symon Roufe (or Symon Renfo.)",
+      "people": [
+        {
+          "name_as_written": "Jeremiah Dickenson",
+          "role": "patentee",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Symon Roufe (or Symon Renfo.)",
+          "role": "headright",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "EARLIEST Renfro in Virginia records. Transported by Dickenson."
+        }
+      ],
+      "notes": "This is the earliest documented Renfro in Virginia. Tony notes: 'First notes in Virginia of Possible Renfro as Jeremiah Dickenson is tied to JOHNSON research and land owners JOHNSON at Chippoakes Creek.' The Chippokes Creek area is where early Johnsons also settled."
+    },
+    {
+      "temp_id": "DOC-L002",
+      "document_type": "church_record",
+      "date": "1701-1725",
+      "county": "New Castle",
+      "state": "Delaware",
+      "source_temp_id": "SRC-L003",
+      "title": "Welsh Tract Baptist Church Records - John Rontfro",
+      "transcription_excerpt": "John Rontfro of record in Delaware. He appears on pages 18 and 19 of records of the Welsh Tract Baptist Meeting, Pecander Hundred, New Castle Co, Delaware, 1701 to 1728. Citing: (1) Signers of the Confession of Faith, 1725 (2) John Rontfro..., Margaret Rontfro and The names of Such as has been removed from us by death..",
+      "people": [
+        {
+          "name_as_written": "John Rontfro",
+          "role": "church_member",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Member of Welsh Tract Baptist Church; signed Confession of Faith 1725"
+        },
+        {
+          "name_as_written": "Margaret Rontfro",
+          "role": "church_member",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Listed in church death records; likely wife of John Rontfro"
+        }
+      ],
+      "notes": "John Renfro was part of the Welsh Baptist community that included settlers who later moved to Virginia. This provides religious/community context."
+    },
+    {
+      "temp_id": "DOC-L003",
+      "document_type": "will",
+      "date": "1727-07-28",
+      "date_probated": "1728-04-06",
+      "county": "Chester",
+      "state": "Pennsylvania",
+      "source_temp_id": "SRC-L002",
+      "title": "Will of John Renfro - Chester County, PA",
+      "transcription_excerpt": "More About JOHN RENFRO: Died 2: Bet. Jul 28, 1727 - Apr 06, 1728, Chester Co, PA. Residence: 1697, VA. Will: Jul 28, 1727, Chester Co, PA. Children of JOHN RENFRO and MARY UNKNOWN are: i. DAVID RENFRO, b. Abt. 1677. ii. JOHN RENFRO, JR, b. 1695; d. May 30, 1748, Edgecombe Co, NC. iii. JAMES RENFRO, b. 1698, Orange, Va. iv. ENOCH RENFRO, b. Aug 24, 1698. v. SUSANNAH RENFRO, b. Bet. 1698-1705. vi. JOSEPH RENFRO, b. 1700, VA; d. Mar 25, 1776, Bedford, VA. vii. CAPTAIN WILLIAM RENFRO, b. Abt. 1702, James City Co, Va. viii. JACOB RENFRO, b. 1715.",
+      "people": [
+        {
+          "name_as_written": "John Renfro",
+          "role": "testator",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Mary Unknown",
+          "role": "wife",
+          "likely_match": null,
+          "new_person_flag": true
+        }
+      ],
+      "notes": "This will documents John Renfro's 8 children who dispersed across Virginia and North Carolina. Several children end up in Orange County and the Valley of Virginia where they later intermarry with Johnson and Looney families."
+    },
+    {
+      "temp_id": "DOC-L004",
+      "document_type": "will",
+      "date": "1772-11-14",
+      "date_probated": "1776-03-25",
+      "county": "Bedford",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L004",
+      "title": "Will of Joseph Renfro - Bedford County, VA",
+      "transcription_excerpt": "March 25, 1776 In the name of God, Amen: I, Joseph Renfro of Bedford County, and colony.... I give and bequeath to Mary, my dearly beloved wife... Also I give to my beloved son, James... Also, I give to my beloved son-in-law Moses Renfro... Also I give to my beloved son Mark Renfro, the north side of the land on Black Water... I have in the last part given or bequeathed to my son Joshua Renfro, an entry south side of Black Water... Administration was granted to the three older sons, James Renfro, John Renfro and William Renfro.",
+      "people": [
+        {
+          "name_as_written": "Joseph Renfro",
+          "role": "testator",
+          "likely_match": null,
+          "notes": "Son of John Renfro; French & Indian War veteran"
+        },
+        {
+          "name_as_written": "Mary",
+          "role": "wife",
+          "likely_match": null,
+          "notes": "Tony identifies her as Mary Randolph"
+        },
+        {
+          "name_as_written": "James Renfro",
+          "role": "son/executor",
+          "likely_match": null
+        },
+        {
+          "name_as_written": "John Renfro",
+          "role": "son/executor",
+          "likely_match": null
+        },
+        {
+          "name_as_written": "William Renfro",
+          "role": "son/executor",
+          "likely_match": null
+        },
+        {
+          "name_as_written": "Mark Renfro",
+          "role": "son",
+          "likely_match": null
+        },
+        {
+          "name_as_written": "Joshua Renfro",
+          "role": "son",
+          "likely_match": null
+        },
+        {
+          "name_as_written": "Moses Renfro",
+          "role": "son_in_law",
+          "likely_match": null
+        }
+      ],
+      "notes": "Joseph Renfro's will shows the family established in Bedford County by mid-18th century. Five of his sons served as officers in the Revolutionary War. The Black Water location is in Bedford County."
+    }
+  ],
+
+  "family_groups_to_create": [
+    {
+      "name": "Symon Renfro of James City County",
+      "group_type": "extended",
+      "anchor_person": "Symon Renfro (c.1614-1690)",
+      "primary_location": "James City County, Virginia",
+      "date_start": "1638",
+      "date_end": "1728",
+      "confidence": "confirmed",
+      "summary": "Earliest Renfro family in Virginia. Symon arrived as a headright 1638, lived in James City County, went to Barbados c.1652, returned. His descendants spread to Pennsylvania, North Carolina, and the Valley of Virginia where they intermarried with Looney and Johnson families.",
+      "source_files": ["1692-Johnson-renfro-Looney.docx"]
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "RNFR-ENG-e1614-01",
+      "surname": "Renfro",
+      "given_name": "Symon",
+      "name_variants": ["Renfrow", "Roufe", "Renfo"],
+      "birth_year_estimate": 1614,
+      "birth_year_type": "e",
+      "death_year": 1690,
+      "death_place": "James City County, Virginia",
+      "location": "James City County, Virginia",
+      "confidence": "confirmed",
+      "evidence": "Cavaliers & Pioneers v1 p.86 - transported by Jeremiah Dickenson 1638; FindAGrave memorial 116563969",
+      "notes": "EARLIEST documented Renfro in Virginia. Transported 1638. Went to Barbados c.1652, returned. Father of Robert, Simon, Hester, Symon Jr."
+    },
+    {
+      "suggested_id": "RNFR-VA-e1640-01",
+      "surname": "Renfro",
+      "given_name": "Robert",
+      "birth_year_estimate": 1640,
+      "birth_year_type": "e",
+      "death_year": 1690,
+      "death_place": "Virginia",
+      "location": "Virginia",
+      "confidence": "likely",
+      "evidence": "Listed as child of Symon Renfro in Tony's research",
+      "notes": "Son of Symon Renfro. Married (1) Mary Evans, (2) Susan Holmes."
+    },
+    {
+      "suggested_id": "RNFR-VA-e1665-01",
+      "surname": "Renfro",
+      "given_name": "John",
+      "name_variants": ["Rontfro", "Renfrow"],
+      "birth_year_estimate": 1665,
+      "birth_year_type": "e",
+      "death_year": 1728,
+      "death_place": "Chester County, Pennsylvania",
+      "location": "Virginia; Delaware; Pennsylvania",
+      "confidence": "confirmed",
+      "evidence": "Welsh Tract Baptist records pp.18-19; Chester Co PA Will 1727",
+      "notes": "Member of Welsh Tract Baptist Church. Residence in VA 1697 per will. Father of 8 children who dispersed across VA and NC. Will dated 28 July 1727, probated by 6 April 1728."
+    },
+    {
+      "suggested_id": "RNFR-VA-e1670-01",
+      "surname": "Renfro",
+      "given_name": "Mary",
+      "designation": "wife of John Renfro",
+      "birth_year_estimate": 1670,
+      "birth_year_type": "e",
+      "location": "Virginia; Pennsylvania",
+      "confidence": "confirmed",
+      "evidence": "Named in John Renfro's will as mother of his children",
+      "notes": "Wife of John Renfro (d.1728). Surname unknown."
+    },
+    {
+      "suggested_id": "RNFR-VA-e1677-01",
+      "surname": "Renfro",
+      "given_name": "David",
+      "birth_year_estimate": 1677,
+      "birth_year_type": "e",
+      "location": "Virginia",
+      "confidence": "likely",
+      "evidence": "Listed as child of John Renfro and Mary in Tony's research",
+      "notes": "Eldest known child of John Renfro."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1695-01",
+      "surname": "Renfro",
+      "given_name": "John",
+      "designation": "Junior",
+      "birth_year": 1695,
+      "birth_year_type": "b",
+      "death_year": 1748,
+      "death_date": "1748-05-30",
+      "death_place": "Edgecombe County, North Carolina",
+      "location": "Virginia; North Carolina",
+      "confidence": "confirmed",
+      "evidence": "Listed as child of John Renfro; death date from Tony's research",
+      "notes": "Son of John Renfro. Moved to Edgecombe Co NC."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1698-01",
+      "surname": "Renfro",
+      "given_name": "James",
+      "birth_year": 1698,
+      "birth_year_type": "b",
+      "birthplace": "Orange County, Virginia",
+      "location": "Orange County, Virginia",
+      "confidence": "likely",
+      "evidence": "Listed as child of John Renfro",
+      "notes": "Son of John Renfro. Born in Orange Co VA per Tony's research."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1698-02",
+      "surname": "Renfro",
+      "given_name": "Enoch",
+      "birth_year": 1698,
+      "birth_date": "1698-08-24",
+      "birth_year_type": "b",
+      "death_year": 1802,
+      "death_place": "Wilkes County (Warren County), Georgia",
+      "location": "North Carolina; Georgia",
+      "confidence": "likely",
+      "evidence": "Listed as child of John Renfro; dates from Theresa Renfro research",
+      "notes": "Son of John Renfro. Long-lived (died 1802 aged ~104)."
+    },
+    {
+      "suggested_id": "RNFR-VA-e1700-01",
+      "surname": "Renfro",
+      "given_name": "Susannah",
+      "birth_year_estimate": 1700,
+      "birth_year_type": "e",
+      "death_year": 1752,
+      "location": "Virginia",
+      "confidence": "likely",
+      "evidence": "Listed as child of John Renfro; birth 'Bet. 1698-1705', died 'Aft. 1752'",
+      "notes": "Daughter of John Renfro."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1700-01",
+      "surname": "Renfro",
+      "given_name": "Joseph",
+      "birth_year": 1700,
+      "birth_year_type": "b",
+      "birthplace": "Virginia",
+      "death_year": 1776,
+      "death_date": "1776-03-25",
+      "death_place": "Bedford County, Virginia",
+      "location": "Virginia; Bedford County",
+      "confidence": "confirmed",
+      "evidence": "Listed as child of John Renfro; will dated 14 Nov 1772, probated 25 Mar 1776 Bedford Co VA",
+      "notes": "Son of John Renfro. French & Indian War veteran (Lieutenant). Married Mary Randolph. Five sons were Revolutionary War officers."
+    },
+    {
+      "suggested_id": "RNFR-VA-e1702-01",
+      "surname": "Renfro",
+      "given_name": "William",
+      "designation": "Captain",
+      "birth_year_estimate": 1702,
+      "birth_year_type": "e",
+      "birthplace": "James City County, Virginia",
+      "death_year": 1789,
+      "death_place": "Botetourt County, Virginia",
+      "location": "James City County; Botetourt County",
+      "confidence": "confirmed",
+      "evidence": "Listed as child of John Renfro; death 'Bet. Feb 20 - Jun, 1789, Botetourt Co, Va'",
+      "notes": "Son of John Renfro. Captain. Moved from James City Co to Botetourt Co."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1715-01",
+      "surname": "Renfro",
+      "given_name": "Jacob",
+      "birth_year": 1715,
+      "birth_year_type": "b",
+      "death_year": 1800,
+      "location": "Virginia",
+      "confidence": "likely",
+      "evidence": "Listed as child of John Renfro; died 'Aft. 1800'",
+      "notes": "Youngest known child of John Renfro."
+    },
+    {
+      "suggested_id": "DCKN-ENG-e1600-01",
+      "surname": "Dickenson",
+      "given_name": "Jeremiah",
+      "birth_year_estimate": 1600,
+      "birth_year_type": "e",
+      "location": "James City County, Virginia",
+      "confidence": "confirmed",
+      "evidence": "Cavaliers & Pioneers v1 p.546 - patent 6 May 1638",
+      "notes": "Patented 500 acres at Chippokes Creek 1638. Transported Symon Renfro. Tony notes he 'is tied to JOHNSON research and land owners JOHNSON at Chippoakes Creek.'"
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1_temp": "RNFR-ENG-e1614-01",
+      "person_1_name": "Symon Renfro",
+      "person_2_temp": "RNFR-VA-e1640-01",
+      "person_2_name": "Robert Renfro",
+      "relationship_type": "father",
+      "confidence": "likely",
+      "evidence_summary": "Tony's research lists Robert as child of Symon"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1665-01",
+      "person_1_name": "John Renfro (d.1728)",
+      "person_2_temp": "RNFR-VA-e1677-01",
+      "person_2_name": "David Renfro",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "John Renfro's will lists children"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1665-01",
+      "person_1_name": "John Renfro (d.1728)",
+      "person_2_temp": "RNFR-VA-b1695-01",
+      "person_2_name": "John Renfro Jr.",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "John Renfro's will lists children"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1665-01",
+      "person_1_name": "John Renfro (d.1728)",
+      "person_2_temp": "RNFR-VA-b1698-01",
+      "person_2_name": "James Renfro",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "John Renfro's will lists children"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1665-01",
+      "person_1_name": "John Renfro (d.1728)",
+      "person_2_temp": "RNFR-VA-b1700-01",
+      "person_2_name": "Joseph Renfro",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "John Renfro's will lists children"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1665-01",
+      "person_1_name": "John Renfro (d.1728)",
+      "person_2_temp": "RNFR-VA-e1702-01",
+      "person_2_name": "William Renfro (Captain)",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "John Renfro's will lists children"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1665-01",
+      "person_1_name": "John Renfro (d.1728)",
+      "person_2_temp": "RNFR-VA-e1670-01",
+      "person_2_name": "Mary Renfro",
+      "relationship_type": "spouse",
+      "confidence": "confirmed",
+      "evidence_summary": "John Renfro's will names wife Mary"
+    }
+  ],
+
+  "locations_to_create": [
+    {
+      "name": "Chippokes Creek",
+      "name_variants": ["Chippoeks Creek", "Chippoakes Creek"],
+      "location_type": "creek",
+      "parent_location": "James City County",
+      "description": "Creek in James City County where early Renfro and Johnson families settled. Jeremiah Dickenson patent 1638.",
+      "notes": "Tony notes Johnson families also owned land at Chippokes Creek"
+    },
+    {
+      "name": "James City County",
+      "location_type": "county",
+      "parent_location": "Virginia",
+      "date_formed": "1634",
+      "description": "One of the original eight shires of Virginia. Location of early Renfro settlement."
+    },
+    {
+      "name": "Welsh Tract",
+      "location_type": "region",
+      "parent_location": "New Castle County, Delaware",
+      "description": "Settlement area for Welsh Baptists who arrived 1701. John Renfro was a member of the Welsh Tract Baptist Church.",
+      "notes": "Community that connected Pennsylvania, Delaware, and Virginia settlers"
+    },
+    {
+      "name": "Bedford County",
+      "location_type": "county",
+      "parent_location": "Virginia",
+      "date_formed": "1754",
+      "formed_from": "Lunenburg County",
+      "description": "Valley of Virginia county where Joseph Renfro settled. His will 1776 mentions Black Water."
+    },
+    {
+      "name": "Botetourt County",
+      "location_type": "county",
+      "parent_location": "Virginia",
+      "date_formed": "1770",
+      "formed_from": "Augusta County",
+      "description": "Valley of Virginia county where William Renfro (Captain) died 1789."
+    }
+  ],
+
+  "research_notes_not_evidence": [
+    {
+      "note": "Tony states Jeremiah Dickenson 'is tied to JOHNSON research and land owners JOHNSON at Chippoakes Creek' but does not specify which Johnsons or provide documentation.",
+      "related_people": ["Jeremiah Dickenson"],
+      "source_file": "1692-Johnson-renfro-Looney.docx",
+      "status": "needs_research",
+      "research_needed": "Find Johnson patents/deeds at Chippokes Creek area in James City County records"
+    },
+    {
+      "note": "The relationship between Symon Renfro (1638 headright) and John Renfro (d.1728) is not explicitly documented. They could be father-son, grandfather-grandson, or unrelated.",
+      "related_people": ["Symon Renfro", "John Renfro (d.1728)"],
+      "source_file": "1692-Johnson-renfro-Looney.docx",
+      "status": "possible",
+      "research_needed": "Find documentation linking Symon Renfro to later Renfro generations"
+    },
+    {
+      "note": "Mary Randolph, wife of Joseph Renfro, may connect to the Randolph families of Tuckahoe Creek (same area as Michael Johnson). Tony mentions this connection but doesn't document it.",
+      "related_people": ["Joseph Renfro", "Mary Randolph"],
+      "source_file": "1692-Johnson-renfro-Looney.docx",
+      "status": "possible",
+      "research_needed": "Identify which Randolph family Mary belonged to and if connected to Tuckahoe Creek Randolphs"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 4,
+    "sources_identified": 5,
+    "new_people_identified": 14,
+    "family_groups_identified": 1,
+    "locations_identified": 5,
+    "relationships_documented": 7,
+    "time_period": "1638-1789",
+    "key_findings": [
+      "Symon Renfro arrived 1638 as headright of Jeremiah Dickenson - earliest documented Renfro",
+      "John Renfro (d.1728) had 8 children who dispersed across Virginia and North Carolina",
+      "Renfro family connected to Welsh Tract Baptist community (Pennsylvania/Delaware)",
+      "Joseph Renfro (b.1700) established in Bedford County; French & Indian War veteran",
+      "William Renfro (Captain) moved from James City to Botetourt County",
+      "Tony notes Johnson families also at Chippokes Creek - same area as early Renfros"
+    ]
+  }
+}

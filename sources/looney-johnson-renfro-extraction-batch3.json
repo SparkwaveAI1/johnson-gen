@@ -1,0 +1,800 @@
+{
+  "extraction_metadata": {
+    "source_file": "1692-Johnson-renfro-Looney.docx",
+    "extraction_date": "2026-01-17",
+    "batch": 3,
+    "focus": "Stephen Renfro family of Augusta/Botetourt and the Johnson-Looney connection through Benjamin Looney and Mary Johnson",
+    "notes": "This batch documents the key intermarriages between Renfro-Looney-Johnson families. Stephen Renfro became stepfather to the Looney children when he married Margaret Rhea (widow of Robert Looney Jr.). Benjamin Looney married Mary Johnson - the critical Johnson connection."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-L011",
+      "source_type": "primary",
+      "repository": "Virginia Land Office",
+      "collection": "Patents",
+      "volume": "35",
+      "page": "371",
+      "record_date": "1763-08-30",
+      "abbreviation": "VA Patents 35:371",
+      "full_citation": "Virginia Land Office Patents No. 35, 1762-1764, p. 371 (Reel 35).",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L012",
+      "source_type": "primary",
+      "repository": "Sullivan County, Tennessee",
+      "collection": "Land Warrants",
+      "record_date": "1782",
+      "abbreviation": "Sullivan Co TN Land Warrants 1782",
+      "full_citation": "Sullivan County, Tennessee, Land Warrants, 1782.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L013",
+      "source_type": "primary",
+      "repository": "Washington County, Virginia/North Carolina",
+      "collection": "Petitions",
+      "record_date": "1777",
+      "abbreviation": "1777 Holston Petition",
+      "full_citation": "1777 Petition of Holston men protesting erection of a court house.",
+      "original_examined": false,
+      "url": "https://www.anamericanfamilyhistory.com/TennesseeFamilies&Places/1777%20Petition.html"
+    },
+    {
+      "temp_id": "SRC-L014",
+      "source_type": "primary",
+      "repository": "Hawkins County, Tennessee",
+      "collection": "Court Records",
+      "record_date": "1793-12-16",
+      "abbreviation": "Hawkins Co TN Court 1793",
+      "full_citation": "Hawkins County, Tennessee, Court Records, Answer by Walter Johnson, guardian for orphans, dated 16 December 1793.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L015",
+      "source_type": "secondary",
+      "author": "Judge Ben F. Looney",
+      "title": "Looney Family Notes",
+      "publication_place": "Greenville and Dallas, Texas",
+      "abbreviation": "Judge Looney Notes",
+      "full_citation": "Notes from Judge Ben F. Looney of Greenville and Dallas, Texas, cited in Tony L. Johnson research file.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L016",
+      "source_type": "primary",
+      "repository": "U.S. Census",
+      "collection": "1830 Census",
+      "record_date": "1830",
+      "abbreviation": "1830 Census",
+      "full_citation": "United States Census, 1830.",
+      "original_examined": false
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-L014",
+      "document_type": "land_patent",
+      "date": "1763-08-30",
+      "county": "Augusta",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L011",
+      "title": "Margaret Rentfrow Patent - 250 acres on Looney's Mill Creek",
+      "acres": 250,
+      "transcription_excerpt": "1763 August 30. Margaret Rentfrow Location: Augusta County. Description: 250 acres on a branch of Looneys Mill Creek. Source: Land Office Patents No. 35, 1762-1764 (v.1 & 2 p.1-556), p. 371 (Reel 35).",
+      "people": [
+        {
+          "name_as_written": "Margaret Rentfrow",
+          "role": "patentee",
+          "likely_match": "Margaret Rhea Looney Renfro",
+          "notes": "This is Margaret Rhea, widow of Robert Looney Jr., now married to Stephen Renfro"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Looney's Mill Creek",
+          "type": "creek",
+          "parent": "Augusta County",
+          "role": "subject"
+        }
+      ],
+      "notes": "Margaret Rentfrow patenting land in her own name on Looney's Mill Creek. She was formerly Margaret Looney (widow of Robert Jr.) and remarried Stephen Renfro. This is her own land acquisition separate from her husbands' lands."
+    },
+    {
+      "temp_id": "DOC-L015",
+      "document_type": "petition",
+      "date": "1777",
+      "county": "Washington",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L013",
+      "title": "1777 Petition of Holston Men",
+      "transcription_excerpt": "Stephen, John and Stephen, Jr. signed the 1777 petition of Holston men. With brother John and Benjamin, Stepfather Stephen Rentfro Sr., Stephen Rentfro Jr., and John Rentfro, etc., he signed a petition protesting the erection of a court house.",
+      "people": [
+        {
+          "name_as_written": "Stephen Rentfro Sr.",
+          "role": "petitioner"
+        },
+        {
+          "name_as_written": "Stephen Rentfro Jr.",
+          "role": "petitioner"
+        },
+        {
+          "name_as_written": "John Rentfro",
+          "role": "petitioner"
+        },
+        {
+          "name_as_written": "Benjamin [Looney]",
+          "role": "petitioner",
+          "notes": "Benjamin Looney, stepson of Stephen Renfro"
+        },
+        {
+          "name_as_written": "John [Looney]",
+          "role": "petitioner",
+          "notes": "John Looney, brother of Benjamin"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Holston River area",
+          "type": "region",
+          "parent": "Washington County, Virginia",
+          "role": "subject"
+        }
+      ],
+      "notes": "This petition shows the Renfro-Looney family unit operating together on the frontier. Benjamin Looney's stepfather was Stephen Renfro. By 1777 they had moved from Augusta/Botetourt to the Holston settlements."
+    },
+    {
+      "temp_id": "DOC-L016",
+      "document_type": "land_warrant",
+      "date": "1782",
+      "county": "Sullivan",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L012",
+      "title": "Stephen Renfro Sr. and Jr. Land Warrants - Sullivan County",
+      "transcription_excerpt": "In 1782, Steven Sr. and Jr. received land warrants in Sullivan County.",
+      "people": [
+        {
+          "name_as_written": "Steven Sr.",
+          "role": "grantee",
+          "likely_match": "Stephen Renfro Sr."
+        },
+        {
+          "name_as_written": "Steven Jr.",
+          "role": "grantee",
+          "likely_match": "Stephen Renfro Jr."
+        }
+      ],
+      "locations": [
+        {
+          "name": "Sullivan County",
+          "type": "county",
+          "parent": "Tennessee",
+          "role": "subject"
+        }
+      ],
+      "notes": "Stephen Renfro Sr. and Jr. receiving land warrants in Sullivan County TN by 1782, showing their migration from Virginia to Tennessee."
+    },
+    {
+      "temp_id": "DOC-L017",
+      "document_type": "court_record",
+      "date": "1793-12-16",
+      "county": "Hawkins",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L014",
+      "title": "Walter Johnson Guardian Answer - Looney Orphans",
+      "transcription_excerpt": "An answer by Walter Johnson, guardian for orphans, is dated 16 December 1793. It is stated that Ben had only 12 acres cleared in 1779.",
+      "people": [
+        {
+          "name_as_written": "Walter Johnson",
+          "role": "guardian",
+          "new_person_flag": true,
+          "notes": "CRITICAL JOHNSON - Guardian for Benjamin Looney's orphaned children after his death"
+        },
+        {
+          "name_as_written": "Ben [Looney]",
+          "role": "deceased_father",
+          "notes": "Benjamin Looney, husband of Mary Johnson, killed by Cherokees"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Carters Valley",
+          "type": "valley",
+          "parent": "Hawkins County, Tennessee",
+          "role": "residence"
+        },
+        {
+          "name": "Big Creek",
+          "type": "creek",
+          "parent": "Hawkins County, Tennessee",
+          "role": "residence"
+        },
+        {
+          "name": "Stanley Valley",
+          "type": "valley",
+          "parent": "Hawkins County, Tennessee",
+          "role": "residence"
+        }
+      ],
+      "notes": "KEY DOCUMENT: Walter Johnson was guardian for the orphaned children of Benjamin Looney and Mary Johnson after Benjamin was killed by Cherokees at Cumberland Gap. This places Walter Johnson in Carters Valley/Big Creek area with the Looney family."
+    },
+    {
+      "temp_id": "DOC-L018",
+      "document_type": "census",
+      "date": "1830",
+      "county": "Unknown",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L016",
+      "title": "1830 Census - Mary Johnson Looney",
+      "transcription_excerpt": "The census of 1830 shows that Mary Johnson Looney was born 1745 + 5, and living alone except for one male and one female slave.",
+      "people": [
+        {
+          "name_as_written": "Mary Johnson Looney",
+          "role": "head_of_household",
+          "notes": "Widow of Benjamin Looney; birth estimated at 1740-1750 based on census age"
+        }
+      ],
+      "notes": "Mary Johnson Looney still living in 1830, widowed, with two slaves. Her age indicates birth c.1740-1750."
+    },
+    {
+      "temp_id": "DOC-L019",
+      "document_type": "historical_note",
+      "date": "1740",
+      "county": "Botetourt",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L015",
+      "title": "Stephen Rentfroe's Fort - Local Tradition",
+      "transcription_excerpt": "1740: Stephen Rentfroe's Fort, Botetort Co. (1740's), a settlers' fort was once located here according to local tradition. Col. William Preston built his home 'Greenfield' here after 1759 (burned down in 1956).",
+      "people": [
+        {
+          "name_as_written": "Stephen Rentfroe",
+          "role": "fort_builder"
+        },
+        {
+          "name_as_written": "Col. William Preston",
+          "role": "later_owner",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Stephen Rentfroe's Fort",
+          "type": "fort",
+          "parent": "Botetourt County",
+          "role": "subject",
+          "notes": "Later site of Greenfield, William Preston's home"
+        },
+        {
+          "name": "Greenfield",
+          "type": "plantation",
+          "parent": "Botetourt County",
+          "role": "later_name",
+          "notes": "Built after 1759, burned 1956"
+        }
+      ],
+      "notes": "Stephen Renfro significant enough to have a fort named for him in the 1740s. This fort was later the site of Col. William Preston's 'Greenfield' plantation."
+    }
+  ],
+
+  "family_groups_to_create": [
+    {
+      "name": "Stephen Renfro of Augusta/Botetourt",
+      "group_type": "blended",
+      "anchor_person": "Stephen Renfro Sr. (c.1707-?)",
+      "primary_location": "Augusta County, Virginia; Botetourt County; Sullivan County, Tennessee",
+      "date_start": "1707",
+      "date_end": "1782",
+      "confidence": "confirmed",
+      "summary": "Stephen Renfro Sr. was son of William Renfro. Married (1) Esther Van Bibber, had children including Stephen Jr., John, Esther, Elizabeth, David. After Esther died, married (2) Margaret Rhea Looney, widow of Robert Looney Jr. This second marriage created a blended Renfro-Looney family. Benjamin Looney was Stephen's stepson. The combined family signed the 1777 Holston petition together and received land warrants in Sullivan County TN 1782.",
+      "source_files": ["1692-Johnson-renfro-Looney.docx"]
+    },
+    {
+      "name": "Benjamin Looney and Mary Johnson of Big Creek",
+      "group_type": "nuclear",
+      "anchor_person": "Benjamin Looney (1756-c.1779)",
+      "primary_location": "Looney's Mill Creek (birth); Carters Valley/Big Creek, Hawkins County, Tennessee",
+      "date_start": "1756",
+      "date_end": "1830",
+      "confidence": "confirmed",
+      "dna_connection": "This is the KEY Johnson-Looney connection. Mary Johnson married Benjamin Looney. After Benjamin was killed by Cherokees at Cumberland Gap, Walter Johnson served as guardian for their orphaned children.",
+      "summary": "Benjamin Looney was born 1756 on Looney's Mill Creek, son of Robert Looney Jr. and Margaret Rhea. His stepfather was Stephen Renfro. He married Mary Johnson (b.1740-1745). They moved to Carters Valley/Big Creek/Stanley Valley in what became Hawkins Co TN. Benjamin was killed by Cherokees at Cumberland Gap c.1779, leaving 5 sons: Benjamin Jr., John, Isham, Robert, Absolom. Mary Johnson Looney lived until at least 1830. Walter Johnson was guardian for the orphans.",
+      "source_files": ["1692-Johnson-renfro-Looney.docx"]
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "RNFR-VA-e1707-01",
+      "surname": "Renfro",
+      "given_name": "Stephen",
+      "designation": "Senior",
+      "name_variants": ["Rentfro", "Rentfroe", "Renfrow"],
+      "birth_year_estimate": 1707,
+      "birth_year_type": "e",
+      "birthplace": "Virginia",
+      "locations": [
+        {
+          "location_name": "Augusta County",
+          "date_first": "1740",
+          "date_last": "1770",
+          "residence_type": "landowner",
+          "evidence": "Stephen Rentfroe's Fort in 1740s; various records"
+        },
+        {
+          "location_name": "Botetourt County",
+          "date_first": "1770",
+          "date_last": "1777",
+          "residence_type": "resident",
+          "evidence": "County formed 1769-1770 from Augusta"
+        },
+        {
+          "location_name": "Holston River area",
+          "parent_location": "Washington County, Virginia",
+          "date_first": "1777",
+          "date_last": "1782",
+          "residence_type": "resident",
+          "evidence": "1777 Holston petition"
+        },
+        {
+          "location_name": "Sullivan County",
+          "parent_location": "Tennessee",
+          "date_first": "1782",
+          "residence_type": "landowner",
+          "evidence": "1782 land warrants"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1777 Holston petition; 1782 Sullivan Co land warrants; Stephen Rentfroe's Fort",
+      "notes": "Son of William Renfro. Brothers: Joseph, John, James, Peter, William. Married (1) Esther Van Bibber, (2) Margaret Rhea Looney (widow of Robert Looney Jr.). Stepfather to Benjamin Looney. Had fort named for him in 1740s."
+    },
+    {
+      "suggested_id": "VNBB-VA-e1710-01",
+      "surname": "Van Bibber",
+      "given_name": "Esther",
+      "birth_year_estimate": 1710,
+      "birth_year_type": "e",
+      "location": "Augusta County, Virginia",
+      "confidence": "likely",
+      "evidence": "Listed as first wife of Stephen Renfro Sr. in Tony's research",
+      "notes": "First wife of Stephen Renfro Sr. Mother of Stephen Jr. (1736), Esther (1739), John, Elizabeth (1745), David (1744). Died before Stephen remarried Margaret Rhea Looney."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1736-01",
+      "surname": "Renfro",
+      "given_name": "Stephen",
+      "designation": "Junior",
+      "name_variants": ["Rentfro"],
+      "birth_year": 1736,
+      "birth_year_type": "b",
+      "locations": [
+        {
+          "location_name": "Holston River area",
+          "date_first": "1777",
+          "residence_type": "resident",
+          "evidence": "Signed 1777 Holston petition"
+        },
+        {
+          "location_name": "Sullivan County",
+          "parent_location": "Tennessee",
+          "date_first": "1782",
+          "residence_type": "landowner",
+          "evidence": "1782 land warrants"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1777 Holston petition; 1782 Sullivan Co land warrants",
+      "notes": "Son of Stephen Renfro Sr. and Esther Van Bibber."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1739-01",
+      "surname": "Renfro",
+      "given_name": "Esther",
+      "birth_year": 1739,
+      "birth_year_type": "b",
+      "location": "Augusta County, Virginia",
+      "confidence": "likely",
+      "evidence": "Listed as daughter of Stephen Renfro Sr. and Esther Van Bibber",
+      "notes": "Daughter of Stephen Renfro Sr. Married John Looney, son of Robert and Elizabeth Looney (Robert Looney Sr.'s line)."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1745-01",
+      "surname": "Renfro",
+      "given_name": "Elizabeth",
+      "birth_year": 1745,
+      "birth_year_type": "b",
+      "location": "Augusta County, Virginia",
+      "confidence": "likely",
+      "evidence": "Listed as daughter of Stephen Renfro Sr.",
+      "notes": "Daughter of Stephen Renfro Sr. and Esther Van Bibber. Married John Looney, son of Robert and Margaret Looney (Robert Looney Jr.'s line). Note: Two Renfro daughters married two John Looneys from different Looney branches."
+    },
+    {
+      "suggested_id": "LNEY-VA-b1756-01",
+      "surname": "Looney",
+      "given_name": "Benjamin",
+      "birth_year": 1756,
+      "birth_year_type": "b",
+      "birthplace": "Looney's Mill Creek, Augusta County, Virginia",
+      "death_year": 1779,
+      "death_year_type": "c",
+      "death_place": "Cumberland Gap, East Tennessee",
+      "death_cause": "Killed by Cherokees",
+      "locations": [
+        {
+          "location_name": "Looney's Mill Creek",
+          "parent_location": "Augusta County",
+          "date_first": "1756",
+          "date_last": "1777",
+          "residence_type": "resident",
+          "evidence": "Birthplace per family records"
+        },
+        {
+          "location_name": "Carters Valley",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1777",
+          "date_last": "1779",
+          "residence_type": "landowner",
+          "evidence": "1793 guardian report states 'Ben had only 12 acres cleared in 1779'"
+        },
+        {
+          "location_name": "Big Creek",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1777",
+          "date_last": "1779",
+          "residence_type": "resident",
+          "evidence": "Family records place him on Big Creek in Stanley Valley"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Judge Ben F. Looney notes; 1793 guardian document; family records",
+      "notes": "Son of Robert Looney Jr. and Margaret Rhea. Stepson of Stephen Renfro Sr. Married Mary Johnson c.1768. Killed by Cherokees at Cumberland Gap c.1779. Left 5 sons: Benjamin Jr., John, Isham, Robert, Absolom. Walter Johnson was guardian for orphans."
+    },
+    {
+      "suggested_id": "JNSN-VA-e1745-01",
+      "surname": "Johnson",
+      "given_name": "Mary",
+      "birth_year_estimate": 1745,
+      "birth_year_type": "e",
+      "death_year": 1830,
+      "death_year_type": "a",
+      "locations": [
+        {
+          "location_name": "Carters Valley",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1768",
+          "date_last": "1830",
+          "residence_type": "resident",
+          "evidence": "1830 census shows her still living"
+        },
+        {
+          "location_name": "Big Creek",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1768",
+          "date_last": "1830",
+          "residence_type": "resident",
+          "evidence": "Family records"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1830 census shows birth 'c.1745 +/- 5'; Judge Looney notes",
+      "notes": "KEY JOHNSON: Wife of Benjamin Looney. Born c.1740-1750 (1830 census indicates 1745 +/- 5 years). Married Benjamin Looney c.1768. Widowed c.1779 when Benjamin killed by Cherokees. Had 5 sons. Living alone in 1830 with one male and one female slave. Her bond for Guardianship posted by Walter Johnson."
+    },
+    {
+      "suggested_id": "JNSN-VA-e1740-01",
+      "surname": "Johnson",
+      "given_name": "Walter",
+      "birth_year_estimate": 1740,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Carters Valley",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1779",
+          "date_last": "1793",
+          "residence_type": "resident",
+          "evidence": "1793 guardian document"
+        },
+        {
+          "location_name": "Big Creek",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1779",
+          "date_last": "1793",
+          "residence_type": "resident",
+          "evidence": "Tony notes 'Walter Johnson is also of carter Valley, Big Creek Stanley Valley'"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1793 Hawkins Co court record as guardian for Looney orphans",
+      "notes": "KEY JOHNSON: Guardian for the orphaned children of Benjamin Looney and Mary Johnson. Relationship to Mary Johnson unknown but likely kinsman. Located in same area: Carters Valley, Big Creek, Stanley Valley - current Hawkins Co TN. Possibly related to Sullivan County Johnson family per researcher note."
+    },
+    {
+      "suggested_id": "LNEY-TN-b1772-01",
+      "surname": "Looney",
+      "given_name": "Benjamin",
+      "designation": "Junior",
+      "birth_year": 1772,
+      "birth_year_type": "b",
+      "birthplace": "Botetourt County, Virginia",
+      "death_year": 1822,
+      "locations": [
+        {
+          "location_name": "Botetourt County",
+          "date_first": "1772",
+          "date_last": "1792",
+          "residence_type": "resident",
+          "evidence": "Birthplace"
+        },
+        {
+          "location_name": "Hawkins County",
+          "parent_location": "Tennessee",
+          "date_first": "1792",
+          "date_last": "1822",
+          "residence_type": "resident",
+          "evidence": "Marriage 1792 Tennessee"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Family records; married Mary Polly Galbraith 20 Oct 1792 Tennessee",
+      "notes": "Son of Benjamin Looney Sr. and Mary Johnson. One of 5 sons orphaned when father killed by Cherokees."
+    },
+    {
+      "suggested_id": "LNEY-TN-b1775-01",
+      "surname": "Looney",
+      "given_name": "Isham",
+      "name_variants": ["Isam"],
+      "birth_year": 1775,
+      "birth_date": "1775-10-26",
+      "birth_year_type": "b",
+      "birthplace": "Washington County, Virginia (or Tennessee)",
+      "locations": [
+        {
+          "location_name": "Stanley Valley",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1775",
+          "date_last": null,
+          "residence_type": "resident",
+          "evidence": "Family papers of grandson John Findley Looney"
+        },
+        {
+          "location_name": "Sinking Creek",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1775",
+          "residence_type": "resident",
+          "evidence": "Boyhood spent in Stanley Valley area"
+        },
+        {
+          "location_name": "Possum Creek",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1775",
+          "residence_type": "resident"
+        },
+        {
+          "location_name": "Big Creek",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1775",
+          "residence_type": "resident"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Family papers of grandson John Findley Looney; born 26 Oct 1775",
+      "notes": "Son of Benjamin Looney and Mary Johnson. Born just before father and others signed the 1777 courthouse petition. Boyhood spent in Stanley Valley on Sinking Creek, Possum Creek, and Big Creek."
+    },
+    {
+      "suggested_id": "PRST-VA-e1710-01",
+      "surname": "Preston",
+      "given_name": "William",
+      "designation": "Colonel",
+      "birth_year_estimate": 1710,
+      "birth_year_type": "e",
+      "location": "Botetourt County, Virginia",
+      "confidence": "confirmed",
+      "evidence": "Built 'Greenfield' on site of Stephen Rentfroe's Fort after 1759",
+      "notes": "Important Valley settler. Built his home 'Greenfield' on the site of Stephen Rentfroe's Fort after 1759. Connected to Looney family - provided security for Robert Looney in earlier records. Greenfield burned 1956."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1_temp": "RNFR-VA-e1707-01",
+      "person_1_name": "Stephen Renfro Sr.",
+      "person_2_temp": "VNBB-VA-e1710-01",
+      "person_2_name": "Esther Van Bibber",
+      "relationship_type": "spouse",
+      "marriage_order": 1,
+      "confidence": "confirmed",
+      "evidence_summary": "Tony's research - first marriage"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1707-01",
+      "person_1_name": "Stephen Renfro Sr.",
+      "person_2_temp": "RHEA-VA-e1722-01",
+      "person_2_name": "Margaret Rhea",
+      "relationship_type": "spouse",
+      "marriage_order": 2,
+      "confidence": "confirmed",
+      "evidence_summary": "Married after death of Robert Looney Jr.; 1765 processioners list her as 'Margt. Rentfro'"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1707-01",
+      "person_1_name": "Stephen Renfro Sr.",
+      "person_2_temp": "RNFR-VA-b1736-01",
+      "person_2_name": "Stephen Renfro Jr.",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Listed as son; both signed 1777 petition and received 1782 land warrants"
+    },
+    {
+      "person_1_temp": "RNFR-VA-e1707-01",
+      "person_1_name": "Stephen Renfro Sr.",
+      "person_2_temp": "LNEY-VA-b1756-01",
+      "person_2_name": "Benjamin Looney",
+      "relationship_type": "stepfather",
+      "confidence": "confirmed",
+      "evidence_summary": "Stephen married Benjamin's mother Margaret Rhea after Robert Looney Jr. died; signed 1777 petition together"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1756-01",
+      "person_1_name": "Benjamin Looney",
+      "person_2_temp": "JNSN-VA-e1745-01",
+      "person_2_name": "Mary Johnson",
+      "relationship_type": "spouse",
+      "marriage_date": "c.1768",
+      "confidence": "confirmed",
+      "evidence_summary": "Judge Looney notes; 5 children; Benjamin killed c.1779"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1756-01",
+      "person_1_name": "Benjamin Looney",
+      "person_2_temp": "LNEY-TN-b1772-01",
+      "person_2_name": "Benjamin Looney Jr.",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Family records"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1756-01",
+      "person_1_name": "Benjamin Looney",
+      "person_2_temp": "LNEY-TN-b1775-01",
+      "person_2_name": "Isham Looney",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Family papers of grandson John Findley Looney"
+    },
+    {
+      "person_1_temp": "JNSN-VA-e1740-01",
+      "person_1_name": "Walter Johnson",
+      "person_2_temp": "JNSN-VA-e1745-01",
+      "person_2_name": "Mary Johnson",
+      "relationship_type": "associated",
+      "association_type": "possible_kinsman",
+      "confidence": "possible",
+      "evidence_summary": "Walter Johnson guardian for Mary Johnson's orphaned children; same location (Big Creek/Carters Valley); likely related but relationship unknown"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1721-01",
+      "person_1_name": "Robert Looney Jr.",
+      "person_2_temp": "LNEY-VA-b1756-01",
+      "person_2_name": "Benjamin Looney",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Tony explicitly states 'Benjamin Looney is the son of Margaret Rhea and Robert Looney Jr b 1721'"
+    }
+  ],
+
+  "locations_to_create": [
+    {
+      "name": "Carters Valley",
+      "location_type": "valley",
+      "parent_location": "Hawkins County, Tennessee",
+      "description": "Valley in what became Hawkins County TN. Location of Benjamin Looney and Mary Johnson settlement. Also where Walter Johnson resided.",
+      "notes": "Part of the Big Creek / Stanley Valley area"
+    },
+    {
+      "name": "Big Creek",
+      "location_type": "creek",
+      "parent_location": "Hawkins County, Tennessee",
+      "description": "Creek in Hawkins County TN. Benjamin Looney, Mary Johnson, and Walter Johnson all documented here.",
+      "notes": "Connected to Stanley Valley and Carters Valley"
+    },
+    {
+      "name": "Stanley Valley",
+      "location_type": "valley",
+      "parent_location": "Hawkins County, Tennessee",
+      "description": "Valley where Isham Looney's boyhood was spent. Near Sinking Creek, Possum Creek, and Big Creek.",
+      "notes": "Originally in North Carolina before TN statehood"
+    },
+    {
+      "name": "Possum Creek",
+      "location_type": "creek",
+      "parent_location": "Hawkins County, Tennessee",
+      "description": "Creek in Stanley Valley area where Isham Looney spent his boyhood."
+    },
+    {
+      "name": "Cumberland Gap",
+      "location_type": "pass",
+      "parent_location": "East Tennessee / Kentucky border",
+      "description": "Mountain pass where Benjamin Looney was killed by Cherokees c.1779.",
+      "notes": "Major migration route through the Appalachians"
+    },
+    {
+      "name": "Sullivan County",
+      "location_type": "county",
+      "parent_location": "Tennessee",
+      "date_formed": "1779",
+      "description": "Tennessee county where Stephen Renfro Sr. and Jr. received land warrants 1782."
+    },
+    {
+      "name": "Hawkins County",
+      "location_type": "county",
+      "parent_location": "Tennessee",
+      "date_formed": "1786",
+      "description": "Tennessee county containing Carters Valley, Big Creek, and Stanley Valley. Home of Benjamin Looney/Mary Johnson family and Walter Johnson."
+    },
+    {
+      "name": "Stephen Rentfroe's Fort",
+      "location_type": "fort",
+      "parent_location": "Augusta County (later Botetourt County)",
+      "date_formed": "1740s",
+      "description": "Settlers' fort according to local tradition. Later site of Col. William Preston's 'Greenfield' plantation (built after 1759, burned 1956)."
+    }
+  ],
+
+  "research_questions_to_add": [
+    {
+      "question": "What is Walter Johnson's relationship to Mary Johnson?",
+      "question_type": "relationship",
+      "person_id": "JNSN-VA-e1740-01",
+      "status": "open",
+      "evidence_for": "Same surname; same location (Big Creek/Carters Valley); served as guardian for her orphaned children; posted her guardianship bond",
+      "evidence_against": "No explicit relationship stated; common surname",
+      "research_action": "Search Hawkins County TN court records for any kinship statements; look for Walter Johnson's own family records",
+      "related_people": ["Walter Johnson", "Mary Johnson"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    },
+    {
+      "question": "Who were Mary Johnson's parents?",
+      "question_type": "relationship",
+      "person_id": "JNSN-VA-e1745-01",
+      "status": "open",
+      "evidence_for": "None documented",
+      "evidence_against": "N/A",
+      "research_action": "Search Virginia records 1740s-1760s for Johnson families with daughter Mary; check if any connection to Michael Johnson of Tuckahoe Creek line",
+      "related_people": ["Mary Johnson"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    },
+    {
+      "question": "Is Walter Johnson related to the Sullivan County, Tennessee Johnson family?",
+      "question_type": "relationship",
+      "person_id": "JNSN-VA-e1740-01",
+      "status": "open",
+      "evidence_for": "Researcher note states 'possibly Walter Johnson of Sullivan County, Tennessee'",
+      "evidence_against": "No documentation provided",
+      "research_action": "Research Sullivan County TN Johnson families; check for Walter Johnson in Sullivan records",
+      "related_people": ["Walter Johnson"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 6,
+    "sources_identified": 6,
+    "new_people_identified": 12,
+    "family_groups_identified": 2,
+    "locations_identified": 8,
+    "relationships_documented": 10,
+    "research_questions_added": 3,
+    "time_period": "1707-1830",
+    "key_findings": [
+      "Stephen Renfro Sr. married Margaret Rhea Looney (widow of Robert Looney Jr.) - creating blended Renfro-Looney family",
+      "Benjamin Looney (son of Robert Jr. and Margaret Rhea) was stepson to Stephen Renfro",
+      "Benjamin Looney married MARY JOHNSON c.1768 - KEY JOHNSON CONNECTION",
+      "Benjamin Looney killed by Cherokees at Cumberland Gap c.1779, leaving 5 sons",
+      "WALTER JOHNSON served as guardian for Benjamin and Mary's orphaned children - another KEY JOHNSON",
+      "Walter Johnson located in same area: Carters Valley, Big Creek, Stanley Valley (Hawkins Co TN)",
+      "Mary Johnson Looney still living 1830 census",
+      "Stephen Renfro had fort named for him in 1740s - later site of Preston's Greenfield",
+      "1777 Holston petition signed by Renfros AND Looneys together showing family unit"
+    ]
+  }
+}

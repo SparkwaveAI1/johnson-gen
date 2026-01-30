@@ -1,0 +1,722 @@
+{
+  "extraction_metadata": {
+    "source_file": "1692-Johnson-renfro-Looney.docx",
+    "extraction_date": "2026-01-17",
+    "batch": 2,
+    "focus": "Looney family of the Valley - Robert Looney Sr., Robert Looney Jr., and their connections to Renfro and Johnson families",
+    "notes": "The Looney family settled on Looney's Mill Creek in Augusta County (later Botetourt) and intermarried extensively with Renfros. Key Johnson connection: Mary Johnson married Benjamin Looney."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-L006",
+      "source_type": "primary",
+      "repository": "Virginia Land Office",
+      "collection": "Patents",
+      "volume": "21",
+      "page": "18, 20",
+      "record_date": "1741-07-30",
+      "abbreviation": "VA Patents 21:18",
+      "full_citation": "Virginia Land Office Patents No. 21, 1742-1743, pp. 18, 20.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L007",
+      "source_type": "primary",
+      "repository": "Orange County, Virginia",
+      "collection": "Court Order Books",
+      "record_date": "1738-1745",
+      "abbreviation": "Orange Co Order Books",
+      "full_citation": "Orange County, Virginia, Order Books 1-4, various dates 1738-1745.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L008",
+      "source_type": "primary",
+      "repository": "Botetourt County, Virginia",
+      "collection": "Will Book A",
+      "page": "3-5",
+      "record_date": "1770-11-13",
+      "abbreviation": "Botetourt Will Book A",
+      "full_citation": "Botetourt County, Virginia, Will Book A, 1770-1801, pp. 3-5. Will of Robert Looney proved 13 Nov 1770, inventory recorded 12 Mar 1771.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L009",
+      "source_type": "primary",
+      "repository": "Augusta County, Virginia",
+      "collection": "Deed Books / Order Books",
+      "record_date": "1745-1770",
+      "abbreviation": "Augusta Co Records",
+      "full_citation": "Augusta County, Virginia, various deed and order book entries 1745-1770.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L010",
+      "source_type": "primary",
+      "repository": "Frederick County, Virginia",
+      "collection": "Baylor's Book of Surveys",
+      "record_date": "1740-04",
+      "abbreviation": "Frederick Co Surveys",
+      "full_citation": "Baylor's Book of Surveys, Frederick County Courthouse, April 1740 entry for Robert Looney survey on Lunie's Mill Creek.",
+      "original_examined": false
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-L005",
+      "document_type": "court_record",
+      "date": "1738-10-26",
+      "county": "Orange",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L007",
+      "title": "Robert Lowney Wolf Bounty - Orange County Court",
+      "transcription_excerpt": "1738 October 26 Robert Lowney received 1540 pounds of tobacco for 11 old wolf's heads at Orange County Court.",
+      "people": [
+        {
+          "name_as_written": "Robert Lowney",
+          "role": "recipient",
+          "likely_match": "Robert Looney Jr.",
+          "notes": "FIRST documented appearance of Robert Looney Jr. in Virginia"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Orange County",
+          "type": "county",
+          "role": "recorded"
+        }
+      ],
+      "notes": "Wolf bounties were common frontier incentives. This is the earliest documented appearance of Robert Looney Jr. in Virginia records."
+    },
+    {
+      "temp_id": "DOC-L006",
+      "document_type": "court_record",
+      "date": "1739-03-22",
+      "county": "Orange",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L007",
+      "title": "Robert Luna to Jeremiah Jack Deed Order - Orange County",
+      "transcription_excerpt": "1739 March 22, the Orange County Court ordered the recording of the deed from Robert Luna to Jeremiah Jack, but it seems not to have been done. (A second deed was made, perhaps 4 Nov. 1766, by James Jack acting for Robert Looney of Augusta Co.; David Looney et al being witnesses to the power of attorney which was dated 13 June 1766).",
+      "people": [
+        {
+          "name_as_written": "Robert Luna",
+          "role": "grantor",
+          "likely_match": "Robert Looney Jr."
+        },
+        {
+          "name_as_written": "Jeremiah Jack",
+          "role": "grantee",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "James Jack",
+          "role": "attorney_in_fact",
+          "new_person_flag": true,
+          "notes": "Acting for Robert Looney in 1766"
+        },
+        {
+          "name_as_written": "David Looney",
+          "role": "witness",
+          "new_person_flag": true,
+          "notes": "Witness to 1766 power of attorney"
+        }
+      ],
+      "notes": "Shows Robert Looney disposing of land in Orange County as he moved to Augusta County. The 1766 follow-up shows continued family presence."
+    },
+    {
+      "temp_id": "DOC-L007",
+      "document_type": "survey",
+      "date": "1740-04",
+      "county": "Frederick",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L010",
+      "title": "Robert Looney Survey - Lunie's Mill Creek",
+      "transcription_excerpt": "1740 April Baylor's Book of Surveys at Frederick County Courthouse shows that Robert Looney had a survey on Lunie's Mill Creek.",
+      "people": [
+        {
+          "name_as_written": "Robert Looney",
+          "role": "surveyed_for",
+          "likely_match": "Robert Looney Jr."
+        }
+      ],
+      "locations": [
+        {
+          "name": "Looney's Mill Creek",
+          "name_variants": ["Lunie's Mill Creek", "Luney's Mill Creek", "Luie's Mill Creek"],
+          "type": "creek",
+          "parent": "Augusta County (later Botetourt County)",
+          "role": "subject"
+        }
+      ],
+      "notes": "This survey precedes the patent. Looney's Mill Creek was named for this family and became a key settlement area."
+    },
+    {
+      "temp_id": "DOC-L008",
+      "document_type": "land_patent",
+      "date": "1741-07-30",
+      "county": "Orange",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L006",
+      "title": "Robert Looney Jr. Patent - 213 acres on Looney's Mill Creek",
+      "acres": 213,
+      "transcription_excerpt": "1741 July 30: Robert Looney Junr VPB 21:18 213a in that part of Orange designed to be called [Augusta]",
+      "people": [
+        {
+          "name_as_written": "Robert Looney Junr",
+          "role": "patentee",
+          "likely_match": "Robert Looney Jr."
+        }
+      ],
+      "locations": [
+        {
+          "name": "Looney's Mill Creek",
+          "type": "creek",
+          "parent": "Augusta County",
+          "role": "subject",
+          "notes": "In part of Orange 'designed to be called' Augusta - county not yet organized"
+        }
+      ],
+      "notes": "Augusta County was formed in 1738 but not organized until 1745. Patents were still recorded under Orange County."
+    },
+    {
+      "temp_id": "DOC-L009",
+      "document_type": "land_patent",
+      "date": "1741-07-30",
+      "county": "Orange",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L006",
+      "title": "Robert Luney Patent - 250 acres",
+      "acres": 250,
+      "transcription_excerpt": "1741 July 30: Robert Luney VPB 21:20 250a in that part of Orange designed to be called [Augusta]",
+      "people": [
+        {
+          "name_as_written": "Robert Luney",
+          "role": "patentee",
+          "likely_match": "Robert Looney Jr.",
+          "notes": "Same person as 'Robert Looney Junr' - two patents same day"
+        }
+      ],
+      "locations": [
+        {
+          "name": "James River",
+          "type": "river",
+          "role": "adjacent"
+        },
+        {
+          "name": "Looney's Mill Creek",
+          "type": "creek",
+          "role": "subject"
+        }
+      ],
+      "notes": "Second patent same day as DOC-L008. Tony notes: 'Robert Looney obtained a grant of 250 acres on James River and on Lunie's Mill Creek; also 400 acres on Luie's Mill Creek on 30 July 1742. These lands are not far from Natural Bridge.'"
+    },
+    {
+      "temp_id": "DOC-L010",
+      "document_type": "land_patent",
+      "date": "1742-07-30",
+      "county": "Augusta",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L006",
+      "title": "Robert Luney Patent - 213 acres on Looney's Mill Creek",
+      "acres": 213,
+      "transcription_excerpt": "1742 July 30 Robert Luney Location: Augusta County. Description: 213 acres on a branch of James River called Luneys Mill Creek. Source: Land Office Patents No. 21, 1742-1743 (v.1 & 2 p.1-674), p. 18 (Reel 19).",
+      "people": [
+        {
+          "name_as_written": "Robert Luney",
+          "role": "patentee"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Looney's Mill Creek",
+          "type": "creek",
+          "parent": "Augusta County",
+          "role": "subject",
+          "description": "Branch of James River"
+        }
+      ],
+      "notes": "Now recorded under Augusta County designation."
+    },
+    {
+      "temp_id": "DOC-L011",
+      "document_type": "court_record",
+      "date": "1744-08-04",
+      "county": "Orange",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L007",
+      "title": "Francis and John Marshall vs. Robert Luney - Debt Suit",
+      "transcription_excerpt": "Francis and John Marshall sued Robert Luney for debt in 1744, James Patton being security for Luney. The case was tried by jury 4 August 1744 and verdict found against Luney for 18 pounds 1 shilling 6 pence, with 1 penny damage, and so recorded 3 October 1745. (Orange Order Book 4.)",
+      "people": [
+        {
+          "name_as_written": "Robert Luney",
+          "role": "defendant"
+        },
+        {
+          "name_as_written": "Francis Marshall",
+          "role": "plaintiff",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "John Marshall",
+          "role": "plaintiff",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "James Patton",
+          "role": "security",
+          "new_person_flag": true,
+          "notes": "Important Valley settler - provided security for Looney"
+        }
+      ],
+      "notes": "James Patton was a major Valley land speculator and settler. His role as Looney's security suggests business relationship."
+    },
+    {
+      "temp_id": "DOC-L012",
+      "document_type": "will",
+      "date": "1770-11-13",
+      "county": "Botetourt",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L008",
+      "title": "Will of Robert Looney - Botetourt County",
+      "transcription_excerpt": "1770 Nov 13: Robert Luney (Robert Looney) Part of index to Botetourt County Wills and Administrations (1770 - 1800) p. 3-4. Will pro. 13. Nov. 1770. p. 5. Inv. & Appr. rec. 12. March 1771. Will Book A, 1770-1801 (Reel 20)",
+      "people": [
+        {
+          "name_as_written": "Robert Luney",
+          "role": "testator",
+          "likely_match": "Robert Looney Jr."
+        }
+      ],
+      "notes": "Robert Looney Jr. died 1770 in Botetourt County. His lands on Looney's Mill Creek had been part of Augusta until Botetourt formed in 1769."
+    },
+    {
+      "temp_id": "DOC-L013",
+      "document_type": "processioner_record",
+      "date": "1765",
+      "county": "Augusta",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L009",
+      "title": "Augusta County Processioners Report 1765 - Looney's Mill Creek Area",
+      "transcription_excerpt": "Page 408.--1765: Processioners on Waters of James and Catawbo, on South side, report, viz: For Thomas McFerrin, on Persimmon Run; for Michael Cloyd, for Wm. Herbison, adjoining Andw. Monelly; for Robt. Rowland, for Jas. Rowland; for J_____ Looney, on Sinking Spring; for Andw. Monelly; for Jno. Mills, on Looney's Mill Creek; for Jas. Moore, on Looney's Mill Creek; for Margt. Rentfro, on Beaver Dam Run and Looney's Mill Creek; for Wm. Rowland, for Geo. Poage, for Jno. Mills, where he now lives; for Margt. Clark, where she now lives; for Margt. Clark, on Back Creek; for George Burdwell, for James Lauderdale.",
+      "people": [
+        {
+          "name_as_written": "J_____ Looney",
+          "role": "landowner",
+          "notes": "On Sinking Spring - first name illegible, possibly John or James"
+        },
+        {
+          "name_as_written": "Jno. Mills",
+          "role": "landowner",
+          "new_person_flag": true,
+          "notes": "On Looney's Mill Creek"
+        },
+        {
+          "name_as_written": "Jas. Moore",
+          "role": "landowner",
+          "new_person_flag": true,
+          "notes": "On Looney's Mill Creek"
+        },
+        {
+          "name_as_written": "Margt. Rentfro",
+          "role": "landowner",
+          "notes": "Margaret Rhea Looney Renfro - on Beaver Dam Run AND Looney's Mill Creek. KEY CONNECTION."
+        },
+        {
+          "name_as_written": "James Lauderdale",
+          "role": "landowner",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Wm. Rowland",
+          "role": "landowner",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Robt. Rowland",
+          "role": "landowner",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Looney's Mill Creek",
+          "type": "creek",
+          "parent": "Augusta County",
+          "role": "subject"
+        },
+        {
+          "name": "Beaver Dam Run",
+          "type": "creek",
+          "parent": "Augusta County",
+          "role": "mentioned"
+        },
+        {
+          "name": "Sinking Spring",
+          "type": "spring",
+          "parent": "Augusta County",
+          "role": "mentioned"
+        },
+        {
+          "name": "Back Creek",
+          "type": "creek",
+          "parent": "Augusta County",
+          "role": "mentioned"
+        },
+        {
+          "name": "Persimmon Run",
+          "type": "creek",
+          "parent": "Augusta County",
+          "role": "mentioned"
+        }
+      ],
+      "notes": "Processioners walked property boundaries to verify land claims. This shows the Looney's Mill Creek neighborhood in 1765. Margaret Rentfro = Margaret Rhea, widow of Robert Looney Jr., remarried to Stephen Renfro."
+    }
+  ],
+
+  "family_groups_to_create": [
+    {
+      "name": "Robert Looney of Augusta County",
+      "group_type": "extended",
+      "anchor_person": "Robert Looney Sr. (1692-1769)",
+      "primary_location": "Augusta County, Virginia",
+      "secondary_locations": ["Isle of Man (origin)", "Looney's Mill Creek"],
+      "date_start": "1715",
+      "date_end": "1791",
+      "confidence": "confirmed",
+      "summary": "Robert Looney Sr. (b.1692 Isle of Man) married Elizabeth Stover 1715 and emigrated to Virginia. Settled on Looney's Mill Creek in what became Augusta County (later Botetourt). His son Robert Jr. continued the settlement. The family intermarried extensively with Renfros and later with Johnsons through Benjamin Looney's marriage to Mary Johnson.",
+      "source_files": ["1692-Johnson-renfro-Looney.docx"]
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "LNEY-IOM-b1692-01",
+      "surname": "Looney",
+      "given_name": "Robert",
+      "designation": "Senior",
+      "name_variants": ["Luney", "Luna", "Lowney"],
+      "birth_year": 1692,
+      "birth_year_type": "b",
+      "birthplace": "Isle of Man",
+      "death_year": 1769,
+      "death_date": "1769-09-14",
+      "death_place": "Augusta County, Virginia",
+      "locations": [
+        {
+          "location_name": "Ballagilley Farm, Maughold, Isle of Man",
+          "date_first": "1692",
+          "date_last": "1715",
+          "residence_type": "resident",
+          "evidence": "Birthplace per Tony's research"
+        },
+        {
+          "location_name": "Augusta County",
+          "date_first": "1738",
+          "date_last": "1769",
+          "residence_type": "resident",
+          "evidence": "Died Augusta County 1769"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Multiple sources cite birth 1692 Isle of Man, death 14 Sep 1769 Augusta County",
+      "notes": "Patriarch of Virginia Looney family. Married Elizabeth Stover (Barabar) 1715 at Ballagilley Farm, Isle of Man. Father of Robert Jr. and others."
+    },
+    {
+      "suggested_id": "STVR-IOM-e1695-01",
+      "surname": "Stover",
+      "given_name": "Elizabeth",
+      "name_variants": ["Barabar"],
+      "birth_year_estimate": 1695,
+      "birth_year_type": "e",
+      "birthplace": "Isle of Man",
+      "location": "Isle of Man; Augusta County, Virginia",
+      "confidence": "likely",
+      "evidence": "Married Robert Looney 1715 at Ballagilley Farm per Tony's research",
+      "notes": "Wife of Robert Looney Sr. Alternative surname 'Barabar' noted."
+    },
+    {
+      "suggested_id": "LNEY-VA-b1721-01",
+      "surname": "Looney",
+      "given_name": "Robert",
+      "designation": "Junior",
+      "name_variants": ["Luney", "Luna", "Lowney"],
+      "birth_year": 1721,
+      "birth_year_type": "b",
+      "death_year": 1770,
+      "death_place": "Botetourt County, Virginia",
+      "locations": [
+        {
+          "location_name": "Orange County",
+          "date_first": "1738",
+          "date_last": "1745",
+          "residence_type": "documented",
+          "evidence": "Wolf bounty 1738; court records through 1745"
+        },
+        {
+          "location_name": "Looney's Mill Creek",
+          "parent_location": "Augusta County",
+          "date_first": "1740",
+          "date_last": "1770",
+          "residence_type": "landowner",
+          "evidence": "Survey 1740; patents 1741-1742; will probated 1770"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Patents 1741-1742; will probated 13 Nov 1770 Botetourt Co",
+      "notes": "Son of Robert Looney Sr. First documented 1738 Orange Co wolf bounty. Patented lands on Looney's Mill Creek (named for family). Married Margaret Rhea. After his death c.1765, Margaret remarried Stephen Renfro."
+    },
+    {
+      "suggested_id": "RHEA-VA-e1722-01",
+      "surname": "Rhea",
+      "given_name": "Margaret",
+      "birth_year_estimate": 1722,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Looney's Mill Creek",
+          "parent_location": "Augusta County",
+          "date_first": "1742",
+          "date_last": "1765",
+          "residence_type": "resident",
+          "evidence": "Wife of Robert Looney Jr."
+        },
+        {
+          "location_name": "Beaver Dam Run",
+          "parent_location": "Augusta County",
+          "date_first": "1765",
+          "date_last": null,
+          "residence_type": "landowner",
+          "evidence": "1765 Processioners report: 'Margt. Rentfro, on Beaver Dam Run and Looney's Mill Creek'"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1765 processioners report lists 'Margt. Rentfro' on Beaver Dam Run and Looney's Mill Creek",
+      "notes": "Daughter of Major Robert Rhea and Elizabeth McCaub (disputed - some say Matthew Rhea). Married (1) Robert Looney Jr. c.1742, (2) Stephen Renfro after Robert's death. Key link between Looney, Rhea, and Renfro families."
+    },
+    {
+      "suggested_id": "LNEY-VA-e1745-01",
+      "surname": "Looney",
+      "given_name": "David",
+      "birth_year_estimate": 1745,
+      "birth_year_type": "e",
+      "location": "Augusta County, Virginia",
+      "confidence": "likely",
+      "evidence": "Witness to 1766 power of attorney for Robert Looney; listed in estate records",
+      "notes": "Son of Robert Looney Jr. Witnessed power of attorney 1766."
+    },
+    {
+      "suggested_id": "LNEY-VA-e1748-01",
+      "surname": "Looney",
+      "given_name": "Peter",
+      "birth_year_estimate": 1748,
+      "birth_year_type": "e",
+      "death_year": 1760,
+      "death_place": "Augusta County, Virginia",
+      "locations": [
+        {
+          "location_name": "Looney's Mill Creek",
+          "parent_location": "Augusta County",
+          "date_first": null,
+          "date_last": "1760",
+          "residence_type": "resident",
+          "evidence": "Estate records 1760"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Estate administered 1760; Margaret Looney (later McCain) administratrix",
+      "notes": "Son of Robert Looney Jr. Died before father. His widow Margaret remarried James McCain."
+    },
+    {
+      "suggested_id": "LNEY-VA-e1750-01",
+      "surname": "Looney",
+      "given_name": "Thomas",
+      "birth_year_estimate": 1750,
+      "birth_year_type": "e",
+      "death_year": 1760,
+      "death_place": "Augusta County, Virginia",
+      "confidence": "likely",
+      "evidence": "Estate administered 1760 by David Looney",
+      "notes": "Son of Robert Looney Jr. Died same year as brother Peter."
+    },
+    {
+      "suggested_id": "LAUD-VA-e1709-01",
+      "surname": "Lauderdale",
+      "given_name": "James",
+      "birth_year_estimate": 1709,
+      "birth_year_type": "e",
+      "death_year": 1796,
+      "death_place": "Sumner County, Tennessee",
+      "locations": [
+        {
+          "location_name": "Looney's Mill Creek",
+          "parent_location": "Augusta County",
+          "date_first": "1749",
+          "date_last": "1794",
+          "residence_type": "landowner",
+          "evidence": "Deed from John Harrison 1749; processioner 1765; will mentions Botetourt"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Deed 1749; processioner records 1765; will Sumner Co TN 1796",
+      "notes": "Blacksmith. Key neighbor of Looneys on Looney's Mill Creek. Moved to Tennessee. Connected to Looney family through multiple business dealings and marriages."
+    },
+    {
+      "suggested_id": "PATT-VA-e1700-01",
+      "surname": "Patton",
+      "given_name": "James",
+      "birth_year_estimate": 1700,
+      "birth_year_type": "e",
+      "location": "Augusta County, Virginia",
+      "confidence": "confirmed",
+      "evidence": "Security for Robert Looney in 1744 lawsuit",
+      "notes": "Major Valley land speculator and settler. Provided security for Robert Looney in Marshall lawsuit 1744. Important frontier figure."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1_temp": "LNEY-IOM-b1692-01",
+      "person_1_name": "Robert Looney Sr.",
+      "person_2_temp": "STVR-IOM-e1695-01",
+      "person_2_name": "Elizabeth Stover",
+      "relationship_type": "spouse",
+      "marriage_date": "1715",
+      "marriage_place": "Ballagilley Farm, Isle of Man",
+      "confidence": "confirmed",
+      "evidence_summary": "Tony's research cites marriage 1715 Isle of Man"
+    },
+    {
+      "person_1_temp": "LNEY-IOM-b1692-01",
+      "person_1_name": "Robert Looney Sr.",
+      "person_2_temp": "LNEY-VA-b1721-01",
+      "person_2_name": "Robert Looney Jr.",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Robert Jr. designated 'Junr' in patents; family genealogies"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1721-01",
+      "person_1_name": "Robert Looney Jr.",
+      "person_2_temp": "RHEA-VA-e1722-01",
+      "person_2_name": "Margaret Rhea",
+      "relationship_type": "spouse",
+      "marriage_date": "1742",
+      "marriage_place": "Augusta County, Virginia",
+      "confidence": "confirmed",
+      "evidence_summary": "Margaret later listed as 'Margt. Rentfro' (remarried) on Looney lands 1765"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1721-01",
+      "person_1_name": "Robert Looney Jr.",
+      "person_2_temp": "LNEY-VA-e1745-01",
+      "person_2_name": "David Looney",
+      "relationship_type": "father",
+      "confidence": "likely",
+      "evidence_summary": "David administered Thomas Looney's estate; witness to Robert's power of attorney"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1721-01",
+      "person_1_name": "Robert Looney Jr.",
+      "person_2_temp": "LNEY-VA-e1748-01",
+      "person_2_name": "Peter Looney",
+      "relationship_type": "father",
+      "confidence": "likely",
+      "evidence_summary": "Peter's estate administered on Looney's Mill Creek; family context"
+    },
+    {
+      "person_1_temp": "RHEA-VA-e1722-01",
+      "person_1_name": "Margaret Rhea",
+      "person_2_temp": "RNFR-VA-e1707-01",
+      "person_2_name": "Stephen Renfro Sr.",
+      "relationship_type": "spouse",
+      "marriage_date": "1765",
+      "marriage_place": "Augusta County, Virginia",
+      "confidence": "confirmed",
+      "evidence_summary": "1765 processioners list her as 'Margt. Rentfro'; remarried after Robert Looney Jr's death"
+    }
+  ],
+
+  "locations_to_create": [
+    {
+      "name": "Looney's Mill Creek",
+      "name_variants": ["Lunie's Mill Creek", "Luney's Mill Creek", "Luie's Mill Creek", "Loonie's Creek"],
+      "location_type": "creek",
+      "parent_location": "Augusta County (later Botetourt County)",
+      "description": "Creek named for the Looney family who settled there c.1740. Branch of James River near Natural Bridge. Area became part of Botetourt County when formed 1769.",
+      "formed_from": "Named by/for Robert Looney family",
+      "notes": "Key settlement area for Looney, Renfro, Lauderdale, and allied families. Multiple patents 1741-1746."
+    },
+    {
+      "name": "Beaver Dam Run",
+      "location_type": "creek",
+      "parent_location": "Augusta County",
+      "description": "Creek near Looney's Mill Creek where Margaret Rhea Looney Renfro held land per 1765 processioners.",
+      "notes": "Margaret Rentfro listed on both Beaver Dam Run and Looney's Mill Creek 1765"
+    },
+    {
+      "name": "Sinking Spring",
+      "location_type": "spring",
+      "parent_location": "Augusta County",
+      "description": "Location where a Looney (first name illegible) held land per 1765 processioners.",
+      "notes": "Near Looney's Mill Creek area"
+    },
+    {
+      "name": "Isle of Man",
+      "location_type": "region",
+      "parent_location": "British Isles",
+      "description": "Island between England and Ireland. Origin of Robert Looney Sr. family.",
+      "notes": "Ballagilley Farm in Maughold parish was Looney origin"
+    },
+    {
+      "name": "Natural Bridge",
+      "location_type": "landmark",
+      "parent_location": "Augusta County (later Rockbridge County)",
+      "description": "Famous natural rock bridge. Tony notes Looney lands 'not far from Natural Bridge.'",
+      "notes": "Geographic reference point for Looney settlement area"
+    }
+  ],
+
+  "research_notes_not_evidence": [
+    {
+      "note": "There is dispute over Margaret Rhea's parentage. Tony shows both 'Major Robert Rhea and Elizabeth McCaub' AND 'Matthew Rhea' as possible fathers. This needs resolution.",
+      "related_people": ["Margaret Rhea"],
+      "source_file": "1692-Johnson-renfro-Looney.docx",
+      "status": "needs_research",
+      "research_needed": "Find primary source for Margaret Rhea's parentage - was her father Robert Rhea or Matthew Rhea?"
+    },
+    {
+      "note": "Robert Looney Jr. shown dying 1770, but Margaret remarried Stephen Renfro and appears as 'Margt. Rentfro' in 1765 processioners. Either Robert died earlier than 1770, or the 1765 date is wrong, or she was called 'Rentfro' while still married to Robert for some reason.",
+      "related_people": ["Robert Looney Jr.", "Margaret Rhea"],
+      "source_file": "1692-Johnson-renfro-Looney.docx",
+      "status": "needs_research",
+      "research_needed": "Clarify date of Robert Looney Jr.'s death and Margaret's remarriage to Stephen Renfro"
+    },
+    {
+      "note": "The relationship between Robert Looney Sr. (d.1769) and Robert Looney Jr. (d.1770) seems clear, but their exact relationship to the later Benjamin Looney (who married Mary Johnson) needs documentation.",
+      "related_people": ["Robert Looney Sr.", "Robert Looney Jr.", "Benjamin Looney"],
+      "source_file": "1692-Johnson-renfro-Looney.docx",
+      "status": "possible",
+      "research_needed": "Document the generational chain from Robert Sr. to Benjamin Looney"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 9,
+    "sources_identified": 5,
+    "new_people_identified": 9,
+    "family_groups_identified": 1,
+    "locations_identified": 5,
+    "relationships_documented": 7,
+    "time_period": "1692-1796",
+    "key_findings": [
+      "Robert Looney Sr. (1692-1769) emigrated from Isle of Man, married Elizabeth Stover 1715",
+      "Robert Looney Jr. (1721-1770) first documented 1738 Orange Co, patented Looney's Mill Creek lands 1741-1742",
+      "Looney's Mill Creek named for this family - became center of settlement",
+      "Margaret Rhea married Robert Looney Jr., then Stephen Renfro after Robert's death - KEY Looney-Renfro link",
+      "James Lauderdale was key neighbor/associate on Looney's Mill Creek",
+      "James Patton (major Valley settler) provided security for Robert Looney",
+      "1765 processioners report shows Looney-Renfro-Rowland-Mills neighborhood network"
+    ]
+  }
+}

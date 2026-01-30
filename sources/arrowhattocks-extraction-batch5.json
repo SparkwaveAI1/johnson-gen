@@ -1,0 +1,345 @@
+{
+  "extraction_metadata": {
+    "source_file": "Va-1607-Arrowhattocks.pdf",
+    "extraction_date": "2026-01-16",
+    "batch": 5,
+    "focus": "John Cox 1665 patent (documents Bayly→William Johnson→Cox land chain), Henry Rowen/Alice connections, other Johnsons mentioned (Edward, Luke, Charles), 1756 Tithables",
+    "notes": "This batch captures the critical 1665 patent showing William Johnson's land dealings and miscellaneous other Johnson references in the file."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-401",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 5",
+      "page": "44",
+      "record_date": "1665-03-29",
+      "abbreviation": "Patent Bk 5:44",
+      "full_citation": "Virginia Land Office Patents, Book 5:44 [or 164], John Cox patent, 29 March 1665.",
+      "original_examined": false,
+      "cited_in": "Cavaliers and Pioneers Vol. 1 p. 447; Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-402",
+      "source_type": "primary",
+      "repository": "Library of Virginia (or Henrico County)",
+      "collection": "Henrico County Deeds",
+      "record_date": "1661-02-01",
+      "abbreviation": "Henrico Deed 1661",
+      "full_citation": "Henrico County, Virginia, Deeds, 1 February 1661, Robert Bullington and Henry Rowing to Wm. Hatcher Jr. and Henry Hatcher.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file",
+      "notes": "Recorded April 1, 1694 in later deed"
+    },
+    {
+      "temp_id": "SRC-403",
+      "source_type": "primary",
+      "repository": "Unknown - need to verify",
+      "collection": "Henrico County Tithables",
+      "record_date": "1756",
+      "abbreviation": "Henrico Tithables 1756",
+      "full_citation": "Henrico County, Virginia, List of Tithables, 1756, taken by Archibald Cary.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-401",
+      "document_type": "land_patent",
+      "date": "1665-03-29",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-401",
+      "title": "John Cox Patent - 550 acres Harristocks (Arrowhattocks)",
+      "acres": 550,
+      "location_description": "on north side the River, known by the name of Harristocks, beginning next to land of Capt. Edloe",
+      "transcription_excerpt": "1665 March 29: John Cox, 550 acres, Henrico Co., on north side the River, known by the name of Harristocks, beginning next to land of Capt. Edloe, 29 March 1665, page 164 (44). Granted to Arthur Bayly, who sold to Wm. Johnson, by whom it was assigned to said Cox.",
+      "people": [
+        {
+          "name_as_written": "John Cox",
+          "role": "patentee",
+          "likely_match": "COX-VA-e1635-01",
+          "match_confidence": "confirmed",
+          "reasoning": "John Cox receiving the patent"
+        },
+        {
+          "name_as_written": "Arthur Bayly",
+          "role": "original_grantee",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Arthur Bayley, merchant; married Mary Jordan"
+        },
+        {
+          "name_as_written": "Wm. Johnson",
+          "role": "intermediate_owner",
+          "likely_match": "JNSN-ENG-e1620-01",
+          "match_confidence": "confirmed",
+          "reasoning": "CRITICAL: This document shows William Johnson purchased from Bayly and assigned to Cox. This is the same 550 acres from William Johnson's 1653 patent."
+        },
+        {
+          "name_as_written": "Capt. Edloe",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "notes": "Same as 1653 patent"
+        }
+      ],
+      "notes": "CRITICAL DOCUMENT: This patent documents the complete chain of title for the Arrowhattocks 550 acres: (1) Arthur Bayly granted; (2) Bayly sold to William Johnson; (3) Johnson assigned to John Cox; (4) Cox patents 1665. This proves William Johnson held and then disposed of his 1653 patent land."
+    },
+    {
+      "temp_id": "DOC-402",
+      "document_type": "deed",
+      "date": "1661-02-01",
+      "date_recorded": "1694-04-01",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-402",
+      "title": "Robert Bullington and Henry Rowing to Wm. Hatcher Jr. and Henry Hatcher",
+      "transcription_excerpt": "Purchased of Robert Bullington and Henry Rowing and Alice, his wife, by Wm. Hatcher Jr. and Henry Hatcher by two conveyances Feb. 1, 1661... 50 acres in Varina adjoining land formerly belonging to the widow Parker, now in possession of Wm. Byrd, Esq. and is part of a dividend of 200 acres formerly belonging to William Dawkes, being purchased of Robert Bullington and Henry Rowing and Alice, his wife... conveyed by Henry Hatcher to Edward Hatcher Aug. 20, 1667.",
+      "people": [
+        {
+          "name_as_written": "Robert Bullington",
+          "role": "grantor",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Henry Rowing",
+          "role": "grantor",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Henry Rowen - Tony notes 'Benjamin Hatcher is one of the signeders of John Watson's will 2nd husband of Alice first married to Henry Rowen, whose brother is John Rowen'"
+        },
+        {
+          "name_as_written": "Alice",
+          "role": "wife_of_grantor",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Alice Rowen/Rowing - wife of Henry Rowen. Tony indicates she later married someone else (possibly a Hatcher or Watson connection?)"
+        },
+        {
+          "name_as_written": "Wm. Hatcher Jr.",
+          "role": "grantee",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "William Hatcher Jr. - son of William Hatcher (b. 1613)"
+        },
+        {
+          "name_as_written": "Henry Hatcher",
+          "role": "grantee",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Henry Hatcher - brother of William Jr., son of William Hatcher (b. 1613)"
+        }
+      ],
+      "notes": "This deed connects Bullington and Rowen/Rowing families to Hatchers. Tony's note about Alice being '2nd husband of Alice first married to Henry Rowen' suggests Alice Watson (wife of testator John Watson) may have been previously married to Henry Rowen - this would be significant for Michael Johnson's wife Sarah Watson's maternal line."
+    },
+    {
+      "temp_id": "DOC-403",
+      "document_type": "tithables_list",
+      "date": "1756",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-403",
+      "title": "1756 Henrico County Tithables - Archibald Cary",
+      "transcription_excerpt": "1756 List of Tithables Taken by Archibald Cary... Charles Johnson 1... Tom Johns 1...",
+      "people": [
+        {
+          "name_as_written": "Charles Johnson",
+          "role": "tithable",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Charles Johnson - 1 tithable in 1756. Possible descendant of Michael Johnson line?"
+        },
+        {
+          "name_as_written": "Tom Johns",
+          "role": "tithable",
+          "likely_match": null,
+          "new_person_flag": false,
+          "notes": "Tom Johns - may be Johnson variant spelling; 1 tithable"
+        }
+      ],
+      "notes": "The 1756 tithables list shows continuing Johnson presence in Henrico County area. Charles Johnson and Tom Johns are both listed. By 1756 Michael Johnson's sons (John and James) would have their own descendants in the area."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1": "HTCR-ENG-b1613-01",
+      "person_1_name": "William Hatcher (b.1613)",
+      "person_2_temp": "William Hatcher Jr.",
+      "relationship_type": "father",
+      "confidence": "likely",
+      "evidence_summary": "William Hatcher Jr. named in 1661 deed as purchaser with Henry Hatcher; Tony identifies him as son of William Hatcher (b. 1613)",
+      "source_temp_id": "SRC-402"
+    },
+    {
+      "person_1": "HTCR-ENG-b1613-01",
+      "person_1_name": "William Hatcher (b.1613)",
+      "person_2_temp": "Henry Hatcher",
+      "relationship_type": "father",
+      "confidence": "likely",
+      "evidence_summary": "Henry Hatcher named in 1661 deed as purchaser with William Hatcher Jr.; later conveys to Edward Hatcher 1667",
+      "source_temp_id": "SRC-402"
+    }
+  ],
+
+  "associations_to_add": [
+    {
+      "person_1": "JNSN-ENG-e1620-01",
+      "person_1_name": "William Johnson (1653)",
+      "person_2_temp": "Arthur Bayley",
+      "association_type": "land_transaction",
+      "date": "between 1653-1665",
+      "confidence": "confirmed",
+      "evidence_summary": "John Cox 1665 patent states the land was 'Granted to Arthur Bayly, who sold to Wm. Johnson'",
+      "source_temp_id": "SRC-401"
+    },
+    {
+      "person_1": "JNSN-ENG-e1620-01",
+      "person_1_name": "William Johnson (1653)",
+      "person_2": "COX-VA-e1635-01",
+      "person_2_name": "John Cox",
+      "association_type": "land_transaction",
+      "date": "1665-03-29",
+      "confidence": "confirmed",
+      "evidence_summary": "John Cox 1665 patent states land was 'by [William Johnson] assigned to said Cox'",
+      "source_temp_id": "SRC-401"
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "BYLO-ENG-e1610-01",
+      "surname": "Bayley",
+      "given_name": "Arthur",
+      "designation": "merchant",
+      "birth_year_estimate": 1610,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named in John Cox 1665 patent as original grantee of Arrowhattocks land",
+      "source_temp_id": "SRC-401",
+      "notes": "Tony notes Arthur Bayley was married to Mary Jordan, daughter of Samuel Jordan. The Mary Jordan at Jordan's Journey in 1624 (with Richard Johnson) later married Arthur Bayley, creating a connection between the earliest Johnson and the Bayley family."
+    },
+    {
+      "suggested_id": "RWNG-VA-e1630-01",
+      "surname": "Rowen",
+      "given_name": "Henry",
+      "designation": "Rowing",
+      "birth_year_estimate": 1630,
+      "death_year_estimate": 1660,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named in 1661 deed with wife Alice selling to Hatchers",
+      "source_temp_id": "SRC-402",
+      "notes": "Tony notes 'Benjamin Hatcher is one of the signeders of John Watson's will 2nd husband of Alice first married to Henry Rowen, whose brother is John Rowen' - this suggests Alice (wife of John Watson, mother of Sarah Watson) was previously married to Henry Rowen."
+    },
+    {
+      "suggested_id": "RWNG-VA-e1635-01",
+      "surname": "Rowen",
+      "given_name": "Alice",
+      "designation": "wife of Henry Rowen, then [?]",
+      "birth_year_estimate": 1635,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named in 1661 deed as wife of Henry Rowing",
+      "source_temp_id": "SRC-402",
+      "notes": "POSSIBLE IDENTITY: Tony suggests this Alice may be the same Alice who later married John Watson. If true, Sarah Watson (wife of Michael Johnson) would have been Alice's daughter from her second marriage to John Watson."
+    },
+    {
+      "suggested_id": "HTCR-VA-e1638-01",
+      "surname": "Hatcher",
+      "given_name": "William",
+      "designation": "Junior",
+      "birth_year_estimate": 1638,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named in 1661 deed as purchaser from Bullington/Rowing",
+      "source_temp_id": "SRC-402"
+    },
+    {
+      "suggested_id": "HTCR-VA-e1640-02",
+      "surname": "Hatcher",
+      "given_name": "Henry",
+      "birth_year_estimate": 1640,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named in 1661 deed as purchaser; conveyed to Edward Hatcher 1667",
+      "source_temp_id": "SRC-402",
+      "notes": "Brother of William Hatcher Jr., Edward Hatcher, Benjamin Hatcher"
+    },
+    {
+      "suggested_id": "BLNG-VA-e1620-01",
+      "surname": "Bullington",
+      "given_name": "Robert",
+      "birth_year_estimate": 1620,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named in 1661 deed as grantor to Hatchers",
+      "source_temp_id": "SRC-402"
+    },
+    {
+      "suggested_id": "JNSN-VA-e1720-01",
+      "surname": "Johnson",
+      "given_name": "Charles",
+      "birth_year_estimate": 1720,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Listed in 1756 Henrico Tithables - 1 tithable",
+      "source_temp_id": "SRC-403",
+      "notes": "Possible descendant of Michael Johnson line. Would be grandson generation if born c.1720."
+    }
+  ],
+
+  "research_notes_not_evidence": [
+    {
+      "note": "Tony notes 'Benjamin Hatcher is one of the signeders of John Watson's will 2nd husband of Alice first married to Henry Rowen, whose brother is John Rowen'. This is a complex claim: (1) Benjamin Hatcher witnessed John Watson's will [can verify]; (2) John Watson was Alice's second husband; (3) Alice was first married to Henry Rowen; (4) Henry Rowen had a brother John Rowen. If true, this means Alice Watson (wife of testator John Watson and mother of Sarah Watson who married Michael Johnson) was previously Alice Rowen.",
+      "related_people": ["Alice Watson", "Henry Rowen", "John Watson", "Sarah Watson", "Michael Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "needs_verification",
+      "research_needed": "Find documentation of Alice's first marriage to Henry Rowen and remarriage to John Watson"
+    },
+    {
+      "note": "The 1665 John Cox patent proves William Johnson (1653) disposed of his Arrowhattocks land before 1665. The patent states the land was granted to Arthur Bayly → sold to Wm. Johnson → assigned to Cox. This means William Johnson held the land for up to 12 years (1653-1665) before transferring it. The court record of 1656 shows him still present at his property.",
+      "related_people": ["William Johnson (1653)", "Arthur Bayley", "John Cox"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "documented",
+      "research_needed": "None - this is confirmed by the patent"
+    },
+    {
+      "note": "Tony mentions 'Edward Johnson of Powhite swamp in era of 1698' and 'Rev. Edward Johnson of Cheesecake Paths estate' and 'Edward Johnson John Johnson and Luke Johnson of Strawberry Bankes'. These are OTHER Johnsons in the area, not part of the White Oak Michael Johnson line. They should be tracked separately.",
+      "related_people": ["Edward Johnson", "Luke Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "noted",
+      "research_needed": "These Johnsons may or may not be related to Michael Johnson. Track separately until connection proven."
+    },
+    {
+      "note": "Charles Johnson listed in 1756 Henrico Tithables. By 1756, Michael Johnson's grandsons would be of tithable age. Charles could be a grandson of Michael through John or James Johnson, but no documentation connects them.",
+      "related_people": ["Charles Johnson (1756)", "Michael Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "possible",
+      "research_needed": "Trace John and James Johnson descendants to see if Charles Johnson connects"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 3,
+    "sources_identified": 3,
+    "confirmed_relationships": 0,
+    "likely_relationships": 2,
+    "new_people_identified": 7,
+    "research_notes_captured": 4,
+    "time_period": "1661-1756",
+    "key_findings": [
+      "John Cox 1665 patent DOCUMENTS the complete land chain: Arthur Bayly → William Johnson → John Cox for the 550-acre Arrowhattocks tract",
+      "This confirms William Johnson held and disposed of his 1653 patent land by 1665",
+      "Henry Rowen and wife Alice sold land to Hatchers in 1661 - Tony suggests this Alice may be the same Alice who later married John Watson (father-in-law of Michael Johnson)",
+      "If Alice Watson was previously Alice Rowen, this connects the Watson family to the Rowen/Bullington network",
+      "William Hatcher Jr. and Henry Hatcher (sons of William Hatcher b.1613) documented in 1661 deed",
+      "Charles Johnson appears in 1756 tithables - possible descendant of Michael Johnson line"
+    ]
+  }
+}

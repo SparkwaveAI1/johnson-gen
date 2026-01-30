@@ -1,0 +1,56 @@
+{
+  "family_groups": [
+    {
+      "name": "Michael Johnson of Tuckahoe Creek",
+      "slug": "michael-johnson-tuckahoe",
+      "group_type": "nuclear",
+      "anchor_person_id": "JNSN-UNK-e1673-01",
+      "primary_location_slug": "tuckahoe-creek",
+      "date_start": "1702",
+      "date_end": "1718",
+      "confidence": "confirmed",
+      "status": "active",
+      "dna_group": "White Oak",
+      "summary": "Michael Johnson settled on Tuckahoe Creek in Henrico County by 1702. He married Sarah Watson, daughter of John Watson, and likely had two sons, John and James Johnson, who inherited adjacent lands after his death in 1718.",
+      "source_files": ["Va-1607-Arrowhattocks.pdf"],
+      "members": [
+        {
+          "person_id": "JNSN-UNK-e1673-01",
+          "role": "anchor",
+          "generation": 0,
+          "notes": "Michael Johnson, central figure. First documented 1702 at Edloe Plantation."
+        },
+        {
+          "person_id": "WTSN-UNK-e1680-01",
+          "role": "spouse",
+          "generation": 0,
+          "notes": "Sarah Watson, daughter of John Watson. Married Michael Johnson."
+        },
+        {
+          "person_id": "JNSN-HEN-e1695-01",
+          "role": "child",
+          "generation": 1,
+          "notes": "John Johnson, likely son of Michael. Adjacent landowner, presented estate inventory 1719."
+        },
+        {
+          "person_id": "JNSN-HEN-e1695-02",
+          "role": "child",
+          "generation": 1,
+          "notes": "James Johnson, likely son of Michael. Adjacent landowner, presented estate inventory 1719."
+        },
+        {
+          "person_id": "WTSN-UNK-e1650-01",
+          "role": "parent",
+          "generation": -1,
+          "notes": "John Watson, father of Sarah Watson. His 1702 will mentions Michael Johnson."
+        },
+        {
+          "person_id": "JNES-UNK-e1670-01",
+          "role": "associated",
+          "generation": 0,
+          "notes": "John Jones, possible brother-in-law. Listed with Michael on Edloe Plantation tithables 1702."
+        }
+      ]
+    }
+  ]
+}

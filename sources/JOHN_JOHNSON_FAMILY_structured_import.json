@@ -1,0 +1,748 @@
+{
+  "extraction_metadata": {
+    "source_document": "THE_JOHN_JOHNSON_FAMILY_IN_AMERICA.txt",
+    "extraction_date": "2026-01-18",
+    "extraction_method": "AI-assisted (Gemini) with human review",
+    "confidence_note": "Relationships stated in genealogical compilation = PROBABLE unless marked otherwise"
+  },
+  
+  "individuals": [
+    {
+      "temp_id": "JOHN-1590",
+      "given_name": "John",
+      "surname": "Johnson",
+      "birth_year": 1590,
+      "birth_year_type": "circa",
+      "birth_place": "England",
+      "death_year": 1637,
+      "death_year_type": "before",
+      "death_place": "James City County, Virginia",
+      "occupation": "yeoman, planter",
+      "notes": "Ancient Planter. Arrived Virginia by 1618. Listed in 1624/1625 Muster at Jamestown. 200 acres at Archer's Hope. Exempt from levies 1653 due to lameness from 1644 massacre.",
+      "designations": ["Ancient Planter"],
+      "match_existing": {
+        "custom_id": "JNSN-ENG-e1590-01",
+        "confidence": "confirmed",
+        "reason": "Exact match: Ancient Planter, Archer's Hope, William Spencer adjacent"
+      }
+    },
+    {
+      "temp_id": "ANN-WIFE-1600",
+      "given_name": "Ann",
+      "surname": null,
+      "birth_year": 1600,
+      "birth_year_type": "circa",
+      "birth_place": "England",
+      "death_year": 1658,
+      "death_year_type": "circa",
+      "death_place": "James City County, Virginia",
+      "notes": "Wife of John Johnson the Ancient Planter. Listed in 1624 Muster at Jamestown."
+    },
+    {
+      "temp_id": "ANN-1621",
+      "given_name": "Ann",
+      "surname": "Johnson",
+      "birth_year": 1621,
+      "birth_year_type": "circa",
+      "birth_place": "James Island, Virginia",
+      "death_year": 1682,
+      "death_year_type": "circa",
+      "death_place": "Virginia",
+      "notes": "Daughter of John Johnson Ancient Planter. Age 4 in 1625 Muster. Married Edward Travis I. Inherited father's lands via marital right."
+    },
+    {
+      "temp_id": "JOHN-1624",
+      "given_name": "John",
+      "surname": "Johnson",
+      "suffix": "Jr.",
+      "birth_year": 1624,
+      "birth_year_type": "circa",
+      "birth_place": "James Island, Virginia",
+      "death_year": 1710,
+      "death_year_type": "circa",
+      "death_place": "Northumberland County, Virginia",
+      "notes": "Son of John Johnson Ancient Planter. Age 1 in 1625 Muster. Repatented father's land 1652. Moved to Northumberland County. Married Ann Goche c.1655. Exempt from levies 1653 due to lameness from service in 1644 massacre."
+    },
+    {
+      "temp_id": "EDWARD-TRAVIS",
+      "given_name": "Edward",
+      "surname": "Travis",
+      "suffix": "I",
+      "birth_year": 1610,
+      "birth_year_type": "circa",
+      "birth_place": "England",
+      "death_year": null,
+      "notes": "Married Ann Johnson (daughter of Ancient Planter). Patented 900 acres James City County 1637 'in right of John Johnson, his wife and two children'.",
+      "match_existing": {
+        "lookup": "Edward Travis",
+        "confidence": "probable"
+      }
+    },
+    {
+      "temp_id": "ANN-GOCHE",
+      "given_name": "Ann",
+      "surname": "Goche",
+      "name_variants": ["Anne Gooch", "Ann Gouche", "Anne Goch"],
+      "birth_year": 1635,
+      "birth_year_type": "circa",
+      "birth_place": "Virginia",
+      "death_year": 1665,
+      "death_year_type": "circa",
+      "death_place": "Northumberland County, Virginia",
+      "notes": "Wife of John Johnson Jr. Sister or niece of Jeffrey Goche. Related to Samuel Goche."
+    },
+    {
+      "temp_id": "JEFFREY-1663",
+      "given_name": "Jeffrey",
+      "surname": "Johnson",
+      "name_variants": ["Jeffery Johnson", "Jeoffrey Johnson"],
+      "suffix": "I",
+      "birth_year": 1663,
+      "birth_year_type": "circa",
+      "birth_place": "Wiccomico Parish, Northumberland County, Virginia",
+      "death_year": 1725,
+      "death_year_type": "exact",
+      "death_date": "1725-06-25",
+      "death_place": "King George County, Virginia",
+      "notes": "Son of John Johnson Jr. and Ann Goche. Received land from Samuel Goche 1663 as infant. Married Elizabeth (Wright?) c.1688. Will dated 25 Jun 1725, probated King George County Oct 1726. Land at Elk Run."
+    },
+    {
+      "temp_id": "ELIZABETH-WRIGHT",
+      "given_name": "Elizabeth",
+      "surname": "Wright",
+      "birth_year": 1656,
+      "birth_year_type": "circa",
+      "birth_place": "Northumberland County, Virginia",
+      "death_year": 1725,
+      "death_year_type": "circa",
+      "death_place": "King George County, Virginia",
+      "notes": "Wife of Jeffrey Johnson I. Named in 1707 land record."
+    },
+    {
+      "temp_id": "ANNE-1665",
+      "given_name": "Anne",
+      "surname": "Johnson",
+      "birth_year": 1665,
+      "birth_year_type": "circa",
+      "birth_place": "Wiccomico Parish, Northumberland County, Virginia",
+      "death_year": 1737,
+      "death_year_type": "circa",
+      "death_place": "Virginia",
+      "notes": "Daughter of John Johnson Jr. and Ann Goche. Married (1) Samuel Goche (d. 1683), (2) Peter Byram. Litigant in Goche estate matters."
+    },
+    {
+      "temp_id": "SAMUEL-GOCHE",
+      "given_name": "Samuel",
+      "surname": "Goche",
+      "name_variants": ["Samuel Gooch", "Samuel Gouche"],
+      "birth_year": null,
+      "death_year": 1683,
+      "death_year_type": "circa",
+      "death_date": "1683-11-10",
+      "death_place": "Northumberland County, Virginia",
+      "notes": "Son of John Goche and Katherine. Married Anne Johnson. 1663 deed of gift to nephew Jeffrey Johnson. Uncle of Jeffrey Johnson I."
+    },
+    {
+      "temp_id": "JEFFREY-GOCHE",
+      "given_name": "Jeffrey",
+      "surname": "Goche",
+      "name_variants": ["Jeffery Gooch", "Geoffrey Gouche"],
+      "birth_year": null,
+      "death_place": "Northumberland County, Virginia",
+      "notes": "Land patents south side Greater Wiccomico River 1650. Brother or uncle of Ann Goche. Land on Cupid's Creek."
+    },
+    {
+      "temp_id": "PETER-BYRAM",
+      "given_name": "Peter",
+      "surname": "Byram",
+      "notes": "Second husband of Anne Johnson (daughter of John Jr.)."
+    },
+    {
+      "temp_id": "JEFFREY-1690",
+      "given_name": "Jeffrey",
+      "surname": "Johnson",
+      "name_variants": ["Jeffery Johnson", "Jeoffrey Johnson"],
+      "suffix": "II",
+      "birth_year": 1690,
+      "birth_year_type": "circa",
+      "birth_place": "Northumberland County, Virginia",
+      "death_year": 1758,
+      "death_year_type": "exact",
+      "death_date": "1758-02-23",
+      "death_place": "Prince William County, Virginia",
+      "notes": "Son of Jeffrey Johnson I. Executor of father's will. Planter. 492-acre lease on Darrell's Run 1732. Will dated 23 Feb 1758. Married Margaret c.1720."
+    },
+    {
+      "temp_id": "JOHN-1695",
+      "given_name": "John",
+      "surname": "Johnson",
+      "birth_year": 1695,
+      "birth_year_type": "circa",
+      "birth_place": "Northumberland County, Virginia",
+      "death_year": 1770,
+      "death_year_type": "circa",
+      "death_place": "Loudoun/Fauquier County, Virginia",
+      "notes": "Son of Jeffrey Johnson I. Married Susanna before 1724. Inherited plantation at Elk Run per 1725 will. Lived Stafford County, died after 1763 in Fauquier."
+    },
+    {
+      "temp_id": "MARGARET-WIFE",
+      "given_name": "Margaret",
+      "surname": null,
+      "birth_year": 1690,
+      "birth_year_type": "circa",
+      "death_year": 1761,
+      "death_year_type": "circa",
+      "death_place": "Virginia",
+      "notes": "Wife of Jeffrey Johnson II. Married (2) Thomas Colson of Frederick County after Jeffrey's death. 1759 agreement with sons Jeffrey III and Moses."
+    },
+    {
+      "temp_id": "WILLIAM-1720",
+      "given_name": "William",
+      "surname": "Johnson",
+      "birth_year": 1720,
+      "birth_year_type": "circa",
+      "birth_place": "Virginia",
+      "notes": "Grandson named in Jeffrey Johnson I's 1725 will. Son of John or Jeffrey II."
+    },
+    {
+      "temp_id": "JEFFREY-1722",
+      "given_name": "Jeffrey",
+      "surname": "Johnson",
+      "suffix": "III",
+      "birth_year": 1722,
+      "birth_year_type": "circa",
+      "birth_place": "Prince William County, Virginia",
+      "death_year": 1789,
+      "death_year_type": "exact",
+      "death_date": "1789-01",
+      "death_place": "Wilkes County, North Carolina",
+      "notes": "Son of Jeffrey Johnson II. Married Rachel Walker. Leader of North Carolina migration."
+    },
+    {
+      "temp_id": "MOSES-1740",
+      "given_name": "Moses",
+      "surname": "Johnson",
+      "birth_year": 1740,
+      "birth_year_type": "circa",
+      "birth_place": "Prince William County, Virginia",
+      "death_year": 1803,
+      "death_year_type": "exact",
+      "death_date": "1803-06",
+      "death_place": "Fauquier County, Virginia",
+      "notes": "Son of Jeffrey Johnson II. DAR Patriot (A207620). Married Duannah Shumate 1768. Resident of Leeds Parish. Will dated 16 Jun 1803, proved 25 Jul 1803.",
+      "designations": ["DAR Patriot A207620"]
+    },
+    {
+      "temp_id": "DUANNAH-SHUMATE",
+      "given_name": "Duannah",
+      "surname": "Shumate",
+      "name_variants": ["Diannah Shumate"],
+      "birth_year": 1748,
+      "birth_year_type": "circa",
+      "birth_place": "Prince William County, Virginia",
+      "death_year": 1829,
+      "death_year_type": "after",
+      "death_place": "Fauquier County, Virginia",
+      "notes": "Wife of Moses Johnson. Daughter of Daniel Shumate II and Mary. French Huguenot descent (Chaumette)."
+    },
+    {
+      "temp_id": "THOMAS-COLSON",
+      "given_name": "Thomas",
+      "surname": "Colson",
+      "death_place": "Frederick County, Virginia",
+      "notes": "Second husband of Margaret (widow of Jeffrey Johnson II). 1759 agreement with stepsons Jeffrey III and Moses."
+    },
+    {
+      "temp_id": "JOHN-GOCHE-SON",
+      "given_name": "John",
+      "surname": "Goche",
+      "name_variants": ["John Gooch", "John Goch"],
+      "notes": "Son of Samuel Goche and Anne Johnson. Sued uncle Jeffrey Johnson in General Court 1690, settled amicably 1696/7."
+    },
+    {
+      "temp_id": "DAVID-1769",
+      "given_name": "David",
+      "surname": "Johnson",
+      "birth_year": 1769,
+      "birth_year_type": "circa",
+      "birth_place": "Fauquier County, Virginia",
+      "notes": "Son of Moses Johnson and Duannah Shumate. Married Sarah Odor 21 Mar 1789."
+    },
+    {
+      "temp_id": "NIMROD-1771",
+      "given_name": "Nimrod",
+      "surname": "Johnson",
+      "birth_year": 1771,
+      "birth_year_type": "circa",
+      "birth_place": "Fauquier County, Virginia",
+      "death_year": 1830,
+      "notes": "Son of Moses Johnson. Married Polly Adams 24 Feb 1790."
+    },
+    {
+      "temp_id": "CHARLOTTE-1786",
+      "given_name": "Charlotte",
+      "surname": "Johnson",
+      "birth_year": 1786,
+      "birth_year_type": "circa",
+      "birth_place": "Fauquier County, Virginia",
+      "death_year": 1877,
+      "notes": "Daughter of Moses Johnson. Married John Burgess 12 Nov 1805."
+    }
+  ],
+  
+  "relationships": [
+    {
+      "person1_temp_id": "JOHN-1590",
+      "person2_temp_id": "ANN-WIFE-1600",
+      "relationship_type": "spouse",
+      "confidence": "probable",
+      "source": "1624/1625 Muster lists 'John Johnson & Ann his wife'"
+    },
+    {
+      "person1_temp_id": "JOHN-1590",
+      "person2_temp_id": "ANN-1621",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1625 Muster lists Ann as daughter, age 4"
+    },
+    {
+      "person1_temp_id": "JOHN-1590",
+      "person2_temp_id": "JOHN-1624",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1625 Muster lists John as son, age 1. 1652 repatent states 'son and heir of said John Johnson'"
+    },
+    {
+      "person1_temp_id": "ANN-1621",
+      "person2_temp_id": "EDWARD-TRAVIS",
+      "relationship_type": "spouse",
+      "confidence": "probable",
+      "source": "1637 patent mentions Travis 'marrying' daughter of John Johnson"
+    },
+    {
+      "person1_temp_id": "JOHN-1624",
+      "person2_temp_id": "ANN-GOCHE",
+      "relationship_type": "spouse",
+      "confidence": "probable",
+      "source": "Multiple records state John Johnson married Ann Goche c.1655"
+    },
+    {
+      "person1_temp_id": "JOHN-1624",
+      "person2_temp_id": "JEFFREY-1663",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1663 deed: 'Jeffrey JOHNSON son of Jno JOHNSON'"
+    },
+    {
+      "person1_temp_id": "JOHN-1624",
+      "person2_temp_id": "ANNE-1665",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "Records indicate Anne Johnson daughter of John Johnson Jr."
+    },
+    {
+      "person1_temp_id": "ANNE-1665",
+      "person2_temp_id": "SAMUEL-GOCHE",
+      "relationship_type": "spouse",
+      "confidence": "probable",
+      "source": "Records state Anne Johnson married Samuel Goche (first husband)"
+    },
+    {
+      "person1_temp_id": "ANNE-1665",
+      "person2_temp_id": "PETER-BYRAM",
+      "relationship_type": "spouse",
+      "confidence": "probable",
+      "source": "Records state Anne Johnson married Peter Byram (second husband)"
+    },
+    {
+      "person1_temp_id": "SAMUEL-GOCHE",
+      "person2_temp_id": "JOHN-GOCHE-SON",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1690 lawsuit: 'John GOCHE, son and heir of Saml GOCHE'"
+    },
+    {
+      "person1_temp_id": "JEFFREY-1663",
+      "person2_temp_id": "ELIZABETH-WRIGHT",
+      "relationship_type": "spouse",
+      "confidence": "probable",
+      "source": "1707 land record mentions Elizabeth wife of Jeffrey Johnson"
+    },
+    {
+      "person1_temp_id": "JEFFREY-1663",
+      "person2_temp_id": "JEFFREY-1690",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1725 will names Jeffrey as executor; 1726 probate 'Jeffery JOHNSON, his Executor'"
+    },
+    {
+      "person1_temp_id": "JEFFREY-1663",
+      "person2_temp_id": "JOHN-1695",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1725 will: 'I give to my son John JOHNSON the plantation whereon He now dwells'"
+    },
+    {
+      "person1_temp_id": "JEFFREY-1690",
+      "person2_temp_id": "MARGARET-WIFE",
+      "relationship_type": "spouse",
+      "confidence": "probable",
+      "source": "1752 deed mentions 'Margaret the wife of said Jeffrey'"
+    },
+    {
+      "person1_temp_id": "JEFFREY-1690",
+      "person2_temp_id": "JEFFREY-1722",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1758 will and 1759 agreement name Jeffrey as son"
+    },
+    {
+      "person1_temp_id": "JEFFREY-1690",
+      "person2_temp_id": "MOSES-1740",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1758 will and 1759 agreement name Moses as son"
+    },
+    {
+      "person1_temp_id": "MOSES-1740",
+      "person2_temp_id": "DUANNAH-SHUMATE",
+      "relationship_type": "spouse",
+      "marriage_year": 1768,
+      "confidence": "probable",
+      "source": "Marriage records and DAR documentation"
+    },
+    {
+      "person1_temp_id": "MOSES-1740",
+      "person2_temp_id": "DAVID-1769",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1803 will names David as heir"
+    },
+    {
+      "person1_temp_id": "MOSES-1740",
+      "person2_temp_id": "NIMROD-1771",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1803 will names Nimrod as heir"
+    },
+    {
+      "person1_temp_id": "MOSES-1740",
+      "person2_temp_id": "CHARLOTTE-1786",
+      "relationship_type": "parent_child",
+      "person1_role": "parent",
+      "person2_role": "child",
+      "confidence": "probable",
+      "source": "1803 will names Charlotte as heir"
+    },
+    {
+      "person1_temp_id": "CHARLOTTE-1786",
+      "person2_temp_id": "JOHN-BURGESS",
+      "relationship_type": "spouse",
+      "marriage_year": 1805,
+      "marriage_date": "1805-11-12",
+      "marriage_place": "Fauquier County, Virginia",
+      "confidence": "confirmed",
+      "source": "Marriage record"
+    }
+  ],
+  
+  "events": [
+    {
+      "event_type": "census",
+      "title": "1624/1625 Muster - John Johnson household",
+      "event_date": "1625",
+      "location": "Jamestown, James City County, Virginia",
+      "description": "John Johnson established at Jamestown with wife Ann and two children: John (age 1) and Ann (age 4)",
+      "participants": [
+        {"temp_id": "JOHN-1590", "role": "head_of_household"},
+        {"temp_id": "ANN-WIFE-1600", "role": "household_member"},
+        {"temp_id": "ANN-1621", "role": "household_member"},
+        {"temp_id": "JOHN-1624", "role": "household_member"}
+      ],
+      "confidence": "confirmed",
+      "source": "Complete Book of Emigrants, 1607-1660"
+    },
+    {
+      "event_type": "land_patent",
+      "title": "John Johnson patent 100 acres Archer's Hope",
+      "event_date": "1624-01-12",
+      "location": "James City County, Virginia",
+      "description": "John Johnson, yeoman and ancient planter of James City, 100 acres, his first person dividend. 15 acres on east toward Back River, 85 acres on small branch of Archer's Hope Creek, parting from land of Ensign William Spencer.",
+      "participants": [
+        {"temp_id": "JOHN-1590", "role": "grantee"}
+      ],
+      "associated_persons": [
+        {"name": "William Spencer", "role": "adjacent_landowner", "title": "Ensign"}
+      ],
+      "confidence": "confirmed",
+      "source": "Land patent records"
+    },
+    {
+      "event_type": "land_patent",
+      "title": "Edward Travis patent 900 acres",
+      "event_date": "1637-01-25",
+      "location": "James City County, Virginia",
+      "description": "Edward Travis I patented 900 acres upon head of Upper Chippokes Creek, adjacent Jeremiah Dickenson 200 acres. Due in right of John Johnson, his wife and two children, the daughter and heir of said John Johnson, he said Travis marrying. Headrights include Walter Johnson and Walter Travis.",
+      "participants": [
+        {"temp_id": "EDWARD-TRAVIS", "role": "grantee"},
+        {"temp_id": "ANN-1621", "role": "mentioned", "note": "daughter and heir of John Johnson"}
+      ],
+      "associated_persons": [
+        {"name": "Jeremiah Dickenson", "role": "adjacent_landowner"},
+        {"name": "Walter Johnson", "role": "headright"},
+        {"name": "Walter Travis", "role": "headright"}
+      ],
+      "confidence": "confirmed",
+      "source": "Patent records"
+    },
+    {
+      "event_type": "land_patent",
+      "title": "John Johnson Jr. repatent of father's land",
+      "event_date": "1652",
+      "location": "James City County, Virginia",
+      "description": "John repatented land granted to his father John Johnson 12 Jan 1624, being son and heir of said John Johnson.",
+      "participants": [
+        {"temp_id": "JOHN-1624", "role": "grantee"}
+      ],
+      "confidence": "confirmed",
+      "source": "Patent records"
+    },
+    {
+      "event_type": "court_order",
+      "title": "John Johnson exempt from levies",
+      "event_date": "1653-05",
+      "location": "Northumberland County, Virginia",
+      "description": "John Johnson to be exempt from paying county and country levies in respect of his lameness and inability to work which was contracted in the service of the country in the last massacre (1644).",
+      "participants": [
+        {"temp_id": "JOHN-1624", "role": "petitioner"}
+      ],
+      "confidence": "confirmed",
+      "source": "Northumberland County court records"
+    },
+    {
+      "event_type": "land_deed",
+      "title": "Samuel Goche deed of gift to Jeffrey Johnson",
+      "event_date": "1663-12-14",
+      "location": "Greater Wiccomico Parish, Northumberland County, Virginia",
+      "description": "Sam Goche of Greater Wiccocomicoe Parish gives to Jeffrey Johnson son of Jno Johnson of Greater Wiccomicoe Parish one half of plantation he now owns from deed of gift from his Uncle Jeffrey Goche. Provision that Jno Johnson and Anne father and mother of said Jeffrey have use of the plantation.",
+      "participants": [
+        {"temp_id": "SAMUEL-GOCHE", "role": "grantor"},
+        {"temp_id": "JEFFREY-1663", "role": "grantee"},
+        {"temp_id": "JOHN-1624", "role": "mentioned", "note": "father, has use of plantation"},
+        {"temp_id": "ANN-GOCHE", "role": "mentioned", "note": "mother, has use of plantation"}
+      ],
+      "witnesses": [
+        {"name": "George Spe"},
+        {"name": "Jeffrey Goche"}
+      ],
+      "confidence": "confirmed",
+      "source": "Northumberland County Record Book, recorded 10 Dec 1666"
+    },
+    {
+      "event_type": "court_case",
+      "title": "John Goche vs Jeffrey Johnson",
+      "event_date": "1690-10-22",
+      "location": "James City, Virginia",
+      "description": "John Goche, son and heir of Samuel Goche, sued Jeffrey Johnson in General Court. Settled amicably 20 Jan 1696/7.",
+      "participants": [
+        {"temp_id": "JOHN-GOCHE-SON", "role": "plaintiff"},
+        {"temp_id": "JEFFREY-1663", "role": "defendant"}
+      ],
+      "confidence": "confirmed",
+      "source": "General Court records"
+    },
+    {
+      "event_type": "will",
+      "title": "Jeffrey Johnson I will",
+      "event_date": "1725-06-25",
+      "location": "King George County, Virginia",
+      "description": "In the name of God; Amen. I Jeffrey Johnson of the county of King George County, Virginia... I give to my son John Johnson the plantation whereon He now dwells with one hundred acres... I give to my grandson William Johnson the remaining part of the tract of land after his father's decease...",
+      "participants": [
+        {"temp_id": "JEFFREY-1663", "role": "testator"},
+        {"temp_id": "JOHN-1695", "role": "heir", "note": "son, receives plantation with 100 acres"},
+        {"temp_id": "WILLIAM-1720", "role": "heir", "note": "grandson, receives remaining land after father's decease"}
+      ],
+      "witnesses": [
+        {"name": "Chs Morgan"},
+        {"name": "Tim Reading"}
+      ],
+      "confidence": "confirmed",
+      "source": "King George County Will Book 1, page 26"
+    },
+    {
+      "event_type": "estate_admin",
+      "title": "Jeffrey Johnson I will probate",
+      "event_date": "1726-10-07",
+      "location": "King George County, Virginia",
+      "description": "Will of Jeffery Johnson, deceased was presented unto court by Jeffery Johnson, his Executor, who made oath thereto and proved by the oath of Charles Morgan and admitted to record.",
+      "participants": [
+        {"temp_id": "JEFFREY-1663", "role": "testator"},
+        {"temp_id": "JEFFREY-1690", "role": "executor"}
+      ],
+      "witnesses": [
+        {"name": "Charles Morgan"}
+      ],
+      "confidence": "confirmed",
+      "source": "King George County COB#1, page 330"
+    },
+    {
+      "event_type": "will",
+      "title": "Jeffrey Johnson II will",
+      "event_date": "1758-02-23",
+      "location": "Prince William County, Virginia",
+      "description": "Will of Jeffrey Johnson II dividing estate between sons Jeffrey and Moses, with other children receiving 25 shillings each.",
+      "participants": [
+        {"temp_id": "JEFFREY-1690", "role": "testator"},
+        {"temp_id": "JEFFREY-1722", "role": "heir"},
+        {"temp_id": "MOSES-1740", "role": "heir"}
+      ],
+      "confidence": "confirmed",
+      "source": "Prince William County will records"
+    },
+    {
+      "event_type": "land_deed",
+      "title": "Thomas Colson and Margaret agreement with Jeffrey and Moses Johnson",
+      "event_date": "1759",
+      "location": "Fauquier County, Virginia",
+      "description": "Articles of agreement between Thomas Colson and Margaret (his wife, widow of Jeffrey Johnson) of Frederick County and Jeffrey Johnson and Moses Johnson of Hamilton Parish. Regarding division of Jeffrey Johnson deceased's estate.",
+      "participants": [
+        {"temp_id": "THOMAS-COLSON", "role": "grantor"},
+        {"temp_id": "MARGARET-WIFE", "role": "grantor"},
+        {"temp_id": "JEFFREY-1722", "role": "grantee"},
+        {"temp_id": "MOSES-1740", "role": "grantee"}
+      ],
+      "confidence": "confirmed",
+      "source": "Deed records"
+    },
+    {
+      "event_type": "will",
+      "title": "Moses Johnson will",
+      "event_date": "1803-06-16",
+      "location": "Leeds Parish, Fauquier County, Virginia",
+      "description": "Will of Moses Johnston Senior of Leeds Parish in the County of Fauquier naming wife Duannah and children including David, Nimrod, Daniel, Susanna, Margaret, Moses Jr., Hannah, Molly, Polly, and Charlotte.",
+      "participants": [
+        {"temp_id": "MOSES-1740", "role": "testator"},
+        {"temp_id": "DUANNAH-SHUMATE", "role": "heir"},
+        {"temp_id": "DAVID-1769", "role": "heir"},
+        {"temp_id": "NIMROD-1771", "role": "heir"},
+        {"temp_id": "CHARLOTTE-1786", "role": "heir"}
+      ],
+      "confidence": "confirmed",
+      "source": "Fauquier County will records"
+    },
+    {
+      "event_type": "estate_admin",
+      "title": "Moses Johnson will probate",
+      "event_date": "1803-07-25",
+      "location": "Fauquier County, Virginia",
+      "description": "Will of Moses Johnson proved by oaths of James Ellis, Joseph Ellis and Isham Bannon.",
+      "participants": [
+        {"temp_id": "MOSES-1740", "role": "testator"}
+      ],
+      "witnesses": [
+        {"name": "James Ellis"},
+        {"name": "Joseph Ellis"},
+        {"name": "Isham Bannon"}
+      ],
+      "confidence": "confirmed",
+      "source": "Fauquier County court records"
+    },
+    {
+      "event_type": "marriage",
+      "title": "Charlotte Johnson marriage to John Burgess",
+      "event_date": "1805-11-12",
+      "location": "Fauquier County, Virginia",
+      "participants": [
+        {"temp_id": "CHARLOTTE-1786", "role": "spouse"}
+      ],
+      "associated_persons": [
+        {"name": "John Burgess", "role": "spouse"}
+      ],
+      "confidence": "confirmed",
+      "source": "Fauquier County marriage records"
+    }
+  ],
+  
+  "associated_persons": [
+    {
+      "name": "William Spencer",
+      "title": "Ensign",
+      "relationship_to_family": "Adjacent landowner to John Johnson Ancient Planter 1624",
+      "notes": "Deceased by 1624; John Johnson ordered to repair his dwelling"
+    },
+    {
+      "name": "Jeremiah Dickenson",
+      "relationship_to_family": "Adjacent landowner to Edward Travis 1637 patent"
+    },
+    {
+      "name": "Walter Johnson",
+      "relationship_to_family": "Headright named in 1637 Travis patent",
+      "notes": "Possibly son of John Johnson Ancient Planter"
+    },
+    {
+      "name": "Walter Travis",
+      "relationship_to_family": "Headright named in 1637 Travis patent"
+    },
+    {
+      "name": "John Burgess",
+      "birth_year": 1771,
+      "death_year": 1855,
+      "relationship_to_family": "Married Charlotte Johnson 1805"
+    },
+    {
+      "name": "Daniel Shumate II",
+      "relationship_to_family": "Father of Duannah Shumate (wife of Moses Johnson)",
+      "notes": "French Huguenot descent (Chaumette)"
+    }
+  ],
+
+  "sources": [
+    {
+      "title": "THE JOHN JOHNSON FAMILY IN AMERICA",
+      "type": "genealogical_compilation",
+      "notes": "Primary source document for this extraction"
+    },
+    {
+      "title": "Complete Book of Emigrants, 1607-1660",
+      "author": "Peter Wilson Coldham",
+      "year": 1987,
+      "type": "published_reference"
+    },
+    {
+      "title": "Virginia Colonial Abstracts Northumbria Collectanea, 1645-1720, A-L",
+      "type": "published_reference"
+    },
+    {
+      "title": "King George County Will Book 1",
+      "type": "primary_source",
+      "repository": "King George County, Virginia"
+    },
+    {
+      "title": "Northumberland County Record Book 1652-1655",
+      "type": "primary_source",
+      "repository": "Northumberland County, Virginia"
+    }
+  ]
+}

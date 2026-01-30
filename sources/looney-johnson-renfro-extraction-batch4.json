@@ -1,0 +1,905 @@
+{
+  "extraction_metadata": {
+    "source_file": "1692-Johnson-renfro-Looney.docx",
+    "extraction_date": "2026-01-17",
+    "batch": 4,
+    "focus": "Additional Johnson-Renfro connections: Timothy Johnson (Orange Co), Eleanor Renfro & John Johnson (Montgomery Co), Absalom Looney line, and the Dickson County TN Johnson-Renfro network (Hudson Johnson, Nathaniel Johnson, Peter Renfro)",
+    "notes": "This batch captures several distinct Johnson-Renfro connection points across time and geography, plus the Absalom Looney line which is a separate branch from Benjamin Looney."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-L017",
+      "source_type": "primary",
+      "repository": "Orange County, Virginia",
+      "collection": "Delinquent Lists",
+      "record_date": "1738",
+      "abbreviation": "Orange Co Delinquent List 1738",
+      "full_citation": "Orange County, Virginia, Delinquent List, 1738.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L018",
+      "source_type": "primary",
+      "repository": "Virginia Land Office",
+      "collection": "Patents",
+      "volume": "Brunswick County",
+      "page": "41",
+      "record_date": "1742-07-30",
+      "abbreviation": "VA Patents Brunswick 1742",
+      "full_citation": "Virginia Land Office Patents, Brunswick County, 30 July 1742, p. 41.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L019",
+      "source_type": "primary",
+      "repository": "Lunenburg County, Virginia",
+      "collection": "Tithables Lists",
+      "record_date": "1750",
+      "abbreviation": "Lunenburg Tithables 1750",
+      "full_citation": "Lunenburg County, Virginia, List of Tithables, 1750, from Falling Creek to Goose River.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L020",
+      "source_type": "primary",
+      "repository": "Dickson County, Tennessee",
+      "collection": "Deed Books",
+      "volume": "A",
+      "page": "271",
+      "record_date": "1808-11-26",
+      "abbreviation": "Dickson Co TN Deeds A:271",
+      "full_citation": "Dickson County, Tennessee, Deed Book A, p. 271. Deed from Nathaniel Johnson to Peter Renfro, 26 November 1808.",
+      "original_examined": false,
+      "notes": "Cited by researcher Peg Zaremba"
+    },
+    {
+      "temp_id": "SRC-L021",
+      "source_type": "primary",
+      "repository": "Montgomery County, Virginia",
+      "collection": "Marriage Records",
+      "record_date": "1793-1798",
+      "abbreviation": "Montgomery Co VA Marriages",
+      "full_citation": "Montgomery County, Virginia, Marriage Records, various dates.",
+      "original_examined": false
+    },
+    {
+      "temp_id": "SRC-L022",
+      "source_type": "primary",
+      "repository": "War Department, Pension Office",
+      "collection": "War of 1812 Records",
+      "record_date": "1903-01-07",
+      "abbreviation": "War of 1812 Pension Records",
+      "full_citation": "War Department, Pension Office, Washington D.C., Record #709844, dated 7 January 1903. Absalom David Looney service record.",
+      "original_examined": false
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-L020",
+      "document_type": "delinquent_list",
+      "date": "1738",
+      "county": "Orange",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L017",
+      "title": "Orange County Delinquent List 1738 - Timothy Johnson and James Johnson",
+      "transcription_excerpt": "Timothy Johnson James Johnson ....... 4. Timothy Johnson left with the Renfro Families from Orange Co Va see above 1738 Deliquet list of Orange Co",
+      "people": [
+        {
+          "name_as_written": "Timothy Johnson",
+          "role": "delinquent",
+          "new_person_flag": true,
+          "notes": "Listed with 4 tithables along with James Johnson. Tony notes: 'Timothy Johnson left with the Renfro Families from Orange Co Va'"
+        },
+        {
+          "name_as_written": "James Johnson",
+          "role": "delinquent",
+          "new_person_flag": true,
+          "notes": "Listed with Timothy Johnson"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Orange County",
+          "type": "county",
+          "role": "recorded"
+        }
+      ],
+      "notes": "KEY DOCUMENT: Timothy Johnson appears on the 1738 Orange County delinquent list with 4 tithables. Tony explicitly states he 'left with the Renfro Families from Orange Co Va.' This connects a Johnson to the Renfro migration pattern."
+    },
+    {
+      "temp_id": "DOC-L021",
+      "document_type": "land_patent",
+      "date": "1742-07-30",
+      "county": "Brunswick",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L018",
+      "title": "Timothy Johnson Patent - 200 acres on North Side of Otter River",
+      "acres": 200,
+      "transcription_excerpt": "1742 July 30: Brunswick County: Timothy Johnson: 200 acres on the North Side of Otter River above the Mouth of Flatt Creek: Library of Virginia Archives Section. RESEARCH NOTES: 1742 July 30 (Brunswick CO. VA) Timothy Johnson, 200 acres on the N. Side of Otter River above the mouth of Flatt Cr. for 1 pound, page 41.",
+      "people": [
+        {
+          "name_as_written": "Timothy Johnson",
+          "role": "patentee"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Otter River",
+          "name_variants": ["North Side of Otter River"],
+          "type": "river",
+          "parent": "Brunswick County",
+          "role": "subject"
+        },
+        {
+          "name": "Flatt Creek",
+          "type": "creek",
+          "parent": "Brunswick County",
+          "role": "adjacent",
+          "description": "Above the mouth of Flatt Creek"
+        }
+      ],
+      "notes": "Timothy Johnson patented land in Brunswick County 1742. This land was later acquired by John Payne in 1756. Tony notes connection to Bedford County where David Johnson, John Johnson, and Timothy Johnson had wills probated."
+    },
+    {
+      "temp_id": "DOC-L022",
+      "document_type": "tithables_list",
+      "date": "1750",
+      "county": "Lunenburg",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L019",
+      "title": "Lunenburg County Tithables 1750 - Timothy Johnson and James Johnson",
+      "transcription_excerpt": "1750 List of Lunenburg Tithes From Falling Creek to Goose River Taken by John Phelps are Timothy Johnson Jas. Johnson pd by Jos. Rust 4 tithes",
+      "people": [
+        {
+          "name_as_written": "Timothy Johnson",
+          "role": "tithable"
+        },
+        {
+          "name_as_written": "Jas. Johnson",
+          "role": "tithable",
+          "notes": "James Johnson"
+        },
+        {
+          "name_as_written": "Jos. Rust",
+          "role": "paid_for",
+          "new_person_flag": true,
+          "notes": "Paid tithes for Timothy and James Johnson - 4 tithes total"
+        },
+        {
+          "name_as_written": "John Phelps",
+          "role": "list_taker",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Falling Creek",
+          "type": "creek",
+          "parent": "Lunenburg County",
+          "role": "boundary"
+        },
+        {
+          "name": "Goose River",
+          "type": "river",
+          "parent": "Lunenburg County",
+          "role": "boundary"
+        }
+      ],
+      "notes": "Timothy and James Johnson appear together again in 1750, now in Lunenburg County (which was formed from Brunswick). Their tithes were paid by Joseph Rust."
+    },
+    {
+      "temp_id": "DOC-L023",
+      "document_type": "deed",
+      "date": "1808-11-26",
+      "county": "Dickson",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L020",
+      "title": "Nathaniel Johnson to Peter Renfro - 320 acres on Bartons Creek",
+      "acres": 320,
+      "transcription_excerpt": "1808 Nov. 26th of Deed from Nathaniel Johnson to Peter Renfro, both of Dickson Co. $100. tract of land containing 320 acres lying on the south side of the Cumberland River on the waters of Bartons Creek, being part of a tract granted to John Gray Blount and Thomas Blount assignees of Christopher Darker's heirs. Test: Jessee Brown, James Sims (X), John Johnston Deed Book A page 271",
+      "people": [
+        {
+          "name_as_written": "Nathaniel Johnson",
+          "role": "grantor",
+          "new_person_flag": true,
+          "notes": "Dickson County TN; connected to Hudson Johnson per Tony's research notes"
+        },
+        {
+          "name_as_written": "Peter Renfro",
+          "role": "grantee",
+          "notes": "Dickson County TN; connected to Hudson Johnson family"
+        },
+        {
+          "name_as_written": "John Johnston",
+          "role": "witness",
+          "new_person_flag": true,
+          "notes": "Tony identifies as son of Hudson Johnson"
+        },
+        {
+          "name_as_written": "Jessee Brown",
+          "role": "witness",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "James Sims",
+          "role": "witness",
+          "new_person_flag": true,
+          "notes": "Signed with mark (X)"
+        },
+        {
+          "name_as_written": "John Gray Blount",
+          "role": "original_grantee",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Thomas Blount",
+          "role": "original_grantee",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Bartons Creek",
+          "name_variants": ["Barton's Creek"],
+          "type": "creek",
+          "parent": "Dickson County, Tennessee",
+          "role": "subject",
+          "notes": "South side of Cumberland River. Hudson Johnson also lived on Bartons Creek."
+        },
+        {
+          "name": "Cumberland River",
+          "type": "river",
+          "parent": "Tennessee",
+          "role": "reference",
+          "notes": "South side"
+        }
+      ],
+      "notes": "KEY DOCUMENT: Shows Nathaniel Johnson selling land to Peter Renfro in Dickson County TN. Tony's research notes state: 'Hudson Johnson lived on Bartons Creek with wife Agness. Hudson Johnson died in 1823 Dickson Co Tn his son is John Johnston and daughter is Mary Johnston Shropshire.' This connects to Tony's direct ancestry."
+    },
+    {
+      "temp_id": "DOC-L024",
+      "document_type": "marriage_record",
+      "date": "1793",
+      "county": "Montgomery",
+      "state": "Virginia",
+      "source_temp_id": "SRC-L021",
+      "title": "John Johnson and Eleanor Renfro Marriage - Montgomery County VA",
+      "transcription_excerpt": "1775 Eleanor Renfro was born and died in 1833. She married John Johnson bef 1793 Montgomery CO Va. Reported Children of Eleanor Renfro and John Johnson: John Johnson Jr, Clarissa Johnson, Roswell Johnson, Eleanor Johnson, William R. Johnson b 1793 Montgomery Co Va.",
+      "people": [
+        {
+          "name_as_written": "John Johnson",
+          "role": "groom",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Eleanor Renfro",
+          "role": "bride",
+          "new_person_flag": true,
+          "notes": "Born 1775, died 1833"
+        }
+      ],
+      "locations": [
+        {
+          "name": "Montgomery County",
+          "type": "county",
+          "parent": "Virginia",
+          "role": "recorded"
+        }
+      ],
+      "notes": "Another Johnson-Renfro marriage connection. Children later moved to Ripley County, Indiana."
+    },
+    {
+      "temp_id": "DOC-L025",
+      "document_type": "military_record",
+      "date": "1813-10-02",
+      "county": "Hawkins",
+      "state": "Tennessee",
+      "source_temp_id": "SRC-L022",
+      "title": "Absalom David Looney War of 1812 Service Record",
+      "transcription_excerpt": "ABSALOM DAVID LOONEY, son of MICHAEL LOONEY and TEMPERANCE CROSS LOONEY: Served War of 1812, as private in Captain George Argenbright's Company, Regiment 2, from October 2, 1813, to February 8, 1814... During the War of 1812 Absalom David Looney Volunteered in Hawkins County, on 2 October 1813 for 3 months and was mustered in at Knoxville, Tennessee, as a private in Captain George Argenbright's Company, 4th Regiment of E. Tennessee Volunteer Riflemen, under Colonel William Lillard and served 4 months, 6 days against the Creek Indians. He was discharged at Rogersville.",
+      "people": [
+        {
+          "name_as_written": "Absalom David Looney",
+          "role": "soldier",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Captain George Argenbright",
+          "role": "commanding_officer",
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Colonel William Lillard",
+          "role": "regiment_commander",
+          "new_person_flag": true
+        }
+      ],
+      "locations": [
+        {
+          "name": "Hawkins County",
+          "type": "county",
+          "parent": "Tennessee",
+          "role": "enlistment"
+        },
+        {
+          "name": "Knoxville",
+          "type": "city",
+          "parent": "Tennessee",
+          "role": "mustered_in"
+        },
+        {
+          "name": "Rogersville",
+          "type": "town",
+          "parent": "Hawkins County, Tennessee",
+          "role": "discharged"
+        }
+      ],
+      "notes": "War of 1812 service record for Absalom David Looney. He received bounty land warrants totaling 160 acres."
+    }
+  ],
+
+  "family_groups_to_create": [
+    {
+      "name": "Absalom Looney of Botetourt/Hawkins",
+      "group_type": "extended",
+      "anchor_person": "Absalom Looney (1729-1791)",
+      "primary_location": "Augusta County, Virginia; Botetourt County; Hawkins County, Tennessee",
+      "date_start": "1729",
+      "date_end": "1874",
+      "confidence": "confirmed",
+      "summary": "Absalom Looney (1729-1791) was a separate Looney line from Robert Looney Jr.'s line. Born possibly in Ireland, married Eleanor Margaret Moore/Rowland 1750 in Augusta County. Son Michael Looney (1758-1827) moved to Hawkins County TN, purchased Stanley Valley land from Mr. Stanley for a long knife and spotted horse (1780). Grandson Absalom David Looney (1790-1862) served in War of 1812, married Sarah Jane Starnes, had 12 children.",
+      "source_files": ["1692-Johnson-renfro-Looney.docx"],
+      "notes": "This is a DIFFERENT Looney line from Benjamin Looney who married Mary Johnson. The exact relationship between Absalom Looney and Robert Looney Sr./Jr. is not documented in this file."
+    },
+    {
+      "name": "John Johnson and Eleanor Renfro of Montgomery County",
+      "group_type": "nuclear",
+      "anchor_person": "John Johnson (Montgomery Co VA)",
+      "primary_location": "Montgomery County, Virginia; Ripley County, Indiana",
+      "date_start": "1775",
+      "date_end": "1850",
+      "confidence": "likely",
+      "summary": "John Johnson married Eleanor Renfro before 1793 in Montgomery County VA. Had children: John Jr., Clarissa, Roswell, Eleanor, William R. (b.1793). Some descendants moved to Ripley County, Indiana.",
+      "source_files": ["1692-Johnson-renfro-Looney.docx"]
+    },
+    {
+      "name": "Hudson Johnson of Bartons Creek, Dickson County",
+      "group_type": "nuclear",
+      "anchor_person": "Hudson Johnson (d.1823)",
+      "primary_location": "Bartons Creek, Dickson County, Tennessee",
+      "date_start": "1800",
+      "date_end": "1823",
+      "confidence": "confirmed",
+      "dna_connection": "Hudson Johnson is Tony L. Johnson's direct ancestor and a confirmed White Oak descendant",
+      "summary": "Hudson Johnson lived on Bartons Creek, Dickson County TN with wife Agness. Died 1823. Son John Johnston witnessed the 1808 Nathaniel Johnson to Peter Renfro deed. Daughter Mary Johnston married Joel Shropshire. Connected to Nathaniel Johnson who sold land to Peter Renfro. This is Tony L. Johnson's direct ancestral line.",
+      "source_files": ["1692-Johnson-renfro-Looney.docx"]
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "JNSN-VA-e1710-01",
+      "surname": "Johnson",
+      "given_name": "Timothy",
+      "birth_year_estimate": 1710,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Orange County",
+          "date_first": "1738",
+          "date_last": "1738",
+          "residence_type": "documented",
+          "evidence": "1738 Delinquent List"
+        },
+        {
+          "location_name": "Otter River",
+          "parent_location": "Brunswick County",
+          "date_first": "1742",
+          "date_last": "1742",
+          "residence_type": "landowner",
+          "evidence": "200 acre patent 30 July 1742 on N side Otter River above mouth of Flatt Creek"
+        },
+        {
+          "location_name": "Lunenburg County",
+          "date_first": "1750",
+          "date_last": "1750",
+          "residence_type": "documented",
+          "evidence": "1750 Tithables list"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1738 Orange Co delinquent list; 1742 Brunswick Co patent; 1750 Lunenburg tithables",
+      "notes": "KEY JOHNSON: Tony explicitly states 'Timothy Johnson left with the Renfro Families from Orange Co Va.' Listed with James Johnson on 1738 delinquent list (4 tithables). Patented 200 acres Brunswick Co 1742. Wills probated Bedford Co per researcher note."
+    },
+    {
+      "suggested_id": "JNSN-VA-e1715-01",
+      "surname": "Johnson",
+      "given_name": "James",
+      "designation": "of Orange County",
+      "birth_year_estimate": 1715,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Orange County",
+          "date_first": "1738",
+          "residence_type": "documented",
+          "evidence": "1738 Delinquent List with Timothy Johnson"
+        },
+        {
+          "location_name": "Lunenburg County",
+          "date_first": "1750",
+          "residence_type": "documented",
+          "evidence": "1750 Tithables list with Timothy Johnson"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1738 Orange Co delinquent list; 1750 Lunenburg tithables",
+      "notes": "Listed with Timothy Johnson. Possibly brother or close relation. Tithes paid by Joseph Rust 1750."
+    },
+    {
+      "suggested_id": "JNSN-TN-e1770-01",
+      "surname": "Johnson",
+      "given_name": "Hudson",
+      "birth_year_estimate": 1770,
+      "birth_year_type": "e",
+      "death_year": 1823,
+      "death_place": "Dickson County, Tennessee",
+      "locations": [
+        {
+          "location_name": "Bartons Creek",
+          "parent_location": "Dickson County, Tennessee",
+          "date_first": "1800",
+          "date_last": "1823",
+          "residence_type": "resident",
+          "evidence": "Tony's research notes; died Dickson Co 1823"
+        }
+      ],
+      "dna_group": "White Oak",
+      "dna_notes": "Confirmed White Oak descendant per Tony's research",
+      "confidence": "confirmed",
+      "evidence": "Tony L. Johnson's direct ancestor; died 1823 Dickson Co TN",
+      "notes": "TONY'S DIRECT ANCESTOR. Confirmed White Oak DNA group descendant. Lived on Bartons Creek, Dickson Co TN with wife Agness. Son John Johnston, daughter Mary Johnston (married Joel Shropshire). Connected to Nathaniel Johnson and Peter Renfro network."
+    },
+    {
+      "suggested_id": "JNSN-TN-e1790-01",
+      "surname": "Johnston",
+      "given_name": "John",
+      "name_variants": ["Johnson"],
+      "birth_year_estimate": 1790,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Bartons Creek",
+          "parent_location": "Dickson County, Tennessee",
+          "date_first": "1808",
+          "residence_type": "resident",
+          "evidence": "Witness to 1808 deed"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Witness to 1808 Nathaniel Johnson to Peter Renfro deed",
+      "notes": "Son of Hudson Johnson per Tony's research notes. Witnessed the 1808 deed from Nathaniel Johnson to Peter Renfro."
+    },
+    {
+      "suggested_id": "JNSN-TN-e1775-01",
+      "surname": "Johnson",
+      "given_name": "Nathaniel",
+      "birth_year_estimate": 1775,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Bartons Creek",
+          "parent_location": "Dickson County, Tennessee",
+          "date_first": "1808",
+          "date_last": "1808",
+          "residence_type": "landowner",
+          "evidence": "Sold 320 acres to Peter Renfro 1808"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1808 deed to Peter Renfro, Dickson Co TN Deed Book A:271",
+      "notes": "Sold 320 acres on Bartons Creek to Peter Renfro 1808. Tony's research suggests connection to Hudson Johnson family. Also bondsman for Jane Johnston's marriage to William McClish 1794 Davidson Co."
+    },
+    {
+      "suggested_id": "RNFR-TN-e1765-01",
+      "surname": "Renfro",
+      "given_name": "Peter",
+      "name_variants": ["Rentfro"],
+      "birth_year_estimate": 1765,
+      "birth_year_type": "e",
+      "death_year": 1850,
+      "death_year_type": "b",
+      "locations": [
+        {
+          "location_name": "Bartons Creek",
+          "parent_location": "Dickson County, Tennessee",
+          "date_first": "1808",
+          "date_last": "1810",
+          "residence_type": "landowner",
+          "evidence": "1808 deed from Nathaniel Johnson; 1810 sold land"
+        },
+        {
+          "location_name": "Maury County",
+          "parent_location": "Tennessee",
+          "date_first": "1810",
+          "date_last": "1817",
+          "residence_type": "resident",
+          "evidence": "Moved from Dickson to Maury Co"
+        },
+        {
+          "location_name": "Wayne County",
+          "parent_location": "Tennessee",
+          "date_first": "1817",
+          "date_last": "1840",
+          "residence_type": "resident",
+          "evidence": "1820, 1830, 1840 census"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "1808 Dickson Co deed; census records 1820-1840 Wayne Co TN",
+      "notes": "Married Jane McClish (widow of William McClish). Connected to Hudson Johnson family on Bartons Creek. Moved: Dickson Co → Maury Co → Wayne Co TN. Born 1760-1770 per 1840 census. No children listed on any census."
+    },
+    {
+      "suggested_id": "JNSN-VA-e1750-01",
+      "surname": "Johnson",
+      "given_name": "John",
+      "designation": "of Montgomery County",
+      "birth_year_estimate": 1750,
+      "birth_year_type": "e",
+      "locations": [
+        {
+          "location_name": "Montgomery County",
+          "parent_location": "Virginia",
+          "date_first": "1793",
+          "residence_type": "resident",
+          "evidence": "Married Eleanor Renfro before 1793"
+        }
+      ],
+      "confidence": "likely",
+      "evidence": "Married Eleanor Renfro before 1793 Montgomery Co VA",
+      "notes": "Married Eleanor Renfro (b.1775, d.1833). Children: John Jr., Clarissa, Roswell, Eleanor, William R. (b.1793). Some descendants moved to Ripley Co IN."
+    },
+    {
+      "suggested_id": "RNFR-VA-b1775-01",
+      "surname": "Renfro",
+      "given_name": "Eleanor",
+      "birth_year": 1775,
+      "birth_year_type": "b",
+      "death_year": 1833,
+      "locations": [
+        {
+          "location_name": "Montgomery County",
+          "parent_location": "Virginia",
+          "date_first": "1793",
+          "residence_type": "resident",
+          "evidence": "Married John Johnson before 1793"
+        }
+      ],
+      "confidence": "likely",
+      "evidence": "Born 1775, died 1833; married John Johnson before 1793 Montgomery Co VA",
+      "notes": "Married John Johnson. Children moved to Ripley County, Indiana."
+    },
+    {
+      "suggested_id": "LNEY-VA-b1729-01",
+      "surname": "Looney",
+      "given_name": "Absalom",
+      "name_variants": ["Absolum"],
+      "birth_year": 1729,
+      "birth_year_type": "b",
+      "birthplace": "Ireland (reported)",
+      "death_year": 1791,
+      "death_date": "1791-09-28",
+      "death_place": "Bluefield, Botetourt County, Virginia",
+      "locations": [
+        {
+          "location_name": "Augusta County",
+          "date_first": "1750",
+          "residence_type": "resident",
+          "evidence": "Married there 1750"
+        },
+        {
+          "location_name": "Botetourt County",
+          "date_first": "1770",
+          "date_last": "1791",
+          "residence_type": "resident",
+          "evidence": "Died Bluefield, Botetourt Co 1791"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Family records; died 28 Sep 1791 Botetourt Co VA",
+      "notes": "SEPARATE LINE from Robert Looney Jr. Married Eleanor Margaret Moore/Rowland 1750. Father of Michael Looney who settled Stanley Valley, Hawkins Co TN."
+    },
+    {
+      "suggested_id": "MOOR-VA-e1730-01",
+      "surname": "Moore",
+      "given_name": "Eleanor Margaret",
+      "name_variants": ["Rowland"],
+      "birth_year_estimate": 1730,
+      "birth_year_type": "e",
+      "birthplace": "Augusta, Virginia (or Ireland)",
+      "death_year": 1799,
+      "death_place": "Botetourt, Virginia",
+      "confidence": "confirmed",
+      "evidence": "Family records",
+      "notes": "Wife of Absalom Looney. Also listed as 'Margaret Eleanor Rowland (Moore)'. Died before husband per one source, but other source says died 1799."
+    },
+    {
+      "suggested_id": "LNEY-VA-b1758-01",
+      "surname": "Looney",
+      "given_name": "Michael",
+      "birth_year": 1758,
+      "birth_year_type": "b",
+      "birthplace": "Augusta County, Virginia",
+      "death_year": 1827,
+      "death_date": "1827-11-12",
+      "death_place": "Hawkins County, Tennessee",
+      "locations": [
+        {
+          "location_name": "Augusta County",
+          "date_first": "1758",
+          "date_last": "1780",
+          "residence_type": "resident",
+          "evidence": "Birthplace"
+        },
+        {
+          "location_name": "Stanley Valley",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1780",
+          "date_last": "1827",
+          "residence_type": "landowner",
+          "evidence": "Purchased land from Mr. Stanley 1780 for long knife and spotted horse; deeded to son 1829"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "Family records; land purchase 1780",
+      "notes": "Son of Absalom Looney. Married Temperance Cross (b.c.1752 Ireland). Purchased Stanley Valley land 1780 - gave long knife and spotted horse for it. Built log house that became homestead. Father of Absalom David Looney."
+    },
+    {
+      "suggested_id": "CRSS-IRL-e1752-01",
+      "surname": "Cross",
+      "given_name": "Temperance",
+      "birth_year_estimate": 1752,
+      "birth_year_type": "e",
+      "birthplace": "Ireland",
+      "death_place": "Hawkins County, Tennessee",
+      "confidence": "likely",
+      "evidence": "Family records",
+      "notes": "Wife of Michael Looney. Born Ireland c.1752. Died Hawkins Co TN."
+    },
+    {
+      "suggested_id": "LNEY-TN-b1790-01",
+      "surname": "Looney",
+      "given_name": "Absalom David",
+      "birth_year": 1790,
+      "birth_date": "1790-03-05",
+      "birth_year_type": "b",
+      "birthplace": "Rogersville, Hawkins County, Tennessee",
+      "death_year": 1862,
+      "death_date": "1862-12-12",
+      "death_place": "Hawkins County, Tennessee",
+      "locations": [
+        {
+          "location_name": "Stanley Valley",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1790",
+          "date_last": "1829",
+          "residence_type": "resident",
+          "evidence": "Born at Stanley Valley homestead"
+        },
+        {
+          "location_name": "Hickory Cove",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1829",
+          "date_last": "1862",
+          "residence_type": "landowner",
+          "evidence": "Built two-story home; buried there"
+        },
+        {
+          "location_name": "Rogersville",
+          "parent_location": "Hawkins County, Tennessee",
+          "date_first": "1813",
+          "date_last": "1814",
+          "residence_type": "documented",
+          "evidence": "Discharged from War of 1812 service at Rogersville"
+        }
+      ],
+      "confidence": "confirmed",
+      "evidence": "War of 1812 pension records; tombstone; family Bible",
+      "notes": "Son of Michael Looney and Temperance Cross. War of 1812 veteran (served against Creek Indians). Married Sarah Jane Starnes 1819. Had 12 children. Presbyterian. 'Sturdy build, average height, blond complexion.' Successful farmer, gave each child inheritance of land and slaves."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1_temp": "JNSN-VA-e1710-01",
+      "person_1_name": "Timothy Johnson",
+      "person_2_temp": "JNSN-VA-e1715-01",
+      "person_2_name": "James Johnson (of Orange County)",
+      "relationship_type": "associated",
+      "association_type": "possibly_related",
+      "confidence": "possible",
+      "evidence_summary": "Listed together on 1738 Orange Co delinquent list and 1750 Lunenburg tithables; may be brothers"
+    },
+    {
+      "person_1_temp": "JNSN-TN-e1770-01",
+      "person_1_name": "Hudson Johnson",
+      "person_2_temp": "JNSN-TN-e1790-01",
+      "person_2_name": "John Johnston",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Tony's research notes explicitly state John Johnston is son of Hudson Johnson"
+    },
+    {
+      "person_1_temp": "JNSN-TN-e1770-01",
+      "person_1_name": "Hudson Johnson",
+      "person_2_temp": "JNSN-TN-e1775-01",
+      "person_2_name": "Nathaniel Johnson",
+      "relationship_type": "associated",
+      "association_type": "possibly_related",
+      "confidence": "possible",
+      "evidence_summary": "Both on Bartons Creek, Dickson Co TN; Tony's research suggests connection"
+    },
+    {
+      "person_1_temp": "JNSN-VA-e1750-01",
+      "person_1_name": "John Johnson (Montgomery Co)",
+      "person_2_temp": "RNFR-VA-b1775-01",
+      "person_2_name": "Eleanor Renfro",
+      "relationship_type": "spouse",
+      "marriage_date": "before 1793",
+      "marriage_place": "Montgomery County, Virginia",
+      "confidence": "confirmed",
+      "evidence_summary": "Married before 1793; son William R. born 1793 Montgomery Co VA"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1729-01",
+      "person_1_name": "Absalom Looney",
+      "person_2_temp": "MOOR-VA-e1730-01",
+      "person_2_name": "Eleanor Margaret Moore",
+      "relationship_type": "spouse",
+      "marriage_date": "1750",
+      "marriage_place": "Augusta County, Virginia",
+      "confidence": "confirmed",
+      "evidence_summary": "Family records"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1729-01",
+      "person_1_name": "Absalom Looney",
+      "person_2_temp": "LNEY-VA-b1758-01",
+      "person_2_name": "Michael Looney",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Family records"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1758-01",
+      "person_1_name": "Michael Looney",
+      "person_2_temp": "CRSS-IRL-e1752-01",
+      "person_2_name": "Temperance Cross",
+      "relationship_type": "spouse",
+      "marriage_date": "1780",
+      "marriage_place": "Virginia",
+      "confidence": "confirmed",
+      "evidence_summary": "Family records"
+    },
+    {
+      "person_1_temp": "LNEY-VA-b1758-01",
+      "person_1_name": "Michael Looney",
+      "person_2_temp": "LNEY-TN-b1790-01",
+      "person_2_name": "Absalom David Looney",
+      "relationship_type": "father",
+      "confidence": "confirmed",
+      "evidence_summary": "Family records; War of 1812 pension records"
+    }
+  ],
+
+  "locations_to_create": [
+    {
+      "name": "Otter River",
+      "location_type": "river",
+      "parent_location": "Brunswick County (later Bedford County), Virginia",
+      "description": "River in Brunswick County where Timothy Johnson patented 200 acres in 1742.",
+      "notes": "Flatt Creek is near the mouth. Area later became part of Bedford County."
+    },
+    {
+      "name": "Flatt Creek",
+      "location_type": "creek",
+      "parent_location": "Brunswick County, Virginia",
+      "description": "Creek near Otter River. Timothy Johnson's 1742 patent was 'above the mouth of Flatt Creek.'"
+    },
+    {
+      "name": "Bartons Creek",
+      "name_variants": ["Barton's Creek"],
+      "location_type": "creek",
+      "parent_location": "Dickson County, Tennessee",
+      "description": "Creek on south side of Cumberland River. Hudson Johnson lived here with wife Agness. Nathaniel Johnson sold 320 acres here to Peter Renfro 1808.",
+      "notes": "Key location for Tony L. Johnson's direct ancestry"
+    },
+    {
+      "name": "Hickory Cove",
+      "location_type": "cove",
+      "parent_location": "Hawkins County, Tennessee",
+      "description": "Location of Absalom David Looney's second home and burial place. Later known as 'Pearson Place' and 'Pearson Cemetery.'",
+      "notes": "East of Rogersville"
+    },
+    {
+      "name": "Rogersville",
+      "location_type": "town",
+      "parent_location": "Hawkins County, Tennessee",
+      "description": "County seat of Hawkins County. Absalom David Looney discharged from War of 1812 here. Stanley Valley about 7 miles east."
+    },
+    {
+      "name": "Lee Valley",
+      "location_type": "valley",
+      "parent_location": "Hawkins County, Tennessee",
+      "description": "Valley north of Clinch Mountain. Home of John Starnes family (in-laws of Absalom David Looney)."
+    },
+    {
+      "name": "Wayne County",
+      "location_type": "county",
+      "parent_location": "Tennessee",
+      "date_formed": "1817",
+      "formed_from": "Humphreys County",
+      "description": "Tennessee county where Peter Renfro lived 1817-1840s after leaving Dickson County."
+    }
+  ],
+
+  "research_questions_to_add": [
+    {
+      "question": "Is Timothy Johnson of Orange County related to Michael Johnson of Tuckahoe Creek?",
+      "question_type": "relationship",
+      "person_id": "JNSN-VA-e1710-01",
+      "status": "open",
+      "evidence_for": "Both in Virginia; Timothy traveled with Renfro families who later intermarried with Looneys connected to Michael Johnson's area",
+      "evidence_against": "Different counties; no documented connection",
+      "research_action": "Compare locations and dates; check if Orange County Johnsons overlap with Henrico County Johnsons",
+      "related_people": ["Timothy Johnson", "Michael Johnson of Tuckahoe Creek"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    },
+    {
+      "question": "What is the relationship between Absalom Looney (1729-1791) and Robert Looney Jr. (1721-1770)?",
+      "question_type": "relationship",
+      "person_id": "LNEY-VA-b1729-01",
+      "status": "open",
+      "evidence_for": "Both in Augusta County area same time period; both Looney surname",
+      "evidence_against": "No documented connection in this file; Absalom possibly from Ireland",
+      "research_action": "Research Looney family origins; check if both descend from Robert Looney Sr.",
+      "related_people": ["Absalom Looney", "Robert Looney Jr."],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    },
+    {
+      "question": "How is Hudson Johnson connected to the White Oak / Michael Johnson line?",
+      "question_type": "relationship",
+      "person_id": "JNSN-TN-e1770-01",
+      "status": "open",
+      "evidence_for": "Tony states Hudson Johnson is 'a known White Oak Descendant'; Tony descends from Hudson",
+      "evidence_against": "Specific lineage not documented in this file",
+      "research_action": "Document the generational chain from Michael Johnson (d.1718) to Hudson Johnson (d.1823)",
+      "related_people": ["Hudson Johnson", "Michael Johnson of Tuckahoe Creek"],
+      "source_file": "1692-Johnson-renfro-Looney.docx"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 6,
+    "sources_identified": 6,
+    "new_people_identified": 14,
+    "family_groups_identified": 3,
+    "locations_identified": 7,
+    "relationships_documented": 8,
+    "research_questions_added": 3,
+    "time_period": "1710-1862",
+    "key_findings": [
+      "TIMOTHY JOHNSON 'left with the Renfro Families from Orange Co Va' (1738) - direct Johnson-Renfro connection",
+      "Timothy Johnson and James Johnson listed together on 1738 Orange Co delinquent list and 1750 Lunenburg tithables",
+      "HUDSON JOHNSON (d.1823) of Bartons Creek, Dickson Co TN - Tony's direct ancestor and confirmed White Oak descendant",
+      "John Johnston (son of Hudson) witnessed 1808 deed from Nathaniel Johnson to Peter Renfro",
+      "Nathaniel Johnson sold 320 acres on Bartons Creek to Peter Renfro 1808 - Johnson-Renfro land connection",
+      "John Johnson married Eleanor Renfro in Montgomery Co VA before 1793 - another Johnson-Renfro marriage",
+      "Absalom Looney (1729-1791) is a SEPARATE Looney line from Robert Looney Jr.",
+      "Michael Looney purchased Stanley Valley land 1780 for 'a long knife and spotted horse'",
+      "Absalom David Looney served War of 1812, had 12 children, buried at Hickory Cove"
+    ]
+  }
+}

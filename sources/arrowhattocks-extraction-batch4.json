@@ -1,0 +1,480 @@
+{
+  "extraction_metadata": {
+    "source_file": "Va-1607-Arrowhattocks.pdf",
+    "extraction_date": "2026-01-16",
+    "batch": 4,
+    "focus": "Robert Burton 1699 patent (connects Hatcher land to Burton family), Michael Johnson's arrival timeline (1698-1702), Hutchins Burton, Burton-Johnson land adjacency",
+    "notes": "This batch fills the gap between the 1685 records and Michael Johnson's first documented records (1702-1714). Critical for understanding how Michael Johnson came to be adjacent to the Burtons."
+  },
+
+  "sources_to_add": [
+    {
+      "temp_id": "SRC-301",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 9",
+      "page": "187",
+      "record_date": "1699-06-06",
+      "abbreviation": "Patent Bk 9:187",
+      "full_citation": "Virginia Land Office Patents, Book 9:187, Robert Burton patent for 1300 acres, 6 June 1699.",
+      "original_examined": false,
+      "cited_in": "Cavaliers and Pioneers; Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-302",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Henrico County Order Book",
+      "volume": "1694-1701",
+      "page": "264",
+      "record_date": "1700-05-01",
+      "abbreviation": "Henrico OB 1694-1701:264",
+      "full_citation": "Henrico County, Virginia, Order Book 1694-1701, p. 264, 1 May 1700, Robert Burton land acknowledgments.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-303",
+      "source_type": "primary",
+      "repository": "Unknown - need to verify",
+      "collection": "St. Peters Parish Vestry Book",
+      "page": "55 (renumbered 57)",
+      "record_date": "1702-02-27",
+      "abbreviation": "St Peters Vestry 1702/3:55",
+      "full_citation": "St. Peters Parish, New Kent County, Virginia, Vestry Book, p. 55 [renumbered p. 57], 27 February 1702/3 O.S.",
+      "original_examined": false,
+      "cited_in": "Chamberlayne p. 89; Virginia DOT historical roads report; Tony L. Johnson research file",
+      "notes": "This is the key document placing Michael Johnson and John Jones at Edloe Plantation"
+    },
+    {
+      "temp_id": "SRC-304",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 9",
+      "page": "unknown",
+      "record_date": "1701-04-25",
+      "abbreviation": "Patent Bk 9 (Burton 1701)",
+      "full_citation": "Virginia Land Office Patents, Book 9, Robert Burton Sr. patent for 300 acres, 25 April 1701.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-305",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Henrico County Deeds and Wills",
+      "volume": "1697-1704",
+      "page": "177-178",
+      "record_date": "1700",
+      "abbreviation": "Henrico DW 1697-1704:177-178",
+      "full_citation": "Henrico County, Virginia, Deeds and Wills 1697-1704, pp. 177-178, Robert Burton deeds to Cox, Hobson, Perkins.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    },
+    {
+      "temp_id": "SRC-306",
+      "source_type": "secondary",
+      "author": "Chamberlayne, C.G.",
+      "title": "The Vestry Book of St. Peters Parish",
+      "publication_place": "Richmond",
+      "abbreviation": "Chamberlayne St Peters",
+      "full_citation": "C.G. Chamberlayne, ed., The Vestry Book of St. Peters Parish (Richmond).",
+      "notes": "Contains transcription of the 1702/3 vestry entry"
+    },
+    {
+      "temp_id": "SRC-307",
+      "source_type": "primary",
+      "repository": "Library of Virginia",
+      "collection": "Land Office Patents",
+      "volume": "Book 9",
+      "page": "unknown",
+      "record_date": "1717-07-15",
+      "abbreviation": "Patent Bk (Burton 1717)",
+      "full_citation": "Virginia Land Office Patents, Robert Burton grant for 17 acres, 15 July 1717.",
+      "original_examined": false,
+      "cited_in": "Tony L. Johnson research file"
+    }
+  ],
+
+  "documents": [
+    {
+      "temp_id": "DOC-301",
+      "document_type": "land_patent",
+      "date": "1699-06-06",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-301",
+      "title": "Robert Burton Patent - 1300 acres (formerly Edward Hatcher's deserted land)",
+      "acres": 1300,
+      "location_description": "on N. side of James River, beginning at Lilly Valley, to Cole's run, nigh Cornelius Creek, over Mr. Beauchampt's path",
+      "transcription_excerpt": "6 JUNE 1699: Robert Burton, 1300 acs. Henrico Co., on N. side of James Riv., 6 June 1699. p. 187. Beg. at Lilly Valley, to Cole's run, nigh Cornelius Cr., over Mr. Beauchampt's path, &c. Granted Edward Hatcher 6 Oct. 1675, deserted, & now granted by order, &c. Imp. of 26 pers.",
+      "people": [
+        {
+          "name_as_written": "Robert Burton",
+          "role": "patentee",
+          "likely_match": "BRTN-VA-e1660-01",
+          "match_confidence": "confirmed",
+          "reasoning": "Robert Burton Sr. receiving Edward Hatcher's deserted 1675 patent"
+        },
+        {
+          "name_as_written": "Edward Hatcher",
+          "role": "previous_patentee",
+          "likely_match": "HTCR-VA-e1640-01",
+          "match_confidence": "confirmed",
+          "reasoning": "Original 1675 patentee who deserted the land"
+        }
+      ],
+      "notes": "CRITICAL: This patent transfers Edward Hatcher's 1675 land to Robert Burton. This is the same area where Michael Johnson later patents land (1714-1717). The survey was 'identically described in both patents' per Tony's notes. Robert Burton was granted this by General Court order 5 October 1698."
+    },
+    {
+      "temp_id": "DOC-302",
+      "document_type": "land_patent",
+      "date": "1701-04-25",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-304",
+      "title": "Robert Burton Sr. Patent - 300 acres Cornelius Creek",
+      "acres": 300,
+      "location_description": "in the parish of Varina and on the east side of Cornelius Creek, by Parker's path",
+      "transcription_excerpt": "On April 25, 1701, there was a grant to 'Robert Burton, Senior,' of 300 acres in Henrico:- 'in the parish of Varina and on the east side of Cornelius Creek by Parker's path due for the transportation of six persons.' At that time (1701) the landowners adjoining Robert Burton were John Pleasants, John Davis and William Ballew.",
+      "people": [
+        {
+          "name_as_written": "Robert Burton, Senior",
+          "role": "patentee",
+          "likely_match": "BRTN-VA-e1660-01",
+          "match_confidence": "confirmed"
+        },
+        {
+          "name_as_written": "John Pleasants",
+          "role": "adjacent_landowner",
+          "likely_match": "PLSN-ENG-e1640-01",
+          "match_confidence": "likely"
+        },
+        {
+          "name_as_written": "John Davis",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "John Davis of Longfield area"
+        },
+        {
+          "name_as_written": "William Ballew",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "new_person_flag": true
+        }
+      ],
+      "notes": "This additional 300 acres is near the 1300 acre tract. The 'Senior' designation confirms there was also a Robert Burton Jr. by this date."
+    },
+    {
+      "temp_id": "DOC-303",
+      "document_type": "court_record",
+      "date": "1700-05-01",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-302",
+      "title": "Robert Burton Land Acknowledgments",
+      "transcription_excerpt": "Robert [Burton] did not hold all of his patented land; in 1700, May 1st, he and Mary his wife acknowledged a conveyance of 300 acres to Richard Cox; 150 acres to Wm. Hobson, and 200 (300)? to Nicholas Perkins. (Henrico Orders 1694-1701, p. 264).",
+      "people": [
+        {
+          "name_as_written": "Robert Burton",
+          "role": "grantor",
+          "likely_match": "BRTN-VA-e1660-01",
+          "match_confidence": "confirmed"
+        },
+        {
+          "name_as_written": "Mary [Burton]",
+          "role": "wife_of_grantor",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Wife of Robert Burton Sr."
+        },
+        {
+          "name_as_written": "Richard Cox",
+          "role": "grantee",
+          "likely_match": null,
+          "new_person_flag": true
+        },
+        {
+          "name_as_written": "Wm. Hobson",
+          "role": "grantee",
+          "likely_match": "HBSN-VA-e1660-01",
+          "match_confidence": "likely",
+          "reasoning": "Same William Hobson from 1704 Woodson agreement"
+        },
+        {
+          "name_as_written": "Nicholas Perkins",
+          "role": "grantee",
+          "likely_match": null,
+          "new_person_flag": true
+        }
+      ],
+      "notes": "Shows Robert Burton selling portions of his land in 1700. The deed to Hobson specifies it was 'part of a patent granted unto the said Robert Burton for 1300 acres as lapsed land June 6, 1699, small branch of Cornelius Creek, quarter fields.'"
+    },
+    {
+      "temp_id": "DOC-304",
+      "document_type": "parish_record",
+      "date": "1702-02-27",
+      "county": "New Kent",
+      "state": "Virginia",
+      "source_temp_id": "SRC-303",
+      "title": "St. Peters Parish Vestry Book - Michael Johnson and John Jones at Edloe Plantation",
+      "transcription_excerpt": "27 February 1702/3, O. S., p. 55 [renumbered p. 57; Chamberlayne, p. 89] Peter masse upon his motion to this vestrey is ordered to his tithables the tithables on Mr Edloes plantation John Jones and Michaell Johnson",
+      "people": [
+        {
+          "name_as_written": "Peter Masse",
+          "role": "reporter",
+          "likely_match": "MSSY-UNK-e1670-01",
+          "match_confidence": "likely",
+          "reasoning": "Peter Massey from Batch 1"
+        },
+        {
+          "name_as_written": "John Jones",
+          "role": "tithable",
+          "likely_match": "JNES-UNK-e1670-01",
+          "match_confidence": "confirmed",
+          "reasoning": "John Jones listed with Michael Johnson - Tony identifies as brother-in-law"
+        },
+        {
+          "name_as_written": "Michaell Johnson",
+          "role": "tithable",
+          "likely_match": "JNSN-UNK-e1673-01",
+          "match_confidence": "confirmed",
+          "reasoning": "Michael Johnson - White Oak DNA anchor. This is his FIRST documented appearance."
+        },
+        {
+          "name_as_written": "Mr Edloe",
+          "role": "plantation_owner",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "John Edloe or Matthew Edloe - the Edloe Plantation"
+        }
+      ],
+      "notes": "CRITICAL DOCUMENT: This is the EARLIEST documented record of Michael Johnson. Tony notes 'Michael Johnson in 1698 was living by Beaverdam Swamp' - but the 1702 vestry entry is the first PRIMARY SOURCE. Tony interprets this as showing Michael Johnson moved to the Edloe Plantation tithes from St. Peters Parish lands in New Kent County."
+    },
+    {
+      "temp_id": "DOC-305",
+      "document_type": "land_patent",
+      "date": "1717-07-15",
+      "county": "Henrico",
+      "state": "Virginia",
+      "source_temp_id": "SRC-307",
+      "title": "Robert Burton Grant - 17 acres",
+      "acres": 17,
+      "location_description": "bounding on the head of the Longfield patent, land of Thomas Taylor, to William Burton's line",
+      "transcription_excerpt": "On July 15, 1717, he received another grant: 17 acres bounding on the head of the Longfield patent, land of Thomas Taylor, to William Burton's line, thence on his line s.w. by w. 34 to the said Burton's corner pine, thence on the head of the Longfield patent south to the beginning.",
+      "people": [
+        {
+          "name_as_written": "Robert [Burton]",
+          "role": "patentee",
+          "likely_match": "BRTN-VA-e1660-01",
+          "match_confidence": "confirmed"
+        },
+        {
+          "name_as_written": "Thomas Taylor",
+          "role": "adjacent_landowner",
+          "likely_match": null,
+          "new_person_flag": true,
+          "notes": "Taylor family of Harrahadocks"
+        },
+        {
+          "name_as_written": "William Burton",
+          "role": "adjacent_landowner",
+          "likely_match": "BRTN-HEN-e1685-01",
+          "match_confidence": "likely",
+          "reasoning": "William Burton from Batch 1 - adjacent to Michael Johnson in 1714 patent. Tony notes 'William Burton is son of Robert Burton of Arrowhattocks and Lily Valley'"
+        }
+      ],
+      "notes": "This 1717 patent is the same year as Michael Johnson's patent. Shows Burton family still acquiring land in the area."
+    }
+  ],
+
+  "relationships_to_add": [
+    {
+      "person_1": "BRTN-VA-e1660-01",
+      "person_1_name": "Robert Burton Sr.",
+      "person_2": "BRTN-HEN-e1685-01",
+      "person_2_name": "William Burton",
+      "relationship_type": "father",
+      "confidence": "likely",
+      "evidence_summary": "Tony states 'William Burton is son of Robert Burton of Arrowhattocks and Lily Valley'. The 1717 patent shows 'William Burton's line' adjacent to Robert Burton's new grant.",
+      "source_temp_id": "SRC-307",
+      "notes": "This relationship is stated by Tony but not explicitly documented in a will or deed saying 'my son William'. The adjacent land ownership strongly supports it."
+    }
+  ],
+
+  "associations_to_add": [
+    {
+      "person_1": "JNSN-UNK-e1673-01",
+      "person_1_name": "Michael Johnson",
+      "person_2": "JNES-UNK-e1670-01",
+      "person_2_name": "John Jones",
+      "association_type": "co_tithable",
+      "date": "1702-02-27",
+      "confidence": "confirmed",
+      "evidence_summary": "Both listed on Edloe Plantation tithables in St. Peters Parish vestry book, February 1702/3",
+      "source_temp_id": "SRC-303"
+    },
+    {
+      "person_1": "BRTN-VA-e1660-01",
+      "person_1_name": "Robert Burton Sr.",
+      "person_2": "PLSN-ENG-e1640-01",
+      "person_2_name": "John Pleasants",
+      "association_type": "adjacent_landowner",
+      "date": "1701-04-25",
+      "confidence": "confirmed",
+      "evidence_summary": "Listed as adjacent landowner in Robert Burton 1701 patent",
+      "source_temp_id": "SRC-304"
+    },
+    {
+      "person_1": "BRTN-VA-e1660-01",
+      "person_1_name": "Robert Burton Sr.",
+      "person_2": "HTCR-VA-e1640-01",
+      "person_2_name": "Edward Hatcher",
+      "association_type": "land_succession",
+      "date": "1699-06-06",
+      "confidence": "confirmed",
+      "evidence_summary": "Robert Burton received Edward Hatcher's deserted 1675 patent by grant 6 June 1699",
+      "source_temp_id": "SRC-301"
+    }
+  ],
+
+  "new_people_to_create": [
+    {
+      "suggested_id": "BRTN-VA-e1690-01",
+      "surname": "Burton",
+      "given_name": "Mary",
+      "designation": "wife of Robert Burton Sr.",
+      "birth_year_estimate": 1665,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Named as wife in 1700 court acknowledgment of land conveyances",
+      "source_temp_id": "SRC-302"
+    },
+    {
+      "suggested_id": "COX-VA-e1665-01",
+      "surname": "Cox",
+      "given_name": "Richard",
+      "birth_year_estimate": 1665,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Purchased 300 acres from Robert Burton in 1700",
+      "source_temp_id": "SRC-302"
+    },
+    {
+      "suggested_id": "PRKN-VA-e1660-01",
+      "surname": "Perkins",
+      "given_name": "Nicholas",
+      "birth_year_estimate": 1660,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Purchased 200-300 acres from Robert Burton in 1700",
+      "source_temp_id": "SRC-302"
+    },
+    {
+      "suggested_id": "DVIS-VA-e1640-01",
+      "surname": "Davis",
+      "given_name": "John",
+      "designation": "of Longfield",
+      "birth_year_estimate": 1640,
+      "location": "Henrico County, Longfield",
+      "confidence": "confirmed",
+      "evidence": "Adjacent landowner to Robert Burton in 1701 patent",
+      "source_temp_id": "SRC-304",
+      "notes": "This is the John Davis family connected to Longfield and the Burton family"
+    },
+    {
+      "suggested_id": "BLEW-VA-e1650-01",
+      "surname": "Ballew",
+      "given_name": "William",
+      "birth_year_estimate": 1650,
+      "location": "Henrico County",
+      "confidence": "confirmed",
+      "evidence": "Adjacent landowner to Robert Burton in 1701 patent",
+      "source_temp_id": "SRC-304"
+    },
+    {
+      "suggested_id": "BRTN-VA-e1694-01",
+      "surname": "Burton",
+      "given_name": "Hutchins",
+      "birth_year": 1694,
+      "birth_type": "known",
+      "death_year": 1763,
+      "death_type": "known",
+      "location": "Henrico County, Westham",
+      "confidence": "confirmed",
+      "evidence": "Tony's notes: 'Hutchins Burton resided at Westham... His first appearance in the records was in 1719 when he was appointed road surveyor from William Gordons to Tuckahoe Bridge.'",
+      "notes": "Hutchins Burton (1694-1763) - appears in 1719 as road surveyor to Tuckahoe Bridge - same area as Michael Johnson. Part of Burton family connected to Michael Johnson's neighbors."
+    },
+    {
+      "suggested_id": "TYLR-VA-e1660-01",
+      "surname": "Taylor",
+      "given_name": "Thomas",
+      "designation": "of Harrahadocks",
+      "birth_year_estimate": 1660,
+      "location": "Henrico County, Harrahadocks",
+      "confidence": "confirmed",
+      "evidence": "Adjacent landowner in Robert Burton 1717 patent",
+      "source_temp_id": "SRC-307",
+      "notes": "Taylor family with long presence at Harrahadocks"
+    }
+  ],
+
+  "research_notes_not_evidence": [
+    {
+      "note": "Tony states 'Michael Johnson in 1698 was living by Beaverdam Swamp a Section of Beaverdam Creek which has three known Branches. The Northern James River Section of Edloe Plantation is an area on Cornelius Creek beside the Mouth of Beaverdam Creek.' However, the 1702 vestry entry is the first PRIMARY SOURCE documenting Michael Johnson. The 1698 reference appears to be Tony's interpretation/research note, not a documented source.",
+      "related_people": ["Michael Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "unverified",
+      "research_needed": "Find the actual source for Michael Johnson at Beaverdam Swamp in 1698"
+    },
+    {
+      "note": "Tony states 'Michael Johnson and his brother in Law John Jones moved from the lands of St. Peters Parish New Kent Co Va' but the brother-in-law relationship is not documented in the vestry record. The vestry entry only lists them together on Edloe Plantation tithables.",
+      "related_people": ["Michael Johnson", "John Jones"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "unverified",
+      "research_needed": "Find document confirming John Jones as brother-in-law to Michael Johnson"
+    },
+    {
+      "note": "Tony states 'William Burton is son of Robert Burton of Arrowhattocks and Lily Valley' but no will or deed has been cited explicitly naming this relationship. The 1717 patent shows their lands adjacent which supports but doesn't confirm the relationship.",
+      "related_people": ["Robert Burton Sr.", "William Burton"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "likely_but_unconfirmed",
+      "research_needed": "Find Robert Burton Sr.'s will or deed naming William as son"
+    },
+    {
+      "note": "The connection between John Burton (1665 Longfield patent) and Robert Burton Sr. (1699 patent) is implied but not documented. They may be father/son, brothers, or cousins.",
+      "related_people": ["John Burton (1665)", "Robert Burton Sr."],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "possible",
+      "research_needed": "Research Burton family genealogy to determine relationship"
+    },
+    {
+      "note": "The timing of Michael Johnson's move to the Tuckahoe Creek area (where he patents land 1714-1717) from Edloe Plantation (where he was in 1702) is not documented. Between 1702 and 1714 we have the Watson Will (1702) showing his marriage to Sarah Watson, then nothing until the land patents.",
+      "related_people": ["Michael Johnson"],
+      "source_file": "Va-1607-Arrowhattocks",
+      "status": "gap_in_record",
+      "research_needed": "Find any records of Michael Johnson between 1702-1714"
+    }
+  ],
+
+  "extraction_summary": {
+    "documents_extracted": 5,
+    "sources_identified": 7,
+    "confirmed_relationships": 0,
+    "likely_relationships": 1,
+    "new_people_identified": 7,
+    "research_notes_captured": 5,
+    "time_period": "1699-1717",
+    "key_findings": [
+      "Robert Burton received Edward Hatcher's deserted 1675 patent in 1699 - this is the land area where Michael Johnson later patents",
+      "Michael Johnson's FIRST documented appearance is the St. Peters Parish vestry entry dated 27 February 1702/3",
+      "Tony's claim of Michael Johnson at Beaverdam Swamp in 1698 is NOT verified by primary source in this file",
+      "William Burton (adjacent to Michael Johnson in 1714) is stated by Tony to be son of Robert Burton Sr. - not yet confirmed",
+      "Hutchins Burton (1694-1763) appointed road surveyor to Tuckahoe Bridge in 1719 - same area as Michael Johnson",
+      "The Burton family effectively inherited the Hatcher land network that surrounded Michael Johnson"
+    ]
+  }
+}
