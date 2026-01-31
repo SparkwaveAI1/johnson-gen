@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BookOpen, Search, Plus, Filter } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import SourceForm from '../components/sources/SourceForm'
 
 const sourceTypeLabels = {
@@ -12,6 +13,7 @@ const sourceTypeLabels = {
 }
 
 function SourceBrowser() {
+  const { workspaceId } = useWorkspace()
   const [sources, setSources] = useState([])
   const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
@@ -19,11 +21,13 @@ function SourceBrowser() {
   const [showAddSource, setShowAddSource] = useState(false)
 
   const fetchSources = async () => {
+    if (!workspaceId) return
     setLoading(true)
 
     let query = supabase
       .from('sources')
       .select('*')
+      .eq('workspace_id', workspaceId)
       .order('abbreviation')
 
     if (typeFilter) {
@@ -46,7 +50,7 @@ function SourceBrowser() {
 
   useEffect(() => {
     fetchSources()
-  }, [typeFilter])
+  }, [workspaceId, typeFilter])
 
   // Debounced search
   useEffect(() => {

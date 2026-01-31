@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FileText, Search, Plus, Filter } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import DocumentForm from '../components/documents/DocumentForm'
 
 const documentTypeLabels = {
@@ -23,6 +24,7 @@ const documentTypeLabels = {
 }
 
 function DocumentBrowser() {
+  const { workspaceId } = useWorkspace()
   const [documents, setDocuments] = useState([])
   const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState('')
@@ -34,6 +36,7 @@ function DocumentBrowser() {
   const [counties, setCounties] = useState([])
 
   const fetchDocuments = async () => {
+    if (!workspaceId) return
     setLoading(true)
 
     let query = supabase
@@ -42,6 +45,7 @@ function DocumentBrowser() {
         *,
         participants:document_people(count)
       `)
+      .eq('workspace_id', workspaceId)
       .order('date_normalized', { ascending: false })
       .limit(100)
 
@@ -70,9 +74,11 @@ function DocumentBrowser() {
   // Fetch unique counties for filter
   useEffect(() => {
     async function fetchCounties() {
+      if (!workspaceId) return
       const { data } = await supabase
         .from('documents')
         .select('county')
+        .eq('workspace_id', workspaceId)
         .not('county', 'is', null)
 
       if (data) {
@@ -81,11 +87,11 @@ function DocumentBrowser() {
       }
     }
     fetchCounties()
-  }, [])
+  }, [workspaceId])
 
   useEffect(() => {
     fetchDocuments()
-  }, [typeFilter, countyFilter])
+  }, [workspaceId, typeFilter, countyFilter])
 
   // Debounced search
   useEffect(() => {

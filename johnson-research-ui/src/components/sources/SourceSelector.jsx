@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Search, Plus, X, BookOpen } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { useWorkspace } from '../../contexts/WorkspaceContext'
 import SourceCitation from './SourceCitation'
 import SourceForm from './SourceForm'
 
@@ -15,6 +16,7 @@ import SourceForm from './SourceForm'
  */
 
 function SourceSelector({ value, onChange, placeholder = 'Search sources...', allowCreate = true }) {
+  const { workspaceId } = useWorkspace()
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
   const [recentSources, setRecentSources] = useState([])
@@ -30,11 +32,9 @@ function SourceSelector({ value, onChange, placeholder = 'Search sources...', al
   useEffect(() => {
     async function loadSource() {
       if (value && typeof value === 'string') {
-        const { data } = await supabase
-          .from('sources')
-          .select('*')
-          .eq('id', value)
-          .single()
+        let query = supabase.from('sources').select('*').eq('id', value)
+        if (workspaceId) query = query.eq('workspace_id', workspaceId)
+        const { data } = await query.single()
         setSelectedSource(data)
       } else if (value && typeof value === 'object') {
         setSelectedSource(value)
@@ -43,25 +43,27 @@ function SourceSelector({ value, onChange, placeholder = 'Search sources...', al
       }
     }
     loadSource()
-  }, [value])
+  }, [value, workspaceId])
 
   // Load recent sources on mount
   useEffect(() => {
     async function loadRecent() {
+      if (!workspaceId) return
       const { data } = await supabase
         .from('sources')
         .select('*')
+        .eq('workspace_id', workspaceId)
         .order('updated_at', { ascending: false })
         .limit(5)
       setRecentSources(data || [])
     }
     loadRecent()
-  }, [])
+  }, [workspaceId])
 
   // Search sources when query changes
   useEffect(() => {
     async function searchSources() {
-      if (query.length < 2) {
+      if (query.length < 2 || !workspaceId) {
         setResults([])
         return
       }
@@ -70,6 +72,7 @@ function SourceSelector({ value, onChange, placeholder = 'Search sources...', al
       const { data } = await supabase
         .from('sources')
         .select('*')
+        .eq('workspace_id', workspaceId)
         .or(`abbreviation.ilike.%${query}%,title.ilike.%${query}%,author.ilike.%${query}%`)
         .limit(10)
 
@@ -79,7 +82,7 @@ function SourceSelector({ value, onChange, placeholder = 'Search sources...', al
 
     const debounce = setTimeout(searchSources, 300)
     return () => clearTimeout(debounce)
-  }, [query])
+  }, [query, workspaceId])
 
   // Close dropdown when clicking outside
   useEffect(() => {

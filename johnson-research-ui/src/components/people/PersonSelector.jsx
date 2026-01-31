@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { Search, Plus, X, User, Check } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { useWorkspace } from '../../contexts/WorkspaceContext'
 import ConfidenceIndicator from '../common/ConfidenceIndicator'
 import PersonForm from './PersonForm'
 
@@ -26,6 +27,7 @@ function PersonSelector({
   excludeIds = [],
   multiple = false
 }) {
+  const { workspaceId } = useWorkspace()
   const [query, setQuery] = useState('')
   const [results, setResults] = useState([])
   const [loading, setLoading] = useState(false)
@@ -54,11 +56,14 @@ function PersonSelector({
       } else {
         // Handle single person
         if (value && typeof value === 'string') {
-          const { data } = await supabase
+          let query = supabase
             .from('people')
             .select('*')
             .eq('id', value)
-            .single()
+          if (workspaceId) {
+            query = query.eq('workspace_id', workspaceId)
+          }
+          const { data } = await query.single()
           setSelectedPerson(data)
         } else if (value && typeof value === 'object') {
           setSelectedPerson(value)
@@ -68,7 +73,7 @@ function PersonSelector({
       }
     }
     loadPerson()
-  }, [value, multiple])
+  }, [value, multiple, workspaceId])
 
   // Stable reference for excludeIds
   const excludeIdsRef = useRef(excludeIds)
@@ -86,11 +91,17 @@ function PersonSelector({
 
     const debounce = setTimeout(async () => {
       try {
-        const { data } = await supabase
+        let queryBuilder = supabase
           .from('people')
           .select('id, given_name, surname, birth_year, death_year, confidence, designation')
           .or(`given_name.ilike.%${query}%,surname.ilike.%${query}%,id.ilike.%${query}%`)
           .limit(15)
+        
+        if (workspaceId) {
+          queryBuilder = queryBuilder.eq('workspace_id', workspaceId)
+        }
+        
+        const { data } = await queryBuilder
 
         // Filter out excluded IDs and already selected people in multi-select mode
         const selectedIds = multiple ? selectedPeople.map(p => p.id) : []

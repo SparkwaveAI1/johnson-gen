@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { X, AlertCircle } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { useWorkspace } from '../../contexts/WorkspaceContext'
 import PersonSelector from '../people/PersonSelector'
 import SourceSelector from '../sources/SourceSelector'
 
@@ -45,6 +46,7 @@ function RelationshipForm({
   onCancel,
   isModal = false
 }) {
+  const { workspaceId } = useWorkspace()
   const [formData, setFormData] = useState({
     related_person: relationship?.related_person || null,
     relationship_type: relationship?.relationship_type || 'father',
@@ -101,7 +103,8 @@ function RelationshipForm({
         marriage_end_date: formData.marriage_end_date || null,
         marriage_end_type: formData.marriage_end_type || null,
         source_id: formData.source?.id || null,
-        notes: formData.notes || null
+        notes: formData.notes || null,
+        workspace_id: workspaceId
       }
 
       let result
@@ -146,7 +149,8 @@ function RelationshipForm({
                 confidence: formData.confidence,
                 evidence: formData.evidence || null,
                 source_id: formData.source?.id || null,
-                notes: formData.notes ? `Reciprocal of: ${formData.notes}` : null
+                notes: formData.notes ? `Reciprocal of: ${formData.notes}` : null,
+                workspace_id: workspaceId
               })
           }
         }

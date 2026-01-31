@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { X, AlertCircle, Info } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { useWorkspace } from '../../contexts/WorkspaceContext'
 
 /**
  * PersonForm - Add/Edit person
@@ -55,6 +56,7 @@ function generatePersonId(formData) {
 }
 
 function PersonForm({ person = null, onSave, onCancel, isModal = false }) {
+  const { workspaceId } = useWorkspace()
   const [formData, setFormData] = useState({
     id: '',
     surname: '',
@@ -184,10 +186,10 @@ function PersonForm({ person = null, onSave, onCancel, isModal = false }) {
         if (updateError) throw updateError
         result = data
       } else {
-        // Insert new
+        // Insert new - include workspace_id
         const { data, error: insertError } = await supabase
           .from('people')
-          .insert(dataToSave)
+          .insert({ ...dataToSave, workspace_id: workspaceId })
           .select()
           .single()
 
