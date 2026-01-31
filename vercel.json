@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd johnson-research-ui && npm install && npm run build",
+  "outputDirectory": "johnson-research-ui/dist",
+  "framework": "vite"
+}
