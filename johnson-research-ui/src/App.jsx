@@ -26,6 +26,7 @@ import ResearchQuestions from './pages/ResearchQuestions'
 import GapAnalysis from './pages/GapAnalysis'
 import DocumentProcessing from './pages/DocumentProcessing'
 import ExtractionReview from './pages/ExtractionReview'
+import PedigreeView from './pages/PedigreeView'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path="people" element={<PeopleBrowser />} />
           <Route path="people/:id" element={<PersonDetail />} />
+          <Route path="pedigree" element={<PedigreeView />} />
           <Route path="documents" element={<DocumentBrowser />} />
           <Route path="documents/:id" element={<DocumentDetail />} />
           <Route path="sources" element={<SourceBrowser />} />

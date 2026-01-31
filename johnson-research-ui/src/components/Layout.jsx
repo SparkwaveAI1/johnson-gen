@@ -10,13 +10,15 @@ import {
   GitCompare,
   AlertTriangle,
   Search,
-  Upload
+  Upload,
+  GitBranch
 } from 'lucide-react'
 import WorkspaceSwitcher from './WorkspaceSwitcher'
 
 const navItems = [
   { to: '/', icon: Home, label: 'Dashboard' },
   { to: '/people', icon: Users, label: 'People' },
+  { to: '/pedigree', icon: GitBranch, label: 'Pedigree Chart' },
   { to: '/families', icon: Users, label: 'Families' },
   { to: '/documents', icon: FileText, label: 'Documents' },
   { to: '/processing', icon: Upload, label: 'Processing' },
