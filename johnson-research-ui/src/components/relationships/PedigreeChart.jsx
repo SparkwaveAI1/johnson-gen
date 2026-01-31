@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import * as d3 from 'd3'
 import { User, Users, ZoomIn, ZoomOut, RotateCcw, ChevronLeft, ChevronRight } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
@@ -12,6 +12,7 @@ import { useWorkspace } from '../../contexts/WorkspaceContext'
 
 function PedigreeChart({ rootPersonId, onPersonSelect }) {
   const { workspaceId } = useWorkspace()
+  const navigate = useNavigate()
   const svgRef = useRef()
   const containerRef = useRef()
   
@@ -195,6 +196,11 @@ function PedigreeChart({ rootPersonId, onPersonSelect }) {
       .attr('transform', d => `translate(${d.x}, ${d.y})`)
       .style('cursor', 'pointer')
       .on('click', (event, d) => {
+        // Navigate to person's profile page
+        navigate(`/people/${d.id}`)
+      })
+      .on('dblclick', (event, d) => {
+        // Double-click to set as root person
         if (onPersonSelect) {
           onPersonSelect(d.id)
         }
@@ -318,7 +324,9 @@ function PedigreeChart({ rootPersonId, onPersonSelect }) {
 
       {/* Legend */}
       <div className="flex items-center justify-center gap-6 p-3 bg-parchment/50 border-t border-sepia/20 text-sm text-faded-ink">
-        <span>Click a person to view details</span>
+        <span>Click to view profile</span>
+        <span>•</span>
+        <span>Double-click to set as root</span>
         <span>•</span>
         <span>Scroll to zoom, drag to pan</span>
       </div>

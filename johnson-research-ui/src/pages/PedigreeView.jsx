@@ -31,9 +31,14 @@ function PedigreeView() {
 
       if (!error) {
         setPeople(data || [])
-        // If no person selected, pick the first one
+        // If no person selected, default to Scott Christopher Johnson (or first person)
         if (!selectedPersonId && data?.length > 0) {
-          setSearchParams({ person: data[0].id })
+          const scott = data.find(p => 
+            p.given_name?.includes('Scott') && 
+            p.surname === 'Johnson' && 
+            p.birth_year === 1968
+          )
+          setSearchParams({ person: scott?.id || data[0].id })
         }
       }
       setLoading(false)
