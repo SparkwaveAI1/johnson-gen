@@ -1,5 +1,8 @@
 {
   "installCommand": "cd johnson-research-ui && npm install",
   "buildCommand": "cd johnson-research-ui && npm run build",
-  "outputDirectory": "johnson-research-ui/dist"
+  "outputDirectory": "johnson-research-ui/dist",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
