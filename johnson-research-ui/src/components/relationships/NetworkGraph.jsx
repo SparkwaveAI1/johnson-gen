@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import * as d3 from 'd3'
 import { Users, FileText, MapPin, Network, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { useWorkspace } from '../../contexts/WorkspaceContext'
 
 // Color palette for different relationship types
 const relationshipColors = {

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Edit, FileText, Users, MapPin, RefreshCw, ExternalLink } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import DocumentForm from '../components/documents/DocumentForm'
 
 const documentTypeLabels = {
@@ -24,15 +25,17 @@ const documentTypeLabels = {
 
 function DocumentDetail() {
   const { id } = useParams()
+  const { workspaceId } = useWorkspace()
   const [document, setDocument] = useState(null)
   const [participants, setParticipants] = useState([])
   const [loading, setLoading] = useState(true)
   const [showEditForm, setShowEditForm] = useState(false)
 
   const fetchDocument = async () => {
+    if (!workspaceId) return
     setLoading(true)
 
-    // Fetch document details
+    // Fetch document details (filter by workspace)
     const { data: docData, error: docError } = await supabase
       .from('documents')
       .select(`
@@ -40,6 +43,7 @@ function DocumentDetail() {
         source:source_id(id, title, repository, collection)
       `)
       .eq('id', id)
+      .eq('workspace_id', workspaceId)
       .single()
 
     if (docError) {
@@ -66,7 +70,7 @@ function DocumentDetail() {
 
   useEffect(() => {
     fetchDocument()
-  }, [id])
+  }, [id, workspaceId])
 
   const handleDocumentSave = (updatedDoc) => {
     setDocument(updatedDoc)

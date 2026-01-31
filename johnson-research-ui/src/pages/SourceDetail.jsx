@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { ArrowLeft, Edit, BookOpen, FileText, AlertCircle, ExternalLink } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import SourceCitation, { formatFullCitation } from '../components/sources/SourceCitation'
 import SourceForm from '../components/sources/SourceForm'
 
@@ -14,6 +15,7 @@ const sourceTypeConfig = {
 
 function SourceDetail() {
   const { id } = useParams()
+  const { workspaceId } = useWorkspace()
   const [source, setSource] = useState(null)
   const [evidenceUsage, setEvidenceUsage] = useState([])
   const [loading, setLoading] = useState(true)
@@ -21,13 +23,15 @@ function SourceDetail() {
 
   useEffect(() => {
     async function fetchSource() {
+      if (!workspaceId) return
       setLoading(true)
 
-      // Fetch source details
+      // Fetch source details (filter by workspace)
       const { data: sourceData, error: sourceError } = await supabase
         .from('sources')
         .select('*')
         .eq('id', id)
+        .eq('workspace_id', workspaceId)
         .single()
 
       if (sourceError) {
@@ -49,7 +53,7 @@ function SourceDetail() {
     }
 
     fetchSource()
-  }, [id])
+  }, [id, workspaceId])
 
   const handleSave = (updatedSource) => {
     setSource(updatedSource)

@@ -5,6 +5,7 @@ import {
   ChevronRight, Edit2, Check, X
 } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 
 const GROUP_TYPE_LABELS = {
   nuclear: 'Nuclear Family',

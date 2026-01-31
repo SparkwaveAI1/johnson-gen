@@ -5,6 +5,7 @@ import {
   Users, MapPin, User, ChevronDown, ChevronUp, Check, Clock
 } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import { useChapter } from '../hooks/useChapters'
 import { useFamilyGroups } from '../hooks/useFamilyGroups'
 import { useLocations } from '../hooks/useLocations'

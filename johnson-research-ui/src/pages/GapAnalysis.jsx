@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AlertTriangle, Users, FileText, HelpCircle } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 
 function GapAnalysis() {
+  const { workspaceId } = useWorkspace()
   const [gaps, setGaps] = useState({
     noParents: [],
     noBio: [],
@@ -14,15 +16,18 @@ function GapAnalysis() {
 
   useEffect(() => {
     async function fetchGaps() {
+      if (!workspaceId) return
       try {
-        // People with no parent relationships documented
+        // People with no parent relationships documented (filter by workspace)
         const { data: allPeople } = await supabase
           .from('people')
           .select('id, given_name, surname, birth_year, confidence, bio')
+          .eq('workspace_id', workspaceId)
 
         const { data: parentRels } = await supabase
           .from('family_relationships')
           .select('person_id')
+          .eq('workspace_id', workspaceId)
           .in('relationship_type', ['father', 'mother'])
 
         const peopleWithParents = new Set(parentRels?.map(r => r.person_id) || [])
@@ -51,7 +56,7 @@ function GapAnalysis() {
     }
 
     fetchGaps()
-  }, [])
+  }, [workspaceId])
 
   const GapSection = ({ title, icon: Icon, items, emptyMessage }) => (
     <div className="card">

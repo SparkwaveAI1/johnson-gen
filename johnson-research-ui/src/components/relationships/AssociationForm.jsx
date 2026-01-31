@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { X, AlertCircle } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { useWorkspace } from '../../contexts/WorkspaceContext'
 import PersonSelector from '../people/PersonSelector'
 import SourceSelector from '../sources/SourceSelector'
 

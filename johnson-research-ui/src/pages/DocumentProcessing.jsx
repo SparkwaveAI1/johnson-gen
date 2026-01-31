@@ -5,6 +5,7 @@ import {
   Clock, Loader2, Eye, Play, Filter
 } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import { ProcessingStatusCard } from '../components/events'
 import { PROCESSING_STATUS } from '../lib/eventTypes'
 import { processDocument, retryProcessing } from '../services/documentProcessingService'

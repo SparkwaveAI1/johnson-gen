@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { ArrowLeft, Edit, Users, FileText, MapPin, Plus, RefreshCw, Link as LinkIcon, BookOpen, ClipboardList, Upload, Navigation, Trash2, Calendar, Merge } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import ConfidenceIndicator from '../components/common/ConfidenceIndicator'
 import ConfirmDialog from '../components/common/ConfirmDialog'
 import PersonForm from '../components/people/PersonForm'
@@ -24,6 +25,7 @@ import { EventList } from '../components/events'
 function PersonDetail() {
   const { id } = useParams()
   const navigate = useNavigate()
+  const { workspaceId } = useWorkspace()
   const [person, setPerson] = useState(null)
   const [relationships, setRelationships] = useState([])
   const [associations, setAssociations] = useState([])
@@ -60,14 +62,20 @@ function PersonDetail() {
   const [showMergeModal, setShowMergeModal] = useState(false)
 
   const fetchData = async () => {
+    if (!workspaceId) return
     setLoading(true)
 
-    // Fetch person details
-    const { data: personData, error: personError } = await supabase
+    // Fetch person details (filter by workspace for security)
+    let personQuery = supabase
       .from('people')
       .select('*')
       .eq('id', id)
-      .single()
+    
+    if (workspaceId) {
+      personQuery = personQuery.eq('workspace_id', workspaceId)
+    }
+    
+    const { data: personData, error: personError } = await personQuery.single()
 
     if (personError) {
       console.error('Error fetching person:', personError)
@@ -172,7 +180,7 @@ function PersonDetail() {
 
   useEffect(() => {
     fetchData()
-  }, [id])
+  }, [id, workspaceId])
 
   const handlePersonSave = (updatedPerson) => {
     setPerson(updatedPerson)

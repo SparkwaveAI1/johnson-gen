@@ -5,6 +5,7 @@ import {
   Users, FileText, Save, Loader2, RefreshCw
 } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import { EventList } from '../components/events'
 import { getProcessingStatusDisplay, getEventTypeLabel } from '../lib/eventTypes'
 

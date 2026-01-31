@@ -1,22 +1,31 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useContext } from 'react'
 import { supabase } from '../lib/supabase'
+import WorkspaceContext from '../contexts/WorkspaceContext'
 
 /**
  * Hook for fetching all locations with hierarchy
  */
 export function useLocations() {
+  const { workspaceId } = useContext(WorkspaceContext) || {}
   const [locations, setLocations] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   const fetchLocations = useCallback(async () => {
+    if (!workspaceId) return
     setLoading(true)
     setError(null)
 
-    const { data, error: fetchError } = await supabase
+    let query = supabase
       .from('locations')
       .select('*')
       .order('name')
+    
+    if (workspaceId) {
+      query = query.eq('workspace_id', workspaceId)
+    }
+
+    const { data, error: fetchError } = await query
 
     if (fetchError) {
       setError(fetchError.message)
@@ -25,7 +34,7 @@ export function useLocations() {
       setLocations(data || [])
     }
     setLoading(false)
-  }, [])
+  }, [workspaceId])
 
   useEffect(() => {
     fetchLocations()
@@ -38,6 +47,7 @@ export function useLocations() {
  * Hook for fetching a single location with details
  */
 export function useLocation(locationId) {
+  const { workspaceId } = useContext(WorkspaceContext) || {}
   const [location, setLocation] = useState(null)
   const [children, setChildren] = useState([])
   const [residents, setResidents] = useState([])
@@ -46,7 +56,7 @@ export function useLocation(locationId) {
   const [error, setError] = useState(null)
 
   const fetchLocation = useCallback(async () => {
-    if (!locationId) {
+    if (!locationId || !workspaceId) {
       setLoading(false)
       return
     }
@@ -55,11 +65,12 @@ export function useLocation(locationId) {
     setError(null)
 
     try {
-      // Fetch the location
+      // Fetch the location (filtered by workspace)
       const { data: locationData, error: locationError } = await supabase
         .from('locations')
         .select('*')
         .eq('id', locationId)
+        .eq('workspace_id', workspaceId)
         .single()
 
       if (locationError) throw locationError
@@ -116,7 +127,7 @@ export function useLocation(locationId) {
     }
 
     setLoading(false)
-  }, [locationId])
+  }, [locationId, workspaceId])
 
   useEffect(() => {
     fetchLocation()

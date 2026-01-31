@@ -5,6 +5,7 @@ import {
   ChevronRight, Users, FileText, Calendar, ArrowLeft
 } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 
 const LOCATION_ICONS = {
   colony: Map,

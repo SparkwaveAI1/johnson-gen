@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { HelpCircle, Plus } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 
 function ResearchQuestions() {
   const [questions, setQuestions] = useState([])
