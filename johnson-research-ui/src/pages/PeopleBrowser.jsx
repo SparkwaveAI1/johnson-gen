@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Search, Filter, ChevronLeft, ChevronRight, Plus, Trash2 } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import ConfidenceIndicator from '../components/common/ConfidenceIndicator'
 import ConfirmDialog from '../components/common/ConfirmDialog'
 import PersonForm from '../components/people/PersonForm'
@@ -9,6 +10,7 @@ import PersonForm from '../components/people/PersonForm'
 const PAGE_SIZE = 20
 
 function PeopleBrowser() {
+  const { workspaceId } = useWorkspace()
   const [people, setPeople] = useState([])
   const [loading, setLoading] = useState(true)
   const [totalCount, setTotalCount] = useState(0)
@@ -33,11 +35,13 @@ function PeopleBrowser() {
   const [deleting, setDeleting] = useState(false)
 
   useEffect(() => {
-    // Fetch filter options on mount
+    // Fetch filter options when workspace changes
     async function fetchFilterOptions() {
+      if (!workspaceId) return
+      
       const [{ data: surnameData }, { data: dnaData }] = await Promise.all([
-        supabase.from('people').select('surname').order('surname'),
-        supabase.from('people').select('dna_group').not('dna_group', 'is', null)
+        supabase.from('people').select('surname').eq('workspace_id', workspaceId).order('surname'),
+        supabase.from('people').select('dna_group').eq('workspace_id', workspaceId).not('dna_group', 'is', null)
       ])
 
       const uniqueSurnames = [...new Set(surnameData?.map(p => p.surname) || [])]
@@ -47,15 +51,17 @@ function PeopleBrowser() {
       setDnaGroups(uniqueDnaGroups)
     }
     fetchFilterOptions()
-  }, [])
+  }, [workspaceId])
 
   useEffect(() => {
     async function fetchPeople() {
+      if (!workspaceId) return
       setLoading(true)
 
       let query = supabase
         .from('people')
         .select('id, given_name, surname, suffix, title, birth_year, birth_year_type, death_year, birthplace_code, death_place_code, confidence, dna_group, designation', { count: 'exact' })
+        .eq('workspace_id', workspaceId)
 
       // Apply filters
       if (searchQuery) {
@@ -89,7 +95,7 @@ function PeopleBrowser() {
     }
 
     fetchPeople()
-  }, [page, searchQuery, surnameFilter, confidenceFilter, dnaGroupFilter])
+  }, [workspaceId, page, searchQuery, surnameFilter, confidenceFilter, dnaGroupFilter])
 
   const totalPages = Math.ceil(totalCount / PAGE_SIZE)
 

@@ -12,6 +12,7 @@ import {
   Search,
   Upload
 } from 'lucide-react'
+import WorkspaceSwitcher from './WorkspaceSwitcher'
 
 const navItems = [
   { to: '/', icon: Home, label: 'Dashboard' },
@@ -35,9 +36,14 @@ function Layout() {
         {/* Logo/Title */}
         <div className="p-6 border-b border-sepia/20">
           <h1 className="text-xl font-display font-semibold text-sepia">
-            Johnson Family
+            Family Research
           </h1>
-          <p className="text-sm text-faded-ink">Research Database</p>
+          <p className="text-sm text-faded-ink">Database</p>
+        </div>
+
+        {/* Workspace Switcher */}
+        <div className="p-3 border-b border-sepia/20">
+          <WorkspaceSwitcher />
         </div>
 
         {/* Navigation */}

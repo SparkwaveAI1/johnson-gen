@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Users, FileText, BookOpen, GitCompare, HelpCircle, Plus, Upload } from 'lucide-react'
 import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
 import PersonForm from '../components/people/PersonForm'
 import DocumentForm from '../components/documents/DocumentForm'
 import SourceForm from '../components/sources/SourceForm'
@@ -24,6 +25,7 @@ function StatCard({ icon: Icon, label, value, link, color }) {
 }
 
 function Dashboard() {
+  const { workspaceId, currentWorkspace } = useWorkspace()
   const [stats, setStats] = useState({
     people: 0,
     documents: 0,
@@ -41,8 +43,9 @@ function Dashboard() {
   const [showProcessDocument, setShowProcessDocument] = useState(false)
 
   const fetchStats = async () => {
+    if (!workspaceId) return
     try {
-      // Fetch counts in parallel
+      // Fetch counts in parallel (filtered by workspace)
       const [
         { count: peopleCount },
         { count: documentsCount },
@@ -51,12 +54,12 @@ function Dashboard() {
         { count: questionsCount },
         { data: recent }
       ] = await Promise.all([
-        supabase.from('people').select('*', { count: 'exact', head: true }),
-        supabase.from('documents').select('*', { count: 'exact', head: true }),
-        supabase.from('sources').select('*', { count: 'exact', head: true }),
+        supabase.from('people').select('*', { count: 'exact', head: true }).eq('workspace_id', workspaceId),
+        supabase.from('documents').select('*', { count: 'exact', head: true }).eq('workspace_id', workspaceId),
+        supabase.from('sources').select('*', { count: 'exact', head: true }).eq('workspace_id', workspaceId),
         supabase.from('identity_candidates').select('*', { count: 'exact', head: true }).eq('status', 'unresolved'),
         supabase.from('research_questions').select('*', { count: 'exact', head: true }).eq('status', 'open'),
-        supabase.from('people').select('id, given_name, surname, birth_year, confidence').order('created_at', { ascending: false }).limit(5)
+        supabase.from('people').select('id, given_name, surname, birth_year, confidence').eq('workspace_id', workspaceId).order('created_at', { ascending: false }).limit(5)
       ])
 
       setStats({
@@ -76,7 +79,7 @@ function Dashboard() {
 
   useEffect(() => {
     fetchStats()
-  }, [])
+  }, [workspaceId])
 
   const handlePersonSave = () => {
     setShowAddPerson(false)

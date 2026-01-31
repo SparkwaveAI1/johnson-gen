@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
+// Context
+import { WorkspaceProvider } from './contexts/WorkspaceContext'
+
 // Layout
 import Layout from './components/Layout'
 
@@ -27,6 +30,7 @@ import ExtractionReview from './pages/ExtractionReview'
 function App() {
   return (
     <BrowserRouter>
+      <WorkspaceProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
@@ -50,6 +54,7 @@ function App() {
           <Route path="documents/:id/review" element={<ExtractionReview />} />
         </Route>
       </Routes>
+      </WorkspaceProvider>
     </BrowserRouter>
   )
 }
