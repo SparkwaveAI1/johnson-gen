@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { X, AlertCircle } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { useWorkspace } from '../../contexts/WorkspaceContext'
 import { formatFullCitation } from './SourceCitation'
 
 /**
@@ -21,6 +22,7 @@ const sourceTypes = [
 ]
 
 function SourceForm({ source = null, onSave, onCancel, isModal = false }) {
+  const { workspaceId } = useWorkspace()
   const [formData, setFormData] = useState({
     source_type: 'derivative',
     // Primary source fields
@@ -127,10 +129,10 @@ function SourceForm({ source = null, onSave, onCancel, isModal = false }) {
         if (updateError) throw updateError
         result = data
       } else {
-        // Insert new
+        // Insert new - include workspace_id
         const { data, error: insertError } = await supabase
           .from('sources')
-          .insert(dataToSave)
+          .insert({ ...dataToSave, workspace_id: workspaceId })
           .select()
           .single()
 

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { X, AlertCircle, Plus, Trash2 } from 'lucide-react'
 import { supabase } from '../../lib/supabase'
+import { useWorkspace } from '../../contexts/WorkspaceContext'
 import PersonSelector from '../people/PersonSelector'
 import SourceSelector from '../sources/SourceSelector'
 
@@ -81,6 +82,7 @@ function DocumentForm({
   onCancel,
   isModal = false
 }) {
+  const { workspaceId } = useWorkspace()
   const [formData, setFormData] = useState({
     document_type: document?.document_type || 'land_patent',
     title: document?.title || '',
@@ -201,10 +203,10 @@ function DocumentForm({
           .delete()
           .eq('document_id', document.id)
       } else {
-        // Insert new document
+        // Insert new document - include workspace_id
         const { data, error: insertError } = await supabase
           .from('documents')
-          .insert(dataToSave)
+          .insert({ ...dataToSave, workspace_id: workspaceId })
           .select()
           .single()
 
@@ -221,7 +223,8 @@ function DocumentForm({
             person_id: p.person.id,
             role: p.role,
             acres: p.acres ? parseInt(p.acres) : null,
-            notes: p.notes || null
+            notes: p.notes || null,
+            workspace_id: workspaceId
           }))
 
         if (participantData.length > 0) {
