@@ -33,19 +33,28 @@ function PedigreeView() {
         setPeople(data || [])
         // If no person selected, default to Scott Christopher Johnson (or first person)
         if (!selectedPersonId && data?.length > 0) {
+          // Try to find Scott Christopher Johnson born 1968
           const scott = data.find(p => 
+            p.given_name === 'Scott Christopher' && 
+            p.surname === 'Johnson' && 
+            p.birth_year === 1968
+          )
+          // Fallback: any Scott Johnson born 1968
+          const scottAlt = data.find(p => 
             p.given_name?.includes('Scott') && 
             p.surname === 'Johnson' && 
             p.birth_year === 1968
           )
-          setSearchParams({ person: scott?.id || data[0].id })
+          const defaultPerson = scott || scottAlt || data[0]
+          console.log('Defaulting pedigree to:', defaultPerson?.given_name, defaultPerson?.surname)
+          setSearchParams({ person: defaultPerson.id })
         }
       }
       setLoading(false)
     }
 
     fetchPeople()
-  }, [workspaceId])
+  }, [workspaceId, selectedPersonId])
 
   const filteredPeople = people.filter(p => {
     if (!searchQuery) return true
