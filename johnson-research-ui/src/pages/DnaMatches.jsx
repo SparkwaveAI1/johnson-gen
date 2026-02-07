@@ -201,9 +201,17 @@ export default function DnaMatchesPage() {
         return false
       }
       
+      // Surname filter (from Mystery Surnames page)
+      if (surnameFilter) {
+        const matchSurnameList = matchSurnames[match.id] || []
+        if (!matchSurnameList.includes(surnameFilter)) {
+          return false
+        }
+      }
+      
       return true
     })
-  }, [matches, searchQuery, companyFilter, contactStatusFilter, minCm, maxCm, hasSegmentsFilter])
+  }, [matches, searchQuery, companyFilter, contactStatusFilter, minCm, maxCm, hasSegmentsFilter, surnameFilter, matchSurnames])
 
   // Calculate stats from all matches (not filtered)
   const stats = useMemo(() => {
@@ -217,7 +225,7 @@ export default function DnaMatchesPage() {
     return { totalMatches, avgCm, withSegments, linkedMatches }
   }, [matches])
 
-  const hasActiveFilters = searchQuery || companyFilter || contactStatusFilter || minCm || maxCm || hasSegmentsFilter
+  const hasActiveFilters = searchQuery || companyFilter || contactStatusFilter || minCm || maxCm || hasSegmentsFilter || surnameFilter
 
   const clearFilters = () => {
     setSearchQuery('')
@@ -226,6 +234,7 @@ export default function DnaMatchesPage() {
     setMinCm('')
     setMaxCm('')
     setHasSegmentsFilter(false)
+    clearSurnameFilter()
   }
 
   if (loading) {
@@ -274,6 +283,25 @@ export default function DnaMatchesPage() {
           <p className="text-sm text-faded-ink">Confirmed MRCA</p>
         </div>
       </div>
+
+      {/* Surname Filter Banner */}
+      {surnameFilter && (
+        <div className="flex items-center justify-between p-3 bg-sepia/10 border border-sepia/20 rounded-lg">
+          <div className="flex items-center gap-2">
+            <Users size={18} className="text-sepia" />
+            <span>
+              Showing matches with surname: <strong>{surnameFilter}</strong>
+            </span>
+          </div>
+          <button
+            onClick={clearSurnameFilter}
+            className="flex items-center gap-1 text-sm text-sepia hover:underline"
+          >
+            <X size={14} />
+            Clear
+          </button>
+        </div>
+      )}
 
       {/* Search and Filters */}
       <div className="card">

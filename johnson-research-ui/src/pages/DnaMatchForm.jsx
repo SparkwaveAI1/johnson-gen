@@ -89,6 +89,8 @@ function DnaMatchFormPage() {
   const [mrcaResults, setMrcaResults] = useState([])
   const [selectedMrca, setSelectedMrca] = useState(null)
   const [showMrcaDropdown, setShowMrcaDropdown] = useState(false)
+  const [mrcaConfirmed, setMrcaConfirmed] = useState(false)
+  const [mrcaRelationshipPath, setMrcaRelationshipPath] = useState(null)
 
   // UI state
   const [loading, setLoading] = useState(isEdit)
@@ -665,66 +667,96 @@ function DnaMatchFormPage() {
           <div className="space-y-4">
             <h2 className="text-lg font-medium border-b border-sepia/20 pb-2">Connection Info</h2>
 
-            {/* MRCA Person Selector */}
+            {/* Enhanced MRCA Person Selector */}
             <div>
-              <label className="label">Confirmed MRCA (Most Recent Common Ancestor)</label>
+              <label className="label flex items-center gap-2">
+                <GitBranch size={16} className="text-sepia" />
+                Confirmed MRCA (Most Recent Common Ancestor)
+              </label>
+              
               {selectedMrca ? (
-                <div className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-lg">
-                  <Check size={18} className="text-green-600" />
-                  <span className="flex-1">
-                    {selectedMrca.given_name} {selectedMrca.surname}
-                    {selectedMrca.birth_year && ` (b. ${selectedMrca.birth_year})`}
-                  </span>
+                <div className="space-y-3">
+                  {/* Selected MRCA display */}
+                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
+                    <div className="flex items-start gap-3">
+                      <UserCheck size={24} className="text-green-600 mt-0.5" />
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <span className="font-semibold text-lg">
+                            {selectedMrca.given_name} {selectedMrca.surname}
+                          </span>
+                          {mrcaConfirmed && (
+                            <span className="px-2 py-0.5 bg-green-600 text-white text-xs rounded-full">
+                              Confirmed
+                            </span>
+                          )}
+                        </div>
+                        <div className="text-sm text-faded-ink mt-1">
+                          {selectedMrca.birth_year && `b. ${selectedMrca.birth_year}`}
+                          {selectedMrca.birth_year && selectedMrca.death_year && ' – '}
+                          {selectedMrca.death_year && `d. ${selectedMrca.death_year}`}
+                        </div>
+                        
+                        {/* Relationship path display */}
+                        {mrcaRelationshipPath && (
+                          <div className="mt-3 p-2 bg-white/50 rounded border border-green-100">
+                            <div className="text-xs text-faded-ink uppercase mb-1">Relationship Path</div>
+                            <div className="text-sm text-green-800 font-medium">
+                              {mrcaRelationshipPath}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                      <button
+                        type="button"
+                        onClick={handleClearMrca}
+                        className="text-faded-ink hover:text-red-600 p-1"
+                        title="Remove MRCA"
+                      >
+                        <X size={18} />
+                      </button>
+                    </div>
+                    
+                    {/* Confirmation button */}
+                    {!mrcaConfirmed && (
+                      <div className="mt-4 pt-3 border-t border-green-200 flex items-center justify-between">
+                        <span className="text-sm text-green-700">
+                          Ready to confirm this ancestor?
+                        </span>
+                        <button
+                          type="button"
+                          onClick={() => setMrcaConfirmed(true)}
+                          className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors flex items-center gap-2"
+                        >
+                          <Check size={16} />
+                          Confirm MRCA
+                        </button>
+                      </div>
+                    )}
+                  </div>
+                  
                   <button
                     type="button"
                     onClick={handleClearMrca}
-                    className="text-faded-ink hover:text-red-600"
+                    className="text-sm text-sepia hover:underline"
                   >
-                    <X size={18} />
+                    Select a different person
                   </button>
                 </div>
               ) : (
-                <div className="relative">
-                  <div className="relative">
-                    <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-faded-ink" />
-                    <input
-                      type="text"
-                      value={mrcaSearch}
-                      onChange={(e) => {
-                        setMrcaSearch(e.target.value)
-                        setShowMrcaDropdown(true)
-                      }}
-                      onFocus={() => setShowMrcaDropdown(true)}
-                      placeholder="Search for a person..."
-                      className="input pl-10"
-                    />
-                  </div>
-                  {showMrcaDropdown && mrcaResults.length > 0 && (
-                    <div className="absolute z-10 w-full mt-1 bg-white border border-sepia/20 rounded-lg shadow-lg max-h-60 overflow-auto">
-                      {mrcaResults.map(person => (
-                        <button
-                          key={person.id}
-                          type="button"
-                          onClick={() => handleSelectMrca(person)}
-                          className="w-full text-left px-4 py-2 hover:bg-parchment transition-colors"
-                        >
-                          <span className="font-medium">
-                            {person.given_name} {person.surname}
-                          </span>
-                          {person.birth_year && (
-                            <span className="text-faded-ink ml-2">
-                              (b. {person.birth_year})
-                            </span>
-                          )}
-                        </button>
-                      ))}
-                    </div>
-                  )}
+                <div className="space-y-3">
+                  <PersonSelector
+                    value={null}
+                    onChange={handleSelectMrca}
+                    placeholder="Search for common ancestor..."
+                    allowCreate={false}
+                  />
+                  <p className="text-xs text-faded-ink">
+                    Search by name to find the most recent common ancestor shared with this match.
+                    The relationship path will be shown if available in your tree.
+                  </p>
                 </div>
               )}
-              <p className="text-xs text-faded-ink mt-1">
-                Search for a person in your tree to link as the confirmed common ancestor
-              </p>
             </div>
 
             <div>
