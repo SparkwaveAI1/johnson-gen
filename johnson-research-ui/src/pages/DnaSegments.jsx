@@ -1,402 +1,622 @@
-import { useState, useEffect, useMemo, useCallback } from 'react'
-import { Link } from 'react-router-dom'
-import { Dna, Info, ZoomIn, ZoomOut } from 'lucide-react'
+import { useState, useEffect, useMemo, useRef } from 'react'
+import { Dna, Search, X, Info, Filter, ChevronDown, Users, Layers } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 import { useWorkspace } from '../contexts/WorkspaceContext'
 
-// Chromosome lengths in Mbp (approximate, based on GRCh38)
+// Chromosome lengths in base pairs (approximate, for visualization scaling)
 const CHROMOSOME_LENGTHS = {
-  '1': 249, '2': 243, '3': 198, '4': 191, '5': 182,
-  '6': 171, '7': 159, '8': 146, '9': 141, '10': 136,
-  '11': 135, '12': 134, '13': 115, '14': 107, '15': 102,
-  '16': 90, '17': 83, '18': 80, '19': 59, '20': 64,
-  '21': 47, '22': 51, 'X': 156
+  '1': 249000000, '2': 243000000, '3': 198000000, '4': 191000000,
+  '5': 181000000, '6': 171000000, '7': 159000000, '8': 146000000,
+  '9': 138000000, '10': 135000000, '11': 135000000, '12': 134000000,
+  '13': 115000000, '14': 107000000, '15': 102000000, '16': 90000000,
+  '17': 84000000, '18': 80000000, '19': 59000000, '20': 63000000,
+  '21': 47000000, '22': 51000000, 'X': 155000000
 }
 
-// Color palette for matches (distinct colors that work on light backgrounds)
+const CHROMOSOMES = [...Array.from({ length: 22 }, (_, i) => String(i + 1)), 'X']
+
+// Color palette for matches
 const MATCH_COLORS = [
-  '#2563eb', // blue
-  '#dc2626', // red
-  '#16a34a', // green
-  '#9333ea', // purple
-  '#ea580c', // orange
-  '#0891b2', // cyan
-  '#c026d3', // fuchsia
-  '#4f46e5', // indigo
-  '#059669', // emerald
-  '#d97706', // amber
-  '#7c3aed', // violet
-  '#be185d', // pink
-  '#0d9488', // teal
-  '#65a30d', // lime
-  '#e11d48', // rose
+  '#3B82F6', '#10B981', '#F59E0B', '#EF4444', '#8B5CF6',
+  '#EC4899', '#06B6D4', '#84CC16', '#F97316', '#6366F1',
+  '#14B8A6', '#A855F7', '#F43F5E', '#22C55E', '#0EA5E9'
 ]
 
-// Chromosome tabs
-const CHROMOSOMES = [
-  ...Array.from({ length: 22 }, (_, i) => String(i + 1)),
-  'X'
-]
+function getMatchColor(index) {
+  return MATCH_COLORS[index % MATCH_COLORS.length]
+}
+
+// Striped pattern for overlaps
+const OVERLAP_PATTERN_ID = 'overlap-pattern'
+
+function OverlapPattern() {
+  return (
+    <defs>
+      <pattern
+        id={OVERLAP_PATTERN_ID}
+        patternUnits="userSpaceOnUse"
+        width="8"
+        height="8"
+        patternTransform="rotate(45)"
+      >
+        <rect width="4" height="8" fill="#EF4444" fillOpacity="0.7" />
+        <rect x="4" width="4" height="8" fill="#F59E0B" fillOpacity="0.7" />
+      </pattern>
+    </defs>
+  )
+}
+
+// Detect overlapping segments
+function findOverlaps(segments) {
+  const overlaps = []
+  
+  // Group by chromosome
+  const byChromosome = {}
+  segments.forEach(seg => {
+    const chr = seg.chromosome
+    if (!byChromosome[chr]) byChromosome[chr] = []
+    byChromosome[chr].push(seg)
+  })
+  
+  // Find overlaps within each chromosome
+  Object.entries(byChromosome).forEach(([chromosome, segs]) => {
+    for (let i = 0; i < segs.length; i++) {
+      for (let j = i + 1; j < segs.length; j++) {
+        const a = segs[i]
+        const b = segs[j]
+        
+        // Check overlap: a.start <= b.end AND a.end >= b.start
+        const aStart = parseInt(a.start_position) || 0
+        const aEnd = parseInt(a.end_position) || 0
+        const bStart = parseInt(b.start_position) || 0
+        const bEnd = parseInt(b.end_position) || 0
+        
+        if (aStart <= bEnd && aEnd >= bStart) {
+          // Calculate overlap region
+          const overlapStart = Math.max(aStart, bStart)
+          const overlapEnd = Math.min(aEnd, bEnd)
+          
+          // Check if this overlap region already exists
+          const existingOverlap = overlaps.find(o =>
+            o.chromosome === chromosome &&
+            o.start === overlapStart &&
+            o.end === overlapEnd
+          )
+          
+          if (existingOverlap) {
+            // Add matches to existing overlap
+            if (!existingOverlap.matchIds.includes(a.match_id)) {
+              existingOverlap.matchIds.push(a.match_id)
+              existingOverlap.segments.push(a)
+            }
+            if (!existingOverlap.matchIds.includes(b.match_id)) {
+              existingOverlap.matchIds.push(b.match_id)
+              existingOverlap.segments.push(b)
+            }
+          } else {
+            overlaps.push({
+              chromosome,
+              start: overlapStart,
+              end: overlapEnd,
+              matchIds: [a.match_id, b.match_id],
+              segments: [a, b]
+            })
+          }
+        }
+      }
+    }
+  })
+  
+  return overlaps
+}
+
+// Overlap popup component
+function OverlapPopup({ overlap, matches, position, onClose }) {
+  const popupRef = useRef(null)
+  
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (popupRef.current && !popupRef.current.contains(e.target)) {
+        onClose()
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [onClose])
+  
+  const overlappingMatches = matches.filter(m => overlap.matchIds.includes(m.id))
+  const overlapCm = overlap.segments.reduce((max, seg) => 
+    Math.max(max, parseFloat(seg.cm) || 0), 0
+  )
+  
+  return (
+    <div
+      ref={popupRef}
+      className="absolute z-50 bg-white rounded-lg shadow-xl border border-sepia/30 p-4 min-w-[280px]"
+      style={{
+        left: position.x,
+        top: position.y,
+        transform: 'translate(-50%, 8px)'
+      }}
+    >
+      <div className="flex items-center justify-between mb-3">
+        <div className="flex items-center gap-2">
+          <Layers size={18} className="text-orange-500" />
+          <h3 className="font-semibold">Overlap Region</h3>
+        </div>
+        <button onClick={onClose} className="text-faded-ink hover:text-ink">
+          <X size={16} />
+        </button>
+      </div>
+      
+      <div className="text-sm text-faded-ink mb-3">
+        <div>Chromosome {overlap.chromosome}</div>
+        <div>Position: {overlap.start.toLocaleString()} - {overlap.end.toLocaleString()}</div>
+        {overlapCm > 0 && <div>Max cM: {overlapCm.toFixed(2)}</div>}
+      </div>
+      
+      <div className="border-t border-sepia/20 pt-3">
+        <div className="text-xs text-faded-ink uppercase mb-2">
+          {overlappingMatches.length} Matches Share This Region
+        </div>
+        <ul className="space-y-2">
+          {overlappingMatches.map(match => (
+            <li key={match.id} className="flex items-center gap-2">
+              <div
+                className="w-3 h-3 rounded-full"
+                style={{ backgroundColor: match.color }}
+              />
+              <span className="font-medium">{match.match_name}</span>
+              <span className="text-xs text-faded-ink">
+                ({match.shared_cm?.toFixed(1) || '?'} cM)
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+// Single chromosome visualization
+function ChromosomeBar({ 
+  chromosome, 
+  segments, 
+  overlaps,
+  maxLength, 
+  matches,
+  highlightMatchId,
+  onOverlapClick
+}) {
+  const chrLength = CHROMOSOME_LENGTHS[chromosome] || 100000000
+  const scale = 100 / maxLength
+  const widthPercent = (chrLength / maxLength) * 100
+  
+  const chrSegments = segments.filter(s => s.chromosome === chromosome)
+  const chrOverlaps = overlaps.filter(o => o.chromosome === chromosome)
+  
+  return (
+    <div className="flex items-center gap-3 py-1">
+      <div className="w-8 text-right text-sm font-mono text-faded-ink">
+        {chromosome}
+      </div>
+      <div 
+        className="relative h-6 bg-gray-100 rounded-full overflow-hidden border border-gray-200"
+        style={{ width: `${widthPercent}%`, minWidth: '100px' }}
+      >
+        <svg width="100%" height="100%" className="absolute inset-0">
+          <OverlapPattern />
+          
+          {/* Regular segments */}
+          {chrSegments.map((seg, idx) => {
+            const start = (parseInt(seg.start_position) || 0) / chrLength * 100
+            const end = (parseInt(seg.end_position) || 0) / chrLength * 100
+            const width = end - start
+            const match = matches.find(m => m.id === seg.match_id)
+            const isHighlighted = highlightMatchId && seg.match_id === highlightMatchId
+            
+            return (
+              <rect
+                key={seg.id || idx}
+                x={`${start}%`}
+                y="2"
+                width={`${Math.max(width, 0.5)}%`}
+                height="20"
+                fill={match?.color || '#888'}
+                fillOpacity={isHighlighted ? 1 : (highlightMatchId ? 0.3 : 0.7)}
+                rx="2"
+                className="transition-opacity duration-200"
+              />
+            )
+          })}
+          
+          {/* Overlap regions */}
+          {chrOverlaps.map((overlap, idx) => {
+            const start = overlap.start / chrLength * 100
+            const end = overlap.end / chrLength * 100
+            const width = end - start
+            
+            return (
+              <rect
+                key={`overlap-${idx}`}
+                x={`${start}%`}
+                y="0"
+                width={`${Math.max(width, 1)}%`}
+                height="24"
+                fill={`url(#${OVERLAP_PATTERN_ID})`}
+                className="cursor-pointer hover:stroke-red-500 hover:stroke-2"
+                onClick={(e) => onOverlapClick(overlap, e)}
+              />
+            )
+          })}
+        </svg>
+      </div>
+      <div className="w-16 text-xs text-faded-ink">
+        {chrSegments.length} seg
+      </div>
+    </div>
+  )
+}
 
 export default function DnaSegmentsPage() {
   const { workspaceId } = useWorkspace()
-  const [selectedChromosome, setSelectedChromosome] = useState('1')
   const [segments, setSegments] = useState([])
+  const [matches, setMatches] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
-  const [hoveredSegment, setHoveredSegment] = useState(null)
-  const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 })
-  const [minCmFilter, setMinCmFilter] = useState(0)
+  
+  // Filters
+  const [minCm, setMinCm] = useState(0)
+  const [selectedMatchId, setSelectedMatchId] = useState('')
+  const [searchQuery, setSearchQuery] = useState('')
+  const [showFilters, setShowFilters] = useState(false)
+  
+  // Overlap popup
+  const [activeOverlap, setActiveOverlap] = useState(null)
+  const [popupPosition, setPopupPosition] = useState({ x: 0, y: 0 })
+  
+  const containerRef = useRef(null)
 
-  // Load segments for selected chromosome
   useEffect(() => {
     if (workspaceId) {
-      loadSegments()
+      loadData()
     }
-  }, [workspaceId, selectedChromosome])
+  }, [workspaceId])
 
-  const loadSegments = async () => {
+  const loadData = async () => {
     setLoading(true)
-    setError(null)
-
     try {
-      const { data, error: fetchError } = await supabase
+      // Load all segments with match info
+      const { data: segmentData, error: segError } = await supabase
         .from('dna_segments')
         .select(`
           id,
+          match_id,
           chromosome,
           start_position,
           end_position,
           cm,
-          snps,
-          match_id,
-          dna_matches!inner(
-            id,
-            match_name,
-            shared_cm,
-            predicted_relationship,
-            workspace_id
-          )
+          snps
         `)
-        .eq('chromosome', selectedChromosome)
-        .eq('dna_matches.workspace_id', workspaceId)
+        .order('chromosome')
         .order('start_position')
 
-      if (fetchError) throw fetchError
+      if (segError) throw segError
 
-      setSegments(data || [])
+      // Load matches for color coding
+      const { data: matchData, error: matchError } = await supabase
+        .from('dna_matches')
+        .select('id, match_name, shared_cm, testing_company')
+        .eq('workspace_id', workspaceId)
+        .order('match_name')
+
+      if (matchError) throw matchError
+
+      // Assign colors to matches
+      const matchesWithColors = (matchData || []).map((m, idx) => ({
+        ...m,
+        color: getMatchColor(idx)
+      }))
+
+      setMatches(matchesWithColors)
+      setSegments(segmentData || [])
     } catch (err) {
-      console.error('Error loading segments:', err)
-      setError('Failed to load segments')
+      console.error('Error loading data:', err)
     } finally {
       setLoading(false)
     }
   }
 
-  // Filter segments by minimum cM
+  // Filter segments
   const filteredSegments = useMemo(() => {
-    return segments.filter(s => (s.cm || 0) >= minCmFilter)
-  }, [segments, minCmFilter])
-
-  // Build color map for matches
-  const matchColorMap = useMemo(() => {
-    const uniqueMatches = [...new Set(filteredSegments.map(s => s.match_id))]
-    const map = {}
-    uniqueMatches.forEach((matchId, index) => {
-      map[matchId] = MATCH_COLORS[index % MATCH_COLORS.length]
-    })
-    return map
-  }, [filteredSegments])
-
-  // Calculate segment rows (stack overlapping segments)
-  const segmentRows = useMemo(() => {
-    if (filteredSegments.length === 0) return []
-
-    const rows = []
-    const sortedSegments = [...filteredSegments].sort((a, b) => a.start_position - b.start_position)
-
-    for (const segment of sortedSegments) {
-      let placed = false
+    return segments.filter(seg => {
+      // Min cM filter
+      if (minCm > 0 && (parseFloat(seg.cm) || 0) < minCm) {
+        return false
+      }
       
-      // Try to place in existing row
-      for (let i = 0; i < rows.length; i++) {
-        const lastInRow = rows[i][rows[i].length - 1]
-        // Leave small gap between segments on same row
-        if (segment.start_position > lastInRow.end_position) {
-          rows[i].push(segment)
-          placed = true
-          break
-        }
+      // Match filter
+      if (selectedMatchId && seg.match_id !== selectedMatchId) {
+        return false
       }
+      
+      return true
+    })
+  }, [segments, minCm, selectedMatchId])
 
-      // Create new row if couldn't place
-      if (!placed) {
-        rows.push([segment])
-      }
-    }
+  // Filter matches for dropdown
+  const filteredMatches = useMemo(() => {
+    if (!searchQuery) return matches
+    const query = searchQuery.toLowerCase()
+    return matches.filter(m => m.match_name?.toLowerCase().includes(query))
+  }, [matches, searchQuery])
 
-    return rows
+  // Calculate overlaps
+  const overlaps = useMemo(() => {
+    return findOverlaps(filteredSegments)
   }, [filteredSegments])
-
-  // Get chromosome length in Mbp
-  const chromosomeLength = CHROMOSOME_LENGTHS[selectedChromosome] || 200
-
-  // Generate tick marks for ruler (every 25 Mbp for shorter chromosomes, 50 for longer)
-  const tickInterval = chromosomeLength > 150 ? 50 : 25
-  const ticks = useMemo(() => {
-    const result = []
-    for (let i = 0; i <= chromosomeLength; i += tickInterval) {
-      result.push(i)
-    }
-    return result
-  }, [chromosomeLength, tickInterval])
-
-  // Convert base pairs to percentage position
-  const bpToPercent = useCallback((bp) => {
-    const mbp = bp / 1_000_000 // Convert bp to Mbp
-    return (mbp / chromosomeLength) * 100
-  }, [chromosomeLength])
-
-  // Handle mouse move for tooltip positioning
-  const handleMouseMove = (e, segment) => {
-    setHoveredSegment(segment)
-    setTooltipPosition({ x: e.clientX, y: e.clientY })
-  }
-
-  // Format position for display
-  const formatPosition = (bp) => {
-    const mbp = bp / 1_000_000
-    return mbp.toFixed(1) + ' Mbp'
-  }
 
   // Stats
-  const totalSegments = filteredSegments.length
-  const uniqueMatches = new Set(filteredSegments.map(s => s.match_id)).size
-  const avgCm = filteredSegments.length > 0
-    ? (filteredSegments.reduce((sum, s) => sum + (s.cm || 0), 0) / filteredSegments.length).toFixed(1)
-    : 0
+  const stats = useMemo(() => {
+    const uniqueMatches = new Set(filteredSegments.map(s => s.match_id)).size
+    const totalCm = filteredSegments.reduce((sum, s) => sum + (parseFloat(s.cm) || 0), 0)
+    return {
+      totalSegments: filteredSegments.length,
+      uniqueMatches,
+      totalCm: totalCm.toFixed(1),
+      overlapCount: overlaps.length
+    }
+  }, [filteredSegments, overlaps])
+
+  // Max chromosome length for scaling
+  const maxLength = Math.max(...Object.values(CHROMOSOME_LENGTHS))
+
+  const handleOverlapClick = (overlap, event) => {
+    const rect = containerRef.current?.getBoundingClientRect()
+    if (rect) {
+      setPopupPosition({
+        x: event.clientX - rect.left,
+        y: event.clientY - rect.top
+      })
+      setActiveOverlap(overlap)
+    }
+  }
+
+  const selectedMatch = matches.find(m => m.id === selectedMatchId)
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <p className="text-faded-ink">Loading DNA segments...</p>
+      </div>
+    )
+  }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6" ref={containerRef}>
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold flex items-center gap-2">
             <Dna size={28} className="text-sepia" />
-            Chromosome Segments
+            DNA Segment Visualizer
           </h1>
           <p className="text-faded-ink mt-1">
-            Visualize shared DNA segments across chromosomes
+            View shared segments across all chromosomes
           </p>
         </div>
       </div>
 
-      {/* Chromosome Tabs */}
-      <div className="card p-2">
-        <div className="flex flex-wrap gap-1">
-          {CHROMOSOMES.map(chr => (
-            <button
-              key={chr}
-              onClick={() => setSelectedChromosome(chr)}
-              className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
-                selectedChromosome === chr
-                  ? 'bg-sepia text-white'
-                  : 'bg-parchment hover:bg-aged-paper text-ink'
-              }`}
-            >
-              {chr === 'X' ? 'X' : chr}
-            </button>
-          ))}
+      {/* Stats Bar */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="card p-4 text-center">
+          <p className="text-3xl font-bold text-sepia">{stats.totalSegments}</p>
+          <p className="text-sm text-faded-ink">Total Segments</p>
+        </div>
+        <div className="card p-4 text-center">
+          <p className="text-3xl font-bold text-sepia">{stats.uniqueMatches}</p>
+          <p className="text-sm text-faded-ink">Matches Shown</p>
+        </div>
+        <div className="card p-4 text-center">
+          <p className="text-3xl font-bold text-sepia">{stats.totalCm}</p>
+          <p className="text-sm text-faded-ink">Total cM</p>
+        </div>
+        <div className="card p-4 text-center">
+          <p className="text-3xl font-bold text-orange-500">{stats.overlapCount}</p>
+          <p className="text-sm text-faded-ink">Overlap Regions</p>
         </div>
       </div>
 
-      {/* Stats and Filter Bar */}
-      <div className="flex items-center justify-between">
-        <div className="flex gap-6 text-sm">
-          <div>
-            <span className="text-faded-ink">Segments:</span>{' '}
-            <span className="font-medium">{totalSegments}</span>
-          </div>
-          <div>
-            <span className="text-faded-ink">Matches:</span>{' '}
-            <span className="font-medium">{uniqueMatches}</span>
-          </div>
-          <div>
-            <span className="text-faded-ink">Avg cM:</span>{' '}
-            <span className="font-medium">{avgCm}</span>
-          </div>
-        </div>
-        <div className="flex items-center gap-2">
-          <label className="text-sm text-faded-ink">Min cM:</label>
-          <input
-            type="number"
-            min="0"
-            step="5"
-            value={minCmFilter}
-            onChange={(e) => setMinCmFilter(Number(e.target.value) || 0)}
-            className="w-20 px-2 py-1 text-sm border border-sepia/30 rounded"
-          />
-        </div>
-      </div>
-
-      {/* Visualization Area */}
+      {/* Filters */}
       <div className="card">
-        <div className="mb-4">
-          <h2 className="text-lg font-medium">
-            Chromosome {selectedChromosome}
-            <span className="text-sm font-normal text-faded-ink ml-2">
-              ({chromosomeLength} Mbp)
-            </span>
-          </h2>
+        <div className="flex items-center gap-4 flex-wrap">
+          {/* Match Selector */}
+          <div className="flex-1 min-w-[200px]">
+            <label className="text-xs text-faded-ink uppercase mb-1 block">
+              Highlight Match
+            </label>
+            <div className="relative">
+              <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-faded-ink" />
+              <select
+                value={selectedMatchId}
+                onChange={(e) => setSelectedMatchId(e.target.value)}
+                className="input pl-9 pr-8 appearance-none"
+              >
+                <option value="">All Matches</option>
+                {matches.map(match => (
+                  <option key={match.id} value={match.id}>
+                    {match.match_name} ({match.shared_cm?.toFixed(1) || '?'} cM)
+                  </option>
+                ))}
+              </select>
+              <ChevronDown size={16} className="absolute right-3 top-1/2 -translate-y-1/2 text-faded-ink pointer-events-none" />
+            </div>
+          </div>
+
+          {/* cM Filter */}
+          <div className="w-48">
+            <label className="text-xs text-faded-ink uppercase mb-1 block">
+              Minimum cM: {minCm}
+            </label>
+            <input
+              type="range"
+              min="0"
+              max="50"
+              step="1"
+              value={minCm}
+              onChange={(e) => setMinCm(parseInt(e.target.value))}
+              className="w-full accent-sepia"
+            />
+          </div>
+
+          {/* Quick cM buttons */}
+          <div className="flex gap-2">
+            {[0, 7, 15, 25].map(val => (
+              <button
+                key={val}
+                onClick={() => setMinCm(val)}
+                className={`px-3 py-1 text-sm rounded ${
+                  minCm === val 
+                    ? 'bg-sepia text-cream' 
+                    : 'bg-sepia/10 text-sepia hover:bg-sepia/20'
+                }`}
+              >
+                {val === 0 ? 'All' : `≥${val}`}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {loading ? (
-          <div className="flex items-center justify-center h-48">
-            <p className="text-faded-ink">Loading segments...</p>
-          </div>
-        ) : error ? (
-          <div className="flex items-center justify-center h-48 text-red-600">
-            <p>{error}</p>
-          </div>
-        ) : filteredSegments.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-48 text-faded-ink">
-            <Info size={32} className="mb-2" />
-            <p>No segments on chromosome {selectedChromosome}</p>
-            <p className="text-sm mt-1">
-              Add segments from the{' '}
-              <Link to="/dna/matches" className="text-sepia hover:underline">
-                DNA Matches
-              </Link>{' '}
-              page
-            </p>
-          </div>
-        ) : (
-          <div className="relative">
-            {/* Chromosome Ruler */}
-            <div className="relative h-8 mb-2 border-b border-sepia/30">
-              {/* Tick marks and labels */}
-              {ticks.map(tick => {
-                const percent = (tick / chromosomeLength) * 100
-                return (
-                  <div
-                    key={tick}
-                    className="absolute flex flex-col items-center"
-                    style={{ left: `${percent}%`, transform: 'translateX(-50%)' }}
-                  >
-                    <div className="w-px h-3 bg-sepia/50" />
-                    <span className="text-xs text-faded-ink mt-0.5">{tick}</span>
-                  </div>
-                )
-              })}
-              {/* Ruler base line */}
-              <div className="absolute bottom-0 left-0 right-0 h-px bg-sepia/30" />
-            </div>
-
-            {/* Segment Rows */}
-            <div className="space-y-1 min-h-[100px]">
-              {segmentRows.map((row, rowIndex) => (
-                <div key={rowIndex} className="relative h-7">
-                  {row.map(segment => {
-                    const startPercent = bpToPercent(segment.start_position)
-                    const endPercent = bpToPercent(segment.end_position)
-                    const widthPercent = endPercent - startPercent
-                    const color = matchColorMap[segment.match_id]
-                    const matchName = segment.dna_matches?.match_name || 'Unknown'
-                    const showLabel = widthPercent > 8 // Only show label if segment is wide enough
-
-                    return (
-                      <Link
-                        key={segment.id}
-                        to={`/dna/matches/${segment.match_id}`}
-                        className="absolute h-6 rounded cursor-pointer transition-all hover:ring-2 hover:ring-sepia hover:z-10"
-                        style={{
-                          left: `${startPercent}%`,
-                          width: `${Math.max(widthPercent, 0.5)}%`,
-                          backgroundColor: color,
-                          opacity: hoveredSegment?.id === segment.id ? 1 : 0.85,
-                        }}
-                        onMouseMove={(e) => handleMouseMove(e, segment)}
-                        onMouseLeave={() => setHoveredSegment(null)}
-                      >
-                        {showLabel && (
-                          <span className="absolute inset-0 flex items-center justify-center text-xs text-white font-medium truncate px-1">
-                            {matchName}
-                          </span>
-                        )}
-                      </Link>
-                    )
-                  })}
-                </div>
-              ))}
-            </div>
-
-            {/* Legend */}
-            <div className="mt-6 pt-4 border-t border-sepia/20">
-              <h3 className="text-sm font-medium text-faded-ink mb-2">Matches</h3>
-              <div className="flex flex-wrap gap-3">
-                {Object.entries(matchColorMap).map(([matchId, color]) => {
-                  const segment = filteredSegments.find(s => s.match_id === matchId)
-                  const matchName = segment?.dna_matches?.match_name || 'Unknown'
-                  const segmentCount = filteredSegments.filter(s => s.match_id === matchId).length
-
-                  return (
-                    <Link
-                      key={matchId}
-                      to={`/dna/matches/${matchId}`}
-                      className="flex items-center gap-2 px-2 py-1 rounded hover:bg-parchment transition-colors"
-                    >
-                      <div
-                        className="w-4 h-4 rounded"
-                        style={{ backgroundColor: color }}
-                      />
-                      <span className="text-sm">{matchName}</span>
-                      <span className="text-xs text-faded-ink">({segmentCount})</span>
-                    </Link>
-                  )
-                })}
-              </div>
-            </div>
+        {/* Selected match indicator */}
+        {selectedMatch && (
+          <div className="mt-4 pt-4 border-t border-sepia/20 flex items-center gap-3">
+            <div
+              className="w-4 h-4 rounded-full"
+              style={{ backgroundColor: selectedMatch.color }}
+            />
+            <span className="font-medium">{selectedMatch.match_name}</span>
+            <span className="text-faded-ink">
+              {selectedMatch.shared_cm?.toFixed(1)} cM total
+            </span>
+            <button
+              onClick={() => setSelectedMatchId('')}
+              className="ml-auto text-sm text-sepia hover:underline flex items-center gap-1"
+            >
+              <X size={14} />
+              Clear selection
+            </button>
           </div>
         )}
       </div>
 
-      {/* Tooltip */}
-      {hoveredSegment && (
-        <div
-          className="fixed z-50 bg-ink text-white px-3 py-2 rounded-lg shadow-lg text-sm pointer-events-none"
-          style={{
-            left: tooltipPosition.x + 12,
-            top: tooltipPosition.y - 10,
-            transform: 'translateY(-100%)',
-          }}
-        >
-          <div className="font-medium">
-            {hoveredSegment.dna_matches?.match_name || 'Unknown'}
+      {/* Legend */}
+      <div className="card p-4">
+        <div className="flex items-center gap-6 flex-wrap">
+          <div className="flex items-center gap-2">
+            <Info size={16} className="text-faded-ink" />
+            <span className="text-sm text-faded-ink">Legend:</span>
           </div>
-          <div className="text-gray-300 mt-1 space-y-0.5">
-            <div>
-              <span className="text-gray-400">cM:</span> {hoveredSegment.cm?.toFixed(1) || '—'}
+          
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-4 rounded bg-gradient-to-r from-blue-500 to-green-500" />
+            <span className="text-sm">Segment (color = match)</span>
+          </div>
+          
+          <div className="flex items-center gap-2">
+            <div 
+              className="w-6 h-4 rounded"
+              style={{
+                background: 'repeating-linear-gradient(45deg, #EF4444, #EF4444 4px, #F59E0B 4px, #F59E0B 8px)'
+              }}
+            />
+            <span className="text-sm">Overlap region (click for details)</span>
+          </div>
+
+          {overlaps.length > 0 && (
+            <div className="ml-auto text-sm text-orange-600 flex items-center gap-1">
+              <Layers size={16} />
+              {overlaps.length} overlap{overlaps.length !== 1 ? 's' : ''} detected
             </div>
-            <div>
-              <span className="text-gray-400">Position:</span>{' '}
-              {formatPosition(hoveredSegment.start_position)} – {formatPosition(hoveredSegment.end_position)}
-            </div>
-            {hoveredSegment.snps && (
-              <div>
-                <span className="text-gray-400">SNPs:</span> {hoveredSegment.snps.toLocaleString()}
-              </div>
+          )}
+        </div>
+      </div>
+
+      {/* Chromosome Visualization */}
+      {segments.length === 0 ? (
+        <div className="card p-12 text-center">
+          <Dna size={48} className="mx-auto text-faded-ink mb-4" />
+          <h3 className="text-lg font-medium mb-2">No segments yet</h3>
+          <p className="text-faded-ink">
+            Add DNA segments to your matches to see them visualized here.
+          </p>
+        </div>
+      ) : (
+        <div className="card p-6 relative">
+          <h2 className="text-lg font-semibold mb-4 flex items-center gap-2">
+            <Dna size={20} className="text-sepia" />
+            Chromosome Map
+          </h2>
+          
+          <div className="space-y-1">
+            {CHROMOSOMES.map(chr => (
+              <ChromosomeBar
+                key={chr}
+                chromosome={chr}
+                segments={filteredSegments}
+                overlaps={overlaps}
+                maxLength={maxLength}
+                matches={matches}
+                highlightMatchId={selectedMatchId}
+                onOverlapClick={handleOverlapClick}
+              />
+            ))}
+          </div>
+          
+          {/* Overlap popup */}
+          {activeOverlap && (
+            <OverlapPopup
+              overlap={activeOverlap}
+              matches={matches}
+              position={popupPosition}
+              onClose={() => setActiveOverlap(null)}
+            />
+          )}
+        </div>
+      )}
+
+      {/* Match Color Legend */}
+      {matches.length > 0 && !selectedMatchId && (
+        <div className="card p-4">
+          <h3 className="text-sm font-medium mb-3 flex items-center gap-2">
+            <Users size={16} className="text-faded-ink" />
+            Match Colors
+          </h3>
+          <div className="flex flex-wrap gap-3">
+            {matches.slice(0, 15).map(match => {
+              const segCount = filteredSegments.filter(s => s.match_id === match.id).length
+              if (segCount === 0) return null
+              return (
+                <button
+                  key={match.id}
+                  onClick={() => setSelectedMatchId(match.id)}
+                  className="flex items-center gap-2 px-3 py-1.5 bg-gray-50 rounded-full hover:bg-gray-100 transition-colors"
+                >
+                  <div
+                    className="w-3 h-3 rounded-full"
+                    style={{ backgroundColor: match.color }}
+                  />
+                  <span className="text-sm">{match.match_name}</span>
+                  <span className="text-xs text-faded-ink">({segCount})</span>
+                </button>
+              )
+            })}
+            {matches.length > 15 && (
+              <span className="text-sm text-faded-ink self-center">
+                +{matches.length - 15} more
+              </span>
             )}
           </div>
         </div>
       )}
-
-      {/* Help Text */}
-      <div className="text-sm text-faded-ink">
-        <p>
-          <strong>Tip:</strong> Hover over segments to see details. Click to view the match.
-          Overlapping segments are stacked vertically.
-        </p>
-      </div>
     </div>
   )
 }

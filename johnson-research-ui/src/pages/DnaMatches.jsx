@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from 'react'
-import { Link } from 'react-router-dom'
-import { Plus, Dna, ExternalLink, Edit, Trash2, Search, Filter, X } from 'lucide-react'
+import { Link, useSearchParams } from 'react-router-dom'
+import { Plus, Dna, ExternalLink, Edit, Trash2, Search, Filter, X, Users } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 import { useWorkspace } from '../contexts/WorkspaceContext'
 import ConfirmDialog from '../components/common/ConfirmDialog'
@@ -60,7 +60,9 @@ const companyBadgeColors = {
 
 export default function DnaMatchesPage() {
   const { workspaceId } = useWorkspace()
+  const [searchParams, setSearchParams] = useSearchParams()
   const [matches, setMatches] = useState([])
+  const [matchSurnames, setMatchSurnames] = useState({}) // { matchId: [surname1, surname2, ...] }
   const [loading, setLoading] = useState(true)
   const [deleteMatch, setDeleteMatch] = useState(null)
   const [deleting, setDeleting] = useState(false)
@@ -73,10 +75,14 @@ export default function DnaMatchesPage() {
   const [minCm, setMinCm] = useState('')
   const [maxCm, setMaxCm] = useState('')
   const [hasSegmentsFilter, setHasSegmentsFilter] = useState(false)
+  
+  // Surname filter from URL (from Mystery Surnames page)
+  const surnameFilter = searchParams.get('surname')?.toUpperCase() || ''
 
   useEffect(() => {
     if (workspaceId) {
       loadMatches()
+      loadMatchSurnames()
     }
   }, [workspaceId])
 
@@ -97,6 +103,32 @@ export default function DnaMatchesPage() {
       setMatches(data || [])
     }
     setLoading(false)
+  }
+
+  const loadMatchSurnames = async () => {
+    const { data, error } = await supabase
+      .from('dna_match_surnames')
+      .select('match_id, surname')
+    
+    if (error) {
+      console.error('Error loading match surnames:', error)
+      return
+    }
+
+    // Group surnames by match_id
+    const surnameMap = {}
+    for (const row of data || []) {
+      if (!surnameMap[row.match_id]) {
+        surnameMap[row.match_id] = []
+      }
+      surnameMap[row.match_id].push(row.surname?.toUpperCase())
+    }
+    setMatchSurnames(surnameMap)
+  }
+
+  const clearSurnameFilter = () => {
+    searchParams.delete('surname')
+    setSearchParams(searchParams)
   }
 
   const handleDelete = async () => {

@@ -176,6 +176,15 @@ function PersonDetail() {
     }))
     setEvents(personEvents)
 
+    // Fetch DNA matches where this person is confirmed MRCA
+    const { data: dnaMatchData } = await supabase
+      .from('dna_matches')
+      .select('*')
+      .eq('confirmed_mrca_id', id)
+      .order('shared_cm', { ascending: false })
+
+    setDnaMatches(dnaMatchData || [])
+
     setLoading(false)
   }
 
@@ -1118,6 +1127,41 @@ function PersonDetail() {
                 <dd>{documents.length}</dd>
               </div>
             </dl>
+          </div>
+
+          {/* DNA Connections */}
+          <div className="card">
+            <h3 className="font-medium mb-3 flex items-center gap-2">
+              <Dna size={16} className="text-purple-600" />
+              DNA Connections
+            </h3>
+            {dnaMatches.length > 0 ? (
+              <ul className="space-y-3">
+                {dnaMatches.map(match => (
+                  <li key={match.id} className="p-2 rounded bg-parchment/50 hover:bg-parchment">
+                    <Link
+                      to={`/dna/matches/${match.id}`}
+                      className="font-medium text-sepia hover:underline block"
+                    >
+                      {match.match_name}
+                    </Link>
+                    <div className="flex items-center gap-2 mt-1 text-sm text-faded-ink">
+                      <span className="font-mono">{match.shared_cm?.toLocaleString() || '—'} cM</span>
+                      {match.testing_company && (
+                        <>
+                          <span>•</span>
+                          <span className="capitalize">{match.testing_company}</span>
+                        </>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="text-sm text-faded-ink">
+                No DNA matches confirmed through this ancestor.
+              </p>
+            )}
           </div>
         </div>
       </div>

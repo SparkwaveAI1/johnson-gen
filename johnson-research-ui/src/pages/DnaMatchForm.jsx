@@ -1,8 +1,9 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, X, Plus, AlertCircle, Search, Check, ChevronDown, ChevronRight, Trash2 } from 'lucide-react'
+import { ArrowLeft, X, Plus, AlertCircle, Search, Check, ChevronDown, ChevronRight, Trash2, GitBranch, UserCheck } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 import { useWorkspace } from '../contexts/WorkspaceContext'
+import PersonSelector from '../components/people/PersonSelector'
 
 // Chromosome options (1-22 + X)
 const chromosomeOptions = [
