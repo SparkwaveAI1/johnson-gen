@@ -177,6 +177,45 @@ function Dashboard() {
         />
       </div>
 
+      {/* DNA Stats Card */}
+      <div className="card">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="p-2 rounded-lg bg-purple-600">
+            <Dna size={20} className="text-white" />
+          </div>
+          <h2 className="text-lg font-display">DNA Research</h2>
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <Link to="/dna/matches" className="p-3 rounded-lg bg-parchment hover:bg-sepia/10 transition-colors">
+            <p className="text-2xl font-semibold text-sepia">{dnaStats.matchCount}</p>
+            <p className="text-sm text-faded-ink">DNA Matches</p>
+          </Link>
+          <Link to="/dna/segments" className="p-3 rounded-lg bg-parchment hover:bg-sepia/10 transition-colors">
+            <p className="text-2xl font-semibold text-sepia">{dnaStats.segmentCount}</p>
+            <p className="text-sm text-faded-ink">Segments Recorded</p>
+          </Link>
+          <Link to="/dna/surnames" className="p-3 rounded-lg bg-parchment hover:bg-sepia/10 transition-colors">
+            <p className="text-2xl font-semibold text-sepia">{dnaStats.mysterySurnameCount}</p>
+            <p className="text-sm text-faded-ink">Mystery Surnames</p>
+          </Link>
+          <div className="p-3 rounded-lg bg-parchment">
+            {dnaStats.topMysterySurname ? (
+              <>
+                <p className="text-xl font-semibold text-sepia">{dnaStats.topMysterySurname.surname}</p>
+                <p className="text-sm text-faded-ink">
+                  Top Mystery ({dnaStats.topMysterySurname.total_shared_cm?.toLocaleString() || 0} cM)
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-xl font-semibold text-faded-ink">—</p>
+                <p className="text-sm text-faded-ink">Top Mystery Surname</p>
+              </>
+            )}
+          </div>
+        </div>
+      </div>
+
       {/* Recent Activity */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="card">

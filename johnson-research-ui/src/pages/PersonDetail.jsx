@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
-import { ArrowLeft, Edit, Users, FileText, MapPin, Plus, RefreshCw, Link as LinkIcon, BookOpen, ClipboardList, Upload, Navigation, Trash2, Calendar, Merge } from 'lucide-react'
+import { ArrowLeft, Edit, Users, FileText, MapPin, Plus, RefreshCw, Link as LinkIcon, BookOpen, ClipboardList, Upload, Navigation, Trash2, Calendar, Merge, Dna } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 import { useWorkspace } from '../contexts/WorkspaceContext'
 import ConfidenceIndicator from '../components/common/ConfidenceIndicator'
@@ -32,6 +32,7 @@ function PersonDetail() {
   const [documents, setDocuments] = useState([])
   const [locations, setLocations] = useState([])
   const [events, setEvents] = useState([])
+  const [dnaMatches, setDnaMatches] = useState([])
   const [loading, setLoading] = useState(true)
 
   // View mode: 'details' or 'bio'
