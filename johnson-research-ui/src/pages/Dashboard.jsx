@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Users, FileText, BookOpen, GitCompare, HelpCircle, Plus, Upload } from 'lucide-react'
+import { Users, FileText, BookOpen, GitCompare, HelpCircle, Plus, Upload, Dna } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 import { useWorkspace } from '../contexts/WorkspaceContext'
 import PersonForm from '../components/people/PersonForm'
@@ -33,6 +33,12 @@ function Dashboard() {
     unresolvedIdentities: 0,
     openQuestions: 0,
   })
+  const [dnaStats, setDnaStats] = useState({
+    matchCount: 0,
+    segmentCount: 0,
+    mysterySurnameCount: 0,
+    topMysterySurname: null,
+  })
   const [loading, setLoading] = useState(true)
   const [recentPeople, setRecentPeople] = useState([])
 
@@ -52,14 +58,24 @@ function Dashboard() {
         { count: sourcesCount },
         { count: identityCount },
         { count: questionsCount },
-        { data: recent }
+        { data: recent },
+        // DNA stats
+        { count: dnaMatchCount },
+        { count: dnaSegmentCount },
+        { data: mysterySurnames },
+        { data: topSurnameData }
       ] = await Promise.all([
         supabase.from('people').select('*', { count: 'exact', head: true }).eq('workspace_id', workspaceId),
         supabase.from('documents').select('*', { count: 'exact', head: true }).eq('workspace_id', workspaceId),
         supabase.from('sources').select('*', { count: 'exact', head: true }).eq('workspace_id', workspaceId),
         supabase.from('identity_candidates').select('*', { count: 'exact', head: true }).eq('status', 'unresolved'),
         supabase.from('research_questions').select('*', { count: 'exact', head: true }).eq('status', 'open'),
-        supabase.from('people').select('id, given_name, surname, birth_year, confidence').eq('workspace_id', workspaceId).order('created_at', { ascending: false }).limit(5)
+        supabase.from('people').select('id, given_name, surname, birth_year, confidence').eq('workspace_id', workspaceId).order('created_at', { ascending: false }).limit(5),
+        // DNA counts
+        supabase.from('dna_matches').select('id', { count: 'exact', head: true }).eq('workspace_id', workspaceId),
+        supabase.from('dna_segments').select('id', { count: 'exact', head: true }).eq('workspace_id', workspaceId),
+        supabase.from('mystery_surnames').select('*').eq('workspace_id', workspaceId).eq('in_tree', false),
+        supabase.from('mystery_surnames').select('surname, total_shared_cm').eq('workspace_id', workspaceId).eq('in_tree', false).order('total_shared_cm', { ascending: false }).limit(1)
       ])
 
       setStats({
@@ -70,6 +86,12 @@ function Dashboard() {
         openQuestions: questionsCount || 0,
       })
       setRecentPeople(recent || [])
+      setDnaStats({
+        matchCount: dnaMatchCount || 0,
+        segmentCount: dnaSegmentCount || 0,
+        mysterySurnameCount: mysterySurnames?.length || 0,
+        topMysterySurname: topSurnameData?.[0] || null,
+      })
     } catch (error) {
       console.error('Error fetching stats:', error)
     } finally {

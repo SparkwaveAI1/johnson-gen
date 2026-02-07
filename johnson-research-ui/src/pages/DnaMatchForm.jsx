@@ -755,6 +755,191 @@ function DnaMatchFormPage() {
             </div>
           </div>
 
+          {/* Section 4: DNA Segments */}
+          <div className="space-y-4">
+            <button
+              type="button"
+              onClick={() => setSegmentsExpanded(!segmentsExpanded)}
+              className="flex items-center gap-2 w-full text-left text-lg font-medium border-b border-sepia/20 pb-2 hover:text-sepia transition-colors"
+            >
+              {segmentsExpanded ? <ChevronDown size={20} /> : <ChevronRight size={20} />}
+              <span>Segments</span>
+              {segments.length > 0 && (
+                <span className="ml-2 px-2 py-0.5 text-xs bg-sepia/10 text-sepia rounded-full">
+                  {segments.length}
+                </span>
+              )}
+            </button>
+
+            {segmentsExpanded && (
+              <div className="space-y-4">
+                {/* Segments Table */}
+                {segments.length > 0 && (
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="border-b border-sepia/20">
+                          <th className="text-left py-2 px-2 font-medium">Chr</th>
+                          <th className="text-left py-2 px-2 font-medium">Start (Mbp)</th>
+                          <th className="text-left py-2 px-2 font-medium">End (Mbp)</th>
+                          <th className="text-left py-2 px-2 font-medium">cM</th>
+                          <th className="text-left py-2 px-2 font-medium">SNPs</th>
+                          <th className="text-left py-2 px-2 font-medium w-12"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {segments.map((segment, index) => (
+                          <tr key={segment.id || segment._tempId} className="border-b border-sepia/10">
+                            <td className="py-2 px-2">
+                              <select
+                                value={segment.chromosome}
+                                onChange={(e) => handleUpdateSegment(index, 'chromosome', e.target.value)}
+                                className="input py-1 px-2 w-16"
+                              >
+                                <option value="">-</option>
+                                {chromosomeOptions.map(opt => (
+                                  <option key={opt.value} value={opt.value}>{opt.label}</option>
+                                ))}
+                              </select>
+                            </td>
+                            <td className="py-2 px-2">
+                              <input
+                                type="number"
+                                value={segment.start_position}
+                                onChange={(e) => handleUpdateSegment(index, 'start_position', e.target.value)}
+                                className="input py-1 px-2 w-24"
+                                min="0"
+                              />
+                            </td>
+                            <td className="py-2 px-2">
+                              <input
+                                type="number"
+                                value={segment.end_position}
+                                onChange={(e) => handleUpdateSegment(index, 'end_position', e.target.value)}
+                                className="input py-1 px-2 w-24"
+                                min="0"
+                              />
+                            </td>
+                            <td className="py-2 px-2">
+                              <input
+                                type="number"
+                                value={segment.cm}
+                                onChange={(e) => handleUpdateSegment(index, 'cm', e.target.value)}
+                                className="input py-1 px-2 w-20"
+                                step="0.01"
+                                min="0"
+                              />
+                            </td>
+                            <td className="py-2 px-2">
+                              <input
+                                type="number"
+                                value={segment.snps}
+                                onChange={(e) => handleUpdateSegment(index, 'snps', e.target.value)}
+                                className="input py-1 px-2 w-20"
+                                min="0"
+                              />
+                            </td>
+                            <td className="py-2 px-2">
+                              <button
+                                type="button"
+                                onClick={() => handleDeleteSegment(index)}
+                                className="text-faded-ink hover:text-red-600 transition-colors p-1"
+                                title="Delete segment"
+                              >
+                                <Trash2 size={16} />
+                              </button>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+
+                {/* Add New Segment Row */}
+                <div className="bg-parchment/50 p-3 rounded-lg">
+                  <p className="text-sm font-medium mb-3">Add New Segment</p>
+                  <div className="grid grid-cols-6 gap-2 items-end">
+                    <div>
+                      <label className="text-xs text-faded-ink">Chromosome</label>
+                      <select
+                        value={newSegment.chromosome}
+                        onChange={(e) => handleNewSegmentChange('chromosome', e.target.value)}
+                        className="input py-1.5 text-sm"
+                      >
+                        <option value="">Select...</option>
+                        {chromosomeOptions.map(opt => (
+                          <option key={opt.value} value={opt.value}>{opt.label}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label className="text-xs text-faded-ink">Start (Mbp)</label>
+                      <input
+                        type="number"
+                        value={newSegment.start_position}
+                        onChange={(e) => handleNewSegmentChange('start_position', e.target.value)}
+                        placeholder="0"
+                        className="input py-1.5 text-sm"
+                        min="0"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs text-faded-ink">End (Mbp)</label>
+                      <input
+                        type="number"
+                        value={newSegment.end_position}
+                        onChange={(e) => handleNewSegmentChange('end_position', e.target.value)}
+                        placeholder="0"
+                        className="input py-1.5 text-sm"
+                        min="0"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs text-faded-ink">cM</label>
+                      <input
+                        type="number"
+                        value={newSegment.cm}
+                        onChange={(e) => handleNewSegmentChange('cm', e.target.value)}
+                        placeholder="0.00"
+                        className="input py-1.5 text-sm"
+                        step="0.01"
+                        min="0"
+                      />
+                    </div>
+                    <div>
+                      <label className="text-xs text-faded-ink">SNPs</label>
+                      <input
+                        type="number"
+                        value={newSegment.snps}
+                        onChange={(e) => handleNewSegmentChange('snps', e.target.value)}
+                        placeholder="0"
+                        className="input py-1.5 text-sm"
+                        min="0"
+                      />
+                    </div>
+                    <div>
+                      <button
+                        type="button"
+                        onClick={handleAddSegment}
+                        className="btn-secondary py-1.5 w-full flex items-center justify-center gap-1"
+                      >
+                        <Plus size={14} />
+                        Add
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {segments.length === 0 && (
+                  <p className="text-sm text-faded-ink text-center py-4">
+                    No segments added yet. Use the form above to add shared DNA segments.
+                  </p>
+                )}
+              </div>
+            )}
+          </div>
+
           {/* Form Actions */}
           <div className="flex justify-end gap-3 pt-4 border-t border-sepia/20">
             <Link to="/dna/matches" className="btn-secondary">
