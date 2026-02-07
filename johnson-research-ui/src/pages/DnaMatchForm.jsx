@@ -1,8 +1,14 @@
 import { useState, useEffect, useCallback } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
-import { ArrowLeft, X, Plus, AlertCircle, Search, Check } from 'lucide-react'
+import { ArrowLeft, X, Plus, AlertCircle, Search, Check, ChevronDown, ChevronRight, Trash2 } from 'lucide-react'
 import { supabase } from '../lib/supabase'
 import { useWorkspace } from '../contexts/WorkspaceContext'
+
+// Chromosome options (1-22 + X)
+const chromosomeOptions = [
+  ...Array.from({ length: 22 }, (_, i) => ({ value: String(i + 1), label: String(i + 1) })),
+  { value: 'X', label: 'X' }
+]
 
 const testingCompanies = [
   { value: 'ancestry', label: 'AncestryDNA' },
@@ -64,6 +70,18 @@ function DnaMatchFormPage() {
   const [surnames, setSurnames] = useState([])
   const [surnameInput, setSurnameInput] = useState('')
   const [existingSurnameIds, setExistingSurnameIds] = useState([]) // Track IDs for updates
+
+  // Segments state
+  const [segments, setSegments] = useState([])
+  const [originalSegmentIds, setOriginalSegmentIds] = useState([]) // Track original IDs for diff
+  const [segmentsExpanded, setSegmentsExpanded] = useState(false)
+  const [newSegment, setNewSegment] = useState({
+    chromosome: '',
+    start_position: '',
+    end_position: '',
+    cm: '',
+    snps: ''
+  })
 
   // Person search for MRCA
   const [mrcaSearch, setMrcaSearch] = useState('')
@@ -133,6 +151,33 @@ function DnaMatchFormPage() {
 
       setSurnames(surnameData?.map(s => s.surname) || [])
       setExistingSurnameIds(surnameData?.map(s => ({ id: s.id, surname: s.surname })) || [])
+
+      // Fetch segments
+      const { data: segmentData, error: segmentError } = await supabase
+        .from('dna_segments')
+        .select('id, chromosome, start_position, end_position, cm, snps')
+        .eq('match_id', id)
+        .order('chromosome', { ascending: true })
+        .order('start_position', { ascending: true })
+
+      if (segmentError) throw segmentError
+
+      const loadedSegments = (segmentData || []).map(s => ({
+        id: s.id,
+        chromosome: s.chromosome || '',
+        start_position: s.start_position ? String(s.start_position) : '',
+        end_position: s.end_position ? String(s.end_position) : '',
+        cm: s.cm ? String(s.cm) : '',
+        snps: s.snps ? String(s.snps) : '',
+        _original: true // Mark as existing in DB
+      }))
+      setSegments(loadedSegments)
+      setOriginalSegmentIds(loadedSegments.map(s => s.id))
+      
+      // Auto-expand if there are segments
+      if (loadedSegments.length > 0) {
+        setSegmentsExpanded(true)
+      }
     } catch (err) {
       console.error('Error loading match:', err)
       setError('Failed to load match data')
@@ -205,6 +250,61 @@ function DnaMatchFormPage() {
   const handleClearMrca = () => {
     setSelectedMrca(null)
     setFormData(prev => ({ ...prev, confirmed_mrca_id: null }))
+  }
+
+  // Segment management
+  const handleNewSegmentChange = (field, value) => {
+    setNewSegment(prev => ({ ...prev, [field]: value }))
+  }
+
+  const validateSegment = (segment) => {
+    if (!segment.chromosome) {
+      return 'Chromosome is required'
+    }
+    const start = parseFloat(segment.start_position)
+    const end = parseFloat(segment.end_position)
+    if (segment.start_position && segment.end_position && start >= end) {
+      return 'Start must be less than End'
+    }
+    const cm = parseFloat(segment.cm)
+    if (segment.cm && cm <= 0) {
+      return 'cM must be positive'
+    }
+    return null
+  }
+
+  const handleAddSegment = () => {
+    const validationError = validateSegment(newSegment)
+    if (validationError) {
+      setError(validationError)
+      return
+    }
+
+    setSegments(prev => [...prev, {
+      ...newSegment,
+      _tempId: Date.now(), // Temp ID for new segments
+      _isNew: true
+    }])
+    setNewSegment({
+      chromosome: '',
+      start_position: '',
+      end_position: '',
+      cm: '',
+      snps: ''
+    })
+    setError(null)
+  }
+
+  const handleUpdateSegment = (index, field, value) => {
+    setSegments(prev => prev.map((seg, i) => 
+      i === index 
+        ? { ...seg, [field]: value, _modified: !seg._isNew } 
+        : seg
+    ))
+  }
+
+  const handleDeleteSegment = (index) => {
+    setSegments(prev => prev.filter((_, i) => i !== index))
   }
 
   // Form submission
@@ -301,6 +401,54 @@ function DnaMatchFormPage() {
 
           if (insertSurnameError) throw insertSurnameError
         }
+      }
+
+      // Handle segments
+      // 1. Find segments to delete (original IDs not in current list)
+      const currentSegmentIds = segments.filter(s => s.id).map(s => s.id)
+      const segmentsToDelete = originalSegmentIds.filter(id => !currentSegmentIds.includes(id))
+
+      if (segmentsToDelete.length > 0) {
+        const { error: deleteSegmentError } = await supabase
+          .from('dna_segments')
+          .delete()
+          .in('id', segmentsToDelete)
+
+        if (deleteSegmentError) throw deleteSegmentError
+      }
+
+      // 2. Insert new segments
+      const newSegments = segments.filter(s => s._isNew)
+      if (newSegments.length > 0) {
+        const { error: insertSegmentError } = await supabase
+          .from('dna_segments')
+          .insert(newSegments.map(seg => ({
+            match_id: matchId,
+            chromosome: seg.chromosome,
+            start_position: seg.start_position ? parseInt(seg.start_position) : null,
+            end_position: seg.end_position ? parseInt(seg.end_position) : null,
+            cm: seg.cm ? parseFloat(seg.cm) : null,
+            snps: seg.snps ? parseInt(seg.snps) : null
+          })))
+
+        if (insertSegmentError) throw insertSegmentError
+      }
+
+      // 3. Update modified segments
+      const modifiedSegments = segments.filter(s => s._modified && s.id)
+      for (const seg of modifiedSegments) {
+        const { error: updateSegmentError } = await supabase
+          .from('dna_segments')
+          .update({
+            chromosome: seg.chromosome,
+            start_position: seg.start_position ? parseInt(seg.start_position) : null,
+            end_position: seg.end_position ? parseInt(seg.end_position) : null,
+            cm: seg.cm ? parseFloat(seg.cm) : null,
+            snps: seg.snps ? parseInt(seg.snps) : null
+          })
+          .eq('id', seg.id)
+
+        if (updateSegmentError) throw updateSegmentError
       }
 
       // Success - redirect to matches list
