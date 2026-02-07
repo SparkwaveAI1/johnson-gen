@@ -11,7 +11,8 @@ import {
   AlertTriangle,
   Search,
   Upload,
-  GitBranch
+  GitBranch,
+  Dna
 } from 'lucide-react'
 import WorkspaceSwitcher from './WorkspaceSwitcher'
 
@@ -28,6 +29,12 @@ const navItems = [
   { to: '/identity', icon: GitCompare, label: 'Identity Queue' },
   { to: '/research', icon: HelpCircle, label: 'Research Questions' },
   { to: '/gaps', icon: AlertTriangle, label: 'Gap Analysis' },
+]
+
+const dnaItems = [
+  { to: '/dna/matches', icon: Dna, label: 'DNA Matches' },
+  { to: '/dna/segments', icon: Dna, label: 'Segments' },
+  { to: '/dna/surnames', icon: Dna, label: 'Mystery Surnames' },
 ]
 
 function Layout() {
@@ -49,7 +56,7 @@ function Layout() {
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 p-4">
+        <nav className="flex-1 p-4 overflow-y-auto">
           <ul className="space-y-1">
             {navItems.map(({ to, icon: Icon, label }) => (
               <li key={to}>
@@ -70,6 +77,33 @@ function Layout() {
               </li>
             ))}
           </ul>
+
+          {/* DNA Section */}
+          <div className="mt-6 pt-4 border-t border-sepia/20">
+            <div className="flex items-center gap-2 px-3 mb-2 text-xs font-semibold text-faded-ink uppercase tracking-wider">
+              <Dna size={14} />
+              <span>DNA</span>
+            </div>
+            <ul className="space-y-1">
+              {dnaItems.map(({ to, icon: Icon, label }) => (
+                <li key={to}>
+                  <NavLink
+                    to={to}
+                    className={({ isActive }) =>
+                      `flex items-center gap-3 px-3 py-2 rounded-md transition-colors ${
+                        isActive
+                          ? 'bg-sepia text-white'
+                          : 'text-ink hover:bg-parchment'
+                      }`
+                    }
+                  >
+                    <Icon size={18} />
+                    <span>{label}</span>
+                  </NavLink>
+                </li>
+              ))}
+            </ul>
+          </div>
         </nav>
 
         {/* Footer */}

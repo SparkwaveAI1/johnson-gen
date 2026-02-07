@@ -1,0 +1,625 @@
+import { useState, useEffect, useCallback } from 'react'
+import { useParams, useNavigate, Link } from 'react-router-dom'
+import { ArrowLeft, X, Plus, AlertCircle, Search, Check } from 'lucide-react'
+import { supabase } from '../lib/supabase'
+import { useWorkspace } from '../contexts/WorkspaceContext'
+
+const testingCompanies = [
+  { value: 'ancestry', label: 'AncestryDNA' },
+  { value: '23andme', label: '23andMe' },
+  { value: 'myheritage', label: 'MyHeritage' },
+  { value: 'ftdna', label: 'FTDNA' },
+  { value: 'gedmatch', label: 'GEDmatch' },
+  { value: 'other', label: 'Other' }
+]
+
+const contactStatuses = [
+  { value: 'not_contacted', label: 'Not Contacted' },
+  { value: 'contacted', label: 'Contacted' },
+  { value: 'responded', label: 'Responded' },
+  { value: 'no_response', label: 'No Response' },
+  { value: 'collaborative', label: 'Collaborative' }
+]
+
+const commonRelationships = [
+  'Parent/Child',
+  'Full Sibling',
+  'Half Sibling',
+  'Grandparent/Grandchild',
+  'Aunt/Uncle/Niece/Nephew',
+  '1st Cousin',
+  '1st Cousin Once Removed',
+  '2nd Cousin',
+  '2nd Cousin Once Removed',
+  '3rd Cousin',
+  '3rd Cousin Once Removed',
+  '4th Cousin',
+  '4th-6th Cousin',
+  'Distant Cousin',
+  'Unknown'
+]
+
+function DnaMatchFormPage() {
+  const { id } = useParams()
+  const navigate = useNavigate()
+  const { workspaceId } = useWorkspace()
+  const isEdit = Boolean(id)
+
+  // Form state
+  const [formData, setFormData] = useState({
+    match_name: '',
+    testing_company: 'ancestry',
+    shared_cm: '',
+    shared_segments: '',
+    largest_segment_cm: '',
+    predicted_relationship: '',
+    match_tree_url: '',
+    match_tree_size: '',
+    contact_status: 'not_contacted',
+    confirmed_mrca_id: null,
+    notes: ''
+  })
+
+  // Surnames state (managed separately for tag input)
+  const [surnames, setSurnames] = useState([])
+  const [surnameInput, setSurnameInput] = useState('')
+  const [existingSurnameIds, setExistingSurnameIds] = useState([]) // Track IDs for updates
+
+  // Person search for MRCA
+  const [mrcaSearch, setMrcaSearch] = useState('')
+  const [mrcaResults, setMrcaResults] = useState([])
+  const [selectedMrca, setSelectedMrca] = useState(null)
+  const [showMrcaDropdown, setShowMrcaDropdown] = useState(false)
+
+  // UI state
+  const [loading, setLoading] = useState(isEdit)
+  const [saving, setSaving] = useState(false)
+  const [error, setError] = useState(null)
+
+  // Load existing match data
+  useEffect(() => {
+    if (isEdit && workspaceId) {
+      loadMatch()
+    }
+  }, [id, workspaceId, isEdit])
+
+  const loadMatch = async () => {
+    setLoading(true)
+    try {
+      // Fetch match
+      const { data: matchData, error: matchError } = await supabase
+        .from('dna_matches')
+        .select('*')
+        .eq('id', id)
+        .eq('workspace_id', workspaceId)
+        .single()
+
+      if (matchError) throw matchError
+
+      setFormData({
+        match_name: matchData.match_name || '',
+        testing_company: matchData.testing_company || 'ancestry',
+        shared_cm: matchData.shared_cm || '',
+        shared_segments: matchData.shared_segments || '',
+        largest_segment_cm: matchData.largest_segment_cm || '',
+        predicted_relationship: matchData.predicted_relationship || '',
+        match_tree_url: matchData.match_tree_url || '',
+        match_tree_size: matchData.match_tree_size || '',
+        contact_status: matchData.contact_status || 'not_contacted',
+        confirmed_mrca_id: matchData.confirmed_mrca_id || null,
+        notes: matchData.notes || ''
+      })
+
+      // Load MRCA person if set
+      if (matchData.confirmed_mrca_id) {
+        const { data: personData } = await supabase
+          .from('people')
+          .select('id, given_name, surname, birth_year')
+          .eq('id', matchData.confirmed_mrca_id)
+          .single()
+
+        if (personData) {
+          setSelectedMrca(personData)
+        }
+      }
+
+      // Fetch surnames
+      const { data: surnameData, error: surnameError } = await supabase
+        .from('dna_match_surnames')
+        .select('id, surname')
+        .eq('match_id', id)
+
+      if (surnameError) throw surnameError
+
+      setSurnames(surnameData?.map(s => s.surname) || [])
+      setExistingSurnameIds(surnameData?.map(s => ({ id: s.id, surname: s.surname })) || [])
+    } catch (err) {
+      console.error('Error loading match:', err)
+      setError('Failed to load match data')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  // Handle form field changes
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  // Surname tag management
+  const handleAddSurname = () => {
+    const trimmed = surnameInput.trim()
+    if (trimmed && !surnames.includes(trimmed)) {
+      setSurnames(prev => [...prev, trimmed])
+      setSurnameInput('')
+    }
+  }
+
+  const handleSurnameKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault()
+      handleAddSurname()
+    }
+  }
+
+  const handleRemoveSurname = (surnameToRemove) => {
+    setSurnames(prev => prev.filter(s => s !== surnameToRemove))
+  }
+
+  // MRCA person search with debounce
+  const searchPeople = useCallback(async (query) => {
+    if (!query || query.length < 2 || !workspaceId) {
+      setMrcaResults([])
+      return
+    }
+
+    const { data } = await supabase
+      .from('people')
+      .select('id, given_name, surname, birth_year')
+      .eq('workspace_id', workspaceId)
+      .or(`surname.ilike.%${query}%,given_name.ilike.%${query}%`)
+      .limit(10)
+
+    setMrcaResults(data || [])
+  }, [workspaceId])
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      searchPeople(mrcaSearch)
+    }, 300)
+    return () => clearTimeout(timer)
+  }, [mrcaSearch, searchPeople])
+
+  const handleSelectMrca = (person) => {
+    setSelectedMrca(person)
+    setFormData(prev => ({ ...prev, confirmed_mrca_id: person.id }))
+    setMrcaSearch('')
+    setShowMrcaDropdown(false)
+    setMrcaResults([])
+  }
+
+  const handleClearMrca = () => {
+    setSelectedMrca(null)
+    setFormData(prev => ({ ...prev, confirmed_mrca_id: null }))
+  }
+
+  // Form submission
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    setError(null)
+
+    // Validation
+    if (!formData.match_name.trim()) {
+      setError('Match name is required')
+      return
+    }
+
+    setSaving(true)
+
+    try {
+      // Prepare match data
+      const matchPayload = {
+        match_name: formData.match_name.trim(),
+        testing_company: formData.testing_company,
+        shared_cm: formData.shared_cm ? parseFloat(formData.shared_cm) : null,
+        shared_segments: formData.shared_segments ? parseInt(formData.shared_segments) : null,
+        largest_segment_cm: formData.largest_segment_cm ? parseFloat(formData.largest_segment_cm) : null,
+        predicted_relationship: formData.predicted_relationship || null,
+        match_tree_url: formData.match_tree_url || null,
+        match_tree_size: formData.match_tree_size ? parseInt(formData.match_tree_size) : null,
+        contact_status: formData.contact_status,
+        confirmed_mrca_id: formData.confirmed_mrca_id || null,
+        notes: formData.notes || null,
+        workspace_id: workspaceId
+      }
+
+      let matchId = id
+
+      if (isEdit) {
+        // Update existing match
+        const { error: updateError } = await supabase
+          .from('dna_matches')
+          .update(matchPayload)
+          .eq('id', id)
+
+        if (updateError) throw updateError
+      } else {
+        // Insert new match
+        const { data: newMatch, error: insertError } = await supabase
+          .from('dna_matches')
+          .insert(matchPayload)
+          .select()
+          .single()
+
+        if (insertError) throw insertError
+        matchId = newMatch.id
+      }
+
+      // Handle surnames - delete removed ones, insert new ones
+      if (isEdit) {
+        // Find surnames to delete (exist in DB but not in current list)
+        const surnamesToDelete = existingSurnameIds
+          .filter(existing => !surnames.includes(existing.surname))
+          .map(s => s.id)
+
+        if (surnamesToDelete.length > 0) {
+          const { error: deleteError } = await supabase
+            .from('dna_match_surnames')
+            .delete()
+            .in('id', surnamesToDelete)
+
+          if (deleteError) throw deleteError
+        }
+
+        // Find surnames to add (in current list but not in DB)
+        const existingSurnameList = existingSurnameIds.map(s => s.surname)
+        const surnamesToAdd = surnames.filter(s => !existingSurnameList.includes(s))
+
+        if (surnamesToAdd.length > 0) {
+          const { error: insertSurnameError } = await supabase
+            .from('dna_match_surnames')
+            .insert(surnamesToAdd.map(surname => ({
+              match_id: matchId,
+              surname
+            })))
+
+          if (insertSurnameError) throw insertSurnameError
+        }
+      } else {
+        // Insert all surnames for new match
+        if (surnames.length > 0) {
+          const { error: insertSurnameError } = await supabase
+            .from('dna_match_surnames')
+            .insert(surnames.map(surname => ({
+              match_id: matchId,
+              surname
+            })))
+
+          if (insertSurnameError) throw insertSurnameError
+        }
+      }
+
+      // Success - redirect to matches list
+      navigate('/dna/matches')
+    } catch (err) {
+      console.error('Error saving match:', err)
+      setError(err.message || 'Failed to save match')
+    } finally {
+      setSaving(false)
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <p className="text-faded-ink">Loading...</p>
+      </div>
+    )
+  }
+
+  return (
+    <div className="max-w-2xl mx-auto">
+      {/* Header */}
+      <Link to="/dna/matches" className="text-faded-ink hover:text-ink flex items-center gap-1 mb-4">
+        <ArrowLeft size={16} />
+        Back to DNA Matches
+      </Link>
+
+      <div className="card">
+        <h1 className="text-2xl font-display mb-6">
+          {isEdit ? 'Edit DNA Match' : 'Add DNA Match'}
+        </h1>
+
+        {error && (
+          <div className="flex items-center gap-2 p-3 mb-6 bg-red-50 text-red-800 rounded-lg">
+            <AlertCircle size={18} />
+            <span>{error}</span>
+          </div>
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-8">
+          {/* Section 1: Basic Info */}
+          <div className="space-y-4">
+            <h2 className="text-lg font-medium border-b border-sepia/20 pb-2">Basic Info</h2>
+
+            <div>
+              <label className="label">Match Name *</label>
+              <input
+                type="text"
+                name="match_name"
+                value={formData.match_name}
+                onChange={handleChange}
+                placeholder="e.g., John Smith"
+                className="input"
+                required
+              />
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="label">Testing Company</label>
+                <select
+                  name="testing_company"
+                  value={formData.testing_company}
+                  onChange={handleChange}
+                  className="input"
+                >
+                  {testingCompanies.map(company => (
+                    <option key={company.value} value={company.value}>
+                      {company.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div>
+                <label className="label">Shared cM</label>
+                <input
+                  type="number"
+                  name="shared_cm"
+                  value={formData.shared_cm}
+                  onChange={handleChange}
+                  placeholder="e.g., 125.5"
+                  step="0.1"
+                  min="0"
+                  className="input"
+                />
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="label">Shared Segments</label>
+                <input
+                  type="number"
+                  name="shared_segments"
+                  value={formData.shared_segments}
+                  onChange={handleChange}
+                  placeholder="e.g., 8"
+                  min="0"
+                  className="input"
+                />
+              </div>
+
+              <div>
+                <label className="label">Largest Segment cM</label>
+                <input
+                  type="number"
+                  name="largest_segment_cm"
+                  value={formData.largest_segment_cm}
+                  onChange={handleChange}
+                  placeholder="e.g., 45.2"
+                  step="0.1"
+                  min="0"
+                  className="input"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="label">Predicted Relationship</label>
+              <input
+                type="text"
+                name="predicted_relationship"
+                value={formData.predicted_relationship}
+                onChange={handleChange}
+                placeholder="e.g., 2nd Cousin"
+                list="relationship-suggestions"
+                className="input"
+              />
+              <datalist id="relationship-suggestions">
+                {commonRelationships.map(rel => (
+                  <option key={rel} value={rel} />
+                ))}
+              </datalist>
+            </div>
+          </div>
+
+          {/* Section 2: Match Tree Info */}
+          <div className="space-y-4">
+            <h2 className="text-lg font-medium border-b border-sepia/20 pb-2">Match Tree Info</h2>
+
+            <div>
+              <label className="label">Match Tree URL</label>
+              <input
+                type="url"
+                name="match_tree_url"
+                value={formData.match_tree_url}
+                onChange={handleChange}
+                placeholder="https://..."
+                className="input"
+              />
+            </div>
+
+            <div>
+              <label className="label">Tree Size (approx. people count)</label>
+              <input
+                type="number"
+                name="match_tree_size"
+                value={formData.match_tree_size}
+                onChange={handleChange}
+                placeholder="e.g., 500"
+                min="0"
+                className="input"
+              />
+            </div>
+
+            {/* Surname Tags */}
+            <div>
+              <label className="label">Match Tree Surnames</label>
+              <div className="flex flex-wrap gap-2 mb-2">
+                {surnames.map(surname => (
+                  <span
+                    key={surname}
+                    className="inline-flex items-center gap-1 px-3 py-1 bg-sepia/10 text-sepia rounded-full text-sm"
+                  >
+                    {surname}
+                    <button
+                      type="button"
+                      onClick={() => handleRemoveSurname(surname)}
+                      className="hover:text-red-600"
+                    >
+                      <X size={14} />
+                    </button>
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-2">
+                <input
+                  type="text"
+                  value={surnameInput}
+                  onChange={(e) => setSurnameInput(e.target.value)}
+                  onKeyDown={handleSurnameKeyDown}
+                  placeholder="Add a surname..."
+                  className="input flex-1"
+                />
+                <button
+                  type="button"
+                  onClick={handleAddSurname}
+                  className="btn-secondary flex items-center gap-1"
+                >
+                  <Plus size={16} />
+                  Add
+                </button>
+              </div>
+              <p className="text-xs text-faded-ink mt-1">
+                Press Enter or click Add to add a surname
+              </p>
+            </div>
+          </div>
+
+          {/* Section 3: Connection Info */}
+          <div className="space-y-4">
+            <h2 className="text-lg font-medium border-b border-sepia/20 pb-2">Connection Info</h2>
+
+            {/* MRCA Person Selector */}
+            <div>
+              <label className="label">Confirmed MRCA (Most Recent Common Ancestor)</label>
+              {selectedMrca ? (
+                <div className="flex items-center gap-2 p-3 bg-green-50 border border-green-200 rounded-lg">
+                  <Check size={18} className="text-green-600" />
+                  <span className="flex-1">
+                    {selectedMrca.given_name} {selectedMrca.surname}
+                    {selectedMrca.birth_year && ` (b. ${selectedMrca.birth_year})`}
+                  </span>
+                  <button
+                    type="button"
+                    onClick={handleClearMrca}
+                    className="text-faded-ink hover:text-red-600"
+                  >
+                    <X size={18} />
+                  </button>
+                </div>
+              ) : (
+                <div className="relative">
+                  <div className="relative">
+                    <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-faded-ink" />
+                    <input
+                      type="text"
+                      value={mrcaSearch}
+                      onChange={(e) => {
+                        setMrcaSearch(e.target.value)
+                        setShowMrcaDropdown(true)
+                      }}
+                      onFocus={() => setShowMrcaDropdown(true)}
+                      placeholder="Search for a person..."
+                      className="input pl-10"
+                    />
+                  </div>
+                  {showMrcaDropdown && mrcaResults.length > 0 && (
+                    <div className="absolute z-10 w-full mt-1 bg-white border border-sepia/20 rounded-lg shadow-lg max-h-60 overflow-auto">
+                      {mrcaResults.map(person => (
+                        <button
+                          key={person.id}
+                          type="button"
+                          onClick={() => handleSelectMrca(person)}
+                          className="w-full text-left px-4 py-2 hover:bg-parchment transition-colors"
+                        >
+                          <span className="font-medium">
+                            {person.given_name} {person.surname}
+                          </span>
+                          {person.birth_year && (
+                            <span className="text-faded-ink ml-2">
+                              (b. {person.birth_year})
+                            </span>
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              )}
+              <p className="text-xs text-faded-ink mt-1">
+                Search for a person in your tree to link as the confirmed common ancestor
+              </p>
+            </div>
+
+            <div>
+              <label className="label">Contact Status</label>
+              <select
+                name="contact_status"
+                value={formData.contact_status}
+                onChange={handleChange}
+                className="input"
+              >
+                {contactStatuses.map(status => (
+                  <option key={status.value} value={status.value}>
+                    {status.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="label">Notes</label>
+              <textarea
+                name="notes"
+                value={formData.notes}
+                onChange={handleChange}
+                rows={4}
+                placeholder="Any additional notes about this match..."
+                className="input"
+              />
+            </div>
+          </div>
+
+          {/* Form Actions */}
+          <div className="flex justify-end gap-3 pt-4 border-t border-sepia/20">
+            <Link to="/dna/matches" className="btn-secondary">
+              Cancel
+            </Link>
+            <button type="submit" disabled={saving} className="btn-primary">
+              {saving ? 'Saving...' : isEdit ? 'Update Match' : 'Add Match'}
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  )
+}
+
+export default DnaMatchFormPage

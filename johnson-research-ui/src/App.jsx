@@ -27,6 +27,10 @@ import GapAnalysis from './pages/GapAnalysis'
 import DocumentProcessing from './pages/DocumentProcessing'
 import ExtractionReview from './pages/ExtractionReview'
 import PedigreeView from './pages/PedigreeView'
+import DnaMatchesPage from './pages/DnaMatches'
+import DnaMatchFormPage from './pages/DnaMatchForm'
+import DnaSegmentsPage from './pages/DnaSegments'
+import DnaSurnamesPage from './pages/DnaSurnames'
 
 function App() {
   return (
@@ -54,6 +58,11 @@ function App() {
           <Route path="gaps" element={<GapAnalysis />} />
           <Route path="processing" element={<DocumentProcessing />} />
           <Route path="documents/:id/review" element={<ExtractionReview />} />
+          <Route path="dna/matches" element={<DnaMatchesPage />} />
+          <Route path="dna/matches/new" element={<DnaMatchFormPage />} />
+          <Route path="dna/matches/:id" element={<DnaMatchFormPage />} />
+          <Route path="dna/segments" element={<DnaSegmentsPage />} />
+          <Route path="dna/surnames" element={<DnaSurnamesPage />} />
         </Route>
       </Routes>
       </WorkspaceProvider>
